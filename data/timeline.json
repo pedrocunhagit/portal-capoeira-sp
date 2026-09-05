@@ -7,7 +7,8 @@
     "periodo": "1830-1870",
     "tipo": "DOCUMENTO",
     "personagens": ["Augusto da Silveira Pinto"],
-    "pagina": "p. 48"
+    "pagina": "p. 103",
+    "pagina_pdf": 103
   },
   {
     "ano": 1831,
@@ -17,7 +18,8 @@
     "descricao": "Cerca de 60 escravos africanos se reúnem na Chácara Bom Sucesso, na Freguesia do Brás. Dois grupos, identificados como 'paulistas' e 'cariocas', se enfrentam. As lideranças são reconhecidas pelos barretes vermelhos que usam. O inquérito policial que se seguiu é o mais antigo registro de uma ocorrência envolvendo capoeira em São Paulo.",
     "periodo": "1830-1870",
     "tipo": "CONFLITO",
-    "pagina": "p. 63"
+    "pagina": "p. 39",
+    "pagina_pdf": 39
   },
   {
     "ano": 1833,
@@ -27,7 +29,8 @@
     "descricao": "A Câmara Municipal de São Paulo aprova a primeira postura proibindo 'o jogo denominado de capoeiras'. A punição para pessoas livres era prisão e multa; para escravos, de 25 a 50 açoites, entregues pelo próprio senhor. Senhores que se recusassem a punir seus escravos também eram multados.",
     "periodo": "1830-1870",
     "tipo": "LEI",
-    "pagina": "p. 71"
+    "pagina": "p. 8",
+    "pagina_pdf": 8
   },
   {
     "ano": 1833,
@@ -36,7 +39,8 @@
     "descricao": "Após a lei da capital, as cidades de Cabreúva, Itu e Sorocaba adotam medidas similares contra a capoeira. Sorocaba mantém a proibição em códigos de posturas de 1850, 1865 e 1871, mostrando que a prática persistia.",
     "periodo": "1830-1870",
     "tipo": "LEI",
-    "pagina": "p. 73"
+    "pagina": "p. 61",
+    "pagina_pdf": 61
   },
   {
     "ano": 1850,
@@ -45,7 +49,8 @@
     "periodo": "1830-1870",
     "tipo": "CULTURAL",
     "personagens": ["Couto de Magalhães"],
-    "pagina": "p. 95"
+    "pagina": "p. 117",
+    "pagina_pdf": 117
   },
   {
     "ano": 1854,
@@ -54,7 +59,8 @@
     "periodo": "1830-1870",
     "tipo": "CULTURAL",
     "personagens": ["Luíz Joaquim Duque-Estrada Teixeira"],
-    "pagina": "p. 99"
+    "pagina": "p. 112",
+    "pagina_pdf": 112
   },
   {
     "ano": 1855,
@@ -63,7 +69,8 @@
     "periodo": "1830-1870",
     "tipo": "CULTURAL",
     "personagens": ["José Basson de Miranda Osorio"],
-    "pagina": "p. 101"
+    "pagina": "p. 117",
+    "pagina_pdf": 117
   },
   {
     "ano": 1864,
@@ -74,7 +81,8 @@
     "periodo": "1830-1870",
     "tipo": "CONFLITO",
     "personagens": ["Adão dos Santos Jorge", "Eduardo", "Melchiades", "João Pequeno", "João Grande"],
-    "pagina": "p. 113"
+    "pagina": "p. 80",
+    "pagina_pdf": 80
   },
   {
     "ano": 1865,
@@ -85,7 +93,8 @@
     "periodo": "1830-1870",
     "tipo": "JULGAMENTO",
     "personagens": ["Adão dos Santos Jorge"],
-    "pagina": "p. 117"
+    "pagina": "p. 100",
+    "pagina_pdf": 100
   },
   {
     "ano": 1865,
@@ -93,7 +102,8 @@
     "descricao": "Com o início da Guerra do Paraguai, homens negros com habilidades marciais são recrutados para os batalhões brasileiros. O Corpo dos Zuavos da Bahia se destaca em combates corpo a corpo. Muitos eram escravos alforriados especialmente para lutar. Veteranos retornam com novo status social.",
     "periodo": "1830-1870",
     "tipo": "POLITICO",
-    "pagina": "p. 123"
+    "pagina": "p. 120",
+    "pagina_pdf": 120
   },
   {
     "ano": 1858,
@@ -101,7 +111,8 @@
     "descricao": "Dois grupos rivais de capoeiras se consolidam no porto de Santos na segunda metade do século XIX. Os 'valongueiros', do bairro do Valongo, ligados ao comércio de escravos e aos portugueses, enfrentam os 'quarteleiros', das proximidades dos quartéis, formados por caboclos e militares. As tensões entre os dois bairros alimentam uma rivalidade que se expressa nas ruas em confrontos com capoeira, paus e navalhas.",
     "periodo": "1870-1888",
     "tipo": "CULTURAL",
-    "pagina": "p. 152"
+    "pagina": "p. 152",
+    "pagina_pdf": 152
   },
   {
     "ano": 1860,
@@ -109,7 +120,8 @@
     "descricao": "Uma empresa ferroviária inglesa compra o terreno onde ficava a Igreja Matriz de Santos, ameaçando derrubá-la. Os valongueiros afixam um cartaz na porta da igreja convocando seus rivais quarteleiros para uma trégua. Em resposta, 200 a 300 homens dos dois grupos marcham unidos até a Câmara Municipal. A pressão popular, somada a uma ordem imperial, garante a preservação da igreja em 1861. O episódio ficou conhecido na memória local como o 'Milagre de Santo Antônio'.",
     "periodo": "1870-1888",
     "tipo": "POLITICO",
-    "pagina": "p. 156"
+    "pagina": "p. 157",
+    "pagina_pdf": 157
   },
   {
     "ano": 1874,
@@ -118,7 +130,8 @@
     "periodo": "1870-1888",
     "tipo": "POLITICO",
     "personagens": ["Joaquim Xavier da Silveira"],
-    "pagina": "p. 159"
+    "pagina": "p. 161",
+    "pagina_pdf": 161
   },
   {
     "ano": 1871,
@@ -129,7 +142,8 @@
     "periodo": "1870-1888",
     "tipo": "PRISAO",
     "personagens": ["Japhet"],
-    "pagina": "p. 132"
+    "pagina": "p. 150",
+    "pagina_pdf": 150
   },
   {
     "ano": 1873,
@@ -139,7 +153,8 @@
     "periodo": "1870-1888",
     "tipo": "PRISAO",
     "personagens": ["Marcelino Ignacio", "Zacarias", "Luís", "João"],
-    "pagina": "p. 135"
+    "pagina": "p. 138",
+    "pagina_pdf": 138
   },
   {
     "ano": 1882,
@@ -148,7 +163,8 @@
     "periodo": "1870-1888",
     "tipo": "POLITICO",
     "personagens": ["Vicente de Carvalho", "Eugênio Wansuít"],
-    "pagina": "p. 167"
+    "pagina": "p. 182",
+    "pagina_pdf": 182
   },
   {
     "ano": 1884,
@@ -156,7 +172,8 @@
     "descricao": "Santos emerge como principal centro do movimento abolicionista em São Paulo. Grupos de capoeiras e valentes do porto participam ativamente das redes de fuga de escravizados. A cidade se torna ponto de passagem obrigatório para quem levava fugitivos do interior à liberdade.",
     "periodo": "1870-1888",
     "tipo": "POLITICO",
-    "pagina": "p. 169"
+    "pagina": "p. 163",
+    "pagina_pdf": 163
   },
   {
     "ano": 1885,
@@ -165,7 +182,8 @@
     "periodo": "1870-1888",
     "tipo": "POLITICO",
     "personagens": ["Quintino de Lacerda"],
-    "pagina": "p. 171"
+    "pagina": "p. 186",
+    "pagina_pdf": 186
   },
   {
     "ano": 1882,
@@ -174,7 +192,8 @@
     "periodo": "1870-1888",
     "tipo": "POLITICO",
     "personagens": ["António Bento", "António Paciência", "Rodolfo Motta", "Carlos Garcia"],
-    "pagina": "p. 175"
+    "pagina": "p. 175",
+    "pagina_pdf": 175
   },
   {
     "ano": 1888,
@@ -184,7 +203,8 @@
     "descricao": "A Lei Áurea, assinada pela Princesa Isabel, abole a escravatura no Brasil. Em Santos, as festas duram dias. Documentos da Câmara Municipal registram sessões de comemoração. Para os capoeiras que participaram do abolicionismo, o momento representa o coroamento de anos de luta.",
     "periodo": "1870-1888",
     "tipo": "POLITICO",
-    "pagina": "p. 187"
+    "pagina": "p. 206",
+    "pagina_pdf": 206
   },
   {
     "ano": 1888,
@@ -194,7 +214,8 @@
     "periodo": "1888-1930",
     "tipo": "POLITICO",
     "personagens": ["Eugênio Wansuit", "Quintino de Lacerda"],
-    "pagina": "p. 193"
+    "pagina": "p. 208",
+    "pagina_pdf": 208
   },
   {
     "ano": 1889,
@@ -204,7 +225,8 @@
     "descricao": "A República é proclamada. A mudança de regime traz novas pressões sobre práticas culturais afro-brasileiras. O governo republicano adota uma postura de 'modernização' que vê a capoeira como símbolo do atraso colonial a ser eliminado.",
     "periodo": "1888-1930",
     "tipo": "POLITICO",
-    "pagina": "p. 197"
+    "pagina": "p. 217",
+    "pagina_pdf": 217
   },
   {
     "ano": 1890,
@@ -212,7 +234,8 @@
     "descricao": "O Código Penal republicano, no artigo 402, criminaliza a capoeira em todo o Brasil. A pena vai de dois a seis meses de prisão. No Rio de Janeiro, 297 pessoas são presas só naquele ano. Em São Paulo, a repressão é mais indireta, focada em criminalizar a 'vadiagem' e as práticas culturais negras em geral.",
     "periodo": "1888-1930",
     "tipo": "LEI",
-    "pagina": "p. 199"
+    "pagina": "p. 224",
+    "pagina_pdf": 224
   },
   {
     "ano": 1891,
@@ -221,7 +244,8 @@
     "periodo": "1888-1930",
     "tipo": "POLITICO",
     "personagens": ["Quintino de Lacerda"],
-    "pagina": "p. 203"
+    "pagina": "p. 227",
+    "pagina_pdf": 227
   },
   {
     "ano": 1897,
@@ -230,7 +254,8 @@
     "periodo": "1888-1930",
     "tipo": "CULTURAL",
     "personagens": ["Couto de Magalhães"],
-    "pagina": "p. 211"
+    "pagina": "p. 120",
+    "pagina_pdf": 120
   },
   {
     "ano": 1906,
@@ -239,7 +264,8 @@
     "periodo": "1888-1930",
     "tipo": "DOCUMENTO",
     "personagens": ["João do Rio"],
-    "pagina": "p. 217"
+    "pagina": "p. 112",
+    "pagina_pdf": 112
   },
   {
     "ano": 1900,
@@ -247,7 +273,8 @@
     "descricao": "Nas primeiras décadas do século XX, ex-capoeiras e seus descendentes integram os cordões carnavalescos e grupos de samba de São Paulo. A 'tiririca' — disputa corporal originada na capoeira — aparece como atração nos cortejos de blocos e cordões da capital. Práticas de origem afro-brasileira sobrevivem nas festas populares mesmo sob a repressão republicana.",
     "periodo": "1888-1930",
     "tipo": "CULTURAL",
-    "pagina": "p. 221"
+    "pagina": "p. 255",
+    "pagina_pdf": 255
   },
   {
     "ano": 1910,
@@ -255,7 +282,8 @@
     "descricao": "O futebol começa a se popularizar nos bairros operários e nas comunidades negras de São Paulo. Nos times dos bairros do Bexiga, Barra Funda e Lavapés — redutos de afro-brasileiros, italianos e nordestinos —, encontram-se ex-capoeiras e seus filhos. O esporte se tornaria um novo espaço de sociabilidade e afirmação para populações que haviam sido expulsas das ruas pela criminalização da capoeira.",
     "periodo": "1888-1930",
     "tipo": "CULTURAL",
-    "pagina": "p. 228"
+    "pagina": "p. 269",
+    "pagina_pdf": 269
   },
   {
     "ano": 1928,
@@ -264,6 +292,7 @@
     "periodo": "1888-1930",
     "tipo": "CULTURAL",
     "personagens": ["Coelho Neto"],
-    "pagina": "p. 235"
+    "pagina": "p. 177",
+    "pagina_pdf": 177
   }
 ]
