@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Linha do tempo da hist\u00f3ria da capoeira em S\u00e3o Paulo, de 1830 a 1930." />
-  <title>Linha do tempo \u2014 Capoeira e valentia em S\u00e3o Paulo</title>
+  <meta name="description" content="Linha do tempo da história da capoeira em São Paulo, de 1830 a 1930." />
+  <title>Linha do tempo — Capoeira e valentia em São Paulo</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     /* ---- LINHA DO TEMPO ---- */
@@ -135,6 +135,12 @@
       color: var(--accent-light);
       font-style: italic;
     }
+    .tl-pagina {
+      margin-top: 4px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      opacity: 0.7;
+    }
 
     .tl-legenda {
       display: flex;
@@ -166,7 +172,7 @@
   </style>
 </head>
 <body>
-  <div class="acess-bar" role="toolbar" aria-label="Op\u00e7\u00f5es de acessibilidade">
+  <div class="acess-bar" role="toolbar" aria-label="Opções de acessibilidade">
     <span>Acessibilidade</span>
     <button class="btn-fonte" data-nivel="n">A</button>
     <button class="btn-fonte" data-nivel="g">A+</button>
@@ -179,35 +185,35 @@
   </div>
 
   <header><div class="header-inner">
-    <h1>Capoeira e valentia em S\u00e3o Paulo</h1>
-    <p class="subtitulo">Pesquisa e documentos hist\u00f3ricos (1830\u20131930)</p>
+    <h1>Capoeira e valentia em São Paulo</h1>
+    <p class="subtitulo">Pesquisa e documentos históricos (1830–1930)</p>
   </div></header>
 
   <nav aria-label="Menu principal">
     <button class="menu-toggle" aria-expanded="false" aria-controls="menu-lista">Menu</button>
     <ul id="menu-lista" role="list">
-      <li><a href="index.html">In\u00edcio</a></li>
+      <li><a href="index.html">Início</a></li>
       <li><a href="timeline.html" class="ativo">Linha do tempo</a></li>
       <li><a href="dissertacao.html">A pesquisa</a></li>
       <li><a href="documentos.html">Documentos</a></li>
-      <li><a href="referencias.html">Refer\u00eancias</a></li>
+      <li><a href="referencias.html">Referências</a></li>
       <li><a href="sobre.html">Sobre a pesquisa</a></li>
     </ul>
   </nav>
 
   <div class="page-header"><div class="page-header-inner">
     <h2>Linha do tempo</h2>
-    <p>Principais eventos e personagens da capoeira em S\u00e3o Paulo, de 1830 a 1930</p>
+    <p>Principais eventos e personagens da capoeira em São Paulo, de 1830 a 1930</p>
   </div></div>
 
   <main>
 
     <div class="tl-filtros" role="group" aria-label="Filtrar por tipo de evento">
       <button class="ativo" data-filtro="todos">Todos</button>
-      <button data-filtro="LEI">Leis e proibi\u00e7\u00f5es</button>
+      <button data-filtro="LEI">Leis e proibições</button>
       <button data-filtro="CONFLITO">Conflitos</button>
-      <button data-filtro="PRISAO">Pris\u00f5es</button>
-      <button data-filtro="POLITICO">Pol\u00edtico</button>
+      <button data-filtro="PRISAO">Prisões</button>
+      <button data-filtro="POLITICO">Político</button>
       <button data-filtro="CULTURAL">Cultural</button>
       <button data-filtro="DOCUMENTO">Documentos</button>
       <button data-filtro="JULGAMENTO">Julgamentos</button>
@@ -215,8 +221,8 @@
 
     <div class="tl-legenda" aria-hidden="true">
       <span><span class="dot" style="background:#8b1a1a"></span>Lei</span>
-      <span><span class="dot" style="background:#5a3a00"></span>Conflito / Pris\u00e3o</span>
-      <span><span class="dot" style="background:#1a4a1a"></span>Pol\u00edtico</span>
+      <span><span class="dot" style="background:#5a3a00"></span>Conflito / Prisão</span>
+      <span><span class="dot" style="background:#1a4a1a"></span>Político</span>
       <span><span class="dot" style="background:#1a3a5a"></span>Cultural</span>
       <span><span class="dot" style="background:#6b3a1f"></span>Outros</span>
     </div>
@@ -226,10 +232,10 @@
   </main>
 
   <footer><p>
-    <strong>Capoeira e valentia em S\u00e3o Paulo \u2014 Pesquisa e documentos</strong><br />
-    Disserta\u00e7\u00e3o de mestrado em Hist\u00f3ria Social \u00b7 Universidade de S\u00e3o Paulo \u00b7 2011<br />
+    <strong>Capoeira e valentia em São Paulo — Pesquisa e documentos</strong><br />
+    Dissertação de mestrado em História Social · Universidade de São Paulo · 2011<br />
     <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html" target="_blank" rel="noopener">Registro oficial na USP</a>
-    &nbsp;\u00b7&nbsp;
+    &nbsp;·&nbsp;
     <a href="sobre.html">Sobre a pesquisa</a>
   </p></footer>
 
@@ -237,13 +243,13 @@
   <script>
   (function() {
     var PERIODOS = [
-      { id: '1830-1870', label: 'Per\u00edodo 1: Primeiros ind\u00edcios (1830\u20131870)' },
-      { id: '1870-1888', label: 'Per\u00edodo 2: Na rota do abolicionismo (1870\u20131888)' },
-      { id: '1888-1930', label: 'Per\u00edodo 3: P\u00f3s-aboli\u00e7\u00e3o (1888\u20131930)' }
+      { id: '1830-1870', label: 'Período 1: Primeiros indícios (1830–1870)' },
+      { id: '1870-1888', label: 'Período 2: Na rota do abolicionismo (1870–1888)' },
+      { id: '1888-1930', label: 'Período 3: Pós-abolição (1888–1930)' }
     ];
 
     var LABELS_TIPO = {
-      LEI: 'Lei', PRISAO: 'Pris\u00e3o', POLITICO: 'Pol\u00edtico',
+      LEI: 'Lei', PRISAO: 'Prisão', POLITICO: 'Político',
       CULTURAL: 'Cultural', CONFLITO: 'Conflito',
       JULGAMENTO: 'Julgamento', DOCUMENTO: 'Documento'
     };
@@ -296,6 +302,9 @@
           var personagens = ev.personagens && ev.personagens.length
             ? '<p class="tl-personagens">Personagens: ' + ev.personagens.join(', ') + '</p>'
             : '';
+          var pagina = ev.pagina
+            ? '<p class="tl-pagina">Dissertação, ' + ev.pagina + '</p>'
+            : '';
           html += '<li class="tl-item" data-tipo="' + ev.tipo + '">';
           html += '<div class="tl-item-header">';
           html += '<span class="tl-ano">' + dataStr + '</span>';
@@ -304,6 +313,7 @@
           html += '<p class="tl-titulo">' + ev.titulo + '</p>';
           html += '<p class="tl-descricao">' + ev.descricao + '</p>';
           html += personagens;
+          html += pagina;
           html += '</li>';
         });
         html += '</ul></div>';
@@ -312,6 +322,16 @@
       container.innerHTML = html;
     }
   })();
+  </script>
+  <script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'pt',
+      includedLanguages: 'en,es',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
   </script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>

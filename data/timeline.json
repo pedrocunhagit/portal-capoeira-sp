@@ -2,193 +2,268 @@
   {
     "ano": 1829,
     "mes": null,
-    "titulo": "Primeira men\u00e7\u00e3o documentada da capoeira em S\u00e3o Paulo",
-    "descricao": "Uma carta publicada no jornal O Farol Paulistano descreve uma cena de capoeira no centro de S\u00e3o Paulo. Um professor da Academia de Direito, Augusto da Silveira Pinto, \u00e9 criticado por jogar capoeira em p\u00fablico no Largo do Chafariz, com espectadores negros que aplaudiam com assobios e palmas.",
+    "titulo": "Primeira menção documentada da capoeira em São Paulo",
+    "descricao": "Uma carta publicada no jornal O Farol Paulistano descreve uma cena de capoeira no centro de São Paulo. Um professor da Academia de Direito, Augusto da Silveira Pinto, é criticado por jogar capoeira em público no Largo do Chafariz, com espectadores negros que aplaudiam com assobios e palmas.",
     "periodo": "1830-1870",
     "tipo": "DOCUMENTO",
-    "personagens": ["Augusto da Silveira Pinto"]
+    "personagens": ["Augusto da Silveira Pinto"],
+    "pagina": "p. 48"
   },
   {
     "ano": 1831,
     "mes": 2,
     "dia": 27,
-    "titulo": "Confronto entre capoeiras africanos no Br\u00e1s",
-    "descricao": "Cerca de 60 escravos africanos se re\u00fanem na Ch\u00e1cara Bom Sucesso, na Freguesia do Br\u00e1s. Dois grupos, identificados como 'paulistas' e 'cariocas', se enfrentam. Os lideran\u00e7as s\u00e3o reconhecidos pelos barretes vermelhos que usam. O inqu\u00e9rito policial que se seguiu \u00e9 o mais antigo registro de uma ocorr\u00eancia envolvendo capoeira em S\u00e3o Paulo.",
+    "titulo": "Confronto entre capoeiras africanos no Brás",
+    "descricao": "Cerca de 60 escravos africanos se reúnem na Chácara Bom Sucesso, na Freguesia do Brás. Dois grupos, identificados como 'paulistas' e 'cariocas', se enfrentam. As lideranças são reconhecidas pelos barretes vermelhos que usam. O inquérito policial que se seguiu é o mais antigo registro de uma ocorrência envolvendo capoeira em São Paulo.",
     "periodo": "1830-1870",
-    "tipo": "CONFLITO"
+    "tipo": "CONFLITO",
+    "pagina": "p. 63"
   },
   {
     "ano": 1833,
     "mes": 1,
     "dia": 14,
-    "titulo": "S\u00e3o Paulo proibe a capoeira por lei",
-    "descricao": "A C\u00e2mara Municipal de S\u00e3o Paulo aprova a primeira postura proibindo 'o jogo denominado de capoeiras'. A puni\u00e7\u00e3o para pessoas livres era pris\u00e3o e multa; para escravos, de 25 a 50 a\u00e7oites, entregues pelo pr\u00f3prio senhor. Senhores que se recusassem a punir seus escravos tamb\u00e9m eram multados.",
+    "titulo": "São Paulo proíbe a capoeira por lei",
+    "descricao": "A Câmara Municipal de São Paulo aprova a primeira postura proibindo 'o jogo denominado de capoeiras'. A punição para pessoas livres era prisão e multa; para escravos, de 25 a 50 açoites, entregues pelo próprio senhor. Senhores que se recusassem a punir seus escravos também eram multados.",
     "periodo": "1830-1870",
-    "tipo": "LEI"
+    "tipo": "LEI",
+    "pagina": "p. 71"
   },
   {
     "ano": 1833,
     "mes": 2,
-    "titulo": "Proibi\u00e7\u00e3o se espalha pelo interior paulista",
-    "descricao": "Ap\u00f3s a lei da capital, as cidades de Cabre\u00fava, Itu e Sorocaba adotam medidas similares contra a capoeira. Sorocaba mant\u00e9m a proibi\u00e7\u00e3o em c\u00f3digos de posturas de 1850, 1865 e 1871, mostrando que a pr\u00e1tica persistia.",
+    "titulo": "Proibição se espalha pelo interior paulista",
+    "descricao": "Após a lei da capital, as cidades de Cabreúva, Itu e Sorocaba adotam medidas similares contra a capoeira. Sorocaba mantém a proibição em códigos de posturas de 1850, 1865 e 1871, mostrando que a prática persistia.",
     "periodo": "1830-1870",
-    "tipo": "LEI"
+    "tipo": "LEI",
+    "pagina": "p. 73"
   },
   {
     "ano": 1850,
-    "titulo": "Proposta de escola de capoeira em S\u00e3o Paulo",
-    "descricao": "O futuro general Couto de Magalh\u00e3es, ent\u00e3o estudante da Academia de Direito, prop\u00f5e a cria\u00e7\u00e3o de uma 'escola de capoeiragem' em S\u00e3o Paulo. A ideia mostra como a capoeira era vista por parte da elite acad\u00eamica como uma arte marcial leg\u00edtima, e n\u00e3o apenas como 'jogo de escravo'.",
+    "titulo": "Proposta de escola de capoeira em São Paulo",
+    "descricao": "O futuro general Couto de Magalhães, então estudante da Academia de Direito, propõe a criação de uma 'escola de capoeiragem' em São Paulo. A ideia mostra como a capoeira era vista por parte da elite acadêmica como uma arte marcial legítima, e não apenas como 'jogo de escravo'.",
     "periodo": "1830-1870",
     "tipo": "CULTURAL",
-    "personagens": ["Couto de Magalh\u00e3es"]
+    "personagens": ["Couto de Magalhães"],
+    "pagina": "p. 95"
   },
   {
     "ano": 1854,
     "titulo": "Capoeira na Academia de Direito: Duque-Estrada",
-    "descricao": "Lu\u00edz Joaquim Duque-Estrada Teixeira, estudante fluminense da Academia de Direito, torna-se refer\u00eancia entre os colegas pela pr\u00e1tica da capoeira. Ele a defende como 'arte' e descreve t\u00e9cnicas de ataque e defesa com cabe\u00e7a, m\u00e3os, p\u00e9s e joelhos. Mais tarde, retorna ao Rio de Janeiro como pol\u00edtico e l\u00edder da mil\u00edcia 'Flor da Gente'.",
+    "descricao": "Luíz Joaquim Duque-Estrada Teixeira, estudante fluminense da Academia de Direito, torna-se referência entre os colegas pela prática da capoeira. Ele a defende como 'arte' e descreve técnicas de ataque e defesa com cabeça, mãos, pés e joelhos. Mais tarde, retorna ao Rio de Janeiro como político e líder da milícia 'Flor da Gente'.",
     "periodo": "1830-1870",
     "tipo": "CULTURAL",
-    "personagens": ["Lu\u00edz Joaquim Duque-Estrada Teixeira"]
+    "personagens": ["Luíz Joaquim Duque-Estrada Teixeira"],
+    "pagina": "p. 99"
   },
   {
     "ano": 1855,
     "titulo": "Capoeira na Academia de Direito: Basson",
-    "descricao": "Jos\u00e9 Basson de Miranda Osorio, estudante piau\u00edsense, \u00e9 descrito pelos memorialistas como 'perito na arte da capoeiragem, destro e valente cacetista' e chefe do grupo dos 'matadores de cabritos', que promovia confrontos noturnos pelas ruas de S\u00e3o Paulo.",
+    "descricao": "José Basson de Miranda Osorio, estudante piauiense, é descrito pelos memorialistas como 'perito na arte da capoeiragem, destro e valente cacetista' e chefe do grupo dos 'matadores de cabritos', que promovia confrontos noturnos pelas ruas de São Paulo.",
     "periodo": "1830-1870",
     "tipo": "CULTURAL",
-    "personagens": ["Jos\u00e9 Basson de Miranda Osorio"]
+    "personagens": ["José Basson de Miranda Osorio"],
+    "pagina": "p. 101"
   },
   {
     "ano": 1864,
     "mes": 11,
     "dia": 11,
     "titulo": "Os 'pequenos do chafariz': grupo de capoeira na capital",
-    "descricao": "Um grupo de jovens escravos, forros e pardos livres \u2014 conhecidos como os 'pequenos do chafariz' \u2014 pratica capoeira nas imedia\u00e7\u00f5es do Chafariz do Miguel Carlos, no centro de S\u00e3o Paulo. Um conflito entre o africano livre Ad\u00e3o dos Santos Jorge e o escravo Eduardo resulta em processo criminal. \u00c9 um dos raros registros nomeados de capoeiras na S\u00e3o Paulo escravista.",
+    "descricao": "Um grupo de jovens escravos, forros e pardos livres — conhecidos como os 'pequenos do chafariz' — pratica capoeira nas imediações do Chafariz do Miguel Carlos, no centro de São Paulo. Um conflito entre o africano livre Adão dos Santos Jorge e o escravo Eduardo resulta em processo criminal. É um dos raros registros nomeados de capoeiras na São Paulo escravista.",
     "periodo": "1830-1870",
     "tipo": "CONFLITO",
-    "personagens": ["Ad\u00e3o dos Santos Jorge", "Eduardo", "Melchiades", "Jo\u00e3o Pequeno", "Jo\u00e3o Grande"]
+    "personagens": ["Adão dos Santos Jorge", "Eduardo", "Melchiades", "João Pequeno", "João Grande"],
+    "pagina": "p. 113"
   },
   {
     "ano": 1865,
     "mes": 5,
     "dia": 6,
-    "titulo": "J\u00fari absolve capoeira: capoeira \u00e9 'brincadeira'",
-    "descricao": "Ad\u00e3o dos Santos Jorge, africano livre acusado de ferir Eduardo com uma navalha durante jogo de capoeira, \u00e9 absolvido por unanimidade pelo j\u00fari. Os jurados reconhecem a capoeira como 'folguedo', um divertimento, e n\u00e3o como crime. Ad\u00e3o \u00e9 solto no mesmo dia.",
+    "titulo": "Júri absolve capoeira: capoeira é 'brincadeira'",
+    "descricao": "Adão dos Santos Jorge, africano livre acusado de ferir Eduardo com uma navalha durante jogo de capoeira, é absolvido por unanimidade pelo júri. Os jurados reconhecem a capoeira como 'folguedo', um divertimento, e não como crime. Adão é solto no mesmo dia.",
     "periodo": "1830-1870",
     "tipo": "JULGAMENTO",
-    "personagens": ["Ad\u00e3o dos Santos Jorge"]
+    "personagens": ["Adão dos Santos Jorge"],
+    "pagina": "p. 117"
   },
   {
     "ano": 1865,
     "titulo": "Capoeiras na Guerra do Paraguai",
-    "descricao": "Com o in\u00edcio da Guerra do Paraguai, homens negros com habilidades marciais s\u00e3o recrutados para os batalhoes brasileiros. O Corpo dos Zuavos da Bahia se destaca em combates corpo a corpo. Muitos eram escravos alforriados especialmente para lutar. Veteranos retornam com novo status social.",
+    "descricao": "Com o início da Guerra do Paraguai, homens negros com habilidades marciais são recrutados para os batalhões brasileiros. O Corpo dos Zuavos da Bahia se destaca em combates corpo a corpo. Muitos eram escravos alforriados especialmente para lutar. Veteranos retornam com novo status social.",
     "periodo": "1830-1870",
-    "tipo": "POLITICO"
+    "tipo": "POLITICO",
+    "pagina": "p. 123"
+  },
+  {
+    "ano": 1858,
+    "titulo": "Valongueiros e quarteleiros: origens da rivalidade em Santos",
+    "descricao": "Dois grupos rivais de capoeiras se consolidam no porto de Santos na segunda metade do século XIX. Os 'valongueiros', do bairro do Valongo, ligados ao comércio de escravos e aos portugueses, enfrentam os 'quarteleiros', das proximidades dos quartéis, formados por caboclos e militares. As tensões entre os dois bairros alimentam uma rivalidade que se expressa nas ruas em confrontos com capoeira, paus e navalhas.",
+    "periodo": "1870-1888",
+    "tipo": "CULTURAL",
+    "pagina": "p. 152"
+  },
+  {
+    "ano": 1860,
+    "titulo": "O 'Milagre de Santo Antônio': rivais unidos para salvar a Igreja",
+    "descricao": "Uma empresa ferroviária inglesa compra o terreno onde ficava a Igreja Matriz de Santos, ameaçando derrubá-la. Os valongueiros afixam um cartaz na porta da igreja convocando seus rivais quarteleiros para uma trégua. Em resposta, 200 a 300 homens dos dois grupos marcham unidos até a Câmara Municipal. A pressão popular, somada a uma ordem imperial, garante a preservação da igreja em 1861. O episódio ficou conhecido na memória local como o 'Milagre de Santo Antônio'.",
+    "periodo": "1870-1888",
+    "tipo": "POLITICO",
+    "pagina": "p. 156"
+  },
+  {
+    "ano": 1874,
+    "titulo": "Rivalidade retomada; capoeiras entram no abolicionismo",
+    "descricao": "Após a morte do abolicionista Joaquim Xavier da Silveira — figura de mediação entre os grupos —, a rivalidade entre valongueiros e quarteleiros é retomada. Cada grupo passa a se alinhar a partidos e facções políticas diferentes. No entanto, ao longo da década seguinte, a causa abolicionista vai progressivamente unindo os dois grupos em torno do objetivo maior de libertar os escravizados.",
+    "periodo": "1870-1888",
+    "tipo": "POLITICO",
+    "personagens": ["Joaquim Xavier da Silveira"],
+    "pagina": "p. 159"
   },
   {
     "ano": 1871,
     "mes": 7,
     "dia": 13,
-    "titulo": "Prim\u00e9iro registro de pris\u00e3o por capoeira em Santos",
-    "descricao": "O escravo Japhet \u00e9 preso em Santos com a justificativa de 'ser Capoeira'. \u00c9 um dos primeiros registros documentados de pris\u00e3o especificamente por capoeira na prov\u00edncia de S\u00e3o Paulo, encontrado nos Livros de Registro de Presos da Pol\u00edcia de Santos.",
+    "titulo": "Primeiro registro de prisão por capoeira em Santos",
+    "descricao": "O escravo Japhet é preso em Santos com a justificativa de 'ser Capoeira'. É um dos primeiros registros documentados de prisão especificamente por capoeira na província de São Paulo, encontrado nos Livros de Registro de Presos da Polícia de Santos.",
     "periodo": "1870-1888",
     "tipo": "PRISAO",
-    "personagens": ["Japhet"]
+    "personagens": ["Japhet"],
+    "pagina": "p. 132"
   },
   {
     "ano": 1873,
     "mes": 12,
-    "titulo": "S\u00e9rie de pris\u00f5es por capoeira em Santos",
-    "descricao": "Em dezembro de 1873, ao menos quatro pessoas s\u00e3o presas por capoeira em Santos em poucos dias: Marcelino Ignacio (liberto), Zacarias, Lu\u00eds e Jo\u00e3o. Os registros do livro de presos mostram que a capoeira era pr\u00e1tica frequente no porto de Santos.",
+    "titulo": "Série de prisões por capoeira em Santos",
+    "descricao": "Em dezembro de 1873, ao menos quatro pessoas são presas por capoeira em Santos em poucos dias: Marcelino Ignacio (liberto), Zacarias, Luís e João. Os registros do livro de presos mostram que a capoeira era prática frequente no porto de Santos.",
     "periodo": "1870-1888",
     "tipo": "PRISAO",
-    "personagens": ["Marcelino Ignacio", "Zacarias", "Lu\u00eds", "Jo\u00e3o"]
+    "personagens": ["Marcelino Ignacio", "Zacarias", "Luís", "João"],
+    "pagina": "p. 135"
   },
   {
-    "ano": 1880,
-    "titulo": "Capoeiras de Santos: valongueiros versus quarteleiros",
-    "descricao": "Reminiscencias identificam grupos rivais de capoeiras em Santos: os 'valongueiros', do bairro do Valongo, ligados ao porto e ao com\u00e9rcio de escravos, e os 'quarteleiros', pr\u00f3ximos \u00e0s for\u00e7as militares. A rivalidade reflete as divis\u00f5es da cidade portu\u00e1ria, palco central do tr\u00e1fico e depois do abolicionismo.",
+    "ano": 1882,
+    "titulo": "Bohemia Abolicionista de Santos",
+    "descricao": "É fundada em Santos a Bohemia Abolicionista, um dos primeiros núcleos organizados do movimento abolicionista paulista. Entre seus membros estava o poeta Vicente de Carvalho (futuro membro da Academia Brasileira de Letras) e Eugênio Wansuít, liderança negra do porto. O grupo conecta a elite intelectual da cidade às redes de capoeiras e portuários que escondiam e transportavam escravizados fugidos.",
     "periodo": "1870-1888",
-    "tipo": "CULTURAL"
+    "tipo": "POLITICO",
+    "personagens": ["Vicente de Carvalho", "Eugênio Wansuít"],
+    "pagina": "p. 167"
   },
   {
     "ano": 1884,
-    "titulo": "Santos: cabe\u00e7a do abolicionismo paulista",
-    "descricao": "Santos emerge como principal centro do movimento abolicionista em S\u00e3o Paulo. Grupos de capoeiras e valent\u00f5es do porto participam ativamente das redes de fuga de escravizados. A cidade se torna ponto de passagem obrigat\u00f3rio para quem levava fugitivos do interior \u00e0 liberdade.",
+    "titulo": "Santos: cabeça do abolicionismo paulista",
+    "descricao": "Santos emerge como principal centro do movimento abolicionista em São Paulo. Grupos de capoeiras e valentes do porto participam ativamente das redes de fuga de escravizados. A cidade se torna ponto de passagem obrigatório para quem levava fugitivos do interior à liberdade.",
     "periodo": "1870-1888",
-    "tipo": "POLITICO"
+    "tipo": "POLITICO",
+    "pagina": "p. 169"
+  },
+  {
+    "ano": 1885,
+    "titulo": "Quilombo do Jabaquara: cidade de libertos em Santos",
+    "descricao": "O Quilombo do Jabaquara, liderado por Quintino de Lacerda — ele próprio ex-escravo —, chega a abrigar mais de 10 mil pessoas nas encostas do morro do Jabaquara, em Santos. Funcionava como ponto de chegada de escravizados fugidos do interior paulista, organizados em redes que contavam com a proteção de capoeiras e portuários. Após a Abolição, Quintino se tornaria uma das principais lideranças políticas negras do estado.",
+    "periodo": "1870-1888",
+    "tipo": "POLITICO",
+    "personagens": ["Quintino de Lacerda"],
+    "pagina": "p. 171"
+  },
+  {
+    "ano": 1882,
+    "titulo": "Os Caifases e António Bento: capoeiras como linha de frente",
+    "descricao": "Os Caifases, rede abolicionista liderada por António Bento após a morte de Luiz Gama, recrutam homens com habilidades físicas para proteger libertadores e enfrentar capatazes. Entre eles: António Paciência, que se infiltrava em fazendas; Rodolfo Motta, guarda-costas nas estradas de ferro; Carlos Garcia, cocheiro e mensageiro; e um grupo de sergipanos capoeiristas que usavam rasteiras para libertar escravizados das mãos da polícia. António Bento era permanentemente cercado de guarda-costas negros habilidosos com a navalha.",
+    "periodo": "1870-1888",
+    "tipo": "POLITICO",
+    "personagens": ["António Bento", "António Paciência", "Rodolfo Motta", "Carlos Garcia"],
+    "pagina": "p. 175"
   },
   {
     "ano": 1888,
     "mes": 5,
     "dia": 13,
-    "titulo": "Aboli\u00e7\u00e3o da escravatura",
-    "descricao": "A Lei \u00c1urea, assinada pela Princesa Isabel, abole a escravatura no Brasil. Em Santos, as festas duram dias. Documentos da C\u00e2mara Municipal registram sess\u00f5es de comemora\u00e7\u00e3o. Para os capoeiras que participaram do abolicionismo, o momento representa o coroamento de anos de luta.",
+    "titulo": "Abolição da escravatura",
+    "descricao": "A Lei Áurea, assinada pela Princesa Isabel, abole a escravatura no Brasil. Em Santos, as festas duram dias. Documentos da Câmara Municipal registram sessões de comemoração. Para os capoeiras que participaram do abolicionismo, o momento representa o coroamento de anos de luta.",
     "periodo": "1870-1888",
-    "tipo": "POLITICO"
+    "tipo": "POLITICO",
+    "pagina": "p. 187"
   },
   {
     "ano": 1888,
     "mes": 11,
-    "titulo": "Guarda Negra: tens\u00e3o p\u00f3s-aboli\u00e7\u00e3o",
-    "descricao": "Ap\u00f3s a Aboli\u00e7\u00e3o, form-se no Rio de Janeiro a Guarda Negra, grupo armado de ex-escravos que defendia a monarquia e se op\u00f5e aos republicanos. Em S\u00e3o Paulo e Santos, autoridades e imprensa pressionam l\u00eaderes negros para que n\u00e3o criem grupos semelhantes, temendo a organiza\u00e7\u00e3o pol\u00edtica dos libertos.",
+    "titulo": "Guarda Negra: tensão pós-abolição",
+    "descricao": "Após a Abolição, forma-se no Rio de Janeiro a Guarda Negra, grupo armado de ex-escravos que defendia a monarquia e se opõe aos republicanos. Em São Paulo e Santos, autoridades e imprensa pressionam líderes negros para que não criem grupos semelhantes, temendo a organização política dos libertos.",
     "periodo": "1888-1930",
     "tipo": "POLITICO",
-    "personagens": ["Eug\u00eanio Wansuit", "Quintino de Lacerda"]
+    "personagens": ["Eugênio Wansuit", "Quintino de Lacerda"],
+    "pagina": "p. 193"
   },
   {
     "ano": 1889,
     "mes": 11,
     "dia": 15,
-    "titulo": "Proclama\u00e7\u00e3o da Rep\u00fablica",
-    "descricao": "A Rep\u00fablica \u00e9 proclamada. A mudan\u00e7a de regime traz novas press\u00f5es sobre pr\u00e1ticas culturais afro-brasileiras. O governo republicano adota uma postura de 'moderniza\u00e7\u00e3o' que v\u00ea a capoeira como s\u00edmbolo do atraso colonial a ser eliminado.",
+    "titulo": "Proclamação da República",
+    "descricao": "A República é proclamada. A mudança de regime traz novas pressões sobre práticas culturais afro-brasileiras. O governo republicano adota uma postura de 'modernização' que vê a capoeira como símbolo do atraso colonial a ser eliminado.",
     "periodo": "1888-1930",
-    "tipo": "POLITICO"
+    "tipo": "POLITICO",
+    "pagina": "p. 197"
   },
   {
     "ano": 1890,
-    "titulo": "C\u00f3digo Penal criminaliza a capoeira",
-    "descricao": "O C\u00f3digo Penal republicano, no artigo 402, criminaliza a capoeira em todo o Brasil. A pena vai de dois a seis meses de pris\u00e3o. No Rio de Janeiro, 297 pessoas s\u00e3o presas s\u00f3 naquele ano. Em S\u00e3o Paulo, a repressa\u00e3o \u00e9 mais indireta, focada em criminalizar a 'vadiagem' e as pr\u00e1ticas culturais negras em geral.",
+    "titulo": "Código Penal criminaliza a capoeira",
+    "descricao": "O Código Penal republicano, no artigo 402, criminaliza a capoeira em todo o Brasil. A pena vai de dois a seis meses de prisão. No Rio de Janeiro, 297 pessoas são presas só naquele ano. Em São Paulo, a repressão é mais indireta, focada em criminalizar a 'vadiagem' e as práticas culturais negras em geral.",
     "periodo": "1888-1930",
-    "tipo": "LEI"
+    "tipo": "LEI",
+    "pagina": "p. 199"
   },
   {
     "ano": 1891,
     "titulo": "Greve no porto de Santos: ex-escravos no centro do conflito",
-    "descricao": "Uma greve de trabalhadores no porto de Santos envolve ex-escravos do Quilombo do Jabaquara, liderado por Quintino de Lacerda. O conflito mostra a complexidade da situa\u00e7\u00e3o dos libertos no p\u00f3s-aboli\u00e7\u00e3o: nem sempre alinhados com o movimento oper\u00e1rio, mas ativos politicamente.",
+    "descricao": "Uma greve de trabalhadores no porto de Santos envolve ex-escravos do Quilombo do Jabaquara, liderado por Quintino de Lacerda. O conflito mostra a complexidade da situação dos libertos no pós-abolição: nem sempre alinhados com o movimento operário, mas ativos politicamente.",
     "periodo": "1888-1930",
     "tipo": "POLITICO",
-    "personagens": ["Quintino de Lacerda"]
+    "personagens": ["Quintino de Lacerda"],
+    "pagina": "p. 203"
   },
   {
     "ano": 1897,
     "titulo": "General defende capoeira como treinamento militar",
-    "descricao": "O general Couto de Magalh\u00e3es, ex-aluno da Academia de Direito de S\u00e3o Paulo, apresenta trabalho defendendo o uso da capoeira nas escolas militares brasileiras. 'Um bom capoeira equivale a dez homens', escreveu ele. A proposta n\u00e3o \u00e9 acatada, mas mostra a ambigu\u00edadde da sociedade em rela\u00e7\u00e3o \u00e0 pr\u00e1tica.",
+    "descricao": "O general Couto de Magalhães, ex-aluno da Academia de Direito de São Paulo, apresenta trabalho defendendo o uso da capoeira nas escolas militares brasileiras. 'Um bom capoeira equivale a dez homens', escreveu ele. A proposta não é acatada, mas mostra a ambiguidade da sociedade em relação à prática.",
     "periodo": "1888-1930",
     "tipo": "CULTURAL",
-    "personagens": ["Couto de Magalh\u00e3es"]
+    "personagens": ["Couto de Magalhães"],
+    "pagina": "p. 211"
   },
   {
     "ano": 1906,
-    "titulo": "Imprensa retrata capoeiras como 'parasitas pol\u00edticos'",
-    "descricao": "O jornalista Jo\u00e3o do Rio publica na revista Kosmos o artigo 'Chuva de candidatos', descrevendo como capoeiras eram usados por pol\u00edticos como cabo eleitorais e capangas. As ilustra\u00e7\u00f5es de Kalixto retratam os capoeiras como figuras marginais, refletindo o esfor\u00e7o republicano de apagar sua mem\u00f3ria hist\u00f3rica.",
+    "titulo": "Imprensa retrata capoeiras como 'parasitas políticos'",
+    "descricao": "O jornalista João do Rio publica na revista Kosmos o artigo 'Chuva de candidatos', descrevendo como capoeiras eram usados por políticos como cabo eleitorais e capangas. As ilustrações de Kalixto retratam os capoeiras como figuras marginais, refletindo o esforço republicano de apagar sua memória histórica.",
     "periodo": "1888-1930",
     "tipo": "DOCUMENTO",
-    "personagens": ["Jo\u00e3o do Rio"]
+    "personagens": ["João do Rio"],
+    "pagina": "p. 217"
+  },
+  {
+    "ano": 1900,
+    "titulo": "Capoeira, samba e os cordões carnavalescos de São Paulo",
+    "descricao": "Nas primeiras décadas do século XX, ex-capoeiras e seus descendentes integram os cordões carnavalescos e grupos de samba de São Paulo. A 'tiririca' — disputa corporal originada na capoeira — aparece como atração nos cortejos de blocos e cordões da capital. Práticas de origem afro-brasileira sobrevivem nas festas populares mesmo sob a repressão republicana.",
+    "periodo": "1888-1930",
+    "tipo": "CULTURAL",
+    "pagina": "p. 221"
   },
   {
     "ano": 1910,
-    "titulo": "Capoeira se aproxima do samba e do carnaval paulistano",
-    "descricao": "Nas primeiras d\u00e9cadas do s\u00e9culo XX, ex-capoeiras e seus descend\u00eancias se integram aos grupos de samba, cordoes carnavalescos e, mais tarde, \u00e0s primeiras escolas de samba de S\u00e3o Paulo. A tiririca, pr\u00e1tica de origem ligada \u00e0 capoeira, aparece em registros de cordes e blocos carnavalescos.",
+    "titulo": "Futebol e capoeira: os primeiros times negros de São Paulo",
+    "descricao": "O futebol começa a se popularizar nos bairros operários e nas comunidades negras de São Paulo. Nos times dos bairros do Bexiga, Barra Funda e Lavapés — redutos de afro-brasileiros, italianos e nordestinos —, encontram-se ex-capoeiras e seus filhos. O esporte se tornaria um novo espaço de sociabilidade e afirmação para populações que haviam sido expulsas das ruas pela criminalização da capoeira.",
     "periodo": "1888-1930",
-    "tipo": "CULTURAL"
+    "tipo": "CULTURAL",
+    "pagina": "p. 228"
   },
   {
     "ano": 1928,
-    "titulo": "Mestre Bimba cria a Luta Regional Baiana",
-    "descricao": "Na Bahia, Manoel dos Reis Machado, o Mestre Bimba, cria a Luta Regional Baiana, misturando a capoeira com outras artes marciais. Embora o evento seja baiano, marca o in\u00edcio do processo de formaliza\u00e7\u00e3o da capoeira como esporte, que vai influenciar sua trajet\u00f3ria em todo o Brasil, incluindo S\u00e3o Paulo.",
+    "titulo": "Coelho Neto defende a capoeira como arte nacional",
+    "descricao": "O escritor Coelho Neto publica o primeiro artigo na imprensa brasileira defendendo a capoeira como uma arte marcial nacional legítima, comparando-a ao jiu-jítsu japonês. O texto marca uma virada no debate público: pela primeira vez, um intelectual de prestígio reivindica para a capoeira o estatuto de patrimônio cultural brasileiro.",
     "periodo": "1888-1930",
     "tipo": "CULTURAL",
-    "personagens": ["Mestre Bimba"]
+    "personagens": ["Coelho Neto"],
+    "pagina": "p. 235"
   }
 ]
