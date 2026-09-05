@@ -6,6 +6,86 @@
   <meta name="description" content="Sobre a pesquisa Capoeiras e valentões na história de São Paulo e seu autor Pedro Figueiredo Alves da Cunha." />
   <title>Sobre a pesquisa — Capoeira e valentia em São Paulo</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ---- READER PDF ---- */
+    .pdf-reader-bloco {
+      margin: 28px 0 8px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--bg-card);
+    }
+    .pdf-reader-topo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 14px 20px;
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+    }
+    .pdf-reader-topo strong {
+      font-size: 0.88rem;
+      color: var(--text);
+      font-weight: 700;
+    }
+    .pdf-reader-topo span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .pdf-reader-btns {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .btn-reader-expand {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      padding: 7px 16px;
+      font-size: 0.82rem;
+      font-family: var(--font);
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+      transition: background .15s;
+    }
+    .btn-reader-expand:hover { background: var(--accent-hover); }
+    .btn-reader-expand:focus { outline: 3px solid var(--focus); }
+    .btn-reader-nova-aba {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 7px 16px;
+      font-size: 0.82rem;
+      font-family: var(--font);
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background .15s, color .15s;
+    }
+    .btn-reader-nova-aba:hover {
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+    }
+    .pdf-reader-frame {
+      display: none;
+      width: 100%;
+      height: 680px;
+      border: none;
+    }
+    .pdf-reader-frame.aberto { display: block; }
+    @media (max-width: 600px) {
+      .pdf-reader-frame { height: 420px; }
+      .pdf-reader-topo  { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
 </head>
 <body>
   <div class="acess-bar" role="toolbar" aria-label="Opções de acessibilidade">
@@ -59,8 +139,38 @@
       <p>
         Por muito tempo, a história da capoeira se limitou ao eixo Salvador–Rio de Janeiro. Este trabalho busca ampliar essa visão, mostrando que a prática dessa arte marcial afro-brasileira chegou também ao interior e à capital de São Paulo.
       </p>
-      <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html"
-         target="_blank" rel="noopener" class="btn-cta">Registro oficial na USP</a>
+
+      <!-- READER PDF -->
+      <div class="pdf-reader-bloco" id="pdf-reader-bloco">
+        <div class="pdf-reader-topo">
+          <div>
+            <strong>Dissertação completa em PDF</strong><br />
+            <span>Pedro Figueiredo Alves da Cunha · USP · 2011</span>
+          </div>
+          <div class="pdf-reader-btns">
+            <button class="btn-reader-expand" id="btn-reader-expand" aria-expanded="false" aria-controls="pdf-frame">
+              Ler aqui no portal
+            </button>
+            <a href="https://drive.google.com/file/d/1_5yrNuLScfKgQxTjlm4NDU_R8mSiuInJ/view?usp=sharing"
+               target="_blank" rel="noopener" class="btn-reader-nova-aba">
+              Abrir em nova aba
+            </a>
+          </div>
+        </div>
+        <iframe
+          id="pdf-frame"
+          class="pdf-reader-frame"
+          src="https://drive.google.com/file/d/1_5yrNuLScfKgQxTjlm4NDU_R8mSiuInJ/preview"
+          title="Dissertação: Capoeiras e valentões na história de São Paulo (1830–1930)"
+          allow="autoplay"
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <div style="margin-top: 16px;">
+        <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html"
+           target="_blank" rel="noopener" class="btn-cta">Registro oficial na USP</a>
+      </div>
     </section>
 
     <!-- O AUTOR -->
@@ -114,6 +224,33 @@
   </p></footer>
 
   <script src="script.js"></script>
+  <script>
+  // Reader PDF expansível
+  (function () {
+    var btn = document.getElementById('btn-reader-expand');
+    var frame = document.getElementById('pdf-frame');
+    if (!btn || !frame) return;
+    btn.addEventListener('click', function () {
+      var aberto = frame.classList.toggle('aberto');
+      btn.setAttribute('aria-expanded', aberto);
+      btn.textContent = aberto ? 'Fechar leitor' : 'Ler aqui no portal';
+      if (aberto) {
+        // Rola suavemente até o reader
+        frame.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  })();
+  </script>
+  <script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'pt',
+      includedLanguages: 'en,es',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+  </script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
