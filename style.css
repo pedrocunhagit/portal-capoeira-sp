@@ -57,7 +57,7 @@ a:hover  { color: var(--accent-hover); text-decoration: underline; }
 a:focus  { outline: 3px solid var(--focus); outline-offset: 2px; }
 
 /* ============================================================
-   BARRA DE ACESSIBILIDADE
+   BARRA DE ACESSIBILIDADE + IDIOMA
    ============================================================ */
 .acess-bar {
   background: #2e1a0a;
@@ -73,8 +73,9 @@ a:focus  { outline: 3px solid var(--focus); outline-offset: 2px; }
   font-size: 11px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  margin-right: 4px;
 }
+.acess-sep { color: #5a3a1a !important; padding: 0 4px; }
+
 .acess-bar button {
   background: transparent;
   color: #d4b896;
@@ -90,6 +91,26 @@ a:focus  { outline: 3px solid var(--focus); outline-offset: 2px; }
 .acess-bar button:hover  { background: var(--accent); color: #fff; border-color: var(--accent); }
 .acess-bar button.ativo  { background: var(--accent); color: #fff; border-color: var(--accent); }
 .acess-bar button:focus  { outline: 3px solid var(--focus); }
+
+/* Google Translate widget — integrado na barra */
+#google_translate_element { display: inline-flex; align-items: center; }
+#google_translate_element .goog-te-gadget-simple {
+  background: transparent !important;
+  border: 1px solid #5a3a1a !important;
+  border-radius: 3px !important;
+  padding: 1px 6px !important;
+  font-size: 12px !important;
+  font-family: var(--font) !important;
+  color: #d4b896 !important;
+}
+#google_translate_element .goog-te-gadget-simple a,
+#google_translate_element .goog-te-gadget-simple span {
+  color: #d4b896 !important;
+  font-size: 12px !important;
+  text-decoration: none !important;
+}
+.goog-te-banner-frame { display: none !important; }
+body { top: 0 !important; }
 
 /* ============================================================
    CABEÇALHO
@@ -112,7 +133,6 @@ header .subtitulo {
   color: #f0d0a8;
   margin-top: 5px;
   font-style: italic;
-  letter-spacing: 0.2px;
 }
 
 /* ============================================================
@@ -163,9 +183,9 @@ nav ul li a:focus  { outline: 3px solid var(--focus); outline-offset: -3px; }
   background: none;
   border: none;
   color: #ddc4a0;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
   padding: 14px 20px;
   cursor: pointer;
@@ -242,7 +262,7 @@ main {
 }
 
 /* ============================================================
-   CARDS — design limpo sem ícones
+   CARDS
    ============================================================ */
 .cards-grid {
   display: grid;
@@ -274,31 +294,12 @@ main {
   transform-origin: left;
   transition: transform .25s;
 }
-.card:hover {
-  box-shadow: var(--shadow);
-  transform: translateY(-3px);
-  text-decoration: none;
-}
+.card:hover { box-shadow: var(--shadow); transform: translateY(-3px); text-decoration: none; }
 .card:hover::before { transform: scaleX(1); }
 .card:focus { outline: 3px solid var(--focus); }
-.card h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: -0.2px;
-}
-.card p {
-  font-size: 0.87rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-.card .card-arrow {
-  font-size: 0.8rem;
-  color: var(--accent-light);
-  margin-top: auto;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
+.card h3 { font-size: 1rem; font-weight: 700; color: var(--accent); letter-spacing: -0.2px; }
+.card p  { font-size: 0.87rem; color: var(--text-muted); line-height: 1.6; }
+.card .card-arrow { font-size: 0.8rem; color: var(--accent-light); margin-top: auto; font-weight: 700; letter-spacing: 0.5px; }
 
 /* ============================================================
    SOBRE A PESQUISA
@@ -308,7 +309,7 @@ main {
   grid-template-columns: 200px 1fr;
   gap: 40px;
   align-items: start;
-  margin-top: 40px;
+  margin-top: 8px;
 }
 .sobre-foto {
   width: 100%;
@@ -318,10 +319,26 @@ main {
   border-radius: var(--radius);
   filter: grayscale(100%);
 }
-.sobre-texto h2   { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 14px; }
+.sobre-texto h2   { font-size: 1.05rem; font-weight: 700; color: var(--text); margin-bottom: 14px; }
 .sobre-texto p    { color: var(--text-muted); font-size: 0.93rem; margin-bottom: 14px; line-height: 1.75; }
 .sobre-texto a    { color: var(--accent); text-decoration: underline; }
-.sobre-texto a:hover { color: var(--accent-hover); }
+
+/* lista de acervos */
+.acervos-lista {
+  list-style: decimal;
+  padding-left: 22px;
+  max-width: 720px;
+}
+.acervos-lista li {
+  padding: 7px 0;
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  border-bottom: 1px solid var(--border);
+}
+.acervos-lista li:last-child { border-bottom: none; }
+.acervos-lista a { color: var(--accent); text-decoration: underline; }
+.acervos-lista a:hover { color: var(--accent-hover); }
 
 /* ============================================================
    PÁGINAS INTERNAS
@@ -329,7 +346,6 @@ main {
 .page-header {
   background: var(--bg-alt);
   padding: 32px 32px 28px;
-  margin-bottom: 0;
 }
 .page-header-inner { max-width: 1100px; margin: 0 auto; }
 .page-header h2 {
@@ -351,10 +367,19 @@ main {
   color: var(--accent);
   margin-bottom: 12px;
   letter-spacing: -0.2px;
+  font-weight: 700;
 }
 .em-construcao p { max-width: 480px; margin: 0 auto; font-size: 0.93rem; line-height: 1.7; }
 
-/* botão CTA */
+.sobre-disserta p {
+  max-width: 780px;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+.sobre-disserta p:first-of-type { color: var(--text); font-size: 1rem; }
+
 .btn-cta {
   display: inline-block;
   background: var(--accent);
@@ -369,18 +394,6 @@ main {
   margin-top: 8px;
 }
 .btn-cta:hover { background: var(--accent-hover); color: #fff; text-decoration: none; }
-
-/* ============================================================
-   SEÇÃO SOBRE — texto da dissertação
-   ============================================================ */
-.sobre-disserta p {
-  max-width: 780px;
-  margin-bottom: 16px;
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.8;
-}
-.sobre-disserta p:first-of-type { color: var(--text); font-size: 1rem; }
 
 /* ============================================================
    RODAPÉ
@@ -408,6 +421,7 @@ footer strong { color: #e8c898; }
   .hero-overlay  { padding: 0 20px 24px; }
   .hero-citacao  { font-size: 0.88rem; }
   main           { padding: 36px 20px 48px; }
+  .page-header   { padding: 24px 20px 20px; }
 
   .menu-toggle   { display: block; }
   nav ul         { display: none; flex-direction: column; }
@@ -418,12 +432,13 @@ footer strong { color: #e8c898; }
   .cards-grid    { grid-template-columns: 1fr 1fr; }
   .sobre-grid    { grid-template-columns: 1fr; }
   .sobre-foto    { width: 150px; margin: 0 auto; aspect-ratio: 1; object-position: center 15%; }
-  .page-header   { padding: 24px 20px 20px; }
+  .acess-bar     { padding: 5px 12px; }
 }
 
 @media (max-width: 480px) {
   .cards-grid    { grid-template-columns: 1fr; }
-  .acess-bar     { justify-content: center; }
+  .acess-bar     { justify-content: center; gap: 4px; }
   header h1      { font-size: 1.05rem; }
   main           { padding: 28px 16px 40px; }
+  footer         { padding: 20px 16px; }
 }

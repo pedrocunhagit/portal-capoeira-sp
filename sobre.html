@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <div class="acess-bar" role="toolbar" aria-label="Opções de acessibilidade">
     <span>Acessibilidade</span>
     <button class="btn-fonte" data-nivel="n">A</button>
@@ -16,14 +15,15 @@
     <button class="btn-fonte" data-nivel="gg">A++</button>
     <button id="btn-contraste">Contraste</button>
     <button id="btn-daltonismo">Daltonismo</button>
+    <span class="acess-sep">|</span>
+    <span>Idioma</span>
+    <div id="google_translate_element"></div>
   </div>
 
-  <header>
-    <div class="header-inner">
-      <h1>Capoeira e valentia em São Paulo</h1>
-      <p class="subtitulo">Pesquisa e documentos históricos (1830–1930)</p>
-    </div>
-  </header>
+  <header><div class="header-inner">
+    <h1>Capoeira e valentia em São Paulo</h1>
+    <p class="subtitulo">Pesquisa e documentos históricos (1830–1930)</p>
+  </div></header>
 
   <nav aria-label="Menu principal">
     <button class="menu-toggle" aria-expanded="false" aria-controls="menu-lista">Menu</button>
@@ -37,73 +37,83 @@
     </ul>
   </nav>
 
-  <div class="page-header">
-    <div class="page-header-inner">
-      <h2>Sobre a pesquisa</h2>
-      <p>A dissertação, o autor e os acervos consultados</p>
-    </div>
-  </div>
+  <div class="page-header"><div class="page-header-inner">
+    <h2>Sobre a pesquisa</h2>
+    <p>A dissertação, o autor e os acervos consultados</p>
+  </div></div>
 
   <main>
 
+    <!-- A DISSERTAÇÃO -->
     <section class="sobre-disserta" aria-labelledby="sobre-disserta-titulo" style="margin-bottom: 56px;">
       <p class="secao-titulo" id="sobre-disserta-titulo">A dissertação</p>
       <p>
-        <strong><em>Capoeiras e valentões na história de São Paulo (1830–1930)</em></strong> é uma pesquisa pioneira sobre a história da capoeira escrava em São Paulo. Desenvolvida no Programa de Pós-graduação em História Social da Faculdade de Filosofia, Letras e Ciências Humanas da Universidade de São Paulo (USP), sob orientação da Prof.ª Dr.ª Maria Cristina Cortez Wissenbach, foi defendida em 2011.
+        <strong><em>Capoeiras e valentões na história de São Paulo (1830–1930)</em></strong> é uma pesquisa sobre a história da capoeira em São Paulo, desenvolvida no Programa de Pós-graduação em História Social da Faculdade de Filosofia, Letras e Ciências Humanas da Universidade de São Paulo (USP), sob orientação da Prof.ª Dr.ª Maria Cristina Cortez Wissenbach, defendida em 2011.
       </p>
       <p>
-        A capoeira hoje é uma arte marcial praticada no mundo inteiro por milhões de pessoas. Porém, sua história ainda é repleta de lacunas. Este estudo surgiu do interesse do autor, praticante dessa arte marcial há mais de 25 anos, em preencher uma dessas lacunas. O resultado foi além do esperado: ao tentar entender melhor o desenvolvimento da capoeira em território paulista, a pesquisa desvelou facetas desconhecidas da própria história de São Paulo.
+        A capoeira é uma arte marcial praticada no mundo inteiro por milhões de pessoas. Porém, sua história ainda é repleta de lacunas. Este estudo buscou preencher uma dessas lacunas, investigando o desenvolvimento da capoeira em território paulista e revelando aspectos até então pouco conhecidos da história de São Paulo.
       </p>
       <p>
-        A partir de fontes variadas como jornais, cartas, ofícios e leis, o autor cruzou a prática da capoeira com os mais variados temas ao longo de quase 100 anos. Nas páginas desta pesquisa, os leitores encontrarão o envolvimento de professores e estudantes da tradicional Faculdade de Direito de São Paulo com valentões da capital paulista; a participação popular no movimento abolicionista que se espalhou pela província; e o processo que deu origem a escolas de samba e times de futebol paulistanos.
+        A partir de fontes variadas como jornais, cartas, ofícios e leis, a pesquisa cruzou a prática da capoeira com os mais variados temas ao longo de quase 100 anos. Nas páginas desta pesquisa, os leitores encontrarão o envolvimento de professores e estudantes da Faculdade de Direito de São Paulo com valentões da capital paulista; a participação popular no movimento abolicionista que se espalhou pela província; e o processo que deu origem a escolas de samba e times de futebol paulistanos.
       </p>
       <p>
-        Por muito tempo, a história da capoeira se limitou ao eixo Salvador–Rio de Janeiro. Este trabalho contribui para ampliar essa visão, mostrando que as raízes dessa arte marcial afro-brasileira chegaram também ao interior e à capital de São Paulo.
+        Por muito tempo, a história da capoeira se limitou ao eixo Salvador–Rio de Janeiro. Este trabalho busca ampliar essa visão, mostrando que a prática dessa arte marcial afro-brasileira chegou também ao interior e à capital de São Paulo.
       </p>
       <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html"
-         target="_blank" rel="noopener" class="btn-cta">
-        Registro oficial na USP
-      </a>
+         target="_blank" rel="noopener" class="btn-cta">Registro oficial na USP</a>
     </section>
 
-    <section aria-labelledby="sobre-autor-titulo">
+    <!-- O AUTOR -->
+    <section aria-labelledby="sobre-autor-titulo" style="margin-bottom: 56px;">
       <p class="secao-titulo" id="sobre-autor-titulo">O autor</p>
       <div class="sobre-grid">
-        <img
-          src="img/pedro-cunha-sobre.jpg"
-          alt="Pedro Figueiredo Alves da Cunha tocando atabaque em evento de capoeira"
-          class="sobre-foto"
-        />
+        <img src="img/pedro-cunha-sobre.jpg"
+             alt="Pedro Figueiredo Alves da Cunha tocando atabaque em evento de capoeira"
+             class="sobre-foto" />
         <div class="sobre-texto">
           <h2>Pedro Figueiredo Alves da Cunha</h2>
-          <p>
-            Pedro Cunha nasceu em Niterói/RJ em 1978 e mudou-se para Santos em 1995, quando começou a praticar capoeira com Nilton Ribas Martins Jr., o Mestre Ribas, fundador do Grupo Capoeira Santista. Inspirado pelas aulas sobre História da Capoeira ministradas por Ribas, e por encontros com outros grandes mestres da Baixada Santista como Sombra, Parada, Bandeira, e mestres de outros estados, Pedro decidiu buscar mais informações sobre a capoeira em São Paulo no período da escravidão.
-          </p>
-          <p>
-            Formado em jornalismo (UniSantos, 1999), entrou no programa de Mestrado da USP por sugestão do seu irmão João, e descobriu na professora Cris Wissenbach um caminho possível para pesquisar algo que muitas pessoas diziam ser impossível pela falta de documentos históricos.
-          </p>
-          <p>
-            A dissertação publicada em 2011 mostrou que a pesquisa não só era possível, como necessária para dar voz a grupos silenciados pela História, e cujos feitos não chegaram aos tempos atuais apesar da força da oralidade na cultura afro-brasileira.
-          </p>
-          <p>
-            Este portal é uma resposta a pedidos de pessoas interessadas em ir além da leitura da dissertação, podendo acessar diretamente documentos digitalizados pelo autor durante sua pesquisa.
-          </p>
+          <p>Pedro Cunha nasceu em Niterói/RJ em 1978 e mudou-se para Santos em 1995, quando começou a praticar capoeira com Nilton Ribas Martins Jr., o Mestre Ribas, fundador do Grupo Capoeira Santista. Inspirado pelas aulas sobre História da Capoeira ministradas por Ribas, e por encontros com outros grandes mestres da Baixada Santista como Sombra, Parada, Bandeira, e mestres de outros estados, Pedro decidiu buscar mais informações sobre a capoeira em São Paulo no período da escravidão.</p>
+          <p>Formado em jornalismo (UniSantos, 1999), entrou no programa de Mestrado da USP por sugestão do seu irmão João, e descobriu na professora Cris Wissenbach um caminho possível para pesquisar algo que muitas pessoas diziam ser impossível pela falta de documentos históricos.</p>
+          <p>A dissertação publicada em 2011 mostrou que a pesquisa não só era possível, como necessária para dar voz a grupos silenciados pela História, e cujos feitos não chegaram aos tempos atuais apesar da força da oralidade na cultura afro-brasileira.</p>
+          <p>Este portal é uma resposta a pedidos de pessoas interessadas em ir além da leitura da dissertação, podendo acessar diretamente documentos digitalizados pelo autor durante sua pesquisa.</p>
         </div>
       </div>
     </section>
 
+    <!-- ACERVOS CONSULTADOS -->
+    <section aria-labelledby="acervos-titulo">
+      <p class="secao-titulo" id="acervos-titulo">Acervos consultados</p>
+      <p style="max-width:700px; color:var(--text-muted); font-size:0.93rem; margin-bottom:24px;">
+        A pesquisa foi realizada em 13 instituições. Os documentos digitalizados estão disponíveis no <a href="documentos.html">Banco de documentos</a>.
+      </p>
+      <ol class="acervos-lista">
+        <li><a href="https://www.arquivoestado.sp.gov.br" target="_blank" rel="noopener">Arquivo do Estado de São Paulo</a></li>
+        <li><a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/cultura/arquivo_historico/" target="_blank" rel="noopener">Arquivo Municipal Washington Luís — São Paulo</a></li>
+        <li><a href="https://www.al.sp.gov.br" target="_blank" rel="noopener">Arquivo da Assembleia Legislativa de São Paulo</a></li>
+        <li><a href="https://www.direito.usp.br" target="_blank" rel="noopener">Arquivo da Faculdade de Direito da USP (Academia de Direito)</a></li>
+        <li>Arquivo da Polícia Civil — Praia Grande / Santos <span style="color:var(--text-muted); font-size:0.85rem;">(acesso presencial)</span></li>
+        <li><a href="https://www.bn.gov.br" target="_blank" rel="noopener">Biblioteca Nacional do Rio de Janeiro</a></li>
+        <li><a href="https://www.tjsp.jus.br" target="_blank" rel="noopener">Fórum João Mendes — Tribunal de Justiça de São Paulo</a></li>
+        <li><a href="https://www.santos.sp.gov.br" target="_blank" rel="noopener">Fundação Arquivo e Memória de Santos</a></li>
+        <li>Hemeroteca Municipal Roldão Mendes Rosa — Santos <span style="color:var(--text-muted); font-size:0.85rem;">(acesso presencial)</span></li>
+        <li><a href="https://www.ieb.usp.br" target="_blank" rel="noopener">Instituto de Estudos Brasileiros (IEB) — USP</a></li>
+        <li><a href="https://www.atribunasp.com.br" target="_blank" rel="noopener">Jornal A Tribuna — Santos</a></li>
+        <li>Museu da Companhia de Ferro <span style="color:var(--text-muted); font-size:0.85rem;">(sem site público identificado)</span></li>
+        <li><a href="https://www.ihgb.org.br" target="_blank" rel="noopener">Instituto Histórico e Geográfico Brasileiro (IHGB)</a></li>
+      </ol>
+    </section>
+
   </main>
 
-  <footer>
-    <p>
-      <strong>Capoeira e valentia em São Paulo — Pesquisa e documentos</strong><br />
-      Dissertação de mestrado em História Social · Universidade de São Paulo · 2011<br />
-      <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html" target="_blank" rel="noopener">Registro oficial na USP</a>
-      &nbsp;·&nbsp;
-      <a href="sobre.html">Sobre a pesquisa</a>
-    </p>
-  </footer>
+  <footer><p>
+    <strong>Capoeira e valentia em São Paulo — Pesquisa e documentos</strong><br />
+    Dissertação de mestrado em História Social · Universidade de São Paulo · 2011<br />
+    <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html" target="_blank" rel="noopener">Registro oficial na USP</a>
+    &nbsp;·&nbsp;
+    <a href="sobre.html">Sobre a pesquisa</a>
+  </p></footer>
 
   <script src="script.js"></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
