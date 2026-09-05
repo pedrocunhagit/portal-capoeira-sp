@@ -3,62 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portal de pesquisa sobre a história da capoeira escrava em São Paulo (1830-1930). Documentos históricos, linha do tempo, dissertação e referências." />
   <title>Capoeira e valentia em São Paulo — Pesquisa e documentos</title>
-  <style>
-    body {
-      font-family: Georgia, serif;
-      background: #1a0a00;
-      color: #f0e6d3;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #3b1a00;
-      padding: 2rem;
-      text-align: center;
-      border-bottom: 3px solid #c8860a;
-    }
-    header h1 {
-      font-size: 2rem;
-      color: #f5c842;
-      margin: 0 0 0.5rem 0;
-    }
-    header p {
-      color: #d4b896;
-      font-style: italic;
-      margin: 0;
-    }
-    main {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-      text-align: center;
-    }
-    main p {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      color: #e8d8c0;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #8a7060;
-      font-size: 0.85rem;
-      border-top: 1px solid #3b1a00;
-      margin-top: 4rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- BARRA DE ACESSIBILIDADE -->
+  <div class="acess-bar" role="toolbar" aria-label="Opções de acessibilidade">
+    <span>Acessibilidade:</span>
+    <button class="btn-fonte" data-nivel="n" title="Tamanho de texto padrão">A</button>
+    <button class="btn-fonte" data-nivel="g"  title="Texto maior">A+</button>
+    <button class="btn-fonte" data-nivel="gg" title="Texto bem maior">A++</button>
+    <button id="btn-contraste"  title="Alto contraste para baixa visão">◑ Contraste</button>
+    <button id="btn-daltonismo" title="Filtro para daltonismo">👁 Daltonismo</button>
+  </div>
+
+  <!-- CABEÇALHO -->
   <header>
-    <h1>Capoeira e valentia em São Paulo</h1>
-    <p>Pesquisa e documentos — Pedro Figueiredo Alves da Cunha</p>
+    <div class="header-inner">
+      <h1>Capoeira e valentia em São Paulo</h1>
+      <p class="subtitulo">Pesquisa e documentos históricos (1830–1930)</p>
+    </div>
   </header>
+
+  <!-- MENU -->
+  <nav aria-label="Menu principal">
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu-lista">☰ Menu</button>
+    <ul id="menu-lista" role="list">
+      <li><a href="index.html" class="ativo">🏠 Início</a></li>
+      <li><a href="timeline.html">📅 Linha do tempo</a></li>
+      <li><a href="dissertacao.html">📖 A pesquisa</a></li>
+      <li><a href="documentos.html">🗂 Documentos</a></li>
+      <li><a href="referencias.html">📚 Referências</a></li>
+      <li><a href="sobre.html">👤 Sobre a pesquisa</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO BANNER -->
+  <section class="hero" aria-label="Imagem histórica em destaque">
+    <img id="hero-img" class="hero-img" src="img/hero/Rugendas_capoeira_RJ.jpg" alt="Imagem histórica da pesquisa" />
+    <div class="hero-overlay">
+      <blockquote class="hero-citacao">
+        <span id="hero-texto">"Aqui é a capoeira, espécie de dança física, de evoluções atrevidas e guerreiras, cadenciada pelo tambor do Congo."</span>
+        <cite id="hero-fonte">— Charles Ribeyrolles, <em>Brazil Pittoresco</em>, 1859</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CONTEÚDO PRINCIPAL -->
   <main>
-    <p>Portal em construção. Em breve: linha do tempo, documentos históricos, trechos da dissertação e referências bibliográficas.</p>
+
+    <!-- INTRODUÇÃO -->
+    <section aria-labelledby="intro-titulo" style="margin-bottom: 40px;">
+      <h2 id="intro-titulo" class="secao-titulo">Sobre este portal</h2>
+      <p style="max-width: 780px; color: var(--text-muted); font-size: 0.96rem;">
+        Este portal reúne os resultados de uma pesquisa pioneira sobre a história da capoeira escrava em São Paulo, desenvolvida no Programa de Pós-graduação em História Social da Universidade de São Paulo (USP). Aqui você encontra documentos históricos originais digitalizados em 13 acervos, uma linha do tempo dos principais fatos e personagens, resumos acessíveis da dissertação e as referências bibliográficas utilizadas.
+      </p>
+    </section>
+
+    <!-- CARDS DAS SEÇÕES -->
+    <section aria-labelledby="secoes-titulo">
+      <h2 id="secoes-titulo" class="secao-titulo">Explore o portal</h2>
+      <div class="cards-grid">
+        <a class="card" href="timeline.html">
+          <span class="card-icon">📅</span>
+          <h3>Linha do tempo</h3>
+          <p>Os principais eventos e personagens da capoeira em São Paulo, de 1830 a 1930, organizados cronologicamente.</p>
+        </a>
+        <a class="card" href="dissertacao.html">
+          <span class="card-icon">📖</span>
+          <h3>A pesquisa</h3>
+          <p>Resumos de cada capítulo da dissertação em linguagem acessível, com link para o texto acadêmico completo.</p>
+        </a>
+        <a class="card" href="documentos.html">
+          <span class="card-icon">🗂</span>
+          <h3>Banco de documentos</h3>
+          <p>Documentos históricos digitalizados em 13 acervos. Pesquise por palavras-chave e filtre por acervo ou período.</p>
+        </a>
+        <a class="card" href="referencias.html">
+          <span class="card-icon">📚</span>
+          <h3>Referências</h3>
+          <p>Fontes primárias, bibliografia e filmografia utilizadas na pesquisa, com busca por autor ou título.</p>
+        </a>
+      </div>
+    </section>
+
   </main>
+
+  <!-- RODAPÉ -->
   <footer>
-    <p>Baseado na dissertação de mestrado <em>Capoeiras e valentões na história de São Paulo (1830–1930)</em> — USP, 2011.</p>
+    <p>
+      <strong>Capoeira e valentia em São Paulo — Pesquisa e documentos</strong><br />
+      Dissertação de mestrado em História Social · Universidade de São Paulo · 2011<br />
+      <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html" target="_blank" rel="noopener">Registro oficial na USP</a>
+      &nbsp;·&nbsp;
+      <a href="sobre.html">Sobre a pesquisa</a>
+    </p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
