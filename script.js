@@ -69,7 +69,7 @@ function salvarPref() {
   }));
 }
 
-// --- HERO: escolhe imagem aleatória do array ---
+// --- HERO: imagens rotativas (históricas + autor praticando capoeira) ---
 var imagensHero = [
   'img/hero/Rugendas_capoeira_RJ.jpg',
   'img/hero/ChristianoJr_aprendizagem-capoeira-1865.jpg',
@@ -78,7 +78,9 @@ var imagensHero = [
   'img/hero/chamberlain.jpg',
   'img/hero/Militao_bras_FOTO_034-baixa.jpg',
   'img/hero/mapa_1878_reproduz_novo-milenio_marcado.jpg',
-  'img/hero/revista_kosmos - detalhe - politico e capoeiras.jpg'
+  'img/hero/pedro-cunha-atual.jpg',
+  'img/hero/pedro-cunha-au-morro.jpg',
+  'img/hero/pedro-cunha-academia.jpg'
 ];
 
 var citacoesHero = [
@@ -88,14 +90,14 @@ var citacoesHero = [
 ];
 
 function rotacionarHero() {
-  var imgEl = document.getElementById('hero-img');
+  var imgEl   = document.getElementById('hero-img');
   var textoEl = document.getElementById('hero-texto');
   var fonteEl = document.getElementById('hero-fonte');
   if (!imgEl) return;
   var i = Math.floor(Math.random() * imagensHero.length);
   var c = Math.floor(Math.random() * citacoesHero.length);
   imgEl.src = imagensHero[i];
-  imgEl.alt = 'Imagem hist\u00f3rica da pesquisa';
+  imgEl.alt = 'Imagem da pesquisa sobre capoeira em S\u00e3o Paulo';
   if (textoEl) textoEl.textContent = citacoesHero[c].texto;
   if (fonteEl) fonteEl.textContent = '\u2014 ' + citacoesHero[c].fonte;
 }
