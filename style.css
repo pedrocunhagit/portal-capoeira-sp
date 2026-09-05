@@ -1,52 +1,42 @@
 /* ============================================================
    PORTAL: Capoeira e valentia em São Paulo
-   Folha de estilos global
+   Folha de estilos global — design contemporâneo
    ============================================================ */
 
-/* === VARIÁVEIS DE TEMA (padrão: creme/pardo histórico) === */
 :root {
-  --bg:           #fdf6ec;   /* creme papel antigo */
-  --bg-alt:       #f5ead8;   /* pardo claro */
+  --bg:           #fdf6ec;
+  --bg-alt:       #f5ead8;
   --bg-card:      #fffcf5;
-  --text:         #1c1008;   /* marrom muito escuro */
+  --text:         #1c1008;
   --text-muted:   #5a4a35;
-  --accent:       #6b3a1f;   /* marrom-terra */
+  --accent:       #6b3a1f;
   --accent-hover: #8f4f28;
   --accent-light: #c8845a;
-  --border:       #d4bfa0;
+  --border:       #e0ceB4;
   --focus:        #005fcc;
-  --white:        #ffffff;
   --font:         Arial, Helvetica, sans-serif;
   --font-size:    17px;
-  --radius:       4px;
-  --shadow:       0 2px 10px rgba(0,0,0,0.10);
+  --radius:       6px;
+  --shadow:       0 4px 24px rgba(0,0,0,0.08);
 }
 
-/* === ALTO CONTRASTE === */
 body.alto-contraste {
-  --bg:           #000000;
-  --bg-alt:       #111111;
+  --bg:           #000;
+  --bg-alt:       #111;
   --bg-card:      #0a0a0a;
-  --text:         #ffffff;
-  --text-muted:   #dddddd;
+  --text:         #fff;
+  --text-muted:   #ddd;
   --accent:       #ffdd00;
   --accent-hover: #ffee55;
   --accent-light: #ffee55;
-  --border:       #888888;
+  --border:       #888;
 }
 
-/* === DALTONISMO (desaturado) === */
-body.daltonismo { filter: grayscale(60%) contrast(1.15); }
+body.daltonismo  { filter: grayscale(60%) contrast(1.15); }
+body.fonte-g     { --font-size: 20px; }
+body.fonte-gg    { --font-size: 24px; }
 
-/* === TAMANHOS DE FONTE === */
-body.fonte-g  { --font-size: 20px; }
-body.fonte-gg { --font-size: 24px; }
-
-/* ============================================================
-   RESET E BASE
-   ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -62,15 +52,12 @@ body {
 
 img { max-width: 100%; height: auto; display: block; }
 
-a {
-  color: var(--accent);
-  text-decoration: underline;
-}
-a:hover  { color: var(--accent-hover); }
+a { color: var(--accent); text-decoration: none; }
+a:hover  { color: var(--accent-hover); text-decoration: underline; }
 a:focus  { outline: 3px solid var(--focus); outline-offset: 2px; }
 
 /* ============================================================
-   ACESSIBILIDADE — barra no canto superior direito
+   BARRA DE ACESSIBILIDADE
    ============================================================ */
 .acess-bar {
   background: #2e1a0a;
@@ -83,57 +70,56 @@ a:focus  { outline: 3px solid var(--focus); outline-offset: 2px; }
 }
 .acess-bar span {
   color: #c8a888;
-  font-size: 12px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
   margin-right: 4px;
 }
 .acess-bar button {
-  background: #4a2e12;
-  color: #f0dcc0;
-  border: 1px solid #7a5030;
-  border-radius: var(--radius);
-  padding: 3px 11px;
-  font-size: 13px;
+  background: transparent;
+  color: #d4b896;
+  border: 1px solid #5a3a1a;
+  border-radius: 3px;
+  padding: 2px 10px;
+  font-size: 12px;
   font-family: var(--font);
   cursor: pointer;
-  transition: background .15s;
-  min-width: 36px;
+  transition: background .15s, color .15s;
+  letter-spacing: 0.3px;
 }
-.acess-bar button:hover   { background: var(--accent); }
-.acess-bar button.ativo   { background: var(--accent); border-color: var(--accent-light); }
-.acess-bar button:focus   { outline: 3px solid var(--focus); }
+.acess-bar button:hover  { background: var(--accent); color: #fff; border-color: var(--accent); }
+.acess-bar button.ativo  { background: var(--accent); color: #fff; border-color: var(--accent); }
+.acess-bar button:focus  { outline: 3px solid var(--focus); }
 
 /* ============================================================
    CABEÇALHO
    ============================================================ */
 header {
   background: var(--accent);
-  padding: 22px 24px 18px;
-  border-bottom: 3px solid var(--accent-light);
+  padding: 24px 32px 20px;
 }
-.header-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-}
+.header-inner { max-width: 1100px; margin: 0 auto; }
+
 header h1 {
-  font-family: var(--font);
-  font-size: 1.6rem;
+  font-size: 1.55rem;
   font-weight: 700;
   color: #fff8ee;
   line-height: 1.2;
+  letter-spacing: -0.2px;
 }
 header .subtitulo {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: #f0d0a8;
-  margin-top: 4px;
+  margin-top: 5px;
   font-style: italic;
+  letter-spacing: 0.2px;
 }
 
 /* ============================================================
-   MENU DE NAVEGAÇÃO
+   NAVEGAÇÃO
    ============================================================ */
 nav {
   background: #3d1f08;
-  border-bottom: 2px solid var(--accent-light);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -147,27 +133,41 @@ nav ul {
 }
 nav ul li a {
   display: block;
-  color: #f0d8b8;
+  color: #ddc4a0;
   text-decoration: none;
-  padding: 13px 16px;
-  font-size: 0.88rem;
+  padding: 14px 18px;
+  font-size: 0.85rem;
   font-weight: 600;
-  border-right: 1px solid #5a3018;
-  transition: background .15s, color .15s;
-  white-space: nowrap;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  transition: color .15s, background .15s;
+  position: relative;
 }
-nav ul li a:hover  { background: var(--accent); color: #ffffff; text-decoration: none; }
-nav ul li a.ativo  { background: var(--accent); color: #ffffff; }
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 18px; right: 18px;
+  height: 2px;
+  background: var(--accent-light);
+  transform: scaleX(0);
+  transition: transform .2s;
+}
+nav ul li a:hover  { color: #fff; text-decoration: none; }
+nav ul li a:hover::after { transform: scaleX(1); }
+nav ul li a.ativo  { color: #fff; }
+nav ul li a.ativo::after { transform: scaleX(1); }
 nav ul li a:focus  { outline: 3px solid var(--focus); outline-offset: -3px; }
 
-/* menu hambúrguer mobile */
 .menu-toggle {
   display: none;
   background: none;
   border: none;
-  color: #f0d8b8;
-  font-size: 1.6rem;
-  padding: 10px 18px;
+  color: #ddc4a0;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 14px 20px;
   cursor: pointer;
   width: 100%;
   text-align: left;
@@ -179,9 +179,9 @@ nav ul li a:focus  { outline: 3px solid var(--focus); outline-offset: -3px; }
 .hero {
   position: relative;
   width: 100%;
-  height: 380px;
+  height: 400px;
   overflow: hidden;
-  background: #2e1a0a;
+  background: #1a0a00;
   display: flex;
   align-items: flex-end;
 }
@@ -192,8 +192,7 @@ nav ul li a:focus  { outline: 3px solid var(--focus); outline-offset: -3px; }
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
-  opacity: 0.5;
-  transition: opacity .4s;
+  opacity: 0.45;
 }
 .hero-overlay {
   position: relative;
@@ -201,24 +200,25 @@ nav ul li a:focus  { outline: 3px solid var(--focus); outline-offset: -3px; }
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 24px 28px;
+  padding: 0 32px 36px;
 }
 .hero-citacao {
-  background: rgba(20, 8, 0, 0.75);
-  border-left: 4px solid var(--accent-light);
-  color: #f5e8d0;
-  padding: 14px 20px;
-  font-size: 1rem;
+  background: rgba(10, 4, 0, 0.72);
+  border-left: 3px solid var(--accent-light);
+  color: #f0e0c8;
+  padding: 16px 22px;
+  font-size: 0.97rem;
   font-style: italic;
-  max-width: 680px;
-  line-height: 1.6;
+  max-width: 620px;
+  line-height: 1.65;
 }
 .hero-citacao cite {
   display: block;
-  margin-top: 8px;
-  font-size: 0.82rem;
+  margin-top: 10px;
+  font-size: 0.78rem;
   font-style: normal;
-  color: #c8a878;
+  color: #b89060;
+  letter-spacing: 0.3px;
 }
 
 /* ============================================================
@@ -227,140 +227,203 @@ nav ul li a:focus  { outline: 3px solid var(--focus); outline-offset: -3px; }
 main {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 36px 24px 56px;
+  padding: 48px 32px 64px;
   flex: 1;
   width: 100%;
 }
 
 .secao-titulo {
-  font-size: 1.3rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--accent);
-  margin-bottom: 20px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--border);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
 }
 
 /* ============================================================
-   CARDS DAS SEÇÕES
+   CARDS — design limpo sem ícones
    ============================================================ */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-bottom: 48px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin-bottom: 56px;
 }
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-top: 4px solid var(--accent);
   border-radius: var(--radius);
-  padding: 22px 18px;
+  padding: 28px 24px;
   text-decoration: none;
   color: var(--text);
-  transition: box-shadow .2s, border-top-color .2s, transform .15s;
+  transition: box-shadow .2s, transform .15s;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s;
 }
 .card:hover {
   box-shadow: var(--shadow);
-  border-top-color: var(--accent-light);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   text-decoration: none;
 }
+.card:hover::before { transform: scaleX(1); }
 .card:focus { outline: 3px solid var(--focus); }
-.card-icon  { font-size: 2rem; line-height: 1; }
-.card h3    { font-size: 1rem; font-weight: 700; color: var(--accent); }
-.card p     { font-size: 0.87rem; color: var(--text-muted); line-height: 1.55; }
+.card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.2px;
+}
+.card p {
+  font-size: 0.87rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.card .card-arrow {
+  font-size: 0.8rem;
+  color: var(--accent-light);
+  margin-top: auto;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
 
 /* ============================================================
-   SEÇÃO SOBRE A PESQUISA
+   SOBRE A PESQUISA
    ============================================================ */
 .sobre-grid {
   display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 32px;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
   align-items: start;
-  padding-top: 36px;
-  border-top: 1px solid var(--border);
+  margin-top: 40px;
 }
 .sobre-foto {
   width: 100%;
   aspect-ratio: 3/4;
   object-fit: cover;
   object-position: center top;
-  border: 2px solid var(--border);
   border-radius: var(--radius);
   filter: grayscale(100%);
 }
-.sobre-texto h2   { font-size: 1.2rem; color: var(--accent); margin-bottom: 12px; }
-.sobre-texto p    { color: var(--text-muted); font-size: 0.93rem; margin-bottom: 12px; line-height: 1.7; }
-.sobre-texto a    { color: var(--accent); }
+.sobre-texto h2   { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 14px; }
+.sobre-texto p    { color: var(--text-muted); font-size: 0.93rem; margin-bottom: 14px; line-height: 1.75; }
+.sobre-texto a    { color: var(--accent); text-decoration: underline; }
 .sobre-texto a:hover { color: var(--accent-hover); }
 
 /* ============================================================
-   PÁGINAS INTERNAS — cabeçalho de seção
+   PÁGINAS INTERNAS
    ============================================================ */
 .page-header {
   background: var(--bg-alt);
-  border-bottom: 2px solid var(--border);
-  padding: 28px 24px;
-  margin-bottom: 32px;
+  padding: 32px 32px 28px;
+  margin-bottom: 0;
 }
-.page-header-inner {
-  max-width: 1100px;
-  margin: 0 auto;
+.page-header-inner { max-width: 1100px; margin: 0 auto; }
+.page-header h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.3px;
+  margin-bottom: 6px;
 }
-.page-header h2   { font-size: 1.5rem; color: var(--accent); margin-bottom: 6px; }
-.page-header p    { font-size: 0.95rem; color: var(--text-muted); }
+.page-header p { font-size: 0.92rem; color: var(--text-muted); }
 
-/* em construção */
 .em-construcao {
   text-align: center;
-  padding: 60px 24px;
+  padding: 80px 24px;
   color: var(--text-muted);
 }
-.em-construcao .icon { font-size: 3rem; margin-bottom: 16px; }
-.em-construcao h3    { font-size: 1.2rem; color: var(--accent); margin-bottom: 10px; }
+.em-construcao h3 {
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+  letter-spacing: -0.2px;
+}
+.em-construcao p { max-width: 480px; margin: 0 auto; font-size: 0.93rem; line-height: 1.7; }
+
+/* botão CTA */
+.btn-cta {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 11px 24px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.3px;
+  transition: background .15s;
+  margin-top: 8px;
+}
+.btn-cta:hover { background: var(--accent-hover); color: #fff; text-decoration: none; }
+
+/* ============================================================
+   SEÇÃO SOBRE — texto da dissertação
+   ============================================================ */
+.sobre-disserta p {
+  max-width: 780px;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+.sobre-disserta p:first-of-type { color: var(--text); font-size: 1rem; }
 
 /* ============================================================
    RODAPÉ
    ============================================================ */
 footer {
   background: #2e1a0a;
-  color: #c8a888;
+  color: #a08060;
   text-align: center;
-  padding: 22px 24px;
-  font-size: 0.84rem;
-  line-height: 1.8;
+  padding: 24px 32px;
+  font-size: 0.82rem;
+  line-height: 1.9;
   margin-top: auto;
+  letter-spacing: 0.2px;
 }
-footer a { color: #e0c090; }
-footer strong { color: #f0d8b8; }
+footer a { color: #d4a870; text-decoration: underline; }
+footer strong { color: #e8c898; }
 
 /* ============================================================
    RESPONSIVO
    ============================================================ */
 @media (max-width: 768px) {
-  header h1          { font-size: 1.25rem; }
-  .hero              { height: 260px; }
-  .hero-citacao      { font-size: 0.9rem; }
+  header         { padding: 20px; }
+  header h1      { font-size: 1.2rem; }
+  .hero          { height: 260px; }
+  .hero-overlay  { padding: 0 20px 24px; }
+  .hero-citacao  { font-size: 0.88rem; }
+  main           { padding: 36px 20px 48px; }
 
-  /* menu colapsável */
-  .menu-toggle       { display: block; }
-  nav ul             { display: none; flex-direction: column; }
-  nav ul.aberto      { display: flex; }
-  nav ul li a        { border-right: none; border-bottom: 1px solid #5a3018; padding: 12px 18px; }
+  .menu-toggle   { display: block; }
+  nav ul         { display: none; flex-direction: column; }
+  nav ul.aberto  { display: flex; }
+  nav ul li a    { padding: 12px 20px; text-transform: none; font-size: 0.9rem; }
+  nav ul li a::after { display: none; }
 
-  .cards-grid        { grid-template-columns: 1fr 1fr; }
-  .sobre-grid        { grid-template-columns: 1fr; }
-  .sobre-foto        { width: 140px; margin: 0 auto; aspect-ratio: 1/1; object-position: center 15%; }
+  .cards-grid    { grid-template-columns: 1fr 1fr; }
+  .sobre-grid    { grid-template-columns: 1fr; }
+  .sobre-foto    { width: 150px; margin: 0 auto; aspect-ratio: 1; object-position: center 15%; }
+  .page-header   { padding: 24px 20px 20px; }
 }
 
 @media (max-width: 480px) {
-  .cards-grid        { grid-template-columns: 1fr; }
-  .acess-bar         { justify-content: center; }
-  header h1          { font-size: 1.1rem; }
-  main               { padding: 24px 16px 40px; }
+  .cards-grid    { grid-template-columns: 1fr; }
+  .acess-bar     { justify-content: center; }
+  header h1      { font-size: 1.05rem; }
+  main           { padding: 28px 16px 40px; }
 }

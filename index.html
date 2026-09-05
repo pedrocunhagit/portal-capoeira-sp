@@ -9,17 +9,15 @@
 </head>
 <body>
 
-  <!-- BARRA DE ACESSIBILIDADE -->
   <div class="acess-bar" role="toolbar" aria-label="Opções de acessibilidade">
-    <span>Acessibilidade:</span>
-    <button class="btn-fonte" data-nivel="n" title="Tamanho de texto padrão">A</button>
+    <span>Acessibilidade</span>
+    <button class="btn-fonte" data-nivel="n" title="Tamanho padrão">A</button>
     <button class="btn-fonte" data-nivel="g"  title="Texto maior">A+</button>
     <button class="btn-fonte" data-nivel="gg" title="Texto bem maior">A++</button>
-    <button id="btn-contraste"  title="Alto contraste para baixa visão">◑ Contraste</button>
-    <button id="btn-daltonismo" title="Filtro para daltonismo">👁 Daltonismo</button>
+    <button id="btn-contraste"  title="Alto contraste">Contraste</button>
+    <button id="btn-daltonismo" title="Filtro daltonismo">Daltonismo</button>
   </div>
 
-  <!-- CABEÇALHO -->
   <header>
     <div class="header-inner">
       <h1>Capoeira e valentia em São Paulo</h1>
@@ -27,71 +25,65 @@
     </div>
   </header>
 
-  <!-- MENU -->
   <nav aria-label="Menu principal">
-    <button class="menu-toggle" aria-expanded="false" aria-controls="menu-lista">☰ Menu</button>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu-lista">Menu</button>
     <ul id="menu-lista" role="list">
-      <li><a href="index.html" class="ativo">🏠 Início</a></li>
-      <li><a href="timeline.html">📅 Linha do tempo</a></li>
-      <li><a href="dissertacao.html">📖 A pesquisa</a></li>
-      <li><a href="documentos.html">🗂 Documentos</a></li>
-      <li><a href="referencias.html">📚 Referências</a></li>
-      <li><a href="sobre.html">👤 Sobre a pesquisa</a></li>
+      <li><a href="index.html" class="ativo">Início</a></li>
+      <li><a href="timeline.html">Linha do tempo</a></li>
+      <li><a href="dissertacao.html">A pesquisa</a></li>
+      <li><a href="documentos.html">Documentos</a></li>
+      <li><a href="referencias.html">Referências</a></li>
+      <li><a href="sobre.html">Sobre a pesquisa</a></li>
     </ul>
   </nav>
 
-  <!-- HERO BANNER -->
   <section class="hero" aria-label="Imagem histórica em destaque">
     <img id="hero-img" class="hero-img" src="img/hero/Rugendas_capoeira_RJ.jpg" alt="Imagem histórica da pesquisa" />
     <div class="hero-overlay">
       <blockquote class="hero-citacao">
         <span id="hero-texto">"Aqui é a capoeira, espécie de dança física, de evoluções atrevidas e guerreiras, cadenciada pelo tambor do Congo."</span>
-        <cite id="hero-fonte">— Charles Ribeyrolles, <em>Brazil Pittoresco</em>, 1859</cite>
+        <cite id="hero-fonte">— Charles Ribeyrolles, Brazil Pittoresco, 1859</cite>
       </blockquote>
     </div>
   </section>
 
-  <!-- CONTEÚDO PRINCIPAL -->
   <main>
 
-    <!-- INTRODUÇÃO -->
-    <section aria-labelledby="intro-titulo" style="margin-bottom: 40px;">
-      <h2 id="intro-titulo" class="secao-titulo">Sobre este portal</h2>
-      <p style="max-width: 780px; color: var(--text-muted); font-size: 0.96rem;">
+    <section aria-labelledby="intro-titulo" style="margin-bottom: 48px;">
+      <p class="secao-titulo" id="intro-titulo">Sobre este portal</p>
+      <p style="max-width: 700px; color: var(--text-muted); font-size: 0.96rem; line-height: 1.85;">
         Este portal reúne os resultados de uma pesquisa pioneira sobre a história da capoeira escrava em São Paulo, desenvolvida no Programa de Pós-graduação em História Social da Universidade de São Paulo (USP). Aqui você encontra documentos históricos originais digitalizados em 13 acervos, uma linha do tempo dos principais fatos e personagens, resumos acessíveis da dissertação e as referências bibliográficas utilizadas.
       </p>
     </section>
 
-    <!-- CARDS DAS SEÇÕES -->
     <section aria-labelledby="secoes-titulo">
-      <h2 id="secoes-titulo" class="secao-titulo">Explore o portal</h2>
+      <p class="secao-titulo" id="secoes-titulo">Explore o portal</p>
       <div class="cards-grid">
         <a class="card" href="timeline.html">
-          <span class="card-icon">📅</span>
           <h3>Linha do tempo</h3>
           <p>Os principais eventos e personagens da capoeira em São Paulo, de 1830 a 1930, organizados cronologicamente.</p>
+          <span class="card-arrow">Ver &rarr;</span>
         </a>
         <a class="card" href="dissertacao.html">
-          <span class="card-icon">📖</span>
           <h3>A pesquisa</h3>
           <p>Resumos de cada capítulo da dissertação em linguagem acessível, com link para o texto acadêmico completo.</p>
+          <span class="card-arrow">Ver &rarr;</span>
         </a>
         <a class="card" href="documentos.html">
-          <span class="card-icon">🗂</span>
           <h3>Banco de documentos</h3>
           <p>Documentos históricos digitalizados em 13 acervos. Pesquise por palavras-chave e filtre por acervo ou período.</p>
+          <span class="card-arrow">Ver &rarr;</span>
         </a>
         <a class="card" href="referencias.html">
-          <span class="card-icon">📚</span>
           <h3>Referências</h3>
           <p>Fontes primárias, bibliografia e filmografia utilizadas na pesquisa, com busca por autor ou título.</p>
+          <span class="card-arrow">Ver &rarr;</span>
         </a>
       </div>
     </section>
 
   </main>
 
-  <!-- RODAPÉ -->
   <footer>
     <p>
       <strong>Capoeira e valentia em São Paulo — Pesquisa e documentos</strong><br />
