@@ -73,6 +73,24 @@
     "pagina_pdf": 117
   },
   {
+    "ano": 1858,
+    "titulo": "Valongueiros e quarteleiros: origens da rivalidade em Santos",
+    "descricao": "Dois grupos rivais de capoeiras se consolidam no porto de Santos na segunda metade do século XIX. Os 'valongueiros', do bairro do Valongo, ligados ao comércio de escravos e aos portugueses, enfrentam os 'quarteleiros', das proximidades dos quartéis, formados por caboclos e militares. As tensões entre os dois bairros alimentam uma rivalidade que se expressa nas ruas em confrontos com capoeira, paus e navalhas.",
+    "periodo": "1830-1870",
+    "tipo": "CULTURAL",
+    "pagina": "p. 152",
+    "pagina_pdf": 152
+  },
+  {
+    "ano": 1860,
+    "titulo": "O 'Milagre de Santo Antônio': rivais unidos para salvar a Igreja",
+    "descricao": "Uma empresa ferroviária inglesa compra o terreno onde ficava a Igreja Matriz de Santos, ameaçando derrubá-la. Os valongueiros afixam um cartaz na porta da igreja convocando seus rivais quarteleiros para uma trégua. Em resposta, 200 a 300 homens dos dois grupos marcham unidos até a Câmara Municipal. A pressão popular, somada a uma ordem imperial, garante a preservação da igreja em 1861. O episódio ficou conhecido na memória local como o 'Milagre de Santo Antônio'.",
+    "periodo": "1830-1870",
+    "tipo": "POLITICO",
+    "pagina": "p. 157",
+    "pagina_pdf": 157
+  },
+  {
     "ano": 1864,
     "mes": 11,
     "dia": 11,
@@ -106,34 +124,6 @@
     "pagina_pdf": 120
   },
   {
-    "ano": 1858,
-    "titulo": "Valongueiros e quarteleiros: origens da rivalidade em Santos",
-    "descricao": "Dois grupos rivais de capoeiras se consolidam no porto de Santos na segunda metade do século XIX. Os 'valongueiros', do bairro do Valongo, ligados ao comércio de escravos e aos portugueses, enfrentam os 'quarteleiros', das proximidades dos quartéis, formados por caboclos e militares. As tensões entre os dois bairros alimentam uma rivalidade que se expressa nas ruas em confrontos com capoeira, paus e navalhas.",
-    "periodo": "1870-1888",
-    "tipo": "CULTURAL",
-    "pagina": "p. 152",
-    "pagina_pdf": 152
-  },
-  {
-    "ano": 1860,
-    "titulo": "O 'Milagre de Santo Antônio': rivais unidos para salvar a Igreja",
-    "descricao": "Uma empresa ferroviária inglesa compra o terreno onde ficava a Igreja Matriz de Santos, ameaçando derrubá-la. Os valongueiros afixam um cartaz na porta da igreja convocando seus rivais quarteleiros para uma trégua. Em resposta, 200 a 300 homens dos dois grupos marcham unidos até a Câmara Municipal. A pressão popular, somada a uma ordem imperial, garante a preservação da igreja em 1861. O episódio ficou conhecido na memória local como o 'Milagre de Santo Antônio'.",
-    "periodo": "1870-1888",
-    "tipo": "POLITICO",
-    "pagina": "p. 157",
-    "pagina_pdf": 157
-  },
-  {
-    "ano": 1874,
-    "titulo": "Rivalidade retomada; capoeiras entram no abolicionismo",
-    "descricao": "Após a morte do abolicionista Joaquim Xavier da Silveira — figura de mediação entre os grupos —, a rivalidade entre valongueiros e quarteleiros é retomada. Cada grupo passa a se alinhar a partidos e facções políticas diferentes. No entanto, ao longo da década seguinte, a causa abolicionista vai progressivamente unindo os dois grupos em torno do objetivo maior de libertar os escravizados.",
-    "periodo": "1870-1888",
-    "tipo": "POLITICO",
-    "personagens": ["Joaquim Xavier da Silveira"],
-    "pagina": "p. 161",
-    "pagina_pdf": 161
-  },
-  {
     "ano": 1871,
     "mes": 7,
     "dia": 13,
@@ -157,6 +147,16 @@
     "pagina_pdf": 138
   },
   {
+    "ano": 1874,
+    "titulo": "Rivalidade retomada; capoeiras entram no abolicionismo",
+    "descricao": "Após a morte do abolicionista Joaquim Xavier da Silveira — figura de mediação entre os grupos —, a rivalidade entre valongueiros e quarteleiros é retomada. Cada grupo passa a se alinhar a partidos e facções políticas diferentes. No entanto, ao longo da década seguinte, a causa abolicionista vai progressivamente unindo os dois grupos em torno do objetivo maior de libertar os escravizados.",
+    "periodo": "1870-1888",
+    "tipo": "POLITICO",
+    "personagens": ["Joaquim Xavier da Silveira"],
+    "pagina": "p. 161",
+    "pagina_pdf": 161
+  },
+  {
     "ano": 1882,
     "titulo": "Bohemia Abolicionista de Santos",
     "descricao": "É fundada em Santos a Bohemia Abolicionista, um dos primeiros núcleos organizados do movimento abolicionista paulista. Entre seus membros estava o poeta Vicente de Carvalho (futuro membro da Academia Brasileira de Letras) e Eugênio Wansuít, liderança negra do porto. O grupo conecta a elite intelectual da cidade às redes de capoeiras e portuários que escondiam e transportavam escravizados fugidos.",
@@ -165,6 +165,16 @@
     "personagens": ["Vicente de Carvalho", "Eugênio Wansuít"],
     "pagina": "p. 182",
     "pagina_pdf": 182
+  },
+  {
+    "ano": 1882,
+    "titulo": "Os Caifases e António Bento: capoeiras como linha de frente",
+    "descricao": "Os Caifases, rede abolicionista liderada por António Bento após a morte de Luiz Gama, recrutam homens com habilidades físicas para proteger libertadores e enfrentar capatazes. Entre eles: António Paciência, que se infiltrava em fazendas; Rodolfo Motta, guarda-costas nas estradas de ferro; Carlos Garcia, cocheiro e mensageiro; e um grupo de sergipanos capoeiristas que usavam rasteiras para libertar escravizados das mãos da polícia. António Bento era permanentemente cercado de guarda-costas negros habilidosos com a navalha.",
+    "periodo": "1870-1888",
+    "tipo": "POLITICO",
+    "personagens": ["António Bento", "António Paciência", "Rodolfo Motta", "Carlos Garcia"],
+    "pagina": "p. 175",
+    "pagina_pdf": 175
   },
   {
     "ano": 1884,
@@ -184,16 +194,6 @@
     "personagens": ["Quintino de Lacerda"],
     "pagina": "p. 186",
     "pagina_pdf": 186
-  },
-  {
-    "ano": 1882,
-    "titulo": "Os Caifases e António Bento: capoeiras como linha de frente",
-    "descricao": "Os Caifases, rede abolicionista liderada por António Bento após a morte de Luiz Gama, recrutam homens com habilidades físicas para proteger libertadores e enfrentar capatazes. Entre eles: António Paciência, que se infiltrava em fazendas; Rodolfo Motta, guarda-costas nas estradas de ferro; Carlos Garcia, cocheiro e mensageiro; e um grupo de sergipanos capoeiristas que usavam rasteiras para libertar escravizados das mãos da polícia. António Bento era permanentemente cercado de guarda-costas negros habilidosos com a navalha.",
-    "periodo": "1870-1888",
-    "tipo": "POLITICO",
-    "personagens": ["António Bento", "António Paciência", "Rodolfo Motta", "Carlos Garcia"],
-    "pagina": "p. 175",
-    "pagina_pdf": 175
   },
   {
     "ano": 1888,
@@ -258,6 +258,15 @@
     "pagina_pdf": 120
   },
   {
+    "ano": 1900,
+    "titulo": "Capoeira, samba e os cordões carnavalescos de São Paulo",
+    "descricao": "Nas primeiras décadas do século XX, ex-capoeiras e seus descendentes integram os cordões carnavalescos e grupos de samba de São Paulo. A 'tiririca' — disputa corporal originada na capoeira — aparece como atração nos cortejos de blocos e cordões da capital. Práticas de origem afro-brasileira sobrevivem nas festas populares mesmo sob a repressão republicana.",
+    "periodo": "1888-1930",
+    "tipo": "CULTURAL",
+    "pagina": "p. 255",
+    "pagina_pdf": 255
+  },
+  {
     "ano": 1906,
     "titulo": "Imprensa retrata capoeiras como 'parasitas políticos'",
     "descricao": "O jornalista João do Rio publica na revista Kosmos o artigo 'Chuva de candidatos', descrevendo como capoeiras eram usados por políticos como cabo eleitorais e capangas. As ilustrações de Kalixto retratam os capoeiras como figuras marginais, refletindo o esforço republicano de apagar sua memória histórica.",
@@ -266,15 +275,6 @@
     "personagens": ["João do Rio"],
     "pagina": "p. 112",
     "pagina_pdf": 112
-  },
-  {
-    "ano": 1900,
-    "titulo": "Capoeira, samba e os cordões carnavalescos de São Paulo",
-    "descricao": "Nas primeiras décadas do século XX, ex-capoeiras e seus descendentes integram os cordões carnavalescos e grupos de samba de São Paulo. A 'tiririca' — disputa corporal originada na capoeira — aparece como atração nos cortejos de blocos e cordões da capital. Práticas de origem afro-brasileira sobrevivem nas festas populares mesmo sob a repressão republicana.",
-    "periodo": "1888-1930",
-    "tipo": "CULTURAL",
-    "pagina": "p. 255",
-    "pagina_pdf": 255
   },
   {
     "ano": 1910,
