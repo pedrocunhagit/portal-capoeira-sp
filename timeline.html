@@ -136,11 +136,18 @@
       font-style: italic;
     }
     .tl-pagina {
-      margin-top: 4px;
+      margin-top: 6px;
       font-size: 0.75rem;
       color: var(--text-muted);
-      opacity: 0.7;
     }
+    .tl-pagina a {
+      color: var(--text-muted);
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 2px;
+      transition: color .15s;
+    }
+    .tl-pagina a:hover { color: var(--accent); text-decoration: underline; }
 
     .tl-legenda {
       display: flex;
@@ -242,14 +249,16 @@
   <script src="script.js"></script>
   <script>
   (function() {
+    var PDF_ID = '1_5yrNuLScfKgQxTjlm4NDU_R8mSiuInJ';
+
     var PERIODOS = [
-      { id: '1830-1870', label: 'Período 1: Primeiros indícios (1830–1870)' },
-      { id: '1870-1888', label: 'Período 2: Na rota do abolicionismo (1870–1888)' },
-      { id: '1888-1930', label: 'Período 3: Pós-abolição (1888–1930)' }
+      { id: '1830-1870', label: 'Per\u00edodo 1: Primeiros ind\u00edcios (1830\u20131870)' },
+      { id: '1870-1888', label: 'Per\u00edodo 2: Na rota do abolicionismo (1870\u20131888)' },
+      { id: '1888-1930', label: 'Per\u00edodo 3: P\u00f3s-aboli\u00e7\u00e3o (1888\u20131930)' }
     ];
 
     var LABELS_TIPO = {
-      LEI: 'Lei', PRISAO: 'Prisão', POLITICO: 'Político',
+      LEI: 'Lei', PRISAO: 'Pris\u00e3o', POLITICO: 'Pol\u00edtico',
       CULTURAL: 'Cultural', CONFLITO: 'Conflito',
       JULGAMENTO: 'Julgamento', DOCUMENTO: 'Documento'
     };
@@ -302,9 +311,13 @@
           var personagens = ev.personagens && ev.personagens.length
             ? '<p class="tl-personagens">Personagens: ' + ev.personagens.join(', ') + '</p>'
             : '';
-          var pagina = ev.pagina
-            ? '<p class="tl-pagina">Dissertação, ' + ev.pagina + '</p>'
-            : '';
+          var pagina = '';
+          if (ev.pagina && ev.pagina_pdf) {
+            var url = 'https://drive.google.com/file/d/' + PDF_ID + '/view?usp=sharing&page=' + ev.pagina_pdf;
+            pagina = '<p class="tl-pagina">Disserta\u00e7\u00e3o, <a href="' + url + '" target="_blank" rel="noopener" title="Abrir na p\u00e1gina ' + ev.pagina_pdf + '">' + ev.pagina + '</a></p>';
+          } else if (ev.pagina) {
+            pagina = '<p class="tl-pagina">Disserta\u00e7\u00e3o, ' + ev.pagina + '</p>';
+          }
           html += '<li class="tl-item" data-tipo="' + ev.tipo + '">';
           html += '<div class="tl-item-header">';
           html += '<span class="tl-ano">' + dataStr + '</span>';
