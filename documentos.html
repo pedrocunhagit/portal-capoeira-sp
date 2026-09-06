@@ -3,10 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Banco de 28 documentos históricos digitalizados em 13 acervos brasileiros. Pesquise transcrições sobre capoeira em São Paulo (1829–1951)." />
+  <meta name="description" content="Banco de documentos históricos digitalizados em 13 acervos brasileiros. Transcrições e acesso ao acervo original no Google Drive." />
   <title>Banco de documentos — Capoeira e valentia em São Paulo</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    /* ── Navegação interna ── */
+    .doc-nav-interna {
+      display: flex;
+      gap: .7rem;
+      flex-wrap: wrap;
+      margin-top: .9rem;
+    }
+    .doc-nav-interna a {
+      font-size: .83rem;
+      font-weight: 700;
+      color: var(--accent);
+      border: 1.5px solid var(--accent);
+      border-radius: 4px;
+      padding: .3rem .85rem;
+      text-decoration: none;
+      transition: background .15s, color .15s;
+    }
+    .doc-nav-interna a:hover { background: var(--accent); color: #fff; }
+
     /* ── Controles de busca e filtros ── */
     .doc-controles {
       background: #fdf6ec;
@@ -37,7 +56,6 @@
     }
     #busca-input:focus { border-color: #6b3a1f; }
     #busca-input::placeholder { color: #a08060; }
-
     .doc-filtros {
       display: flex;
       gap: .6rem;
@@ -69,7 +87,7 @@
     }
     #btn-limpar:hover { background: #6b3a1f; color: #fff; }
 
-    /* ── Contador de resultados ── */
+    /* ── Contador ── */
     .doc-contador {
       max-width: 1000px;
       margin: .7rem auto .4rem;
@@ -78,7 +96,7 @@
       color: #7a5c3a;
     }
 
-    /* ── Grid de cards ── */
+    /* ── Grid de cards de transcrição ── */
     #doc-lista {
       max-width: 1000px;
       margin: 0 auto 3rem;
@@ -87,8 +105,6 @@
       grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
       gap: 1.2rem;
     }
-
-    /* ── Card individual ── */
     .doc-card {
       background: #fff;
       border: 1px solid #e0d3c0;
@@ -98,9 +114,7 @@
       display: flex;
       flex-direction: column;
     }
-    .doc-card:hover {
-      box-shadow: 0 4px 18px rgba(107,58,31,.13);
-    }
+    .doc-card:hover { box-shadow: 0 4px 18px rgba(107,58,31,.13); }
     .doc-card-topo {
       border-top: 3px solid transparent;
       transition: border-color .2s;
@@ -108,7 +122,6 @@
       flex: 1;
     }
     .doc-card:hover .doc-card-topo { border-color: #6b3a1f; }
-
     .doc-sigla {
       display: inline-block;
       font-size: .72rem;
@@ -121,18 +134,8 @@
       padding: .15rem .45rem;
       margin-bottom: .45rem;
     }
-    .doc-titulo {
-      font-size: .97rem;
-      font-weight: bold;
-      color: #2c1a0e;
-      margin: 0 0 .35rem;
-      line-height: 1.35;
-    }
-    .doc-meta {
-      font-size: .8rem;
-      color: #7a5c3a;
-      margin-bottom: .55rem;
-    }
+    .doc-titulo { font-size: .97rem; font-weight: bold; color: #2c1a0e; margin: 0 0 .35rem; line-height: 1.35; }
+    .doc-meta { font-size: .8rem; color: #7a5c3a; margin-bottom: .55rem; }
     .doc-meta span + span::before { content: " · "; }
     .doc-tipo-badge {
       display: inline-block;
@@ -143,26 +146,9 @@
       padding: .1rem .4rem;
       margin-bottom: .55rem;
     }
-    .doc-trecho {
-      font-size: .84rem;
-      color: #4a3520;
-      line-height: 1.5;
-      margin-bottom: .6rem;
-      font-style: italic;
-    }
-    .doc-trecho mark {
-      background: #ffe066;
-      color: #2c1a0e;
-      border-radius: 2px;
-      padding: 0 .1em;
-      font-style: normal;
-    }
-
-    /* ── Botão expandir ── */
-    .doc-card-rodape {
-      padding: .5rem 1rem .75rem;
-      border-top: 1px solid #f0e8d8;
-    }
+    .doc-trecho { font-size: .84rem; color: #4a3520; line-height: 1.5; margin-bottom: .6rem; font-style: italic; }
+    .doc-trecho mark { background: #ffe066; color: #2c1a0e; border-radius: 2px; padding: 0 .1em; font-style: normal; }
+    .doc-card-rodape { padding: .5rem 1rem .75rem; border-top: 1px solid #f0e8d8; }
     .btn-expandir {
       font-family: Arial, sans-serif;
       font-size: .82rem;
@@ -175,8 +161,6 @@
       transition: background .15s, color .15s;
     }
     .btn-expandir:hover { background: #6b3a1f; color: #fff; }
-
-    /* ── Painel expandido ── */
     .doc-expandido {
       display: none;
       background: #fdf6ec;
@@ -184,61 +168,231 @@
       padding: .9rem 1rem 1rem;
     }
     .doc-expandido.aberto { display: block; }
-    .doc-expandido h4 {
-      font-size: .8rem;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      color: #6b3a1f;
-      margin: .7rem 0 .25rem;
-    }
+    .doc-expandido h4 { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: #6b3a1f; margin: .7rem 0 .25rem; }
     .doc-expandido h4:first-child { margin-top: 0; }
     .doc-transcricao-texto {
-      font-size: .84rem;
-      color: #2c1a0e;
+      font-size: .84rem; color: #2c1a0e; line-height: 1.6;
+      background: #fff; border-left: 3px solid #c8b89a;
+      padding: .6rem .8rem; border-radius: 0 4px 4px 0; white-space: pre-wrap;
+    }
+    .doc-transcricao-texto mark { background: #ffe066; color: #2c1a0e; border-radius: 2px; padding: 0 .1em; }
+    .doc-contexto-texto { font-size: .84rem; color: #4a3520; line-height: 1.6; }
+    .doc-personagens-lista { font-size: .82rem; color: #4a3520; }
+    .doc-ref { font-size: .78rem; color: #8a6a4a; font-style: italic; }
+    .doc-sem-resultado { grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: #8a6a4a; font-size: .95rem; }
+
+    /* ── Divisor entre seções ── */
+    .secao-divisor {
+      border: none;
+      border-top: 2px solid #e0d3c0;
+      max-width: 1000px;
+      margin: 2.5rem auto 0;
+    }
+
+    /* ── Seção: Acervo digitalizado ── */
+    #acervo-drive {
+      background: #faf4ea;
+      padding: 2.5rem 1.2rem 3rem;
+    }
+    .acervo-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .acervo-titulo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #6b3a1f;
+      margin-bottom: .4rem;
+      letter-spacing: -.2px;
+    }
+    .acervo-subtitulo {
+      font-size: .9rem;
+      color: #7a5c3a;
+      margin-bottom: 1.6rem;
       line-height: 1.6;
+      max-width: 720px;
+    }
+    .acervo-aviso-ieb {
+      font-size: .8rem;
+      color: #8a5c2a;
+      background: #fff8ec;
+      border: 1px solid #e0ceB4;
+      border-radius: 4px;
+      padding: .45rem .8rem;
+      margin-bottom: 1.4rem;
+      max-width: 700px;
+    }
+
+    /* ── Card de acervo (instituição) ── */
+    .acervo-card {
       background: #fff;
-      border-left: 3px solid #c8b89a;
-      padding: .6rem .8rem;
-      border-radius: 0 4px 4px 0;
-      white-space: pre-wrap;
+      border: 1px solid #e0d3c0;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      overflow: hidden;
     }
-    .doc-transcricao-texto mark {
-      background: #ffe066;
+    .acervo-card-header {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      padding: .9rem 1.1rem;
+      cursor: pointer;
+      user-select: none;
+      transition: background .15s;
+    }
+    .acervo-card-header:hover { background: #fdf6ec; }
+    .acervo-sigla-badge {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      background: #f5ead8;
+      color: #6b3a1f;
+      border-radius: 3px;
+      padding: .18rem .5rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .acervo-nome {
+      font-size: .95rem;
+      font-weight: 700;
       color: #2c1a0e;
-      border-radius: 2px;
-      padding: 0 .1em;
+      flex: 1;
     }
-    .doc-contexto-texto {
-      font-size: .84rem;
-      color: #4a3520;
+    .acervo-total-badge {
+      font-size: .75rem;
+      color: #7a5c3a;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .acervo-chevron {
+      font-size: .8rem;
+      color: #6b3a1f;
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .acervo-card.aberto .acervo-chevron { transform: rotate(180deg); }
+
+    /* ── Descrição do acervo ── */
+    .acervo-descricao {
+      display: none;
+      padding: .1rem 1.1rem .7rem 1.1rem;
+      font-size: .83rem;
+      color: #5a4030;
       line-height: 1.6;
+      border-top: 1px solid #f0e8d8;
+      background: #fffcf8;
     }
-    .doc-personagens-lista {
-      font-size: .82rem;
-      color: #4a3520;
+    .acervo-card.aberto .acervo-descricao { display: block; }
+
+    /* ── Lista de séries ── */
+    .acervo-series {
+      display: none;
+      border-top: 1px solid #e8dcc8;
     }
-    .doc-ref {
-      font-size: .78rem;
+    .acervo-card.aberto .acervo-series { display: block; }
+
+    .serie-item {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      padding: .65rem 1.1rem;
+      border-bottom: 1px solid #f0e8d8;
+      flex-wrap: wrap;
+    }
+    .serie-item:last-child { border-bottom: none; }
+    .serie-nome {
+      font-size: .86rem;
+      color: #2c1a0e;
+      flex: 1;
+      line-height: 1.4;
+      min-width: 180px;
+    }
+    .serie-periodo {
+      font-size: .75rem;
       color: #8a6a4a;
+      white-space: nowrap;
+    }
+    .serie-contagem {
+      font-size: .75rem;
+      color: #8a6a4a;
+      white-space: nowrap;
+    }
+    .serie-docs-portal {
+      display: flex;
+      gap: .4rem;
+      flex-wrap: wrap;
+    }
+    .badge-portal {
+      font-size: .68rem;
+      background: #e8f0fa;
+      color: #2a5090;
+      border-radius: 3px;
+      padding: .1rem .4rem;
+      border: 1px solid #b8ccee;
+      white-space: nowrap;
+    }
+    .btn-drive {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      font-family: Arial, sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      background: #6b3a1f;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: .32rem .75rem;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background .15s;
+      flex-shrink: 0;
+    }
+    .btn-drive:hover { background: #8f4f28; color: #fff; text-decoration: none; }
+    .btn-drive svg { flex-shrink: 0; }
+    .btn-drive-pendente {
+      font-size: .78rem;
+      color: #a08060;
       font-style: italic;
     }
 
-    /* ── Sem resultados ── */
-    .doc-sem-resultado {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 3rem 1rem;
+    /* ── Links do portal destacados na série ── */
+    .serie-docs-detalhe {
+      display: none;
+      background: #fdf6ec;
+      border-top: 1px dashed #e0ceB4;
+      padding: .5rem 1.1rem .6rem 2.2rem;
+    }
+    .serie-item.com-docs .serie-nome { cursor: pointer; }
+    .serie-item.aberto + .serie-docs-detalhe { display: block; }
+    .docs-detalhe-item {
+      font-size: .8rem;
+      color: #4a3520;
+      padding: .22rem 0;
+      border-bottom: 1px dotted #e0d3c0;
+      line-height: 1.45;
+    }
+    .docs-detalhe-item:last-child { border-bottom: none; }
+    .docs-detalhe-ref {
+      font-size: .72rem;
       color: #8a6a4a;
-      font-size: .95rem;
+      font-style: italic;
+      margin-left: .4rem;
+    }
+    .toggle-docs-btn {
+      font-size: .75rem;
+      color: #6b3a1f;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      text-decoration: underline;
+      margin-left: .4rem;
     }
 
-    /* ── Responsivo ── */
-    @media (max-width: 600px) {
-      #doc-lista { grid-template-columns: 1fr; }
-      .doc-filtros select { font-size: .82rem; }
-    }
-
-    /* ── Modo contraste ── */
+    /* ── Acessibilidade modo contraste ── */
     body.alto-contraste .doc-card { background: #000; border-color: #fff; }
     body.alto-contraste .doc-titulo { color: #fff; }
     body.alto-contraste .doc-trecho { color: #eee; }
@@ -247,6 +401,17 @@
     body.alto-contraste .doc-filtros select { background: #111; color: #fff; border-color: #fff; }
     body.alto-contraste .doc-expandido { background: #111; }
     body.alto-contraste .doc-transcricao-texto { background: #000; color: #fff; border-color: #888; }
+    body.alto-contraste .acervo-card { background: #000; border-color: #fff; }
+    body.alto-contraste .acervo-nome { color: #fff; }
+    body.alto-contraste .btn-drive { background: #ffdd00; color: #000; }
+
+    /* ── Responsivo ── */
+    @media (max-width: 600px) {
+      #doc-lista { grid-template-columns: 1fr; }
+      .doc-filtros select { font-size: .82rem; }
+      .serie-item { flex-direction: column; align-items: flex-start; gap: .4rem; }
+      .btn-drive { width: 100%; justify-content: center; }
+    }
   </style>
 </head>
 <body>
@@ -281,41 +446,59 @@
 
   <div class="page-header"><div class="page-header-inner">
     <h2>Banco de documentos</h2>
-    <p>28 documentos históricos digitalizados em 13 acervos brasileiros</p>
+    <p>Transcrições comentadas e acesso ao acervo digitalizado em 8 instituições e mais de 60 séries e fundos</p>
+    <nav class="doc-nav-interna" aria-label="Seções da página">
+      <a href="#transcricoes">↓ Transcrições comentadas</a>
+      <a href="#acervo-drive">↓ Acervo digitalizado no Drive</a>
+    </nav>
   </div></div>
 
-  <!-- Controles -->
-  <div class="doc-controles">
-    <div class="doc-controles-inner">
-      <div class="doc-busca-row">
-        <input
-          type="search"
-          id="busca-input"
-          placeholder="Buscar por palavra, nome, local ou data..."
-          aria-label="Buscar documentos"
-          autocomplete="off"
-        />
-      </div>
-      <div class="doc-filtros">
-        <select id="filtro-acervo" aria-label="Filtrar por acervo">
-          <option value="">Todos os acervos</option>
-        </select>
-        <select id="filtro-periodo" aria-label="Filtrar por período">
-          <option value="">Todos os períodos</option>
-        </select>
-        <select id="filtro-tipo" aria-label="Filtrar por tipo de documento">
-          <option value="">Todos os tipos</option>
-        </select>
-        <button id="btn-limpar" type="button">Limpar filtros</button>
+  <!-- ═══════════════════════════════════════════════════
+       SEÇÃO 1 — BANCO DE TRANSCRIÇÕES
+  ═══════════════════════════════════════════════════ -->
+  <div id="transcricoes">
+    <div class="doc-controles">
+      <div class="doc-controles-inner">
+        <div class="doc-busca-row">
+          <input
+            type="search"
+            id="busca-input"
+            placeholder="Buscar por palavra, nome, local ou data..."
+            aria-label="Buscar documentos"
+            autocomplete="off"
+          />
+        </div>
+        <div class="doc-filtros">
+          <select id="filtro-acervo" aria-label="Filtrar por acervo"><option value="">Todos os acervos</option></select>
+          <select id="filtro-periodo" aria-label="Filtrar por período"><option value="">Todos os períodos</option></select>
+          <select id="filtro-tipo" aria-label="Filtrar por tipo de documento"><option value="">Todos os tipos</option></select>
+          <button id="btn-limpar" type="button">Limpar filtros</button>
+        </div>
       </div>
     </div>
+    <div class="doc-contador" id="doc-contador" aria-live="polite"></div>
+    <main>
+      <div id="doc-lista" role="list" aria-label="Lista de documentos"></div>
+    </main>
   </div>
 
-  <div class="doc-contador" id="doc-contador" aria-live="polite"></div>
+  <hr class="secao-divisor" />
 
-  <main>
-    <div id="doc-lista" role="list" aria-label="Lista de documentos"></div>
-  </main>
+  <!-- ═══════════════════════════════════════════════════
+       SEÇÃO 2 — ACERVO DIGITALIZADO
+  ═══════════════════════════════════════════════════ -->
+  <section id="acervo-drive" aria-labelledby="acervo-titulo">
+    <div class="acervo-inner">
+      <h2 class="acervo-titulo" id="acervo-titulo">Acervo digitalizado — navegue pelos originais</h2>
+      <p class="acervo-subtitulo">
+        Mais de 1.300 imagens digitalizadas de manuscritos, processos judiciais, registros policiais, jornais e periódicos históricos, distribuídas em 8 instituições e mais de 60 séries. Clique em <strong>Abrir no Drive</strong> para ver as imagens originais diretamente no Google Drive.
+      </p>
+      <p class="acervo-aviso-ieb" id="aviso-ieb" style="display:none">
+        ⚠ O link da pasta raiz do <strong>Instituto de Estudos Brasileiros (IEB)</strong> não pôde ser confirmado. Os links das séries individuais (Revista IHGSP e Revista Kosmos) estão corretos.
+      </p>
+      <div id="acervo-lista" role="list"></div>
+    </div>
+  </section>
 
   <footer><p>
     <strong>Capoeira e valentia em São Paulo — Pesquisa e documentos</strong><br />
@@ -337,52 +520,35 @@
   }
   </script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- ── BANCO DE TRANSCRIÇÕES ── -->
   <script>
   (function () {
     'use strict';
-
-    /* ── Estado ── */
     let DOCS = [];
     let termoBusca = '';
     let filtroAcervo = '';
     let filtroPeriodo = '';
     let filtroTipo = '';
 
-    /* ── Carrega JSON ── */
     fetch('data/documentos.json')
       .then(r => r.json())
-      .then(data => {
-        DOCS = data;
-        popularFiltros();
-        renderizar();
-      })
+      .then(data => { DOCS = data; popularFiltros(); renderizar(); })
       .catch(() => {
         document.getElementById('doc-lista').innerHTML =
           '<p class="doc-sem-resultado">Não foi possível carregar os documentos.</p>';
       });
 
-    /* ── Popula dropdowns de filtro ── */
     function popularFiltros() {
-      const acervos  = [...new Set(DOCS.map(d => d.acervo))].sort();
-      const periodos = [...new Set(DOCS.map(d => d.periodo))].sort();
-      const tipos    = [...new Set(DOCS.map(d => d.tipo))].sort();
-
-      preencheSelect('filtro-acervo',  acervos);
-      preencheSelect('filtro-periodo', periodos);
-      preencheSelect('filtro-tipo',    tipos);
+      preencheSelect('filtro-acervo',  [...new Set(DOCS.map(d => d.acervo))].sort());
+      preencheSelect('filtro-periodo', [...new Set(DOCS.map(d => d.periodo))].sort());
+      preencheSelect('filtro-tipo',    [...new Set(DOCS.map(d => d.tipo))].sort());
     }
-
     function preencheSelect(id, valores) {
       const sel = document.getElementById(id);
-      valores.forEach(v => {
-        const opt = document.createElement('option');
-        opt.value = v;
-        opt.textContent = v;
-        sel.appendChild(opt);
-      });
+      valores.forEach(v => { const o = document.createElement('option'); o.value = o.textContent = v; sel.appendChild(o); });
     }
 
-    /* ── Filtragem ── */
     function filtrar() {
       const termo = termoBusca.toLowerCase().trim();
       return DOCS.filter(d => {
@@ -390,141 +556,192 @@
         if (filtroPeriodo && d.periodo !== filtroPeriodo) return false;
         if (filtroTipo    && d.tipo    !== filtroTipo)    return false;
         if (!termo) return true;
-        const haystack = [
-          d.titulo, d.acervo, d.tipo, d.data, d.local,
-          d.periodo, d.transcricao, d.contexto,
-          ...(d.personagens || []),
-          ...(d.palavras_chave || [])
-        ].join(' ').toLowerCase();
-        return haystack.includes(termo);
+        const hay = [d.titulo, d.acervo, d.tipo, d.data, d.local, d.periodo, d.transcricao, d.contexto,
+          ...(d.personagens||[]), ...(d.palavras_chave||[])].join(' ').toLowerCase();
+        return hay.includes(termo);
       });
     }
 
-    /* ── Destacar termos ── */
-    function destacar(texto, termo) {
-      if (!termo) return escHtml(texto);
-      const re = new RegExp('(' + escRegex(termo) + ')', 'gi');
-      return escHtml(texto).replace(re, '<mark>$1</mark>');
+    function esc(s)  { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+    function escRe(s){ return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
+    function hl(txt, termo) {
+      if (!termo) return esc(txt);
+      return esc(txt).replace(new RegExp('('+escRe(termo)+')','gi'),'<mark>$1</mark>');
     }
-    function escHtml(s) {
-      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-    }
-    function escRegex(s) {
-      return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    }
-
-    /* ── Trecho da transcrição (máx 200 chars, centralizado no termo) ── */
-    function trecho(texto, termo) {
+    function trecho(txt, termo) {
       const MAX = 200;
-      if (!termo) return texto.length > MAX ? texto.slice(0, MAX) + '…' : texto;
-      const idx = texto.toLowerCase().indexOf(termo.toLowerCase());
-      if (idx === -1) return texto.length > MAX ? texto.slice(0, MAX) + '…' : texto;
-      const inicio = Math.max(0, idx - 80);
-      const fim    = Math.min(texto.length, idx + termo.length + 120);
-      let trech = (inicio > 0 ? '…' : '') + texto.slice(inicio, fim) + (fim < texto.length ? '…' : '');
-      return trech;
+      if (!termo) return txt.length > MAX ? txt.slice(0,MAX)+'…' : txt;
+      const idx = txt.toLowerCase().indexOf(termo.toLowerCase());
+      if (idx === -1) return txt.length > MAX ? txt.slice(0,MAX)+'…' : txt;
+      const i = Math.max(0,idx-80), f = Math.min(txt.length,idx+termo.length+120);
+      return (i>0?'…':'')+txt.slice(i,f)+(f<txt.length?'…':'');
     }
 
-    /* ── Renderização ── */
     function renderizar() {
-      const resultados = filtrar();
-      const lista = document.getElementById('doc-lista');
+      const res = filtrar();
+      const lista    = document.getElementById('doc-lista');
       const contador = document.getElementById('doc-contador');
-      const termo = termoBusca.trim();
-
-      contador.textContent =
-        resultados.length === 0 ? 'Nenhum documento encontrado.' :
-        resultados.length === 1 ? '1 documento encontrado.' :
-        resultados.length + ' documentos encontrados.';
-
-      if (resultados.length === 0) {
-        lista.innerHTML = '<p class="doc-sem-resultado">Nenhum documento corresponde à busca.</p>';
-        return;
-      }
-
-      lista.innerHTML = resultados.map(d => {
-        const trechoTexto = trecho(d.transcricao, termo);
-        const trechoHl    = destacar(trechoTexto, termo);
-        const tituloHl    = destacar(d.titulo, termo);
-        const transcHl    = destacar(d.transcricao, termo);
-        const contextHl   = destacar(d.contexto, termo);
-
-        const personagensHtml = d.personagens && d.personagens.length
-          ? `<h4>Personagens mencionados</h4>
-             <p class="doc-personagens-lista">${d.personagens.map(p => destacar(p, termo)).join(', ')}</p>`
-          : '';
-
-        return `
-        <div class="doc-card" role="listitem" id="card-${d.id}">
+      const termo    = termoBusca.trim();
+      contador.textContent = res.length === 0 ? 'Nenhum documento encontrado.' :
+        res.length === 1 ? '1 documento encontrado.' : res.length + ' documentos encontrados.';
+      if (!res.length) { lista.innerHTML = '<p class="doc-sem-resultado">Nenhum documento corresponde à busca.</p>'; return; }
+      lista.innerHTML = res.map(d => {
+        const trechoTxt = trecho(d.transcricao, termo);
+        const persHtml  = d.personagens && d.personagens.length
+          ? `<h4>Personagens mencionados</h4><p class="doc-personagens-lista">${d.personagens.map(p=>hl(p,termo)).join(', ')}</p>` : '';
+        return `<div class="doc-card" role="listitem" id="card-${d.id}">
           <div class="doc-card-topo">
-            <span class="doc-sigla">${escHtml(d.acervo_sigla)}</span>
-            <span class="doc-tipo-badge">${escHtml(d.tipo)}</span>
-            <h3 class="doc-titulo">${tituloHl}</h3>
-            <p class="doc-meta">
-              <span>${escHtml(d.data)}</span>
-              <span>${escHtml(d.local)}</span>
-            </p>
-            <p class="doc-trecho">"${trechoHl}"</p>
+            <span class="doc-sigla">${esc(d.acervo_sigla)}</span>
+            <span class="doc-tipo-badge">${esc(d.tipo)}</span>
+            <h3 class="doc-titulo">${hl(d.titulo,termo)}</h3>
+            <p class="doc-meta"><span>${esc(d.data)}</span><span>${esc(d.local)}</span></p>
+            <p class="doc-trecho">"${hl(trechoTxt,termo)}"</p>
           </div>
           <div class="doc-card-rodape">
             <button class="btn-expandir" aria-expanded="false" aria-controls="exp-${d.id}"
-              onclick="toggleCard('${d.id}', this)">Ver transcrição completa</button>
+              onclick="toggleCard('${d.id}',this)">Ver transcrição completa</button>
           </div>
           <div class="doc-expandido" id="exp-${d.id}" aria-hidden="true">
             <h4>Transcrição</h4>
-            <p class="doc-transcricao-texto">${transcHl}</p>
+            <p class="doc-transcricao-texto">${hl(d.transcricao,termo)}</p>
             <h4>Contexto</h4>
-            <p class="doc-contexto-texto">${contextHl}</p>
-            ${personagensHtml}
+            <p class="doc-contexto-texto">${hl(d.contexto,termo)}</p>
+            ${persHtml}
             <h4>Referência de arquivo</h4>
-            <p class="doc-ref">${escHtml(d.acervo)} — ${escHtml(d.referencia)}</p>
+            <p class="doc-ref">${esc(d.acervo)} — ${esc(d.referencia)}</p>
           </div>
         </div>`;
       }).join('');
     }
 
-    /* ── Toggle de card expandido ── */
     window.toggleCard = function(id, btn) {
-      const painel = document.getElementById('exp-' + id);
-      const aberto = painel.classList.contains('aberto');
-      painel.classList.toggle('aberto', !aberto);
-      painel.setAttribute('aria-hidden', aberto ? 'true' : 'false');
-      btn.setAttribute('aria-expanded', aberto ? 'false' : 'true');
+      const p = document.getElementById('exp-'+id), aberto = p.classList.contains('aberto');
+      p.classList.toggle('aberto',!aberto); p.setAttribute('aria-hidden', aberto?'true':'false');
+      btn.setAttribute('aria-expanded', aberto?'false':'true');
       btn.textContent = aberto ? 'Ver transcrição completa' : 'Recolher';
     };
 
-    /* ── Eventos de busca e filtros ── */
-    let debounceTimer;
-    document.getElementById('busca-input').addEventListener('input', function () {
-      termoBusca = this.value;
-      clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(renderizar, 180);
+    let debTimer;
+    document.getElementById('busca-input').addEventListener('input', function(){
+      termoBusca = this.value; clearTimeout(debTimer); debTimer = setTimeout(renderizar,180);
     });
+    document.getElementById('filtro-acervo').addEventListener('change', function(){ filtroAcervo = this.value; renderizar(); });
+    document.getElementById('filtro-periodo').addEventListener('change', function(){ filtroPeriodo = this.value; renderizar(); });
+    document.getElementById('filtro-tipo').addEventListener('change', function(){ filtroTipo = this.value; renderizar(); });
+    document.getElementById('btn-limpar').addEventListener('click', function(){
+      termoBusca=''; filtroAcervo=''; filtroPeriodo=''; filtroTipo='';
+      ['busca-input','filtro-acervo','filtro-periodo','filtro-tipo'].forEach(id => document.getElementById(id).value='');
+      renderizar();
+    });
+  })();
+  </script>
 
-    document.getElementById('filtro-acervo').addEventListener('change', function () {
-      filtroAcervo = this.value;
-      renderizar();
-    });
-    document.getElementById('filtro-periodo').addEventListener('change', function () {
-      filtroPeriodo = this.value;
-      renderizar();
-    });
-    document.getElementById('filtro-tipo').addEventListener('change', function () {
-      filtroTipo = this.value;
-      renderizar();
-    });
+  <!-- ── ACERVO DIGITALIZADO ── -->
+  <script>
+  (function(){
+    'use strict';
 
-    document.getElementById('btn-limpar').addEventListener('click', function () {
-      termoBusca = '';
-      filtroAcervo = '';
-      filtroPeriodo = '';
-      filtroTipo = '';
-      document.getElementById('busca-input').value = '';
-      document.getElementById('filtro-acervo').value = '';
-      document.getElementById('filtro-periodo').value = '';
-      document.getElementById('filtro-tipo').value = '';
-      renderizar();
-    });
+    const DRIVE_ICON = `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L2 19.5h8l2-4 2 4h8L12 2zm0 4.2l5.6 9.8H14l-2-4-2 4H6.4L12 6.2z"/></svg>`;
+
+    fetch('data/acervos.json')
+      .then(r => r.json())
+      .then(data => renderAcervos(data))
+      .catch(() => {
+        document.getElementById('acervo-lista').innerHTML =
+          '<p style="color:#8a6a4a;padding:2rem 0">Não foi possível carregar os acervos.</p>';
+      });
+
+    function contarArquivos(series) {
+      let imgs = 0, pdfs = 0;
+      series.forEach(s => { imgs += (s.imagens||0); pdfs += (s.pdfs||0); });
+      const partes = [];
+      if (imgs) partes.push(imgs + ' imagem' + (imgs>1?'ns':''));
+      if (pdfs) partes.push(pdfs + ' PDF' + (pdfs>1?'s':''));
+      return partes.join(' + ');
+    }
+
+    function renderAcervos(acervos) {
+      const lista = document.getElementById('acervo-lista');
+      let temIebPendente = false;
+
+      lista.innerHTML = acervos.map((acervo, ai) => {
+        if (acervo.drive_url_pendente) temIebPendente = true;
+        const total = contarArquivos(acervo.series);
+
+        const seriesHtml = acervo.series.map((s, si) => {
+          const temDocs = s.docs_portal && s.docs_portal.length > 0;
+          const contagem = [];
+          if (s.imagens) contagem.push(s.imagens + ' img.');
+          if (s.pdfs)    contagem.push(s.pdfs + ' PDF');
+          const contagemStr = contagem.join(' + ') || '';
+
+          const docsBadges = temDocs
+            ? `<div class="serie-docs-portal">${s.docs_portal.map(dp =>
+                `<span class="badge-portal" title="${esc(dp.nota||'')}">${esc(dp.referencia)}</span>`
+              ).join('')}</div>` : '';
+
+          const docsDetalhe = temDocs
+            ? `<div class="serie-docs-detalhe" id="dd-${acervo.id}-${si}">${
+                s.docs_portal.map(dp =>
+                  `<div class="docs-detalhe-item">${esc(dp.titulo)}${dp.nota ? ' <span class="docs-detalhe-ref">'+esc(dp.nota)+'</span>' : ''}</div>`
+                ).join('')
+              }</div>` : '';
+
+          const toggleBtn = temDocs
+            ? `<button class="toggle-docs-btn" onclick="toggleDocs('${acervo.id}',${si},this)" aria-expanded="false">ver docs citados ▾</button>` : '';
+
+          const linkDrive = s.drive_url
+            ? `<a class="btn-drive" href="${s.drive_url}" target="_blank" rel="noopener" aria-label="Abrir ${esc(s.nome)} no Google Drive">${DRIVE_ICON} Abrir no Drive</a>`
+            : `<span class="btn-drive-pendente">link pendente</span>`;
+
+          return `<div class="serie-item${temDocs?' com-docs':''}" id="si-${acervo.id}-${si}">
+            <span class="serie-nome">${esc(s.nome)}${toggleBtn}</span>
+            <span class="serie-periodo">${esc(s.periodo)}</span>
+            ${contagemStr ? `<span class="serie-contagem">${esc(contagemStr)}</span>` : ''}
+            ${docsBadges}
+            ${linkDrive}
+          </div>${docsDetalhe}`;
+        }).join('');
+
+        return `<div class="acervo-card" id="ac-${acervo.id}" role="listitem">
+          <div class="acervo-card-header" onclick="toggleAcervo('${acervo.id}')" tabindex="0"
+            role="button" aria-expanded="false" aria-controls="acs-${acervo.id}"
+            onkeydown="if(event.key==='Enter'||event.key===' '){toggleAcervo('${acervo.id}');}">
+            <span class="acervo-sigla-badge">${esc(acervo.sigla)}</span>
+            <span class="acervo-nome">${esc(acervo.nome)}</span>
+            <span class="acervo-total-badge">${esc(total)}</span>
+            <span class="acervo-chevron" aria-hidden="true">▼</span>
+          </div>
+          <div class="acervo-descricao">${esc(acervo.descricao)}</div>
+          <div class="acervo-series" id="acs-${acervo.id}">${seriesHtml}</div>
+        </div>`;
+      }).join('');
+
+      if (temIebPendente) document.getElementById('aviso-ieb').style.display = '';
+    }
+
+    function esc(s) {
+      if (!s) return '';
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    window.toggleAcervo = function(id) {
+      const card = document.getElementById('ac-'+id);
+      const hdr  = card.querySelector('.acervo-card-header');
+      const aberto = card.classList.contains('aberto');
+      card.classList.toggle('aberto', !aberto);
+      hdr.setAttribute('aria-expanded', aberto ? 'false' : 'true');
+    };
+
+    window.toggleDocs = function(acervoId, si, btn) {
+      const item = document.getElementById('si-'+acervoId+'-'+si);
+      const dd   = document.getElementById('dd-'+acervoId+'-'+si);
+      if (!dd) return;
+      const aberto = item.classList.contains('aberto');
+      item.classList.toggle('aberto', !aberto);
+      btn.setAttribute('aria-expanded', aberto ? 'false' : 'true');
+      btn.textContent = aberto ? 'ver docs citados ▾' : 'ocultar ▴';
+    };
   })();
   </script>
 </body>
