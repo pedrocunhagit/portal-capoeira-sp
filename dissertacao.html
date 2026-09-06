@@ -3,8 +3,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Resumos acessíveis dos capítulos da dissertação Capoeiras e valentões na história de São Paulo (1830–1930)." />
   <title>A pesquisa — Capoeira e valentia em São Paulo</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ---- PÁGINA A PESQUISA ---- */
+    .disserta-intro {
+      max-width: 780px;
+      margin-bottom: 52px;
+    }
+    .disserta-intro p {
+      font-size: 0.97rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+    .disserta-intro p:first-of-type {
+      font-size: 1.02rem;
+      color: var(--text);
+    }
+
+    /* Botão de acesso à dissertação */
+    .disserta-acesso {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
+    /* Grade de capítulos */
+    .capitulos-lista {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 860px;
+    }
+
+    .capitulo-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-card);
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .capitulo-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 22px 24px;
+      cursor: pointer;
+      user-select: none;
+      transition: background .15s;
+    }
+    .capitulo-header:hover { background: var(--bg-alt); }
+    .capitulo-header:focus { outline: 3px solid var(--focus); outline-offset: -3px; }
+
+    .capitulo-num {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      white-space: nowrap;
+      padding-top: 3px;
+      min-width: 80px;
+    }
+
+    .capitulo-header-texto {
+      flex: 1;
+    }
+    .capitulo-titulo {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+    .capitulo-subtitulo {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .capitulo-toggle {
+      font-size: 1.1rem;
+      color: var(--accent-light);
+      flex-shrink: 0;
+      padding-top: 2px;
+      transition: transform .2s;
+      line-height: 1;
+    }
+    .capitulo-item.aberto .capitulo-toggle {
+      transform: rotate(180deg);
+    }
+
+    .capitulo-corpo {
+      display: none;
+      padding: 0 24px 24px 124px;
+      border-top: 1px solid var(--border);
+    }
+    .capitulo-item.aberto .capitulo-corpo {
+      display: block;
+    }
+
+    .capitulo-resumo {
+      margin-top: 18px;
+    }
+    .capitulo-resumo p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .capitulo-citacao {
+      margin: 20px 0;
+      border-left: 3px solid var(--accent-light);
+      padding: 12px 18px;
+      background: var(--bg-alt);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    .capitulo-citacao p {
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin: 0;
+    }
+    .capitulo-citacao cite {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.78rem;
+      font-style: normal;
+      color: var(--accent-light);
+      letter-spacing: 0.2px;
+    }
+
+    .capitulo-personagens {
+      margin-top: 14px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .capitulo-personagens strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .capitulo-link-pdf {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 2px;
+    }
+    .capitulo-link-pdf:hover { color: var(--accent-hover); text-decoration: underline; }
+
+    /* Conclusão */
+    .conclusao-bloco {
+      max-width: 780px;
+      margin-top: 40px;
+      padding: 28px 28px 24px;
+      background: var(--bg-alt);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+    .conclusao-bloco .secao-titulo { margin-bottom: 16px; }
+    .conclusao-bloco p {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .conclusao-bloco p:last-child { margin-bottom: 0; }
+
+    @media (max-width: 600px) {
+      .capitulo-corpo { padding-left: 20px; }
+      .capitulo-num { min-width: auto; }
+      .capitulo-header { gap: 12px; }
+    }
+  </style>
 </head>
 <body>
   <div class="acess-bar" role="toolbar" aria-label="Opções de acessibilidade">
@@ -18,10 +199,12 @@
     <span>Idioma</span>
     <div id="google_translate_element"></div>
   </div>
+
   <header><div class="header-inner">
     <h1>Capoeira e valentia em São Paulo</h1>
     <p class="subtitulo">Pesquisa e documentos históricos (1830–1930)</p>
   </div></header>
+
   <nav aria-label="Menu principal">
     <button class="menu-toggle" aria-expanded="false" aria-controls="menu-lista">Menu</button>
     <ul id="menu-lista" role="list">
@@ -33,16 +216,228 @@
       <li><a href="sobre.html">Sobre a pesquisa</a></li>
     </ul>
   </nav>
+
   <div class="page-header"><div class="page-header-inner">
     <h2>A pesquisa</h2>
     <p>Resumos dos capítulos da dissertação em linguagem acessível</p>
   </div></div>
+
   <main>
-    <div class="em-construcao">
-      <h3>Em construção</h3>
-      <p>Esta seção está sendo preparada. Em breve você encontrará resumos acessíveis de cada capítulo da dissertação e o link para download do texto completo.</p>
+
+    <!-- INTRODUÇÃO / CONTEXTO -->
+    <section class="disserta-intro" aria-labelledby="intro-titulo">
+      <p class="secao-titulo" id="intro-titulo">A pesquisa</p>
+      <p>
+        A capoeira tem uma história longa e documentada em São Paulo — mas essa história foi sistematicamente ignorada. A dissertação <em>Capoeiras e valentões na história de São Paulo (1830–1930)</em>, defendida em 2011 na Universidade de São Paulo, foi o primeiro estudo acadêmico a reconstituir essa trajetória a partir de fontes primárias: leis municipais, registros de presos, processos criminais, jornais, ofícios policiais e depoimentos de memorialistas.
+      </p>
+      <p>
+        O argumento central é que a capoeira em São Paulo não foi fenômeno importado ou passivo. Foi uma manifestação viva que atravessou toda a sociedade da época: começou como luta-jogo de escravos africanos que disputavam espaços urbanos, ganhou dimensão política ao ser cooptada por facções durante o Império, tornou-se braço armado do abolicionismo na década de 1880 e, após a abolição, incorporou-se ao samba, ao carnaval e ao futebol — deixando marcas que persistem até hoje.
+      </p>
+      <p>
+        Clique em cada capítulo abaixo para ler o resumo. Os links levam diretamente à página correspondente na dissertação completa.
+      </p>
+      <div class="disserta-acesso">
+        <a href="https://drive.google.com/file/d/1_5yrNuLScfKgQxTjlm4NDU_R8mSiuInJ/view?usp=sharing"
+           target="_blank" rel="noopener" class="btn-cta">Ler a dissertação completa</a>
+        <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html"
+           target="_blank" rel="noopener" class="btn-cta" style="background:transparent; color:var(--accent); border:1px solid var(--accent);">Registro oficial na USP</a>
+      </div>
+    </section>
+
+    <!-- CAPÍTULOS -->
+    <section aria-labelledby="caps-titulo">
+      <p class="secao-titulo" id="caps-titulo">Capítulos</p>
+
+      <div class="capitulos-lista">
+
+        <!-- INTRODUÇÃO -->
+        <div class="capitulo-item" id="cap-intro">
+          <div class="capitulo-header" tabindex="0" role="button" aria-expanded="false" aria-controls="corpo-intro">
+            <span class="capitulo-num">Introdução</span>
+            <div class="capitulo-header-texto">
+              <p class="capitulo-titulo">O silêncio sobre a capoeira em São Paulo</p>
+              <p class="capitulo-subtitulo">p. 8 — Fontes, método e argumento central</p>
+            </div>
+            <span class="capitulo-toggle" aria-hidden="true">▼</span>
+          </div>
+          <div class="capitulo-corpo" id="corpo-intro">
+            <div class="capitulo-resumo">
+              <p>
+                Em 1833, poucos anos depois de um confronto envolvendo 60 escravos africanos nos arredores de São Paulo, a Câmara Municipal criou a primeira lei proibindo a capoeira. A pena era de três dias de prisão para pessoas livres e 50 açoites para escravos. O fato de a lei existir é prova de que a capoeira existia — e preocupava. Mas durante quase dois séculos, historiadores ignoraram essa evidência.
+              </p>
+              <p>
+                A introdução apresenta o problema central da pesquisa: por que a historiografia da capoeira se concentrou quase exclusivamente no Rio de Janeiro e na Bahia, deixando São Paulo de fora? E como reconstituir uma história cujos protagonistas não deixaram registros escritos próprios?
+              </p>
+              <p>
+                A resposta está em "ler os lábios" dos silenciados — rastrear sua presença nos documentos produzidos por quem os perseguia: posturas municipais, livros de presos, inquéritos policiais, processos criminais. As fontes não falam diretamente dos capoeiras, mas deixam rastros suficientes para reconstituir sua atuação.
+              </p>
+            </div>
+            <div class="capitulo-citacao">
+              <p>"Silêncios são inerentes à história porque qualquer evento individual registra a história com algumas de suas partes constituintes faltando... o contínuo alargamento das fronteiras físicas da produção histórica é útil e necessário."</p>
+              <cite>— Michel-Rolph Trouillot, citado na Introdução, p. 11</cite>
+            </div>
+            <a class="capitulo-link-pdf"
+               href="https://drive.google.com/file/d/1_5yrNuLScfKgQxTjlm4NDU_R8mSiuInJ/view?usp=sharing&page=8"
+               target="_blank" rel="noopener">Ler a Introdução na dissertação (p. 8) →</a>
+          </div>
+        </div>
+
+        <!-- CAPÍTULO 1 -->
+        <div class="capitulo-item" id="cap-1">
+          <div class="capitulo-header" tabindex="0" role="button" aria-expanded="false" aria-controls="corpo-1">
+            <span class="capitulo-num">Capítulo 1</span>
+            <div class="capitulo-header-texto">
+              <p class="capitulo-titulo">Problemas, posturas, ordens: primeiros indícios da capoeira em São Paulo</p>
+              <p class="capitulo-subtitulo">p. 37 — De 1831 à disseminação das leis pelo interior paulista</p>
+            </div>
+            <span class="capitulo-toggle" aria-hidden="true">▼</span>
+          </div>
+          <div class="capitulo-corpo" id="corpo-1">
+            <div class="capitulo-resumo">
+              <p>
+                Em 27 de fevereiro de 1831, o padre Antonio Joaquim de Macedo escreveu assustado ao juiz de paz: cerca de 60 escravos africanos tinham cercado sua chácara no Brás. Divididos entre "paulistas" e "cariocas", os dois grupos queriam mostrar uns aos outros quem era mais valente. Os líderes usavam barretes vermelhos. Foi o incidente que antecedeu a criação da lei contra a capoeira, dois anos depois.
+              </p>
+              <p>
+                O capítulo mostra que São Paulo tratou a capoeira de forma diferente do Rio de Janeiro. Enquanto na capital imperial ela era perseguida como crime grave, em São Paulo as posturas municipais usavam o termo "jogo" — sugerindo que autoridades e proprietários de escravos a viam mais como diversão do que como ameaça. Isso pode explicar por que, mesmo com leis proibindo a prática desde 1833, praticamente não há registros de presos por capoeira nesse período na cidade.
+              </p>
+              <p>
+                A proibição se espalhou pelo interior: Sorocaba em 1850, Itu em 1858, Cabreúva em 1863. Em cada caso, os documentos mostram que a lei não era cópia mecânica de São Paulo, mas resposta a problemas reais da população local. A capoeira estava presente em toda a província.
+              </p>
+            </div>
+            <div class="capitulo-citacao">
+              <p>"Querião mostrar aos negros Cariocas a pimponeza dos negros Paulistas. Redobrarão então os assobios, e assoadas. Destes capoeiras dizem serem os chefes uns 2, ou 3 de barretes vermelhos."</p>
+              <cite>— Carta do padre Antonio Joaquim de Macedo ao juiz de paz, 5 de março de 1831, citada na p. 39</cite>
+            </div>
+            <p class="capitulo-personagens"><strong>Personagens do capítulo:</strong> Padre Antonio Joaquim de Macedo · grupos de capoeiras "paulistas" e "cariocas" da Chácara Bom Sucesso · vereadores de Sorocaba, Itu e Cabreúva</p>
+            <a class="capitulo-link-pdf"
+               href="https://drive.google.com/file/d/1_5yrNuLScfKgQxTjlm4NDU_R8mSiuInJ/view?usp=sharing&page=37"
+               target="_blank" rel="noopener">Ler o Capítulo 1 na dissertação (p. 37) →</a>
+          </div>
+        </div>
+
+        <!-- CAPÍTULO 2 -->
+        <div class="capitulo-item" id="cap-2">
+          <div class="capitulo-header" tabindex="0" role="button" aria-expanded="false" aria-controls="corpo-2">
+            <span class="capitulo-num">Capítulo 2</span>
+            <div class="capitulo-header-texto">
+              <p class="capitulo-titulo">Capoeira, conflito e sociedade em São Paulo</p>
+              <p class="capitulo-subtitulo">p. 73 — Estudantes, africanos livres e a Guerra do Paraguai</p>
+            </div>
+            <span class="capitulo-toggle" aria-hidden="true">▼</span>
+          </div>
+          <div class="capitulo-corpo" id="corpo-2">
+            <div class="capitulo-resumo">
+              <p>
+                Em 11 de novembro de 1864, o africano livre Adão dos Santos Jorge estava no Chafariz do Miguel Carlos, no centro de São Paulo, quando sacou uma navalha e feriu o escravo Eduardo. Era um grupo de jovens — escravos, forros e pardos livres — que se reunia ali regularmente para jogar capoeira. Eram conhecidos como os "pequenos do chafariz". Quando o caso foi julgado, em maio de 1865, o júri absolveu Adão por unanimidade: para os jurados, a capoeira era uma "brincadeira", não um crime.
+              </p>
+              <p>
+                O capítulo mostra como a capoeira perpassava diferentes camadas da sociedade paulista. Estudantes da Faculdade de Direito tornaram-se valentões reconhecidos: Luíz Joaquim Duque-Estrada Teixeira descrevia a capoeira como "arte" e defendia suas técnicas com entusiasmo; José Basson de Miranda Osorio era temido pelos confrontos noturnos que liderava. O general Couto de Magalhães chegou a propor a criação de uma "escola de capoeiragem" em São Paulo.
+              </p>
+              <p>
+                Com a Guerra do Paraguai (1865–1870), homens com habilidades marciais foram recrutados e enviados ao front. Muitos voltaram com novo status social. A experiência da guerra foi "transformadora" — abriu caminhos de ascensão para quem soubesse se impor.
+              </p>
+            </div>
+            <div class="capitulo-citacao">
+              <p>"A verdadeira capoeiragem não admite o auxílio de armas de qualquer natureza. O seu princípio básico é que o homem deve empregar para a sua defesa, ou para o ataque, somente os orgams que da natureza recebeu."</p>
+              <cite>— Luíz Joaquim Duque-Estrada Teixeira, estudante da Academia de Direito de São Paulo, citado na p. 114</cite>
+            </div>
+            <p class="capitulo-personagens"><strong>Personagens do capítulo:</strong> Adão dos Santos Jorge · Eduardo · João Pequeno · João Grande · Luíz Joaquim Duque-Estrada Teixeira · José Basson de Miranda Osorio · Couto de Magalhães · Marcílio Dias</p>
+            <a class="capitulo-link-pdf"
+               href="https://drive.google.com/file/d/1_5yrNuLScfKgQxTjlm4NDU_R8mSiuInJ/view?usp=sharing&page=73"
+               target="_blank" rel="noopener">Ler o Capítulo 2 na dissertação (p. 73) →</a>
+          </div>
+        </div>
+
+        <!-- CAPÍTULO 3 -->
+        <div class="capitulo-item" id="cap-3">
+          <div class="capitulo-header" tabindex="0" role="button" aria-expanded="false" aria-controls="corpo-3">
+            <span class="capitulo-num">Capítulo 3</span>
+            <div class="capitulo-header-texto">
+              <p class="capitulo-titulo">Capoeiras em Santos: da disputa entre bairros à luta pela abolição</p>
+              <p class="capitulo-subtitulo">p. 137 — Valongueiros, quarteleiros e os caifases</p>
+            </div>
+            <span class="capitulo-toggle" aria-hidden="true">▼</span>
+          </div>
+          <div class="capitulo-corpo" id="corpo-3">
+            <div class="capitulo-resumo">
+              <p>
+                Santos tinha dois bairros rivais: o Valongo, ligado ao comércio e aos portugueses, e os Quartéis, de caboclos e militares. Desde meados do século XIX, os "valongueiros" e os "quarteleiros" disputavam as ruas da cidade com capoeira, paus e pedras — e a polícia raramente conseguia intervir. Em 1860, algo surpreendente aconteceu: a ameaça de uma empresa inglesa de demolir a Igreja de Santo Antônio uniu os dois grupos rivais. Cerca de 200 a 300 homens marcharam juntos até a Câmara Municipal. A trégua ficou conhecida como o "Milagre de Santo Antônio".
+              </p>
+              <p>
+                Na década de 1870, sete pessoas foram presas por capoeira em Santos — a maior concentração de prisões por esse motivo encontrada em toda a província de São Paulo. O capítulo investiga por quê: a resposta está na política. Cada grupo de capoeiras estava vinculado a facções políticas diferentes, e as prisões refletiam disputas eleitorais.
+              </p>
+              <p>
+                Na década de 1880, a causa abolicionista uniu os antigos rivais. A rede dos caifases, liderada por António Bento, recrutava homens com habilidades físicas para proteger libertadores e enfrentar capatazes. Em Santos, o ex-escravo Quintino de Lacerda chefiou o Quilombo do Jabaquara — que chegou a abrigar mais de 10 mil pessoas — e tornou-se uma das principais lideranças negras da província.
+              </p>
+            </div>
+            <div class="capitulo-citacao">
+              <p>"Quarteleiros! Gente brava como nós! Querem destruir Santo Antonio: Estrangeiros pretendem pisar as nossas tradições e os nossos brios! Santo Antonio acaba de fazer um milagre! Façamos uma tregua em nossas differenças! Somos todos santistas!"</p>
+              <cite>— Cartaz afixado pelos valongueiros na porta da Igreja Matriz, 1860, citado na p. 159</cite>
+            </div>
+            <p class="capitulo-personagens"><strong>Personagens do capítulo:</strong> Quintino de Lacerda · António Bento · António Paciência · Rodolfo Motta · Carlos Garcia · Vicente de Carvalho · Eugênio Wansuít · Pai Felipe · Japhet · Marcelino Ignacio · Joaquim Xavier da Silveira</p>
+            <a class="capitulo-link-pdf"
+               href="https://drive.google.com/file/d/1_5yrNuLScfKgQxTjlm4NDU_R8mSiuInJ/view?usp=sharing&page=137"
+               target="_blank" rel="noopener">Ler o Capítulo 3 na dissertação (p. 137) →</a>
+          </div>
+        </div>
+
+        <!-- CAPÍTULO 4 -->
+        <div class="capitulo-item" id="cap-4">
+          <div class="capitulo-header" tabindex="0" role="button" aria-expanded="false" aria-controls="corpo-4">
+            <span class="capitulo-num">Capítulo 4</span>
+            <div class="capitulo-header-texto">
+              <p class="capitulo-titulo">Capoeira no pós-abolição: de desordeiros e vadios a bambas do samba</p>
+              <p class="capitulo-subtitulo">p. 207 — República, Código Penal e a sobrevivência da capoeira no samba e no futebol</p>
+            </div>
+            <span class="capitulo-toggle" aria-hidden="true">▼</span>
+          </div>
+          <div class="capitulo-corpo" id="corpo-4">
+            <div class="capitulo-resumo">
+              <p>
+                Com a Abolição em 1888 e a República em 1889, os capoeiras que tinham sido peça-chave da luta abolicionista passaram a ser vistos como problema. O Código Penal republicano de 1890 criminalizou a capoeira em todo o Brasil. No Rio de Janeiro, 297 pessoas foram presas só naquele ano. Em São Paulo, a repressão foi mais indireta: não havia perseguição sistemática, mas havia uma campanha cultural para apagar essa memória.
+              </p>
+              <p>
+                Para sobreviver, os ex-capoeiras adaptaram suas habilidades. Nos bairros negros de São Paulo — Bexiga, Barra Funda, Lavapés —, as rodas de samba incorporaram golpes de capoeira. O sambista Dionísio Barbosa, fundador do Bloco da Barra Funda em 1914, descreveu cenas em que, no meio de uma roda, alguém "passava a perna" e o adversário caía: "Era a capoeira." Os "valentões" que não podiam entrar nos salões de baile ficavam do lado de fora protegendo quem estava dentro — e emprestavam o salão do clube de futebol que tinham fundado para os bailes negros.
+              </p>
+              <p>
+                O capítulo também mostra a tensão em Santos no pós-abolição: a greve do porto de 1891 revelou que ex-quilombolas do Jabaquara foram usados como fura-greves, expondo os limites da solidariedade entre trabalhadores negros e o movimento operário. Quintino de Lacerda, que tinha sido herói da abolição, passou a ser figura ambígua.
+              </p>
+              <p>
+                A capoeira não desapareceu. Transformou-se. Incorporou-se à ginga dos balizas de escola de samba, à destreza dos jogadores de futebol de várzea, ao gestual dos sambistas. Em 1928, o escritor Coelho Neto publicou o primeiro artigo defendendo a capoeira como arte marcial nacional — e revelou que sua admiração tinha nascido do tempo em que frequentava as rodas dos caifases de António Bento, décadas antes.
+              </p>
+            </div>
+            <div class="capitulo-citacao">
+              <p>"Com a morte do último africano em São Paulo, desapareceram as tradições, em sua pureza, da raça negra e hoje o Samba, amálgama das múltiplas danças regionais, da Capoeira, do Lundu, do Jongo, batucado em quase todas as fazendas e sítios do Estado de São Paulo... é tudo quanto resta dos costumes característicos do povo oprimido."</p>
+              <cite>— Affonso A. de Freitas, <em>Tradições e reminiscências paulistanas</em>, citado na p. 258</cite>
+            </div>
+            <p class="capitulo-personagens"><strong>Personagens do capítulo:</strong> Quintino de Lacerda · Eugênio Wansuít · Coelho Neto · Dionísio Barbosa · Manoel Leocádio · João do Rio · Couto de Magalhães · José Domingues Martins (J.D.) · Ataliba · Grande Otelo</p>
+            <a class="capitulo-link-pdf"
+               href="https://drive.google.com/file/d/1_5yrNuLScfKgQxTjlm4NDU_R8mSiuInJ/view?usp=sharing&page=207"
+               target="_blank" rel="noopener">Ler o Capítulo 4 na dissertação (p. 207) →</a>
+          </div>
+        </div>
+
+      </div><!-- fim capitulos-lista -->
+    </section>
+
+    <!-- CONCLUSÃO -->
+    <div class="conclusao-bloco" aria-labelledby="conclusao-titulo">
+      <p class="secao-titulo" id="conclusao-titulo">Conclusão geral</p>
+      <p>
+        A dissertação conclui que a capoeira em São Paulo foi uma manifestação viva e transformadora ao longo de cem anos — não uma prática marginal ou importada. Africanos escravizados, forros, homens livres pobres e até estudantes da elite acadêmica participaram dela, cada um a seu modo e com seus próprios objetivos.
+      </p>
+      <p>
+        O que a pesquisa revela, acima de tudo, é a capacidade de agência dos grupos subalternos: escravos que disputavam o espaço urbano com identidade própria; libertos que usaram suas habilidades para conquistar posição política; ex-capoeiras que reinventaram seu conhecimento corporal dentro do samba, do carnaval e do futebol quando a repressão fechou outras portas.
+      </p>
+      <p>
+        São Paulo não foi palco passivo da história da capoeira. Foi parte ativa dela — com trajetória própria, personagens próprios e documentos que esperavam, por quase dois séculos, que alguém os lesse.
+      </p>
+      <a href="https://drive.google.com/file/d/1_5yrNuLScfKgQxTjlm4NDU_R8mSiuInJ/view?usp=sharing&page=312"
+         target="_blank" rel="noopener" class="capitulo-link-pdf">Ler as Considerações finais na dissertação (p. 312) →</a>
     </div>
+
   </main>
+
   <footer><p>
     <strong>Capoeira e valentia em São Paulo — Pesquisa e documentos</strong><br />
     Dissertação de mestrado em História Social · Universidade de São Paulo · 2011<br />
@@ -50,7 +445,45 @@
     &nbsp;·&nbsp;
     <a href="sobre.html">Sobre a pesquisa</a>
   </p></footer>
+
   <script src="script.js"></script>
+  <script>
+  // Acordeão dos capítulos
+  (function () {
+    document.querySelectorAll('.capitulo-header').forEach(function (header) {
+      function toggle() {
+        var item = header.closest('.capitulo-item');
+        var aberto = item.classList.toggle('aberto');
+        header.setAttribute('aria-expanded', aberto);
+      }
+      header.addEventListener('click', toggle);
+      header.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+    });
+
+    // Abrir o capítulo correto se vier com âncora na URL
+    var hash = window.location.hash;
+    if (hash) {
+      var alvo = document.querySelector(hash);
+      if (alvo && alvo.classList.contains('capitulo-item')) {
+        alvo.classList.add('aberto');
+        alvo.querySelector('.capitulo-header').setAttribute('aria-expanded', 'true');
+        setTimeout(function () { alvo.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+      }
+    }
+  })();
+  </script>
+  <script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'pt',
+      includedLanguages: 'en,es',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+  </script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
