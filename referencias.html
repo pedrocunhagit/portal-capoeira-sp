@@ -5,6 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Referências — Capoeira e valentia em São Paulo</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Barra de busca ── */
+    .ref-busca-wrap {
+      max-width: 860px;
+      margin: 1.4rem auto .6rem;
+      padding: 0 1.2rem;
+    }
+    #ref-busca {
+      width: 100%;
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      padding: .55rem .85rem;
+      border: 1.5px solid #c8b89a;
+      border-radius: 4px;
+      background: #fff;
+      color: #2c1a0e;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color .2s;
+    }
+    #ref-busca:focus { border-color: #6b3a1f; }
+    #ref-busca::placeholder { color: #a08060; }
+    .ref-contador {
+      font-size: .85rem;
+      color: #7a5c3a;
+      margin: .3rem 0 0 .1rem;
+    }
+
+    /* ── Seções temáticas ── */
+    .ref-main {
+      max-width: 860px;
+      margin: 0 auto 3.5rem;
+      padding: 0 1.2rem;
+    }
+    .ref-secao {
+      margin-bottom: 2.5rem;
+    }
+    .ref-secao-titulo {
+      font-size: .75rem;
+      font-weight: bold;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #6b3a1f;
+      border-bottom: 1px solid #e0d3c0;
+      padding-bottom: .4rem;
+      margin-bottom: 1.1rem;
+    }
+
+    /* ── Lista de referências ── */
+    .ref-lista {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .ref-item {
+      font-size: .9rem;
+      line-height: 1.65;
+      color: #2c1a0e;
+      padding: .55rem 0 .55rem .9rem;
+      border-bottom: 1px solid #f5ead8;
+      border-left: 3px solid transparent;
+      transition: border-left-color .18s, background .18s;
+    }
+    .ref-item:last-child { border-bottom: none; }
+    .ref-item:hover {
+      border-left-color: #6b3a1f;
+      background: #fdf6ec;
+      padding-left: 1.1rem;
+    }
+    .ref-item mark {
+      background: #ffe066;
+      color: #2c1a0e;
+      border-radius: 2px;
+      padding: 0 .1em;
+    }
+    .ref-item.oculto { display: none; }
+
+    /* ── Nota de rodapé ── */
+    .ref-nota {
+      font-size: .82rem;
+      color: #8a6a4a;
+      border-top: 1px solid #e0d3c0;
+      padding-top: .9rem;
+      margin-top: 2rem;
+    }
+
+    /* ── Responsivo ── */
+    @media (max-width: 600px) {
+      .ref-item { font-size: .85rem; }
+    }
+
+    /* ── Contraste ── */
+    body.alto-contraste .ref-item { color: #fff; border-bottom-color: #444; }
+    body.alto-contraste .ref-item:hover { background: #111; }
+    body.alto-contraste #ref-busca { background: #111; color: #fff; border-color: #fff; }
+  </style>
 </head>
 <body>
   <div class="acess-bar" role="toolbar" aria-label="Opções de acessibilidade">
@@ -18,10 +114,12 @@
     <span>Idioma</span>
     <div id="google_translate_element"></div>
   </div>
+
   <header><div class="header-inner">
     <h1>Capoeira e valentia em São Paulo</h1>
     <p class="subtitulo">Pesquisa e documentos históricos (1830–1930)</p>
   </div></header>
+
   <nav aria-label="Menu principal">
     <button class="menu-toggle" aria-expanded="false" aria-controls="menu-lista">Menu</button>
     <ul id="menu-lista" role="list">
@@ -33,16 +131,235 @@
       <li><a href="sobre.html">Sobre a pesquisa</a></li>
     </ul>
   </nav>
+
   <div class="page-header"><div class="page-header-inner">
     <h2>Referências bibliográficas</h2>
-    <p>Fontes primárias, bibliografia e filmografia utilizadas na pesquisa</p>
+    <p>Obras consultadas na pesquisa sobre capoeira em São Paulo (1830–1930)</p>
   </div></div>
-  <main>
-    <div class="em-construcao">
-      <h3>Em construção</h3>
-      <p>Esta seção está sendo preparada. Em breve você encontrará a lista completa de fontes primárias, livros, artigos e filmografia utilizados na pesquisa, com busca por autor ou título.</p>
-    </div>
+
+  <!-- Busca -->
+  <div class="ref-busca-wrap">
+    <input type="search" id="ref-busca" placeholder="Buscar por autor, título ou palavra-chave…" aria-label="Buscar nas referências" autocomplete="off" />
+    <p class="ref-contador" id="ref-contador" aria-live="polite"></p>
+  </div>
+
+  <main class="ref-main">
+
+    <!-- 1. Capoeira -->
+    <section class="ref-secao" data-grupo="capoeira">
+      <h3 class="ref-secao-titulo">Capoeira — história e cultura</h3>
+      <ul class="ref-lista">
+        <li class="ref-item">ABREU, Frederico José de. <em>O Barracão do mestre Waldemar.</em> Salvador: Organização Zarabatana, 2003.</li>
+        <li class="ref-item">ABREU, Frederico José de. <em>Capoeiras – Bahia, século XIX: imaginário e documentação,</em> vol I. Salvador: Instituto Jair Moura, 2005.</li>
+        <li class="ref-item">ARAÚJO, Paulo Coêlho de. <em>Abordagens sócio-antropológicas da luta/jogo da capoeira.</em> Portugal, Maia: Instituto Superior da Maia (Série "Estudos e Monografias"), 1997.</li>
+        <li class="ref-item">ASSUNÇÃO, Matthias Röhrig. "Capoeira e escravidão". In: <em>Revista Afro-Ásia,</em> 31, 2004.</li>
+        <li class="ref-item">ASSUNÇÃO, Matthias Röhrig. <em>Capoeira – The History of an Afro-brazilian Martial Art.</em> Londres: Routledge, 2005.</li>
+        <li class="ref-item">ASSUNÇÃO, Matthias Röhrig. "History and Memory in Capoeira Lyrics from Bahia, Brazil". In: NARO, Nancy Priscilla; SANSI-ROCA, Roger; TREECE, David H. (ed.) <em>Cultures of the Lusophone Black Atlantic.</em> New York: Palgrave Macmillan, 2007.</li>
+        <li class="ref-item">ASSUNÇÃO, Matthias Röhrig; PEÇANHA, Cinésio Feliciano (mestre Cobra Mansa). "A Dança da Zebra". In: <em>Revista de História da Biblioteca Nacional,</em> Ano 3, n° 30, março de 2008.</li>
+        <li class="ref-item">BARBOSA, Wallace de Deus (coord.). <em>Inventário para registro e salvaguarda da capoeira como patrimônio cultural do Brasil.</em> Brasília, 2007.</li>
+        <li class="ref-item">BRETAS, Marcos Luiz. "A queda do império da navalha e da rasteira (a República e os capoeiras)". In: <em>Cadernos de Estudos Afro-Asiáticos</em> Nº 20, Cândido Mendes, 1991.</li>
+        <li class="ref-item">CAPOEIRA, Nestor. <em>Galo já cantou.</em> Rio de Janeiro: Ed. Record, 1999.</li>
+        <li class="ref-item">CAVALCANTI, Gil (mestre Gil Velho). "Do lenço de seda à calça de ginástica". In: www.revistadehistoria.com.br (acessado em 15/06/2008).</li>
+        <li class="ref-item">COSTA, Lamartine Pereira da. <em>Capoeiragem: a arte da defesa pessoal brasileira.</em> Rio de Janeiro: s. ed, s. data.</li>
+        <li class="ref-item">DEALTRY, Giovanna. "Ginga na 'belle époque'". In: <em>Revista de História da Biblioteca Nacional,</em> n. 53, fevereiro de 2010.</li>
+        <li class="ref-item">JOÃO PEQUENO, Mestre. <em>Uma vida pela capoeira.</em> São Paulo, 2000.</li>
+        <li class="ref-item">MOURA, Jair. <em>A crônica da capoeiragem.</em> Salvador: edição do autor, 1991.</li>
+        <li class="ref-item">PASTINHA, Vicente Ferreira. <em>Capoeira Angola.</em> Salvador: Escola Gráfica Nossa Senhora de Loreto, 1968.</li>
+        <li class="ref-item">PIRES, Antônio Liberac Cardoso Simões. <em>A capoeira no jogo das cores: criminalidade, cultura e racismo na cidade do Rio de Janeiro (1890-1937).</em> Campinas: dissertação de mestrado, Unicamp, 1996.</li>
+        <li class="ref-item">PIRES, Antônio Liberac Cardoso Simões. <em>Movimentos da cultura afro-brasileira: a formação histórica da capoeira contemporânea (1890-1950).</em> Campinas: tese de doutorado, Unicamp, 2001.</li>
+        <li class="ref-item">REGO, Waldeloir. <em>Capoeira Angola – ensaio sócio-etnográfico.</em> Rio de janeiro: Editora Itapoá – Coleção Baiana, 1968.</li>
+        <li class="ref-item">REIS, Letícia Vidor de Souza. <em>Negros e brancos no jogo da capoeira. A reinivenção da tradição.</em> São Paulo: dissertação de mestrado, USP, 1993.</li>
+        <li class="ref-item">REIS, Letícia Vidor de Sousa Reis. <em>O mundo de pernas para o ar. A capoeira no Brasil.</em> São Paulo: Publisher Brasil, 2000.</li>
+        <li class="ref-item">SOARES, Carlos Eugênio Líbano. <em>A capoeira escrava e outras tradições rebeldes no Rio de Janeiro (1808-1850).</em> 2ª edição. Campinas, SP: Editora Unicamp, 2002.</li>
+        <li class="ref-item">SOARES, Carlos Eugênio Líbano. <em>A negregada instituição: os capoeiras no Rio de Janeiro.</em> Rio de Janeiro: Access Editora, 1999.</li>
+        <li class="ref-item">SOARES, Carlos Eugênio Líbano. "A capoeiragem baiana na Corte Imperial (1863-1890)". In: <em>Revista Afro-Ásia,</em> 21-22, 1998-1999.</li>
+        <li class="ref-item">VIEIRA, Luís Renato. <em>Da vadiação à capoeira regional: uma interpretação da modernização cultural no Brasil.</em> Dissertação de Mestrado. Brasília: Faculdade Sociologia/UNB, 1990.</li>
+        <li class="ref-item">VIEIRA, Luís Renato. <em>O jogo da capoeira – cultura popular no Brasil.</em> Rio de Janeiro: ed. Sprint, 1995.</li>
+      </ul>
+    </section>
+
+    <!-- 2. Escravidão e liberdade -->
+    <section class="ref-secao" data-grupo="escravidao">
+      <h3 class="ref-secao-titulo">Escravidão, liberdade e resistência</h3>
+      <ul class="ref-lista">
+        <li class="ref-item">ALGRANTI, Leila Mezan. <em>O feitor ausente: estudos de escravidão urbana no Rio de Janeiro.</em> Petrópolis: Vozes, 1988.</li>
+        <li class="ref-item">BERTIN, Enidelce. <em>Alforrias na São Paulo do século XIX: liberdade e dominação.</em> São Paulo: Humanitas/FFLCH/USP, 2004.</li>
+        <li class="ref-item">BERTIN, Enidelce. <em>Os meia-cara. Africanos livres em São Paulo no século XIX.</em> Tese de doutorado, USP, 2006.</li>
+        <li class="ref-item">CASTAN. <em>Scenas da abolição e scenas varias: horrores da escravidão.</em> São Paulo: Empresa Editora, 1921.</li>
+        <li class="ref-item">COSTA, Emília Viotti da. <em>Da senzala à colônia,</em> 4ª ed. São Paulo: Fundação Editora Unesp, 1998.</li>
+        <li class="ref-item">CUNHA, Manuela Carneiro da. <em>Negros, estrangeiros. Os escravos libertos e sua volta à África.</em> São Paulo: Brasiliense, 1985.</li>
+        <li class="ref-item">DIAS, Maria Odila Leite da Silva. "Nas fímbrias da escravidão urbana: negras de tabuleiro e de ganho". <em>Estudos Econômicos,</em> 15 (n° especial), 1985.</li>
+        <li class="ref-item">DIAS, Maria Odila Leite da Silva. <em>Quotidiano e poder em São Paulo no século XIX.</em> 2ª ed. rev. São Paulo: Brasiliense, 2001.</li>
+        <li class="ref-item">FLORENCE, Afonso Bandeira. "Resistência escrava em São Paulo: a luta dos escravos da fábrica de ferro São João de Ipanema (1828-1842)". In: <em>Afro-Ásia,</em> 18, 1996.</li>
+        <li class="ref-item">FONER, Eric. <em>Nada além da liberdade: a emancipação e seu legado.</em> Rio de Janeiro: Paz e Terra, 1988.</li>
+        <li class="ref-item">FONTES, Alice Aguiar de Barros. <em>A prática abolicionista em São Paulo: os caifases (1882-1888).</em> Dissertação de Mestrado. São Paulo: FFLCH/USP, 1976.</li>
+        <li class="ref-item">HOLLOWAY, Thomas. <em>Policing Rio de Janeiro: Repression and Resistence in a 19th-Century City.</em> California: Stanford University Press, 1993.</li>
+        <li class="ref-item">KARASCH, Mary C. <em>A vida dos escravos no Rio de Janeiro 1808-1850.</em> São Paulo: Companhia das Letras, 2000.</li>
+        <li class="ref-item">MACHADO, Maria Helena Pereira Toledo. <em>Crime e escravidão: lavradores pobres na crise do trabalho escravo (1830-1888).</em> São Paulo: Ed. Brasiliense, 1987.</li>
+        <li class="ref-item">MACHADO, Maria Helena Pereira Toledo. <em>O plano e o pânico – os movimentos sociais na década da abolição.</em> São Paulo: UFRJ/Edusp, 1994.</li>
+        <li class="ref-item">MACHADO, Maria Helena Pereira Toledo. "From Slaves Rebels to Strikebreakers: the Quilombo of Jabaquara and the Problem of Citizenship in Late-Nineteenth-Century Brazil". In: <em>Hispanic American Historical Review,</em> n° 86:2, maio de 2006.</li>
+        <li class="ref-item">MAMIGONIAN, Beatriz Gallotti. "A Grã-Bretanha, o Brasil e as 'complicações no estado atual da nossa população': revisitando a abolição do tráfico atlântico de escravos (1848-1851)". In: <em>Anais do 4º Encontro Escravidão e Liberdade no Brasil Meridional.</em> Curitiba, 2009.</li>
+        <li class="ref-item">MATTOS, Regiane Augusto de. <em>De cassange, mina, benguela a gentio da Guiné. Grupos étnicos e formação de identidades africanas na cidade de São Paulo (1800-1850).</em> Dissertação de Mestrado. São Paulo: FFLCH/USP, 2006.</li>
+        <li class="ref-item">PIROLA, Ricardo Figueiredo. <em>A Conspiração escrava de Campinas, 1832: rebelião, etnicidade e família.</em> Dissertação de mestrado, Unicamp, 2005.</li>
+        <li class="ref-item">QUINTÃO, Antonia Aparecida. <em>Irmandades negras: outro espaço de luta e resistência (1870-1890).</em> Dissertação de mestrado, FFLCH/USP, 1991.</li>
+        <li class="ref-item">REIS, João José. "Quilombos e revoltas escravas no Brasil". In: <em>Dossiê Povo Negro - 300 Anos,</em> n. 28, dez. 1995 – fev. 1996.</li>
+        <li class="ref-item">REIS, João José. <em>Rebelião escrava no Brasil — a história do levante dos malês em 1835.</em> São Paulo: Companhia das Letras, 2003.</li>
+        <li class="ref-item">REIS, João José. <em>Domingos Sodré: um sacerdote africano – escravidão, liberdade e candomblé na Bahia do século XIX.</em> São Paulo: Companhia das Letras, 2008.</li>
+        <li class="ref-item">ROSEMBERG, André. <em>Ordem e burla – processos sociais, escravidão e justiça em Santos, década de 1880.</em> São Paulo: Alameda, 2006.</li>
+        <li class="ref-item">SILVA, Eduardo. <em>Dom Obá II d'África, príncipe do povo. Vida, tempo e pensamento de um homem livre de cor.</em> São Paulo: Companhia das Letras, 1997.</li>
+        <li class="ref-item">WISSENBACH, Maria Cristina Cortez. <em>Sonhos africanos, vivências ladinas – escravos e forros no Município de São Paulo 1850-1880.</em> Dissertação de Mestrado. São Paulo: FFLCH/USP, 1989.</li>
+        <li class="ref-item">WISSENBACH, Maria Cristina Cortez. <em>Ritos de magia e sobrevivência: sociabilidades e práticas mágico-religiosas no Brasil (1890-1940).</em> Tese de doutorado, FFLCH/USP, 1997.</li>
+        <li class="ref-item">WISSENBACH, Maria Cristina Cortez. <em>Sonhos africanos, vivências ladinas: escravos e forros em São Paulo (1850-1880).</em> São Paulo: Hucitec, 2009.</li>
+      </ul>
+    </section>
+
+    <!-- 3. São Paulo e Santos -->
+    <section class="ref-secao" data-grupo="sp-santos">
+      <h3 class="ref-secao-titulo">São Paulo e Santos — história urbana e social</h3>
+      <ul class="ref-lista">
+        <li class="ref-item">AZEVEDO, Elizabeth Ribeiro. <em>Um palco sob as arcadas: o teatro dos estudantes de Direito do Largo de São Francisco, em São Paulo, no século XIX.</em> São Paulo: Annablume/Fapesp, 2000.</li>
+        <li class="ref-item">BRITTO, Iêda Marques. <em>Samba na cidade de São Paulo (1900-1930): um exercício de resistência cultural.</em> São Paulo: FFLCH/USP, 1986.</li>
+        <li class="ref-item">BRUNO, Ernani Silva. <em>História e tradições da cidade de São Paulo.</em> São Paulo: Hucitec/Prefeitura do Município de São Paulo, 1984, 3ª ed. (1ª ed. 1953), v. 2.</li>
+        <li class="ref-item">CARVALHO, José Murilo de. <em>Os bestializados. O Rio de Janeiro e a República que não foi.</em> São Paulo: Companhia das Letras, 1987.</li>
+        <li class="ref-item">CASTRO, Márcio Sampaio de. <em>Bexiga: um bairro afro-italiano.</em> São Paulo: Annablume, 2008.</li>
+        <li class="ref-item">CAVALHEIRO, Carlos Carvalho. <em>Scenas da escravidão. Breve ensaio sobre a escravidão negra em Sorocaba.</em> Sorocaba/SP: Crearte, 2006.</li>
+        <li class="ref-item">DIAS, Maria Odila Leite da Silva. "Sociabilidades sem história: votantes pobres no império (1824-1881)". In: FREITAS, Marcos Cezar de (org.). <em>Historiografia brasileira em perspectiva.</em> São Paulo: Contexto, 1998.</li>
+        <li class="ref-item">FERREIRA, Barros. <em>O nobre e antigo bairro da Sé.</em> São Paulo: Departamento de Cultura da Prefeitura de São Paulo, 1971.</li>
+        <li class="ref-item">FREITAS, Affonso A. de. <em>Tradições e reminiscências paulistanas.</em> 3ª edição. São Paulo: Governo do Estado de São Paulo, 1978.</li>
+        <li class="ref-item">GASPAR, Byron. <em>Fontes e chafarizes de São Paulo.</em> São Paulo: Conselho Estadual de Cultura, 1967.</li>
+        <li class="ref-item">JÚNIOR, Bandeira. <em>História do carnaval de Santos.</em> Santos: Livraria Corrêa Leite, 1964.</li>
+        <li class="ref-item">LANNA, Ana Lúcia Duarte. <em>Uma cidade na transição. Santos: 1870-1913.</em> Santos: Editora Hucitec/Prefeitura, 1996.</li>
+        <li class="ref-item">MACIEL, Cleber da Silva. <em>Discriminações raciais: negros em Campinas (1888-1926).</em> Campinas: dissertação de mestrado, Unicamp, 1985.</li>
+        <li class="ref-item">MARINS, Paulo César Garcez. <em>Através da rótula: sociedade e arquitetura urbana no Brasil, séculos XVII-XX.</em> Tese de doutorado, USP, 1999.</li>
+        <li class="ref-item">MARZOLA, Nádia. <em>Bela Vista.</em> São Paulo: Departamento de Cultura da Prefeitura de São Paulo, 1979.</li>
+        <li class="ref-item">MOURA, Denise Aparecida Soares. <em>Sociedade movediça: economia, cultura e relações sociais em São Paulo (1808-1850).</em> São Paulo: ed. Unesp, 2005.</li>
+        <li class="ref-item">NOGUEIRA, J. L. de Almeida. <em>A Academia de São Paulo: tradições e reminiscências.</em> São Paulo: Primeira Série, 1907, v. 1.</li>
+        <li class="ref-item">NOGUEIRA, J. L. de Almeida. <em>A Academia de São Paulo: tradições e reminiscências.</em> São Paulo: Quinta Série, 1908.</li>
+        <li class="ref-item">PENTEADO, Jacob. <em>Belenzinho – 1910. Retrato de uma época.</em> São Paulo: Martins, 1962.</li>
+        <li class="ref-item">ROSEMBERG, André. <em>Polícia, policiamento e o policial na província de São Paulo, no final do Império.</em> Tese de Doutorado. São Paulo: FFLCH/USP, 2008.</li>
+        <li class="ref-item">SALLA, Fernando. <em>As prisões em São Paulo (1822-1940).</em> São Paulo: Annablume, Fapesp, 2006.</li>
+        <li class="ref-item">SANTOS, Francisco Martins dos. <em>História de Santos.</em> São Vicente, SP: 2º Volume, Editora Caudex Ltda, 1986. (1ª ed. em 1937).</li>
+        <li class="ref-item">SETÚBAL, Paulo. <em>A Marquesa de Santos,</em> romance histórico, 1925.</li>
+        <li class="ref-item">TORRES, Maria Celestina Teixeira Mendes. <em>O Bairro do Brás.</em> São Paulo: Departamento de Cultura da Prefeitura, 1985.</li>
+        <li class="ref-item">Von SIMSON, Olga Rodrigues de Moraes von. <em>Carnaval em branco e negro: carnaval popular paulistano (1914-1988).</em> Campinas: ed. Unicamp; São Paulo: ed. da USP; Imprensa Oficial do Estado de São Paulo, 2007.</li>
+        <li class="ref-item">ZALUAR, Augusto-Emilio. <em>Peregrinação pela provincia de S. Paulo (1860-1861).</em> Rio de Janeiro: Livraria Garnier, 1862.</li>
+      </ul>
+    </section>
+
+    <!-- 4. África e diáspora -->
+    <section class="ref-secao" data-grupo="africa">
+      <h3 class="ref-secao-titulo">África e diáspora africana</h3>
+      <ul class="ref-lista">
+        <li class="ref-item">APPIAH, Kwame Anthony. <em>Na casa de meu pai: a África na filosofia da cultura.</em> Rio de Janeiro: Contraponto, 1997.</li>
+        <li class="ref-item">CARNEIRO, Edison. <em>Negros Bantus. Notas de ethnographia religiosa e de folklore.</em> Rio de Janeiro: Civilização Brasileira, 1937.</li>
+        <li class="ref-item">DESCH OBI, T. J. "Combat and the Crossing of the Kalunga". In: HEYWOOD, Linda (org.). <em>Central Africans and Cultural Transformations in the Diaspora.</em> Cambridge: Cambridge University Press, 2002.</li>
+        <li class="ref-item">DIAS, Jill. "Novas identidades africanas em Angola no contexto do comércio atlântico". In: BASTOS, Cristina et al. (org.) <em>Trânsitos Coloniais.</em> Campinas: Editora da Unicamp, 2007.</li>
+        <li class="ref-item">GERHARD, Kubik. <em>Angolan Traits in Black Music, Games and Dances of Brazil.</em> Lisboa: s. ed., 1979.</li>
+        <li class="ref-item">KUBIK, Gerhard. "Traços históricos da província da Huíla no Brasil". In: BRITO, Joaquim Pais de et al. (coord.). <em>Sonoridades luso-afro-brasileiras.</em> Lisboa: Imprensa de Ciências Sociais, 2004.</li>
+        <li class="ref-item">MARCUSSI, Alexandre Almeida. <em>Diagonais do afeto: teorias do intercâmbio cultural nos estudos da diáspora africana.</em> Dissertação de mestrado, FFLCH/USP, 2010.</li>
+        <li class="ref-item">MILLER, Joseph C. "Retention, Reinvention and Remembering: Restoring Identities through Enslavement in Africa and under Slavery in Brazil". In: CURDO, José C. e LOVEJOY, Paul E.. <em>Enslaving Connections.</em> New York: Humanity Books, 2004.</li>
+        <li class="ref-item">MINTZ, Sidney; PRICE, Richard. <em>O nascimento da cultura afro-americana. Uma perspectiva antropológica.</em> Rio de Janeiro: Pallas, UCAM, 2003.</li>
+        <li class="ref-item">MUKUNA, Kazadi Wa. <em>Contribuição bantu na música popular brasileira: perspectivas etnomusicológicas.</em> São Paulo: Terceira Margem, 2006.</li>
+        <li class="ref-item">PARÉS, Luis Nicolau. <em>A formação do candomblé: história e ritual da nação Jeje na Bahia.</em> Campinas, SP: Ed. Unicamp, 2006.</li>
+        <li class="ref-item">PRICE, Richard. "O milagre da crioulização: retrospectiva". In: <em>Estudos Afro-Asiáticos,</em> Ano 25, n° 3, 2003.</li>
+        <li class="ref-item">QUERINO, Manuel. <em>Costumes africanos no Brasil.</em> Rio de Janeiro: Civilização Brasileira, 1938.</li>
+        <li class="ref-item">SLENES, Robert W. "Malungo, Ngoma vem! África coberta e descoberta no Brasil". In: <em>Revista USP,</em> 12, 1991/1992.</li>
+        <li class="ref-item">SLENES, Robert W. "A árvore de nsanda transplantada: cultos kongo de aflição e identidade escrava no Sudeste brasileiro (século XIX)". In: LIBBY, Douglas C. e FURTADO, Júnia F. <em>Trabalho Livre, Trabalho Escravo.</em> São Paulo: Annablume, 2006.</li>
+        <li class="ref-item">THORNTON, John K. <em>Warfare in Atlantic Africa (1500-1800).</em> London: Routledge, 2003.</li>
+        <li class="ref-item">THORNTON, John K. "African Soldiers in the Haitian Revolution". In: <em>Journal of Caribbean History,</em> n. 25, 1993.</li>
+        <li class="ref-item">VANHEE, Hein. "Central African Popular Christianity and the Making of Haitian Vodoo Religion". In: HEYWOOD, Linda. (ed.). <em>Central Africans and Cultural Transformations in the American Diaspora.</em> Cambridge University Press, 2002.</li>
+      </ul>
+    </section>
+
+    <!-- 5. Cultura popular e festas -->
+    <section class="ref-secao" data-grupo="cultura">
+      <h3 class="ref-secao-titulo">Cultura popular, festas e manifestações afro-brasileiras</h3>
+      <ul class="ref-lista">
+        <li class="ref-item">CASCUDO, Luís da Câmara. <em>Dicionário do Folclore Brasileiro.</em> Rio de Janeiro: Tecnoprint Gráfica, s/d. (1ª ed. 1954).</li>
+        <li class="ref-item">CASTRO, Maurício Barros de. <em>Na roda do mundo: mestre João Grande entre a Bahia e Nova York.</em> Tese de doutorado, FFLCH/USP, 2007.</li>
+        <li class="ref-item">LINEBAUGH, Peter. "Todas as montanhas atlânticas estremeceram". In: <em>Revista Brasileira de História.</em> São Paulo: Anpuh, n. 6, pp. 7-46, set. 1983.</li>
+        <li class="ref-item">MAGGIE, Yvonne. <em>Medo do feitiço: relações entre magia e poder no Brasil.</em> Rio de Janeiro: Arquivo Nacional, 1992.</li>
+        <li class="ref-item">MAIA, Clarissa Nunes. <em>Sambas, batuques, vozerias e farsas públicas. O controle social sobre os escravos em Pernambuco no século XIX (1850-1888).</em> São Paulo: Annablume, 2008.</li>
+        <li class="ref-item">MITCHELL, Reid. "Significando: carnaval afro-creole em New Orleans do século XIX e início do XX". In: CUNHA, Maria Clementina Pereira (org.). <em>Carnavais e outras f(r)estas.</em> Campinas: ed. da Unicamp, Cecult, 2002.</li>
+        <li class="ref-item">REIS, João José. "Tambores e temores: a festa negra na Bahia na primeira metade do século XIX". In: CUNHA, Maria Clementina Pereira (org.). <em>Carnavais e outras f(r)estas.</em> Campinas: Editora Unicamp, 2002.</li>
+        <li class="ref-item">RIBEIRO, José. <em>Brasil no folclore.</em> Rio de Janeiro: Editora Aurora, 1970.</li>
+        <li class="ref-item">SHAFFER, Kay. "O berimbau-de-barriga e seus toques". In: <em>Monografias folclóricas 2,</em> 1977.</li>
+        <li class="ref-item">SILVA, Luiz Geraldo. "Da festa à sedição. Sociabilidades, etnia e controle social na América Portuguesa (1776-1814)". In: JANCSÓ, István. <em>Festa: cultura e sociabilidade na América portuguesa.</em> São Paulo: Edusp, Hucitec, Fapesp, 2001.</li>
+        <li class="ref-item">SILVA, Salomão Jovino. <em>Memórias sonoras da noite. Musicalidades africanas no Brasil oitocentista.</em> Tese de doutorado, PUC-SP, 2005.</li>
+        <li class="ref-item">SILVA, Vagner Gonçalves da (Org.). <em>Artes do corpo: memória afro-brasileira.</em> São Paulo: Selo Negro, 2004.</li>
+      </ul>
+    </section>
+
+    <!-- 6. Viajantes e fontes do século XIX -->
+    <section class="ref-secao" data-grupo="viajantes">
+      <h3 class="ref-secao-titulo">Viajantes e fontes do século XIX</h3>
+      <ul class="ref-lista">
+        <li class="ref-item">DEBRET, Jean Baptiste. <em>Viagem pitoresca e histórica ao Brasil.</em> São Paulo: Livraria Martins Editora, 3ª Ed. s/d. Tomos I e II.</li>
+        <li class="ref-item">EDMUNDO, Luís. <em>O Rio de Janeiro no tempo dos vice-reis (1763-1808).</em> Coleção Brasil 500 Anos, Senado Federal, 2000. (1ª ed. 1938).</li>
+        <li class="ref-item">KIDDER, Daniel P. <em>Reminiscências de viagens e permanências nas províncias do Sul do Brasil.</em> Belo Horizonte: Livraria Itatiaia, Edusp, 1980.</li>
+        <li class="ref-item">MAGALHÃES, Couto de. <em>O selvagem</em> (3ª ed.). São Paulo: Companhia Editora Nacional, Brasiliana, 1935.</li>
+        <li class="ref-item">MAGALHÃES, José Vieira Couto de. <em>Diário íntimo.</em> Organizado por Maria Helena P. T. Machado. São Paulo: Companhia das Letras, 1998.</li>
+        <li class="ref-item">RIBEYROLLES, Charles. <em>Brazil Pittoresco: história, descrições, viagens, instituições, colonisação.</em> Rio de Janeiro: Typographia Nacional, 1859.</li>
+        <li class="ref-item">RIOS FILHO, Adolfo Morales de los. <em>O Rio de Janeiro imperial.</em> Rio de Janeiro: Topbooks Editora, 2000. (1ª ed. em 1946).</li>
+        <li class="ref-item">RUGENDAS, Johann Moritz. <em>Viagem pitoresca através do Brasil.</em> 8ª ed. Belo Horizonte: Ed. Itatiaia; São Paulo: Ed. da Universidade de São Paulo, 1979. (1ª ed. 1835).</li>
+        <li class="ref-item">SAINT-HILAIRE, Auguste de. <em>Viagem à província de São Paulo e resumos das viagens ao Brasil.</em> São Paulo: Editora da Universidade de São Paulo, 1972.</li>
+        <li class="ref-item">SPIX, J. B. von e MARTIUS, C. F. P. von. <em>Viagem pelo Brasil (1817-1820).</em> 2ª edição. São Paulo: Ed. Melhoramentos, Tomo I, s/d.</li>
+        <li class="ref-item">WETHERELL, James. <em>Brazil. Stray Notes from Bahia.</em> Liverpool: Webb & Hunt, 1860.</li>
+      </ul>
+    </section>
+
+    <!-- 7. Guerra do Paraguai -->
+    <section class="ref-secao" data-grupo="guerra">
+      <h3 class="ref-secao-titulo">Guerra do Paraguai e militarismo</h3>
+      <ul class="ref-lista">
+        <li class="ref-item">BALABAN, Marcelo. "Voluntários involuntários: o recrutamento para a Guerra do Paraguai nas imagens da imprensa ilustrada brasileira do século XIX". In: <em>Revista Mundos do trabalho</em> [online], vol. 1, n.2, jul-dez, 2009.</li>
+        <li class="ref-item">CASTRO, Adler Homero Fonseca de. "Notas sobre o armamento da Guerra do Paraguai". In: <em>Projeto Rede da Memória Virtual Brasileira — Guerra do Paraguai.</em> Disponível em: &lt;http://bndigital.bn.br/projetos/guerradoparaguai/artigos.html&gt;. Acesso em: 9 jun. 2010.</li>
+        <li class="ref-item">DORATIOTO, Francisco. <em>Maldita Guerra: nova história da Guerra do Paraguai.</em> São Paulo: Companhia das Letras, 2002.</li>
+        <li class="ref-item">KRAAY, Hendrik. "Patriotic Mobilization in Brazil: The Zuavos and Other Black Companies". In: KRAAY, Hendrik &amp; WHIGHAM, Thomas (org). <em>I Die with My Country.</em> Lincoln: University of Nebraska Press, 2004.</li>
+        <li class="ref-item">RODRIGUES, Marcelo Santos. <em>Guerra do Paraguai: Os caminhos da memória entre a comemoração e o esquecimento.</em> Tese de doutorado, USP, 2009.</li>
+        <li class="ref-item">SOUSA, Jorge Prata de. <em>Escravidão ou morte: os escravos brasileiros na Guerra do Paraguai.</em> (2ª ed.) Rio de Janeiro: Mauad/ADESA, 1996.</li>
+        <li class="ref-item">TORAL, André Amaral de. "A participação dos negros escravos na guerra do Paraguai". In: <em>Estudos Avançados</em> [online], São Paulo, vol. 9, n. 24, ago. 1995.</li>
+      </ul>
+    </section>
+
+    <!-- 8. Historiografia e teoria -->
+    <section class="ref-secao" data-grupo="teoria">
+      <h3 class="ref-secao-titulo">Historiografia, teoria e metodologia</h3>
+      <ul class="ref-lista">
+        <li class="ref-item">BONFIM, Manoel. <em>América latina: males de origem.</em> Rio de Janeiro: Topbooks, 2005. (1ª ed. 1905).</li>
+        <li class="ref-item">CAVALCANTI, Nireu Oliveira. <em>Crônicas históricas do Rio Colonial.</em> Rio de Janeiro: Editora Civilização Brasileira/Faperj, 2004.</li>
+        <li class="ref-item">CENCIC, Monica Aparecida Pinto. <em>Documentos manuscritos da Faculdade de Direito da USP: 1827-1829.</em> Dissertação de mestrado, USP, 2009.</li>
+        <li class="ref-item">DIAS, Maria Odila Leite da Silva. "Hermenêutica do quotidiano na historiografia contemporânea". In: <em>Projeto História,</em> 17, novembro de 1998.</li>
+        <li class="ref-item">DIAS, Maria Odila Leite da Silva. "Blancos pobres y libertos em la sociedad colonial de Brasil, 1675-1835". In: UNESCO (Org.). <em>Historia Generale de América Latina.</em> Paris: Editora Trotta, 2001.</li>
+        <li class="ref-item">FREIRE, Gilberto. <em>Sobrados e Mocambos: decadência do patriarcado rural e desenvolvimento urbano.</em> Rio de Janeiro: José Olympio, 1951.</li>
+        <li class="ref-item">JANCSÓ, István; PIMENTA, João Paulo Garrido. "Peças de um mosaico". In: MOTA, Carlos Guilherme (org.). <em>Viagem incompleta: a experiência brasileira (1500-2000).</em> 2ª ed. São Paulo: Editora SENAC São Paulo, 2000.</li>
+        <li class="ref-item">LAGO, Bia Corrêa do. (coord.). <em>Os fotógrafos do Império.</em> Rio de Janeiro: Ed. Capivara, 2005.</li>
+        <li class="ref-item">MARQUESE, Rafael de Bivar. "Açúcar, representação visual e poder: a iconografia sobre a produção caribenha de açúcar nos séculos XVII e XVIII". In: <em>Revista USP.</em> 55: 152-84, set.-nov. 2002.</li>
+        <li class="ref-item">MARQUESE, Rafael de Bivar. "História, antropologia e a cultura afro-americana: o legado da escravidão". In: <em>Estudos Avançados – Dossiê O negro no Brasil,</em> n° 50, jan./abr. 2004.</li>
+        <li class="ref-item">PRADO JÚNIOR, Caio. <em>Evolução política do Brasil e outros estudos.</em> São Paulo: Brasiliense, 1971.</li>
+        <li class="ref-item">SCHWARCZ, Lilia Moritz. <em>O espetáculo das raças: cientistas, instituições e questão racial no Brasil (1870-1930).</em> São Paulo: Companhia das Letras, 1993.</li>
+        <li class="ref-item">SILVA, José Bonifácio de Andrada e. "Representação à Assembléia Geral Constituinte e Legislativa do Império do Brasil sobre a escravatura" (1823). In: Graça Salgado (org.) <em>Memórias sobre a escravidão.</em> Rio de Janeiro: Arquivo Nacional, 1988.</li>
+        <li class="ref-item">TROUILLOT, Michel-Rolph. <em>Silencing the Past: Power and the Production of History.</em> Boston: Beacon Press, 1995.</li>
+      </ul>
+    </section>
+
+    <!-- 9. Filmografia -->
+    <section class="ref-secao" data-grupo="filmes">
+      <h3 class="ref-secao-titulo">Filmografia</h3>
+      <ul class="ref-lista">
+        <li class="ref-item">MURICY, Antônio Carlos (dir.). <em>Pastinha! Uma Vida pela Capoeira.</em> 1998.</li>
+        <li class="ref-item"><em>Ag'Ya dance performance,</em> Katherine Dunham Collection, 1936. In: http://lcweb2.loc.gov/cocoon/ihas/search?query=+memberOf:dunham_fieldwork&amp;view=thumbnail</li>
+      </ul>
+    </section>
+
+    <p class="ref-nota">
+      Esta lista corresponde à bibliografia consultada na dissertação <em>Capoeira e valentia em São Paulo (1830-1930)</em>, Pedro Cunha, USP, 2011.
+      A versão completa das referências, com notas de rodapé e fontes primárias de arquivo, está disponível na
+      <a href="https://drive.google.com/file/d/1_5yrNuLScfKgQxTjlm4NDU_R8mSiuInJ/view?usp=sharing" target="_blank" rel="noopener">dissertação em PDF</a> (pp. 317–341).
+    </p>
+
   </main>
+
   <footer><p>
     <strong>Capoeira e valentia em São Paulo — Pesquisa e documentos</strong><br />
     Dissertação de mestrado em História Social · Universidade de São Paulo · 2011<br />
@@ -50,7 +367,63 @@
     &nbsp;·&nbsp;
     <a href="sobre.html">Sobre a pesquisa</a>
   </p></footer>
+
   <script src="script.js"></script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+  (function () {
+    'use strict';
+
+    const busca = document.getElementById('ref-busca');
+    const contador = document.getElementById('ref-contador');
+    const todos = Array.from(document.querySelectorAll('.ref-item'));
+    const total = todos.length;
+
+    function atualizar() {
+      const termo = busca.value.trim().toLowerCase();
+      let visiveis = 0;
+
+      todos.forEach(function (item) {
+        const texto = item.textContent.toLowerCase();
+        if (!termo || texto.includes(termo)) {
+          item.classList.remove('oculto');
+          if (termo) item.innerHTML = destacar(item.innerHTML, termo);
+          visiveis++;
+        } else {
+          item.classList.add('oculto');
+        }
+      });
+
+      contador.textContent = termo
+        ? (visiveis === 0 ? 'Nenhuma referência encontrada.'
+          : visiveis === 1 ? '1 referência encontrada.'
+          : visiveis + ' referências encontradas.')
+        : total + ' referências no total.';
+    }
+
+    function destacar(html, termo) {
+      // remove marcações anteriores
+      html = html.replace(/<mark>/gi, '').replace(/<\/mark>/gi, '');
+      const re = new RegExp('(' + escRegex(termo) + ')', 'gi');
+      // só marca em nós de texto (fora de tags)
+      return html.replace(/>([^<]+)</g, function (match, txt) {
+        return '>' + txt.replace(re, '<mark>$1</mark>') + '<';
+      });
+    }
+
+    function escRegex(s) {
+      return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    let timer;
+    busca.addEventListener('input', function () {
+      clearTimeout(timer);
+      timer = setTimeout(atualizar, 180);
+    });
+
+    // Inicializa contador
+    atualizar();
+  })();
+  </script>
 </body>
 </html>
