@@ -5,6 +5,248 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Banco de documentos — Capoeira e valentia em São Paulo</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Controles de busca e filtros ── */
+    .doc-controles {
+      background: #fdf6ec;
+      border-bottom: 1px solid #e0d3c0;
+      padding: 1.4rem 1.2rem 1rem;
+    }
+    .doc-controles-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .doc-busca-row {
+      display: flex;
+      gap: .6rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    #busca-input {
+      flex: 1 1 280px;
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      padding: .55rem .85rem;
+      border: 1.5px solid #c8b89a;
+      border-radius: 4px;
+      background: #fff;
+      color: #2c1a0e;
+      outline: none;
+      transition: border-color .2s;
+    }
+    #busca-input:focus { border-color: #6b3a1f; }
+    #busca-input::placeholder { color: #a08060; }
+
+    .doc-filtros {
+      display: flex;
+      gap: .6rem;
+      flex-wrap: wrap;
+    }
+    .doc-filtros select {
+      font-family: Arial, sans-serif;
+      font-size: .88rem;
+      padding: .42rem .7rem;
+      border: 1.5px solid #c8b89a;
+      border-radius: 4px;
+      background: #fff;
+      color: #2c1a0e;
+      cursor: pointer;
+      outline: none;
+      transition: border-color .2s;
+    }
+    .doc-filtros select:focus { border-color: #6b3a1f; }
+    #btn-limpar {
+      font-family: Arial, sans-serif;
+      font-size: .88rem;
+      padding: .42rem .9rem;
+      background: transparent;
+      border: 1.5px solid #6b3a1f;
+      border-radius: 4px;
+      color: #6b3a1f;
+      cursor: pointer;
+      transition: background .15s, color .15s;
+    }
+    #btn-limpar:hover { background: #6b3a1f; color: #fff; }
+
+    /* ── Contador de resultados ── */
+    .doc-contador {
+      max-width: 1000px;
+      margin: .7rem auto .4rem;
+      padding: 0 1.2rem;
+      font-size: .88rem;
+      color: #7a5c3a;
+    }
+
+    /* ── Grid de cards ── */
+    #doc-lista {
+      max-width: 1000px;
+      margin: 0 auto 3rem;
+      padding: .6rem 1.2rem 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.2rem;
+    }
+
+    /* ── Card individual ── */
+    .doc-card {
+      background: #fff;
+      border: 1px solid #e0d3c0;
+      border-radius: 6px;
+      overflow: hidden;
+      transition: box-shadow .2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .doc-card:hover {
+      box-shadow: 0 4px 18px rgba(107,58,31,.13);
+    }
+    .doc-card-topo {
+      border-top: 3px solid transparent;
+      transition: border-color .2s;
+      padding: 1rem 1rem .7rem;
+      flex: 1;
+    }
+    .doc-card:hover .doc-card-topo { border-color: #6b3a1f; }
+
+    .doc-sigla {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: bold;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      background: #f5ead8;
+      color: #6b3a1f;
+      border-radius: 3px;
+      padding: .15rem .45rem;
+      margin-bottom: .45rem;
+    }
+    .doc-titulo {
+      font-size: .97rem;
+      font-weight: bold;
+      color: #2c1a0e;
+      margin: 0 0 .35rem;
+      line-height: 1.35;
+    }
+    .doc-meta {
+      font-size: .8rem;
+      color: #7a5c3a;
+      margin-bottom: .55rem;
+    }
+    .doc-meta span + span::before { content: " · "; }
+    .doc-tipo-badge {
+      display: inline-block;
+      font-size: .72rem;
+      background: #f0e8d8;
+      color: #5c3d1a;
+      border-radius: 3px;
+      padding: .1rem .4rem;
+      margin-bottom: .55rem;
+    }
+    .doc-trecho {
+      font-size: .84rem;
+      color: #4a3520;
+      line-height: 1.5;
+      margin-bottom: .6rem;
+      font-style: italic;
+    }
+    .doc-trecho mark {
+      background: #ffe066;
+      color: #2c1a0e;
+      border-radius: 2px;
+      padding: 0 .1em;
+      font-style: normal;
+    }
+
+    /* ── Botão expandir ── */
+    .doc-card-rodape {
+      padding: .5rem 1rem .75rem;
+      border-top: 1px solid #f0e8d8;
+    }
+    .btn-expandir {
+      font-family: Arial, sans-serif;
+      font-size: .82rem;
+      background: transparent;
+      border: 1px solid #6b3a1f;
+      border-radius: 4px;
+      color: #6b3a1f;
+      cursor: pointer;
+      padding: .3rem .75rem;
+      transition: background .15s, color .15s;
+    }
+    .btn-expandir:hover { background: #6b3a1f; color: #fff; }
+
+    /* ── Painel expandido ── */
+    .doc-expandido {
+      display: none;
+      background: #fdf6ec;
+      border-top: 1px solid #e0d3c0;
+      padding: .9rem 1rem 1rem;
+    }
+    .doc-expandido.aberto { display: block; }
+    .doc-expandido h4 {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: #6b3a1f;
+      margin: .7rem 0 .25rem;
+    }
+    .doc-expandido h4:first-child { margin-top: 0; }
+    .doc-transcricao-texto {
+      font-size: .84rem;
+      color: #2c1a0e;
+      line-height: 1.6;
+      background: #fff;
+      border-left: 3px solid #c8b89a;
+      padding: .6rem .8rem;
+      border-radius: 0 4px 4px 0;
+      white-space: pre-wrap;
+    }
+    .doc-transcricao-texto mark {
+      background: #ffe066;
+      color: #2c1a0e;
+      border-radius: 2px;
+      padding: 0 .1em;
+    }
+    .doc-contexto-texto {
+      font-size: .84rem;
+      color: #4a3520;
+      line-height: 1.6;
+    }
+    .doc-personagens-lista {
+      font-size: .82rem;
+      color: #4a3520;
+    }
+    .doc-ref {
+      font-size: .78rem;
+      color: #8a6a4a;
+      font-style: italic;
+    }
+
+    /* ── Sem resultados ── */
+    .doc-sem-resultado {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem 1rem;
+      color: #8a6a4a;
+      font-size: .95rem;
+    }
+
+    /* ── Responsivo ── */
+    @media (max-width: 600px) {
+      #doc-lista { grid-template-columns: 1fr; }
+      .doc-filtros select { font-size: .82rem; }
+    }
+
+    /* ── Modo contraste ── */
+    body.alto-contraste .doc-card { background: #000; border-color: #fff; }
+    body.alto-contraste .doc-titulo { color: #fff; }
+    body.alto-contraste .doc-trecho { color: #eee; }
+    body.alto-contraste .doc-sigla { background: #333; color: #ffcc00; }
+    body.alto-contraste #busca-input { background: #111; color: #fff; border-color: #fff; }
+    body.alto-contraste .doc-filtros select { background: #111; color: #fff; border-color: #fff; }
+    body.alto-contraste .doc-expandido { background: #111; }
+    body.alto-contraste .doc-transcricao-texto { background: #000; color: #fff; border-color: #888; }
+  </style>
 </head>
 <body>
   <div class="acess-bar" role="toolbar" aria-label="Opções de acessibilidade">
@@ -18,10 +260,12 @@
     <span>Idioma</span>
     <div id="google_translate_element"></div>
   </div>
+
   <header><div class="header-inner">
     <h1>Capoeira e valentia em São Paulo</h1>
     <p class="subtitulo">Pesquisa e documentos históricos (1830–1930)</p>
   </div></header>
+
   <nav aria-label="Menu principal">
     <button class="menu-toggle" aria-expanded="false" aria-controls="menu-lista">Menu</button>
     <ul id="menu-lista" role="list">
@@ -33,16 +277,45 @@
       <li><a href="sobre.html">Sobre a pesquisa</a></li>
     </ul>
   </nav>
+
   <div class="page-header"><div class="page-header-inner">
     <h2>Banco de documentos</h2>
-    <p>Documentos históricos digitalizados em 13 acervos brasileiros</p>
+    <p>28 documentos históricos digitalizados em 13 acervos brasileiros</p>
   </div></div>
-  <main>
-    <div class="em-construcao">
-      <h3>Em construção</h3>
-      <p>Esta seção está sendo preparada. Em breve você poderá pesquisar e visualizar os documentos históricos digitalizados, com transcrições e identificação dos acervos.</p>
+
+  <!-- Controles -->
+  <div class="doc-controles">
+    <div class="doc-controles-inner">
+      <div class="doc-busca-row">
+        <input
+          type="search"
+          id="busca-input"
+          placeholder="Buscar por palavra, nome, local ou data..."
+          aria-label="Buscar documentos"
+          autocomplete="off"
+        />
+      </div>
+      <div class="doc-filtros">
+        <select id="filtro-acervo" aria-label="Filtrar por acervo">
+          <option value="">Todos os acervos</option>
+        </select>
+        <select id="filtro-periodo" aria-label="Filtrar por período">
+          <option value="">Todos os períodos</option>
+        </select>
+        <select id="filtro-tipo" aria-label="Filtrar por tipo de documento">
+          <option value="">Todos os tipos</option>
+        </select>
+        <button id="btn-limpar" type="button">Limpar filtros</button>
+      </div>
     </div>
+  </div>
+
+  <div class="doc-contador" id="doc-contador" aria-live="polite"></div>
+
+  <main>
+    <div id="doc-lista" role="list" aria-label="Lista de documentos"></div>
   </main>
+
   <footer><p>
     <strong>Capoeira e valentia em São Paulo — Pesquisa e documentos</strong><br />
     Dissertação de mestrado em História Social · Universidade de São Paulo · 2011<br />
@@ -50,7 +323,198 @@
     &nbsp;·&nbsp;
     <a href="sobre.html">Sobre a pesquisa</a>
   </p></footer>
+
   <script src="script.js"></script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+  (function () {
+    'use strict';
+
+    /* ── Estado ── */
+    let DOCS = [];
+    let termoBusca = '';
+    let filtroAcervo = '';
+    let filtroPeriodo = '';
+    let filtroTipo = '';
+
+    /* ── Carrega JSON ── */
+    fetch('data/documentos.json')
+      .then(r => r.json())
+      .then(data => {
+        DOCS = data;
+        popularFiltros();
+        renderizar();
+      })
+      .catch(() => {
+        document.getElementById('doc-lista').innerHTML =
+          '<p class="doc-sem-resultado">Não foi possível carregar os documentos.</p>';
+      });
+
+    /* ── Popula dropdowns de filtro ── */
+    function popularFiltros() {
+      const acervos  = [...new Set(DOCS.map(d => d.acervo))].sort();
+      const periodos = [...new Set(DOCS.map(d => d.periodo))].sort();
+      const tipos    = [...new Set(DOCS.map(d => d.tipo))].sort();
+
+      preencheSelect('filtro-acervo',  acervos);
+      preencheSelect('filtro-periodo', periodos);
+      preencheSelect('filtro-tipo',    tipos);
+    }
+
+    function preencheSelect(id, valores) {
+      const sel = document.getElementById(id);
+      valores.forEach(v => {
+        const opt = document.createElement('option');
+        opt.value = v;
+        opt.textContent = v;
+        sel.appendChild(opt);
+      });
+    }
+
+    /* ── Filtragem ── */
+    function filtrar() {
+      const termo = termoBusca.toLowerCase().trim();
+      return DOCS.filter(d => {
+        if (filtroAcervo  && d.acervo  !== filtroAcervo)  return false;
+        if (filtroPeriodo && d.periodo !== filtroPeriodo) return false;
+        if (filtroTipo    && d.tipo    !== filtroTipo)    return false;
+        if (!termo) return true;
+        const haystack = [
+          d.titulo, d.acervo, d.tipo, d.data, d.local,
+          d.periodo, d.transcricao, d.contexto,
+          ...(d.personagens || []),
+          ...(d.palavras_chave || [])
+        ].join(' ').toLowerCase();
+        return haystack.includes(termo);
+      });
+    }
+
+    /* ── Destacar termos ── */
+    function destacar(texto, termo) {
+      if (!termo) return escHtml(texto);
+      const re = new RegExp('(' + escRegex(termo) + ')', 'gi');
+      return escHtml(texto).replace(re, '<mark>$1</mark>');
+    }
+    function escHtml(s) {
+      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+    function escRegex(s) {
+      return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    /* ── Trecho da transcrição (máx 200 chars, centralizado no termo) ── */
+    function trecho(texto, termo) {
+      const MAX = 200;
+      if (!termo) return texto.length > MAX ? texto.slice(0, MAX) + '…' : texto;
+      const idx = texto.toLowerCase().indexOf(termo.toLowerCase());
+      if (idx === -1) return texto.length > MAX ? texto.slice(0, MAX) + '…' : texto;
+      const inicio = Math.max(0, idx - 80);
+      const fim    = Math.min(texto.length, idx + termo.length + 120);
+      let trech = (inicio > 0 ? '…' : '') + texto.slice(inicio, fim) + (fim < texto.length ? '…' : '');
+      return trech;
+    }
+
+    /* ── Renderização ── */
+    function renderizar() {
+      const resultados = filtrar();
+      const lista = document.getElementById('doc-lista');
+      const contador = document.getElementById('doc-contador');
+      const termo = termoBusca.trim();
+
+      contador.textContent =
+        resultados.length === 0 ? 'Nenhum documento encontrado.' :
+        resultados.length === 1 ? '1 documento encontrado.' :
+        resultados.length + ' documentos encontrados.';
+
+      if (resultados.length === 0) {
+        lista.innerHTML = '<p class="doc-sem-resultado">Nenhum documento corresponde à busca.</p>';
+        return;
+      }
+
+      lista.innerHTML = resultados.map(d => {
+        const trechoTexto = trecho(d.transcricao, termo);
+        const trechoHl    = destacar(trechoTexto, termo);
+        const tituloHl    = destacar(d.titulo, termo);
+        const transcHl    = destacar(d.transcricao, termo);
+        const contextHl   = destacar(d.contexto, termo);
+
+        const personagensHtml = d.personagens && d.personagens.length
+          ? `<h4>Personagens mencionados</h4>
+             <p class="doc-personagens-lista">${d.personagens.map(p => destacar(p, termo)).join(', ')}</p>`
+          : '';
+
+        return `
+        <div class="doc-card" role="listitem" id="card-${d.id}">
+          <div class="doc-card-topo">
+            <span class="doc-sigla">${escHtml(d.acervo_sigla)}</span>
+            <span class="doc-tipo-badge">${escHtml(d.tipo)}</span>
+            <h3 class="doc-titulo">${tituloHl}</h3>
+            <p class="doc-meta">
+              <span>${escHtml(d.data)}</span>
+              <span>${escHtml(d.local)}</span>
+            </p>
+            <p class="doc-trecho">"${trechoHl}"</p>
+          </div>
+          <div class="doc-card-rodape">
+            <button class="btn-expandir" aria-expanded="false" aria-controls="exp-${d.id}"
+              onclick="toggleCard('${d.id}', this)">Ver transcrição completa</button>
+          </div>
+          <div class="doc-expandido" id="exp-${d.id}" aria-hidden="true">
+            <h4>Transcrição</h4>
+            <p class="doc-transcricao-texto">${transcHl}</p>
+            <h4>Contexto</h4>
+            <p class="doc-contexto-texto">${contextHl}</p>
+            ${personagensHtml}
+            <h4>Referência de arquivo</h4>
+            <p class="doc-ref">${escHtml(d.acervo)} — ${escHtml(d.referencia)}</p>
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    /* ── Toggle de card expandido ── */
+    window.toggleCard = function(id, btn) {
+      const painel = document.getElementById('exp-' + id);
+      const aberto = painel.classList.contains('aberto');
+      painel.classList.toggle('aberto', !aberto);
+      painel.setAttribute('aria-hidden', aberto ? 'true' : 'false');
+      btn.setAttribute('aria-expanded', aberto ? 'false' : 'true');
+      btn.textContent = aberto ? 'Ver transcrição completa' : 'Recolher';
+    };
+
+    /* ── Eventos de busca e filtros ── */
+    let debounceTimer;
+    document.getElementById('busca-input').addEventListener('input', function () {
+      termoBusca = this.value;
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(renderizar, 180);
+    });
+
+    document.getElementById('filtro-acervo').addEventListener('change', function () {
+      filtroAcervo = this.value;
+      renderizar();
+    });
+    document.getElementById('filtro-periodo').addEventListener('change', function () {
+      filtroPeriodo = this.value;
+      renderizar();
+    });
+    document.getElementById('filtro-tipo').addEventListener('change', function () {
+      filtroTipo = this.value;
+      renderizar();
+    });
+
+    document.getElementById('btn-limpar').addEventListener('click', function () {
+      termoBusca = '';
+      filtroAcervo = '';
+      filtroPeriodo = '';
+      filtroTipo = '';
+      document.getElementById('busca-input').value = '';
+      document.getElementById('filtro-acervo').value = '';
+      document.getElementById('filtro-periodo').value = '';
+      document.getElementById('filtro-tipo').value = '';
+      renderizar();
+    });
+  })();
+  </script>
 </body>
 </html>
