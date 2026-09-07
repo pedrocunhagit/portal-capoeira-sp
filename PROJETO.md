@@ -2,7 +2,7 @@
 
 > **Uso:** Este arquivo é lido pelo IBM Bob no início de cada novo chat para retomar o projeto sem perda de contexto. Atualize-o ao fim de cada sessão de trabalho.
 >
-> **Instrução para novo chat:** "Leia o arquivo PROJETO.md neste repositório e o plano local em `A:\Documents\USP\Pesquisa\Pesquisa com IBM Bob\portal-capoeira-plano.md` antes de continuar o projeto."
+> **Instrução para novo chat:** "Vamos continuar o portal de capoeira. O estado completo do projeto está no arquivo PROJETO.md no repositório pedrocunhagit/portal-capoeira-sp — leia antes de responder. O site está em https://pedrocunhagit.github.io/portal-capoeira-sp e toda alteração vai direto para o GitHub via MCP."
 
 ---
 
@@ -42,7 +42,7 @@
 
 ```
 portal-capoeira-sp/
-├── index.html          ✅ Completo — inclui seção "Sobre a capoeira" com imagens históricas
+├── index.html          ✅ Completo — seção "Sobre a capoeira" reescrita (v2) com texto da introdução da dissertação e imagem de Rugendas
 ├── timeline.html       ✅ Completo — linha do tempo com Drive links
 ├── dissertacao.html    ✅ Completo — capítulos com acordeão
 ├── documentos.html     ✅ Completo — transcrições + visor inline Drive + botão acervo raiz
@@ -55,10 +55,13 @@ portal-capoeira-sp/
 │   ├── documentos.json ✅ 19 transcrições (8 acervos)
 │   └── acervos.json    ✅ 8 instituições com Drive folder IDs por série
 └── img/hero/
-    ├── Rugendas_capoeira_RJ.jpg
+    ├── Rugendas_capoeira_RJ.jpg           ← imagem principal da seção "Sobre a capoeira"
     ├── Negros_lutando.jpg
     ├── chamberlain.jpg
-    └── Rugendas_prancha27_Sao-Salvador.jpg
+    ├── Rugendas_prancha27_Sao-Salvador.jpg
+    ├── ChristianoJr_aprendizagem-capoeira-1865.jpg
+    ├── Militao_bras_FOTO_034-baixa.jpg
+    └── mapa_1878_reproduz_novo-milenio_marcado.jpg
 ```
 
 ---
@@ -130,6 +133,7 @@ A:\Documents\USP\Pesquisa\
 │   ├── Museu da Companhia de Ferro\             (1 mapa jpg)
 │   └── www.rhgb.org.br\                         (1 PDF)
 ├── Imagens Séc. XIX\            ← Pinturas históricas (Debret, Rugendas, Earle, Chamberlain…)
+│   └── Rugendas\                ← Contém Rugendas_prancha98_jogar-capoeira (= "danse de la guerre")
 ├── Dissertação\                 ← PDF completo da dissertação
 ├── Artigos\                     ← Artigos publicados por Pedro
 └── Pesquisa com IBM Bob\
@@ -161,14 +165,23 @@ A:\Documents\USP\Pesquisa\
 - `.footer-ia` adicionado ao `style.css`
 - Footer IBM Bob adicionado a: `index.html`, `timeline.html`, `sobre.html`
 
-### Sessão 5 (esta sessão — conclusão dos pendentes + Drive raiz)
+### Sessão 5 (conclusão dos pendentes + Drive raiz)
 - Footer IBM Bob adicionado a `dissertacao.html` ✅
 - Footer IBM Bob adicionado a `referencias.html` ✅
 - Footer IBM Bob adicionado a `documentos.html` ✅
 - Seção "Acervos consultados" (13 instituições) adicionada a `referencias.html` ✅
 - Análise do conteúdo local: confirmado que as 5 instituições removidas não têm imagens visualizáveis ✅
-- **Novo:** Botão "Acervo completo no Google Drive" adicionado à seção de acervo em `documentos.html`, apontando para a pasta raiz pública ✅
-- Texto da seção de acervo melhorado com instrução clara de uso (Visualizar + Abrir no Drive) ✅
+- **Novo:** Botão "Acervo completo no Google Drive" adicionado à seção de acervo em `documentos.html` ✅
+- Texto da seção de acervo melhorado com instrução clara de uso ✅
+
+### Sessão 6 (esta sessão — seção "Sobre a capoeira" reescrita)
+- Seção "Sobre a capoeira" em `index.html` **completamente reescrita** ✅
+  - Novo texto baseado na introdução da dissertação, focado no período da escravidão
+  - Linguagem acessível para público geral, usando expressões da dissertação
+  - Imagem principal: Rugendas "Jogar Capoeira" (*danse de la guerre*, c. 1835) em destaque com legenda completa
+  - Imagens secundárias: Earle, Chamberlain, Rugendas (Batuque)
+  - Botões CTA: "Ler a pesquisa" e "Ver linha do tempo"
+- Footer IBM Bob verificado em **todas as 6 páginas** — já estava correto em todas ✅
 
 ---
 
