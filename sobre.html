@@ -19,6 +19,65 @@
     .pdf-reader-frame { display: none; width: 100%; height: 680px; border: none; }
     .pdf-reader-frame.aberto { display: block; }
     @media (max-width: 600px) { .pdf-reader-frame { height: 420px; } .pdf-reader-topo { flex-direction: column; align-items: flex-start; } }
+
+    /* Seção de licença */
+    .licenca-secao {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      max-width: 780px;
+    }
+    .licenca-secao p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: .9rem;
+    }
+    .licenca-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.2rem 0;
+    }
+    .licenca-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent-light);
+      border-radius: var(--radius);
+      padding: .9rem 1rem;
+      font-size: .86rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .licenca-card strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: .25rem;
+      font-size: .9rem;
+    }
+    .licenca-citacao {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: .85rem 1rem;
+      font-size: .84rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      font-family: monospace;
+      word-break: break-word;
+    }
+    .licenca-citacao strong {
+      display: block;
+      font-family: var(--font);
+      font-size: .82rem;
+      color: var(--accent-light);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: .4rem;
+    }
+    @media (max-width: 560px) {
+      .licenca-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -96,6 +155,55 @@
           <p>Este portal tem o objetivo de ampliar essas vozes, para que mais pessoas possam conhecer as hist&oacute;rias descritas na disserta&ccedil;&atilde;o ou acessar diretamente documentos digitalizados pelo autor durante sua pesquisa.</p>
         </div>
       </div>
+    </section>
+
+    <!-- LICENÇA E USO LIVRE -->
+    <section aria-labelledby="licenca-titulo" class="licenca-secao">
+      <p class="secao-titulo" id="licenca-titulo">Licen&ccedil;a e uso livre</p>
+
+      <p>
+        Este portal &eacute; um projeto educativo, sem fins comerciais, hospedado no
+        <a href="https://github.com/pedrocunhagit/portal-capoeira-sp" target="_blank" rel="noopener">GitHub</a>
+        &mdash; plataforma de c&oacute;digo aberto que garante acesso p&uacute;blico, gratuito e permanente ao reposit&oacute;rio.
+        Todo o conte&uacute;do pode ser reutilizado livremente para fins educativos, acad&ecirc;micos ou culturais,
+        desde que a fonte seja citada.
+      </p>
+
+      <div class="licenca-grid">
+        <div class="licenca-card">
+          <strong>Textos e materiais de pesquisa</strong>
+          Licenciados sob
+          <a href="https://creativecommons.org/licenses/by/4.0/deed.pt" target="_blank" rel="noopener"><strong>Creative Commons CC&nbsp;BY&nbsp;4.0</strong></a>.<br />
+          Voc&ecirc; pode usar, adaptar e redistribuir &mdash; inclusive para fins comerciais &mdash;
+          desde que cite o autor e a fonte original.
+        </div>
+        <div class="licenca-card">
+          <strong>C&oacute;digo do portal (HTML, CSS, JS)</strong>
+          Licenciado sob <strong>MIT License</strong>.<br />
+          Livre para usar, copiar, modificar e distribuir. Veja o arquivo
+          <a href="https://github.com/pedrocunhagit/portal-capoeira-sp/blob/main/LICENSE" target="_blank" rel="noopener">LICENSE</a>
+          no reposit&oacute;rio.
+        </div>
+      </div>
+
+      <p>
+        <strong>Imagens hist&oacute;ricas</strong> (s&eacute;culo XIX): Rugendas, Earle, Chamberlain e outros s&atilde;o obras em dom&iacute;nio p&uacute;blico.
+        Os documentos de arquivo s&atilde;o reproduzidos para fins educativos e de pesquisa; os acervos de origem est&atilde;o identificados em cada item.
+      </p>
+
+      <div class="licenca-citacao" role="note" aria-label="Sugest&atilde;o de como citar este portal">
+        <strong>Como citar este portal</strong>
+        CUNHA, Pedro Figueiredo Alves da. <em>Capoeira e valentia em S&atilde;o Paulo &mdash; pesquisa e documentos.</em>
+        Portal educativo. GitHub Pages, 2025.
+        Dispon&iacute;vel em: &lt;https://pedrocunhagit.github.io/portal-capoeira-sp&gt;.
+        Acesso em: [data].
+      </div>
+
+      <p style="margin-top:1rem;">
+        D&uacute;vidas, sugest&otilde;es ou interesse em colaborar?
+        O reposit&oacute;rio &eacute; p&uacute;blico em
+        <a href="https://github.com/pedrocunhagit/portal-capoeira-sp" target="_blank" rel="noopener">github.com/pedrocunhagit/portal-capoeira-sp</a>.
+      </p>
     </section>
   </main>
 
