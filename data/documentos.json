@@ -358,5 +358,35 @@
     "palavras_chave": ["capoeira", "escola de capoeiragem", "Couto de Magalhães", "Academia de Direito", "São Paulo", "elite acadêmica", "arte marcial"],
     "transcricao": "'Houve, mesmo, quem se lembrasse, tempos depois, de fundar em S. Paulo uma escola de capoeiragem. E era um capitalista importante, então na sua completa integridade mental, — o general Couto de Magalhães.'",
     "contexto": "A passagem de Almeida Nogueira, localizada a partir de uma indicação em Ernani Silva Bruno, é a única evidência conhecida de uma proposta formal de escola de capoeira em São Paulo no século XIX. Couto de Magalhães, futuro general e governador de Mato Grosso, era então estudante da Academia de Direito. A proposta nunca se concretizou, mas revela o prestígio da capoeira entre a elite acadêmica paulistana da época. Documento físico no Arquivo Municipal Washington Luiz — não digitalizado durante a pesquisa."
+  },
+  {
+    "id": "aesp-provincia-wansuit-1889-01-13",
+    "titulo": "Carta de Eugênio Wansuít contra a Guarda Negra em Santos (13 jan. 1889)",
+    "acervo": "Arquivo do Estado de São Paulo",
+    "acervo_sigla": "AESP",
+    "tipo": "Jornal",
+    "data": "13 de janeiro de 1889",
+    "periodo": "1888–1895",
+    "local": "Santos / São Paulo",
+    "referencia": "AESP. Província de São Paulo, 13/01/1889, p. 4",
+    "personagens": ["Eugênio Wansuít", "Quintino de Lacerda", "Pae Felippe", "Firmino"],
+    "palavras_chave": ["Guarda Negra", "abolição", "Santos", "trabalhadores negros", "república", "porto", "café", "recrutamento", "ex-escravos"],
+    "transcricao": "Consta que um cascudo de côr duvidosa e um argentario empenham-se em organizar aqui uma guarda-negra.\n\nPrevinam-se os homens de côr contra essa triste idéa e lembrem-se que a abolição é obra do povo, e que Quintino de Lacerda, Firmino, Felippe e outros pretos como eu fizemos muito mais pela grande causa do que a regente.\n\nOs autores dessa desgraçada lembrança, não calcularam bem o que pretendem; elles, com certeza nunca cogitaram que o commercio de Santos é composto de homens laboriosos e honestos e que uma grande parte é republicana, portanto o que esses senhores querem é fazer mal aos homens do trabalho que vivem do ensaque e transporte de café.\n\nÉ logico que os commerciantes não poderão admittir em seu trabalho homens que seguem conselhos de doidos varridos que andam a despertar um sentimento infame – o odio de raça.\n\nOs homens de côr que têm patriotismo devem reunir-se para protestar contra essa infeliz tentativa.\n\nCuidado, senhores! Os heróes do Cubatão são homens sérios e sabem quanto custou ao povo a abolição.\n\nQuintino de Lacerda, o grande abolicionista-republicano, Pae Felippe, o sublime abnegado que ia quebrar os grilhões de seus irmãos no recinto das fazendas, não podem defender os interesses de um estrangeiro, o Conde d'Eu.\n\n[assinado] Eugênio Wansuít",
+    "contexto": "Eugênio Wansuít era pernambucano, mulato, veterano da Guerra do Paraguai (serviu como Imperial Marinheiro aos 18 anos) e líder da Bohemia Abolicionista de Santos desde 1882. Publicou a carta originalmente no Diário da Tarde de Santos; foi republicada na Província de São Paulo em 13 de janeiro de 1889. Em 15 de janeiro, organizou uma reunião de ~300 'homens de côr' que assinaram telegrama coletivo rejeitando a Guarda Negra. A carta é documento fundamental: afirma que a abolição foi obra do povo — dos quilombos e de figuras como Quintino de Lacerda e Pae Felippe — e não da Princesa Isabel. Alerta ainda que a Guarda Negra prejudicaria os trabalhadores negros que vivem do ensaque e transporte de café no porto de Santos. Wansuít é descrito na dissertação como 'acérrimo republicano' e figura central na vida política dos trabalhadores negros santistas. Em 1891 e 1912 ainda aparece como liderança em greves portuárias. Dissertação, pp. 185-186, 213-215, 227-229."
+  },
+  {
+    "id": "aesp-provincia-homens-de-cor-1889-01-15",
+    "titulo": "Telegrama coletivo dos 'Homens de côr' de Santos contra a Guarda Negra (15 jan. 1889)",
+    "acervo": "Arquivo do Estado de São Paulo",
+    "acervo_sigla": "AESP",
+    "tipo": "Jornal",
+    "data": "15 de janeiro de 1889",
+    "periodo": "1888–1895",
+    "local": "Santos",
+    "referencia": "AESP. Província de São Paulo, 15/01/1889, seção Telegramas",
+    "personagens": ["Eugênio Wansuít", "Quintino de Lacerda"],
+    "palavras_chave": ["Guarda Negra", "abolição", "Santos", "trabalhadores negros", "república", "telegrama", "homens de côr", "quilombo", "Jabaquara"],
+    "transcricao": "Cerca de 300 'homens de côr' reunidos em Santos assinam telegrama reconhecendo 'a abolição da escravatura no Brazil como feita pelos exforços populares, que se impuseram energicamente à corôa' e protestando contra a formação de qualquer Guarda Negra na cidade.",
+    "contexto": "Dois dias após a carta de Wansuít (13 jan.), ~300 'homens de côr' reuniram-se em Santos. O encontro foi liderado por Wansuít e contou com a presença de Quintino de Lacerda. Além de rejeitar a Guarda Negra, o telegrama afirma a abolição como obra do povo — não da monarquia. Na mesma reunião, Wansuít denunciou 'o recrutamento com que o governo quer conservar os ex-escravisados nas fazendas', revelando a preocupação com novas formas de coerção sobre os libertos. O episódio é analisado pelo autor como afirmação coletiva da agência política dos trabalhadores negros no pós-abolição imediato. Dissertação, p. 215."
   }
 ]
