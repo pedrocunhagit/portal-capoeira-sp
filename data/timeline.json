@@ -8,8 +8,8 @@
     "tipo": "DOCUMENTO",
     "acervo_drive": "aesp-jornais-farol",
     "personagens": ["Augusto da Silveira Pinto"],
-    "pagina": "p. 103",
-    "pagina_pdf": 103
+    "pagina": "pp. 102-104",
+    "pagina_pdf": 102
   },
   {
     "ano": 1831,
@@ -63,7 +63,7 @@
     "periodo": "1830-1870",
     "tipo": "CULTURAL",
     "personagens": ["Luíz Joaquim Duque-Estrada Teixeira"],
-    "pagina": "p. 112",
+    "pagina": "pp. 112-117",
     "pagina_pdf": 112
   },
   {
@@ -93,7 +93,7 @@
     "periodo": "1830-1870",
     "tipo": "POLITICO",
     "acervo_drive": "fams-atas-camara",
-    "pagina": "p. 157",
+    "pagina": "pp. 157-159",
     "pagina_pdf": 157
   },
   {
@@ -106,7 +106,7 @@
     "tipo": "CONFLITO",
     "acervo_drive": "aesp-autos-adao",
     "personagens": ["Adão dos Santos Jorge", "Eduardo", "Melchiades", "João Pequeno", "João Grande"],
-    "pagina": "p. 80",
+    "pagina": "pp. 80-100",
     "pagina_pdf": 80
   },
   {
@@ -119,27 +119,17 @@
     "tipo": "JULGAMENTO",
     "acervo_drive": "aesp-autos-adao",
     "personagens": ["Adão dos Santos Jorge"],
-    "pagina": "p. 100",
-    "pagina_pdf": 100
+    "pagina": "pp. 99-100",
+    "pagina_pdf": 99
   },
   {
     "ano": 1865,
     "titulo": "Capoeiras na Guerra do Paraguai",
-    "descricao": "Com o início da Guerra do Paraguai, homens negros com habilidades marciais são recrutados para os batalhoes brasileiros. O Corpo dos Zuavos da Bahia se destaca em combates corpo a corpo. Muitos eram escravos alforriados especialmente para lutar.",
+    "descricao": "Com o início da Guerra do Paraguai, homens negros com habilidades marciais são recrutados para os batalhões brasileiros. O Corpo dos Zuavos da Bahia se destaca em combates corpo a corpo. Muitos eram escravos alforriados especialmente para lutar.",
     "periodo": "1830-1870",
     "tipo": "POLITICO",
-    "pagina": "p. 120",
+    "pagina": "pp. 120-135",
     "pagina_pdf": 120
-  },
-  {
-    "ano": 1872,
-    "titulo": "Malta 'Flor da Gente': ex-aluno da Academia de Direito lidera grupo no Rio",
-    "descricao": "Luíz Joaquim Duque-Estrada Teixeira, formado em Direito em São Paulo em 1858, retorna ao Rio de Janeiro e funda a malta 'Flor da Gente' na Freguesia da Glória, tornando-se líder do Partido Conservador e figura central nas disputas eleitorais violentas da Corte. A trajetória de Duque-Estrada ilustra como a capoeira aprendida em São Paulo podia servir de trampolim para o poder político.",
-    "periodo": "1870-1888",
-    "tipo": "POLITICO",
-    "personagens": ["Luíz Joaquim Duque-Estrada Teixeira"],
-    "pagina": "p. 14",
-    "pagina_pdf": 14
   },
   {
     "ano": 1871,
@@ -151,8 +141,18 @@
     "tipo": "PRISAO",
     "acervo_drive": "acpg-1870-1872",
     "personagens": ["Japhet"],
-    "pagina": "p. 150",
-    "pagina_pdf": 150
+    "pagina": "pp. 143-144",
+    "pagina_pdf": 143
+  },
+  {
+    "ano": 1872,
+    "titulo": "Malta 'Flor da Gente': ex-aluno da Academia de Direito lidera grupo no Rio",
+    "descricao": "Luíz Joaquim Duque-Estrada Teixeira, formado em Direito em São Paulo em 1858, retorna ao Rio de Janeiro e funda a malta 'Flor da Gente' na Freguesia da Glória, tornando-se líder do Partido Conservador e figura central nas disputas eleitorais violentas da Corte. A trajetória de Duque-Estrada ilustra como a capoeira aprendida em São Paulo podia servir de trampolim para o poder político.",
+    "periodo": "1870-1888",
+    "tipo": "POLITICO",
+    "personagens": ["Luíz Joaquim Duque-Estrada Teixeira"],
+    "pagina": "pp. 112-113",
+    "pagina_pdf": 112
   },
   {
     "ano": 1873,
@@ -195,7 +195,7 @@
     "periodo": "1870-1888",
     "tipo": "POLITICO",
     "personagens": ["Antônio Bento", "Antônio Paciência", "Rodolfo Motta", "Carlos Garcia"],
-    "pagina": "p. 175",
+    "pagina": "pp. 175-176",
     "pagina_pdf": 175
   },
   {
@@ -216,7 +216,7 @@
     "tipo": "POLITICO",
     "acervo_drive": "fams-costa-silva",
     "personagens": ["Quintino de Lacerda"],
-    "pagina": "p. 186",
+    "pagina": "pp. 186-205",
     "pagina_pdf": 186
   },
   {
@@ -226,19 +226,19 @@
     "periodo": "1870-1888",
     "tipo": "CONFLITO",
     "personagens": [],
-    "pagina": "p. 12",
-    "pagina_pdf": 12
+    "pagina": "p. 209",
+    "pagina_pdf": 209
   },
   {
     "ano": 1888,
     "mes": 4,
     "titulo": "Emiliano Rocha: último preso por capoeira antes da Abolição em SP",
-    "descricao": "A poucos dias da Abolição, em 27 de abril de 1888, Emiliano Rocha é preso especificamente por capoeira na cidade de São Paulo. O caso é divulgado em pequena nota de jornal e o praticante é solto no dia seguinte, revelando a pouca preocupação que o jogo-luta despertava nas autoridades paulistas. Fonte: O Estado de S. Paulo, abril de 1888.",
+    "descricao": "A poucos dias da Abolição, em 27 de abril de 1888, Emiliano Rocha é preso especificamente por capoeira na cidade de São Paulo. O caso é divulgado em pequena nota de jornal e o praticante é solto no dia seguinte, revelando a pouca preocupação que o jogo-luta despertava nas autoridades paulistas. Fonte: Província de São Paulo, abril de 1888.",
     "periodo": "1870-1888",
     "tipo": "PRISAO",
     "personagens": ["Emiliano Rocha"],
-    "pagina": "p. 12",
-    "pagina_pdf": 12
+    "pagina": "p. 209",
+    "pagina_pdf": 209
   },
   {
     "ano": 1888,
@@ -268,12 +268,12 @@
     "ano": 1889,
     "mes": 7,
     "titulo": "Policiais flagrados em exercícios de capoeira em Cruzeiro",
-    "descricao": "Em 16 de julho de 1889, na cidade de Cruzeiro (SP), as praças Felicio de Souza Ferreira e José Luiz de Toledo são flagradas 'em estado de embriaguez e fasendo exercicios de capoeiras em frente as portas de uma venda'. Advertidos por um professor público, atacaram-no com pedradas — arma típica dos capoeiras da época. O incidente termina com a prisão dos dois policiais. Fonte: Ofício policial, Arquivo do Estado de São Paulo.",
+    "descricao": "Em 16 de julho de 1889, as praças Felicio de Souza Ferreira e José Luiz de Toledo são flagradas 'em estado de embriaguez e fasendo exercicios de capoeiras em frente as portas de uma venda'. Advertidos por um professor público, atacaram-no com pedradas — arma típica dos capoeiras da época. O incidente termina com a prisão dos dois policiais. Fonte: Ofício policial, Arquivo do Estado de São Paulo.",
     "periodo": "1888-1930",
     "tipo": "CONFLITO",
     "personagens": ["Felicio de Souza Ferreira", "José Luiz de Toledo"],
-    "pagina": "p. 178",
-    "pagina_pdf": 178
+    "pagina": "pp. 238-239",
+    "pagina_pdf": 238
   },
   {
     "ano": 1889,
@@ -290,24 +290,24 @@
     "ano": 1890,
     "mes": 1,
     "titulo": "Capoeira foragido em Itu: SP não persegue capoeiras",
-    "descricao": "Em 1º de fevereiro de 1890, o delegado de Itu reporta ao chefe de Polícia de São Paulo a presença de um valentão de origem italiana, foragido de uma malta carioca perseguida por Sampaio Ferraz. Testado, 'deu a conhecer que não desconhece o offício' da capoeira. Surpreendentemente, o chefe de Polícia de SP mandou soltar o homem, demonstrando que a capital paulista não perseguia capoeiras. O caso ocorreu exatamente na cidade onde Sampaio Ferraz — o grande perseguidor da capoeira no Rio — fez seus estudos preparatórios. Fonte: Ofício do delegado de Itu, Arquivo do Estado de SP, 1890.",
+    "descricao": "Em 1º de fevereiro de 1890, o delegado de Itu reporta ao chefe de Polícia de São Paulo a presença de um valentão de origem italiana, foragido de uma malta carioca perseguida por Sampaio Ferraz. Testado, 'deu a conhecer que não desconhece o offício' da capoeira. O chefe de Polícia de SP mandou soltá-lo, demonstrando que a capital paulista não perseguia capoeiras. O caso ocorreu exatamente na cidade onde Sampaio Ferraz — o grande perseguidor da capoeira no Rio — fez seus estudos preparatórios. Fonte: Ofício do delegado de Itu, Arquivo do Estado de SP, 1890.",
     "periodo": "1888-1930",
     "tipo": "PRISAO",
     "personagens": [],
-    "pagina": "p. 77",
-    "pagina_pdf": 77
+    "pagina": "pp. 220-221",
+    "pagina_pdf": 220
   },
   {
     "ano": 1890,
     "mes": 2,
     "titulo": "José da Silva preso por capoeira no carnaval de Santos",
-    "descricao": "Em 20 de fevereiro de 1890, José da Silva é preso em Santos por 'estar fasendo o jogo de capoeira, quando passava um grupo carnavalesco'. O preso resistiu com um canivete à patrulha. O delegado esclarece ao chefe de Polícia que o homem é ensacador de café e não faz 'profissão de Capoeira', propondo apenas 'uns dias de cadeia'. O episódio revela a capoeira como prática lúdica integrada às festas populares santistas. Fonte: Ofício do delegado Francisco Cruz, Arquivo da Polícia de Praia Grande.",
+    "descricao": "Em 20 de fevereiro de 1890, José da Silva é preso em Santos por 'estar fasendo o jogo de capoeira, quando passava um grupo carnavalesco'. O preso resistiu com um canivete à patrulha. O delegado esclarece ao chefe de Polícia que o homem é ensacador de café e não faz 'profissão de Capoeira', propondo apenas 'uns dias de cadeia'. O episódio revela a capoeira como prática lúdica integrada às festas populares santistas. Fonte: Ofício do delegado Francisco Cruz, Arquivo do Estado de SP.",
     "periodo": "1888-1930",
     "tipo": "PRISAO",
     "acervo_drive": "acpg-1870-1872",
     "personagens": ["José da Silva"],
-    "pagina": "p. 146",
-    "pagina_pdf": 146
+    "pagina": "pp. 234-235",
+    "pagina_pdf": 234
   },
   {
     "ano": 1890,
@@ -317,29 +317,29 @@
     "periodo": "1888-1930",
     "tipo": "PRISAO",
     "personagens": ["Benedicto Alves de Siqueira"],
-    "pagina": "p. 151",
-    "pagina_pdf": 151
+    "pagina": "p. 235",
+    "pagina_pdf": 235
   },
   {
     "ano": 1890,
     "mes": 5,
     "titulo": "Ricardo Florencio, capoeira carioca foragido em Sorocaba",
-    "descricao": "Em 10 de maio de 1890, o delegado de Sorocaba envia preso ao chefe de Polícia Ricardo Florencio, espanhol, 30 anos, considerado 'verdadeiro gatuno, e dos capoeiras foragidos da Capital Federal'. O chefe de Polícia manda soltá-lo, explicando que não há processo legal contra ele em SP. O episódio reforça que São Paulo se tornava refúgio para capoeiras perseguidos no Rio de Janeiro por Sampaio Ferraz, e que as cidades com tradição de capoeira — como Sorocaba — eram destinos preferidos. Fonte: Ofício do delegado de Sorocaba, Arquivo do Estado de SP, 1890.",
+    "descricao": "Em 10 de maio de 1890, o delegado de Sorocaba envia preso ao chefe de Polícia Ricardo Florencio, espanhol, 30 anos, considerado 'verdadeiro gatuno, e dos capoeiras foragidos da Capital Federal'. O chefe de Polícia manda soltá-lo. O episódio reforça que São Paulo se tornava refúgio para capoeiras perseguidos no Rio de Janeiro por Sampaio Ferraz, e que cidades com tradição de capoeira — como Sorocaba — eram destinos preferidos. Fonte: Ofício do delegado de Sorocaba, Arquivo do Estado de SP, 1890.",
     "periodo": "1888-1930",
     "tipo": "PRISAO",
     "personagens": ["Ricardo Florencio"],
-    "pagina": "p. 78",
-    "pagina_pdf": 78
+    "pagina": "pp. 221-222",
+    "pagina_pdf": 221
   },
   {
     "ano": 1890,
     "titulo": "Código Penal criminaliza a capoeira",
-    "descricao": "O Código Penal republicano, no artigo 402, criminaliza a capoeira em todo o Brasil. A pena vai de dois a seis meses de prisão. No Rio de Janeiro, 297 pessoas são presas só naquele ano.",
+    "descricao": "O Código Penal republicano, aprovado em outubro de 1890, no artigo 402, criminaliza a capoeira em todo o Brasil. A pena vai de dois a seis meses de prisão. No Rio de Janeiro, 297 pessoas são presas só naquele ano. Em São Paulo, porém, a legislação pouco foi aplicada contra praticantes.",
     "periodo": "1888-1930",
     "tipo": "LEI",
     "acervo_drive": "aesp-policia-caixa233",
-    "pagina": "p. 224",
-    "pagina_pdf": 224
+    "pagina": "pp. 217-218",
+    "pagina_pdf": 217
   },
   {
     "ano": 1890,
@@ -349,8 +349,8 @@
     "periodo": "1888-1930",
     "tipo": "PRISAO",
     "personagens": ["João Antonio dos Santos (Bambú)"],
-    "pagina": "p. 162",
-    "pagina_pdf": 162
+    "pagina": "p. 236",
+    "pagina_pdf": 236
   },
   {
     "ano": 1891,
@@ -370,8 +370,8 @@
     "periodo": "1888-1930",
     "tipo": "POLITICO",
     "personagens": ["Quintino de Lacerda"],
-    "pagina": "p. 114",
-    "pagina_pdf": 114
+    "pagina": "pp. 203, 229",
+    "pagina_pdf": 203
   },
   {
     "ano": 1897,
@@ -381,8 +381,8 @@
     "tipo": "CULTURAL",
     "acervo_drive": "acad-direito",
     "personagens": ["Couto de Magalhães"],
-    "pagina": "p. 120",
-    "pagina_pdf": 120
+    "pagina": "pp. 118-120",
+    "pagina_pdf": 118
   },
   {
     "ano": 1900,
@@ -392,8 +392,8 @@
     "tipo": "CONFLITO",
     "acervo_drive": "aesp-estado-sp",
     "personagens": [],
-    "pagina": "p. 219",
-    "pagina_pdf": 219
+    "pagina": "pp. 243-244",
+    "pagina_pdf": 243
   },
   {
     "ano": 1900,
@@ -419,13 +419,13 @@
   {
     "ano": 1908,
     "titulo": "Bugrinho, navalhista capoeira nas ruas de São Paulo",
-    "descricao": "O navalhista Bugrinho e seu companheiro — ambos dados ao 'perigoso sport da capoeiragem' — ferem um comerciante italiano na Rua Tiradentes, São Paulo, durante um acerto de contas de uma rixa de carnaval. O Correio Paulistano descreve: 'Bugrinho sacou resolutamente da navalha e, num movimento rápido, crescendo para Molinaro...'. O caso revela a naturalidade com que a imprensa tratava ações de capoeiras na capital paulista. Fonte: Correio Paulistano, 1908.",
+    "descricao": "O navalhista Bugrinho e seu companheiro — ambos dados ao 'perigoso sport da capoeiragem' — ferem um comerciante italiano na Rua Tiradentes, São Paulo, durante um acerto de contas de uma rixa de carnaval. O Correio Paulistano descreve: 'Bugrinho sacou resolutamente da navalha e, num movimento rápido, crescendo para Molinaro...'. O caso revela a naturalidade com que a imprensa tratava ações de capoeiras na capital paulista. Fonte: Correio Paulistano, outubro de 1908.",
     "periodo": "1888-1930",
     "tipo": "CONFLITO",
     "acervo_drive": "aesp-correio-paulistano",
     "personagens": ["Bugrinho"],
-    "pagina": "p. 203",
-    "pagina_pdf": 203
+    "pagina": "pp. 241-242",
+    "pagina_pdf": 241
   },
   {
     "ano": 1910,
@@ -434,7 +434,7 @@
     "periodo": "1888-1930",
     "tipo": "CULTURAL",
     "acervo_drive": "aesp-estado-sp",
-    "pagina": "p. 269",
+    "pagina": "pp. 269-272",
     "pagina_pdf": 269
   },
   {
@@ -444,8 +444,8 @@
     "periodo": "1888-1930",
     "tipo": "CULTURAL",
     "personagens": ["Dionísio Barbosa", "Félix Costa", "João Caboclo", "Amargoso"],
-    "pagina": "p. 427",
-    "pagina_pdf": 427
+    "pagina": "pp. 270-271",
+    "pagina_pdf": 270
   },
   {
     "ano": 1912,
@@ -455,7 +455,7 @@
     "tipo": "CONFLITO",
     "acervo_drive": "aesp-commercio-campinas",
     "personagens": ["Benedicto Amaro Gonçalves"],
-    "pagina": "p. 260",
+    "pagina": "pp. 260-263",
     "pagina_pdf": 260
   },
   {
@@ -465,28 +465,28 @@
     "periodo": "1888-1930",
     "tipo": "CULTURAL",
     "personagens": [],
-    "pagina": "p. 637",
-    "pagina_pdf": 637
+    "pagina": "p. 304",
+    "pagina_pdf": 304
   },
   {
     "ano": 1919,
     "titulo": "Morte em Cabreúva: capoeira mata um capoeirista",
-    "descricao": "Em Cabreúva (SP), um soldado da Força Pública é designado para conduzir à prisão um homem que praticava 'exercícios de capoeiragem por mera brincadeira'. O homem, embriagado, recusou-se a ir. O soldado começou a desferi-lhe golpes com a ponta do rifle até matá-lo. Foi condenado a dez anos e seis meses de prisão celular. O episódio ilustra como a prática inocente da capoeira poderia terminar em tragédia em mãos de autoridades despreparadas. Fonte: Fernando Salla, As prisões em São Paulo, citado na dissertação.",
+    "descricao": "Em Cabreúva (SP), um soldado da Força Pública é designado para conduzir à prisão um homem que praticava 'exercícios de capoeiragem por mera brincadeira'. O homem, embriagado, recusou-se a ir. O soldado começou a desferir-lhe golpes com a ponta do rifle até matá-lo. Foi condenado a dez anos e seis meses de prisão celular. O episódio ilustra como a prática inocente da capoeira poderia terminar em tragédia em mãos de autoridades despreparadas. Fonte: Fernando Salla, As prisões em São Paulo, citado na dissertação.",
     "periodo": "1888-1930",
     "tipo": "CONFLITO",
     "personagens": [],
-    "pagina": "p. 214",
-    "pagina_pdf": 214
+    "pagina": "pp. 242-243",
+    "pagina_pdf": 242
   },
   {
     "ano": 1927,
     "titulo": "Menê: capoeira carioca deportado inicia grupo em Botucatu",
-    "descricao": "Segundo o folclorista Alceu Maynard Araújo, quando Botucatu ainda era ponta de trilhos da Estrada de Ferro Sorocabana, 'algumas levas de capueiras foram ali desembarcadas, provenientes do Rio de Janeiro'. Por volta de 1927, um famoso capoeira carioca chamado Menê — um dos 'deportados', parte de uma das levas soltas nas pontas de trilhos — iniciou um grupo de estudantes na arte da capoeira, 'desenferrujando-se' para ensinar rasteiras, rabo-de-arraia e outros golpes. Entre seus alunos estava o próprio folclorista. Fonte: Alceu Maynard Araújo, citado na dissertação.",
+    "descricao": "Segundo o folclorista Alceu Maynard Araújo, quando Botucatu ainda era ponta de trilhos da Estrada de Ferro Sorocabana, 'algumas levas de capueiras foram ali desembarcadas, provenientes do Rio de Janeiro'. Por volta de 1927, um famoso capoeira carioca chamado Menê — um dos 'deportados', parte de uma das levas soltas nas pontas de trilhos — iniciou um grupo de estudantes na arte da capoeira, 'desenferrujando-se' para ensinar rasteiras, rabo-de-arraia e outros golpes. Entre seus alunos estava o próprio folclorista. Fonte: Alceu Maynard Araújo, Folclore Nacional, vol. II, p. 314.",
     "periodo": "1888-1930",
     "tipo": "CULTURAL",
     "personagens": ["Menê", "Alceu Maynard Araújo"],
-    "pagina": "p. 89",
-    "pagina_pdf": 89
+    "pagina": "pp. 222-223",
+    "pagina_pdf": 222
   },
   {
     "ano": 1928,
@@ -495,7 +495,7 @@
     "periodo": "1888-1930",
     "tipo": "CULTURAL",
     "personagens": ["Coelho Neto"],
-    "pagina": "p. 177",
+    "pagina": "pp. 177-178",
     "pagina_pdf": 177
   }
 ]
