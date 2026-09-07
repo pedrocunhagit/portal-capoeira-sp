@@ -3,14 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portal de pesquisa sobre a história da capoeira em São Paulo (1830-1930). Documentos históricos, linha do tempo, dissertação e referências." />
-  <title>Capoeira e valentia em São Paulo — Pesquisa e documentos</title>
+  <meta name="description" content="Portal de pesquisa sobre a hist&oacute;ria da capoeira em S&atilde;o Paulo (1830-1930). Documentos hist&oacute;ricos, linha do tempo, disserta&ccedil;&atilde;o e refer&ecirc;ncias." />
+  <title>Capoeira e valentia em S&atilde;o Paulo &mdash; Pesquisa e documentos</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* === SOBRE A CAPOEIRA === */
+    .sobre-cap {
+      background: #faf4ea;
+      border-top: 2px solid #e0d3c0;
+      padding: 3rem 1.2rem 3.5rem;
+      margin-top: 3rem;
+    }
+    .sobre-cap-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .sobre-cap-titulo {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #6b3a1f;
+      margin-bottom: .5rem;
+      letter-spacing: -.3px;
+    }
+    .sobre-cap-subtitulo {
+      font-size: .9rem;
+      color: #8a6a4a;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    .sobre-cap p {
+      font-size: .96rem;
+      line-height: 1.85;
+      color: #2c1a0e;
+      max-width: 780px;
+      margin-bottom: 1.1rem;
+    }
+    .pintores-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0 1.5rem;
+    }
+    .pintor-card {
+      background: #fff;
+      border: 1px solid #e0d3c0;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .pintor-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      display: block;
+    }
+    .pintor-legenda {
+      padding: .45rem .6rem .5rem;
+      font-size: .72rem;
+      color: #7a5c3a;
+      line-height: 1.4;
+    }
+    .pintor-legenda strong {
+      display: block;
+      color: #4a2810;
+      font-size: .76rem;
+      margin-bottom: .15rem;
+    }
+    @media (max-width: 600px) {
+      .pintores-grid { grid-template-columns: repeat(2, 1fr); }
+      .pintor-card img { height: 120px; }
+    }
+  </style>
 </head>
 <body>
-  <div class="acess-bar" role="toolbar" aria-label="Opções de acessibilidade">
+  <div class="acess-bar" role="toolbar" aria-label="Op&ccedil;&otilde;es de acessibilidade">
     <span>Acessibilidade</span>
-    <button class="btn-fonte" data-nivel="n" title="Tamanho padrão">A</button>
+    <button class="btn-fonte" data-nivel="n" title="Tamanho padr&atilde;o">A</button>
     <button class="btn-fonte" data-nivel="g"  title="Texto maior">A+</button>
     <button class="btn-fonte" data-nivel="gg" title="Texto bem maior">A++</button>
     <button id="btn-contraste"  title="Alto contraste">Contraste</button>
@@ -22,29 +89,29 @@
 
   <header>
     <div class="header-inner">
-      <h1>Capoeira e valentia em São Paulo</h1>
-      <p class="subtitulo">Pesquisa e documentos históricos (1830–1930)</p>
+      <h1>Capoeira e valentia em S&atilde;o Paulo</h1>
+      <p class="subtitulo">Pesquisa e documentos hist&oacute;ricos (1830&ndash;1930)</p>
     </div>
   </header>
 
   <nav aria-label="Menu principal">
     <button class="menu-toggle" aria-expanded="false" aria-controls="menu-lista">Menu</button>
     <ul id="menu-lista" role="list">
-      <li><a href="index.html" class="ativo">Início</a></li>
+      <li><a href="index.html" class="ativo">In&iacute;cio</a></li>
       <li><a href="timeline.html">Linha do tempo</a></li>
       <li><a href="dissertacao.html">A pesquisa</a></li>
       <li><a href="documentos.html">Documentos</a></li>
-      <li><a href="referencias.html">Referências</a></li>
+      <li><a href="referencias.html">Refer&ecirc;ncias</a></li>
       <li><a href="sobre.html">Sobre a pesquisa</a></li>
     </ul>
   </nav>
 
-  <section class="hero" aria-label="Imagem histórica em destaque">
-    <img id="hero-img" class="hero-img" src="img/hero/Rugendas_capoeira_RJ.jpg" alt="Imagem histórica da pesquisa" />
+  <section class="hero" aria-label="Imagem hist&oacute;rica em destaque">
+    <img id="hero-img" class="hero-img" src="img/hero/Rugendas_capoeira_RJ.jpg" alt="Imagem hist&oacute;rica da pesquisa" />
     <div class="hero-overlay">
       <blockquote class="hero-citacao">
-        <span id="hero-texto">"Aqui é a capoeira, espécie de dança física, de evoluções atrevidas e guerreiras, cadenciada pelo tambor do Congo."</span>
-        <cite id="hero-fonte">— Charles Ribeyrolles, Brazil Pittoresco, 1859</cite>
+        <span id="hero-texto">&ldquo;Aqui &eacute; a capoeira, esp&eacute;cie de dan&ccedil;a f&iacute;sica, de evolu&ccedil;&otilde;es atrevidas e guerreiras, cadenciada pelo tambor do Congo.&rdquo;</span>
+        <cite id="hero-fonte">&mdash; Charles Ribeyrolles, Brazil Pittoresco, 1859</cite>
       </blockquote>
     </div>
   </section>
@@ -53,7 +120,7 @@
     <section aria-labelledby="intro-titulo" style="margin-bottom: 48px;">
       <p class="secao-titulo" id="intro-titulo">Sobre este portal</p>
       <p style="max-width: 700px; color: var(--text-muted); font-size: 0.96rem; line-height: 1.85;">
-        Este portal reúne os resultados de uma pesquisa sobre a história da capoeira em São Paulo, desenvolvida no Programa de Pós-graduação em História Social da Universidade de São Paulo (USP). Aqui você encontra documentos históricos originais digitalizados em 13 acervos, uma linha do tempo dos principais fatos e personagens, resumos da dissertação e as referências bibliográficas utilizadas.
+        Este portal re&uacute;ne os resultados de uma pesquisa sobre a hist&oacute;ria da capoeira em S&atilde;o Paulo, desenvolvida no Programa de P&oacute;s-gradua&ccedil;&atilde;o em Hist&oacute;ria Social da Universidade de S&atilde;o Paulo (USP). Aqui voc&ecirc; encontra documentos hist&oacute;ricos originais digitalizados em 13 acervos, uma linha do tempo dos principais fatos e personagens, resumos da disserta&ccedil;&atilde;o e as refer&ecirc;ncias bibliogr&aacute;ficas utilizadas.
       </p>
     </section>
 
@@ -62,39 +129,113 @@
       <div class="cards-grid">
         <a class="card" href="timeline.html">
           <h3>Linha do tempo</h3>
-          <p>Os principais eventos e personagens da capoeira em São Paulo, de 1830 a 1930, organizados cronologicamente.</p>
+          <p>Os principais eventos e personagens da capoeira em S&atilde;o Paulo, de 1830 a 1930, organizados cronologicamente.</p>
           <span class="card-arrow">Ver &rarr;</span>
         </a>
         <a class="card" href="dissertacao.html">
           <h3>A pesquisa</h3>
-          <p>Resumos de cada capítulo da dissertação em linguagem acessível, com link para o texto acadêmico completo.</p>
+          <p>Resumos de cada cap&iacute;tulo da disserta&ccedil;&atilde;o em linguagem acess&iacute;vel, com link para o texto acad&ecirc;mico completo.</p>
           <span class="card-arrow">Ver &rarr;</span>
         </a>
         <a class="card" href="documentos.html">
           <h3>Banco de documentos</h3>
-          <p>Documentos históricos digitalizados em 13 acervos. Pesquise por palavras-chave e filtre por acervo ou período.</p>
+          <p>Documentos hist&oacute;ricos digitalizados em 13 acervos. Pesquise por palavras-chave e filtre por acervo ou per&iacute;odo.</p>
           <span class="card-arrow">Ver &rarr;</span>
         </a>
         <a class="card" href="referencias.html">
-          <h3>Referências</h3>
-          <p>Fontes primárias, bibliografia e filmografia utilizadas na pesquisa, com busca por autor ou título.</p>
+          <h3>Refer&ecirc;ncias</h3>
+          <p>Fontes prim&aacute;rias, bibliografia e filmografia utilizadas na pesquisa, com busca por autor ou t&iacute;tulo.</p>
           <span class="card-arrow">Ver &rarr;</span>
         </a>
       </div>
     </section>
   </main>
 
+  <!-- SOBRE A CAPOEIRA -->
+  <section class="sobre-cap" aria-labelledby="sobre-cap-titulo">
+    <div class="sobre-cap-inner">
+      <h2 class="sobre-cap-titulo" id="sobre-cap-titulo">Sobre a capoeira</h2>
+      <p class="sobre-cap-subtitulo">A arte marcial afro-brasileira no per&iacute;odo da escravid&atilde;o</p>
+
+      <p>
+        A capoeira &eacute; hoje praticada em todo o mundo por milh&otilde;es de pessoas. Mas durante muito tempo &mdash; especialmente nos s&eacute;culos XVIII e XIX &mdash; ela foi perseguida, proibida e associada &agrave; resist&ecirc;ncia de escravizados e libertos nas cidades brasileiras. Compreender essa hist&oacute;ria &eacute; essencial para entender a pr&oacute;pria hist&oacute;ria do Brasil.
+      </p>
+
+      <p>
+        Em sua forma mais antiga, a capoeira era um conjunto de pr&aacute;ticas corporais que misturava luta, dan&ccedil;a e jogo. Era praticada por africanos e seus descendentes nas ruas, largos e chafarizes das cidades. N&atilde;o era apenas entretenimento: era tamb&eacute;m uma forma de afirmar identidade, demonstrar coragem e criar v&iacute;nculos de solidariedade entre pessoas que viviam sob o regime da escravid&atilde;o. O corpo era, muitas vezes, o &uacute;nico recurso dispon&iacute;vel.
+      </p>
+
+      <p>
+        Os viajantes europeus que visitaram o Brasil no s&eacute;culo XIX ficaram impressionados com o que viram. Artistas como Johann Moritz Rugendas, Augustus Earle e Henry Chamberlain registraram cenas de capoeira em suas pinturas e gravuras &mdash; algumas das primeiras imagens visuais que temos dessa pr&aacute;tica. Rugendas, em sua c&eacute;lebre obra <em>Viagem Pitoresca Atrav&eacute;s do Brasil</em> (1835), descreveu o jogo como &ldquo;uma esp&eacute;cie de dança de guerra&rdquo; e retratou dois combatentes rodeados por espectadores que marcavam o ritmo. Earle, por volta de 1820, pintou uma cena intensa de dois homens lutando no Rio de Janeiro. Chamberlain, na mesma &eacute;poca, registrou um vendedor ambulante carregando o berimbau &mdash; instrumento musical indissoci&aacute;vel da capoeira.
+      </p>
+
+      <div class="pintores-grid">
+        <div class="pintor-card">
+          <img src="img/hero/Rugendas_capoeira_RJ.jpg" alt="Rugendas: jogar capoeira, c. 1835" loading="lazy" />
+          <div class="pintor-legenda">
+            <strong>Johann Moritz Rugendas</strong>
+            &ldquo;Jogar Capoeira&rdquo;, c. 1835. Uma das primeiras imagens da capoeira conhecidas.
+          </div>
+        </div>
+        <div class="pintor-card">
+          <img src="img/hero/Negros_lutando.jpg" alt="Augustus Earle: negros lutando, c. 1820" loading="lazy" />
+          <div class="pintor-legenda">
+            <strong>Augustus Earle</strong>
+            &ldquo;Negros lutando&rdquo;, c. 1820. Cena de luta no Rio de Janeiro.
+          </div>
+        </div>
+        <div class="pintor-card">
+          <img src="img/hero/chamberlain.jpg" alt="Henry Chamberlain: vendedor com berimbau, c. 1820" loading="lazy" />
+          <div class="pintor-legenda">
+            <strong>Henry Chamberlain</strong>
+            &ldquo;Vendedor com berimbau&rdquo;, c. 1820. O instrumento &eacute; s&iacute;mbolo da capoeira.
+          </div>
+        </div>
+        <div class="pintor-card">
+          <img src="img/hero/Rugendas_prancha27_Sao-Salvador.jpg" alt="Rugendas: Batuque, c. 1835" loading="lazy" />
+          <div class="pintor-legenda">
+            <strong>Rugendas &mdash; Batuque</strong>
+            Dan&ccedil;a e m&uacute;sica afro-brasileira em S&atilde;o Salvador, c. 1835.
+          </div>
+        </div>
+      </div>
+
+      <p>
+        Em S&atilde;o Paulo, a primeira men&ccedil;&atilde;o documentada &agrave; capoeira data de 1829: uma carta publicada no jornal <em>O Farol Paulistano</em> critica um professor de franc&ecirc;s que jogava capoeira no Largo do Chafariz, &ldquo;servindo de espet&aacute;culo aos negros, que quando o v&ecirc;em dar bem uma cabe&ccedil;ada, o applaudem com bastantes assobios, palmas, gargalhadas&rdquo;. Apenas quatro anos depois, em 1833, a C&acirc;mara Municipal de S&atilde;o Paulo aprovaria a primeira lei proibindo o &ldquo;jogo denominado de Capoeiras&rdquo;, com pena de pris&atilde;o para pessoas livres e a&ccedil;oites para escravizados.
+      </p>
+
+      <p>
+        A proibi&ccedil;&atilde;o n&atilde;o extinguiu a pr&aacute;tica. Pelo contr&aacute;rio: ao longo do s&eacute;culo XIX, os registros mostram que a capoeira continuou presente nas ruas de S&atilde;o Paulo, Santos e outras cidades paulistas, praticada por africanos livres, escravizados e libertos. Nas d&eacute;cadas de 1870 e 1880, capoeiras e &ldquo;valentes&rdquo; participaram ativamente do movimento abolicionista &mdash; protegendo libertadores, escoltando fugitivos e confrontando capatazes. Era a arte do corpo a servi&ccedil;o de uma causa.
+      </p>
+
+      <p>
+        Esta pesquisa rastreou essa hist&oacute;ria por quase 100 anos &mdash; de 1830, quando a capoeira come&ccedil;a a aparecer nos documentos oficiais, at&eacute; 1930, quando come&ccedil;a a ser reabilitada como arte marcial nacional. Para saber mais, acesse os documentos originais, a linha do tempo e os cap&iacute;tulos da disserta&ccedil;&atilde;o neste portal.
+      </p>
+    </div>
+  </section>
+
   <footer>
     <p>
-      <strong>Capoeira e valentia em São Paulo — Pesquisa e documentos</strong><br />
-      Dissertação de mestrado em História Social · Universidade de São Paulo · 2011<br />
+      <strong>Capoeira e valentia em S&atilde;o Paulo &mdash; Pesquisa e documentos</strong><br />
+      Disserta&ccedil;&atilde;o de mestrado em Hist&oacute;ria Social &middot; Universidade de S&atilde;o Paulo &middot; 2011<br />
       <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html" target="_blank" rel="noopener">Registro oficial na USP</a>
-      &nbsp;·&nbsp;
+      &nbsp;&middot;&nbsp;
       <a href="sobre.html">Sobre a pesquisa</a>
+    </p>
+    <p class="footer-ia">
+      Este portal foi gerado com suporte do <strong>IBM Bob</strong>, recurso baseado em IA da IBM, para tornar os dados da pesquisa mais acess&iacute;veis. Caso alguma informa&ccedil;&atilde;o pare&ccedil;a incorreta, considere a disserta&ccedil;&atilde;o publicada no <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html" target="_blank" rel="noopener">site da USP</a> como fonte confi&aacute;vel para verifica&ccedil;&atilde;o.
     </p>
   </footer>
 
   <script src="script.js"></script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'pt', includedLanguages: 'en,es',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false
+    }, 'google_translate_element');
+  }
+  </script>
 </body>
 </html>

@@ -3,92 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sobre a pesquisa Capoeiras e valentões na história de São Paulo (1830–1930) e seu autor Pedro Figueiredo Alves da Cunha." />
-  <title>Sobre a pesquisa — Capoeira e valentia em São Paulo</title>
+  <meta name="description" content="Sobre a pesquisa Capoeiras e valent&otilde;es na hist&oacute;ria de S&atilde;o Paulo (1830&ndash;1930) e seu autor Pedro Figueiredo Alves da Cunha." />
+  <title>Sobre a pesquisa &mdash; Capoeira e valentia em S&atilde;o Paulo</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* ---- READER PDF ---- */
-    .pdf-reader-bloco {
-      margin: 28px 0 8px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      background: var(--bg-card);
-    }
-    .pdf-reader-topo {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 14px 20px;
-      background: var(--bg-alt);
-      border-bottom: 1px solid var(--border);
-    }
-    .pdf-reader-topo strong {
-      font-size: 0.88rem;
-      color: var(--text);
-      font-weight: 700;
-    }
-    .pdf-reader-topo span {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-    .pdf-reader-btns {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .btn-reader-expand {
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      border-radius: var(--radius);
-      padding: 7px 16px;
-      font-size: 0.82rem;
-      font-family: var(--font);
-      font-weight: 700;
-      cursor: pointer;
-      letter-spacing: 0.3px;
-      transition: background .15s;
-    }
+    .pdf-reader-bloco { margin: 28px 0 8px; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--bg-card); }
+    .pdf-reader-topo { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding: 14px 20px; background: var(--bg-alt); border-bottom: 1px solid var(--border); }
+    .pdf-reader-topo strong { font-size: 0.88rem; color: var(--text); font-weight: 700; }
+    .pdf-reader-topo span { font-size: 0.8rem; color: var(--text-muted); }
+    .pdf-reader-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn-reader-expand { background: var(--accent); color: #fff; border: none; border-radius: var(--radius); padding: 7px 16px; font-size: 0.82rem; font-family: var(--font); font-weight: 700; cursor: pointer; letter-spacing: 0.3px; transition: background .15s; }
     .btn-reader-expand:hover { background: var(--accent-hover); }
-    .btn-reader-expand:focus { outline: 3px solid var(--focus); }
-    .btn-reader-nova-aba {
-      background: transparent;
-      color: var(--accent);
-      border: 1px solid var(--accent);
-      border-radius: var(--radius);
-      padding: 7px 16px;
-      font-size: 0.82rem;
-      font-family: var(--font);
-      font-weight: 700;
-      cursor: pointer;
-      letter-spacing: 0.3px;
-      text-decoration: none;
-      display: inline-block;
-      transition: background .15s, color .15s;
-    }
-    .btn-reader-nova-aba:hover {
-      background: var(--accent);
-      color: #fff;
-      text-decoration: none;
-    }
-    .pdf-reader-frame {
-      display: none;
-      width: 100%;
-      height: 680px;
-      border: none;
-    }
+    .btn-reader-nova-aba { background: transparent; color: var(--accent); border: 1px solid var(--accent); border-radius: var(--radius); padding: 7px 16px; font-size: 0.82rem; font-family: var(--font); font-weight: 700; cursor: pointer; letter-spacing: 0.3px; text-decoration: none; display: inline-block; transition: background .15s, color .15s; }
+    .btn-reader-nova-aba:hover { background: var(--accent); color: #fff; text-decoration: none; }
+    .pdf-reader-frame { display: none; width: 100%; height: 680px; border: none; }
     .pdf-reader-frame.aberto { display: block; }
-    @media (max-width: 600px) {
-      .pdf-reader-frame { height: 420px; }
-      .pdf-reader-topo  { flex-direction: column; align-items: flex-start; }
-    }
+    @media (max-width: 600px) { .pdf-reader-frame { height: 420px; } .pdf-reader-topo { flex-direction: column; align-items: flex-start; } }
   </style>
 </head>
 <body>
-  <div class="acess-bar" role="toolbar" aria-label="Opções de acessibilidade">
+  <div class="acess-bar" role="toolbar" aria-label="Op&ccedil;&otilde;es de acessibilidade">
     <span>Acessibilidade</span>
     <button class="btn-fonte" data-nivel="n">A</button>
     <button class="btn-fonte" data-nivel="g">A+</button>
@@ -101,131 +35,85 @@
   </div>
 
   <header><div class="header-inner">
-    <h1>Capoeira e valentia em São Paulo</h1>
-    <p class="subtitulo">Pesquisa e documentos históricos (1830–1930)</p>
+    <h1>Capoeira e valentia em S&atilde;o Paulo</h1>
+    <p class="subtitulo">Pesquisa e documentos hist&oacute;ricos (1830&ndash;1930)</p>
   </div></header>
 
   <nav aria-label="Menu principal">
     <button class="menu-toggle" aria-expanded="false" aria-controls="menu-lista">Menu</button>
     <ul id="menu-lista" role="list">
-      <li><a href="index.html">Início</a></li>
+      <li><a href="index.html">In&iacute;cio</a></li>
       <li><a href="timeline.html">Linha do tempo</a></li>
       <li><a href="dissertacao.html">A pesquisa</a></li>
       <li><a href="documentos.html">Documentos</a></li>
-      <li><a href="referencias.html">Referências</a></li>
+      <li><a href="referencias.html">Refer&ecirc;ncias</a></li>
       <li><a href="sobre.html" class="ativo">Sobre a pesquisa</a></li>
     </ul>
   </nav>
 
   <div class="page-header"><div class="page-header-inner">
     <h2>Sobre a pesquisa</h2>
-    <p>A dissertação, o autor e os acervos consultados</p>
+    <p>A disserta&ccedil;&atilde;o e o autor</p>
   </div></div>
 
   <main>
-
-    <!-- A DISSERTAÇÃO -->
-    <section class="sobre-disserta" aria-labelledby="sobre-disserta-titulo" style="margin-bottom: 56px;">
-      <p class="secao-titulo" id="sobre-disserta-titulo">A dissertação</p>
-      <p>
-        <strong><em>Capoeiras e valentões na história de São Paulo (1830–1930)</em></strong> é uma pesquisa sobre a história da capoeira em São Paulo, desenvolvida no Programa de Pós-graduação em História Social da Faculdade de Filosofia, Letras e Ciências Humanas da Universidade de São Paulo (USP), sob orientação da Prof.ª Dr.ª Maria Cristina Cortez Wissenbach, defendida em 2011.
-      </p>
-      <p>
-        A capoeira é uma arte marcial praticada no mundo inteiro por milhões de pessoas. Porém, sua história ainda é repleta de lacunas. Este estudo buscou preencher uma dessas lacunas, investigando o desenvolvimento da capoeira em território paulista e revelando aspectos até então pouco conhecidos da história de São Paulo.
-      </p>
-      <p>
-        A partir de fontes variadas como jornais, cartas, ofícios e leis, a pesquisa cruzou a prática da capoeira com os mais variados temas ao longo de quase 100 anos. Nas páginas desta pesquisa, os leitores encontrarão o envolvimento de professores e estudantes da Faculdade de Direito de São Paulo com valentões da capital paulista; a participação popular no movimento abolicionista que se espalhou pela província; e o processo que deu origem a escolas de samba e times de futebol paulistanos.
-      </p>
-      <p>
-        Por muito tempo, a história da capoeira se limitou ao eixo Salvador–Rio de Janeiro. Este trabalho busca ampliar essa visão, mostrando que a prática dessa arte marcial afro-brasileira chegou também ao interior e à capital de São Paulo.
-      </p>
-
-      <!-- READER PDF -->
-      <div class="pdf-reader-bloco" id="pdf-reader-bloco">
+    <section aria-labelledby="sobre-disserta-titulo" style="margin-bottom: 56px;">
+      <p class="secao-titulo" id="sobre-disserta-titulo">A disserta&ccedil;&atilde;o</p>
+      <p><strong><em>Capoeiras e valent&otilde;es na hist&oacute;ria de S&atilde;o Paulo (1830&ndash;1930)</em></strong> &eacute; uma pesquisa sobre a hist&oacute;ria da capoeira em S&atilde;o Paulo, desenvolvida no Programa de P&oacute;s-gradua&ccedil;&atilde;o em Hist&oacute;ria Social da Faculdade de Filosofia, Letras e Ci&ecirc;ncias Humanas da Universidade de S&atilde;o Paulo (USP), sob orienta&ccedil;&atilde;o da Prof.&ordf; Dr.&ordf; Maria Cristina Cortez Wissenbach, defendida em 2011.</p>
+      <p>A capoeira &eacute; uma arte marcial praticada no mundo inteiro por milh&otilde;es de pessoas. Por&eacute;m, sua hist&oacute;ria ainda &eacute; repleta de lacunas. Este estudo buscou preencher uma dessas lacunas, investigando o desenvolvimento da capoeira em territ&oacute;rio paulista e revelando aspectos at&eacute; ent&atilde;o pouco conhecidos da hist&oacute;ria de S&atilde;o Paulo.</p>
+      <p>A partir de fontes variadas como jornais, cartas, of&iacute;cios e leis, a pesquisa cruzou a pr&aacute;tica da capoeira com os mais variados temas ao longo de quase 100 anos. Nas p&aacute;ginas desta pesquisa, os leitores encontrar&atilde;o o envolvimento de professores e estudantes da Faculdade de Direito de S&atilde;o Paulo com valent&otilde;es da capital paulista; a participa&ccedil;&atilde;o popular no movimento abolicionista que se espalhou pela prov&iacute;ncia; e o processo que deu origem a escolas de samba e times de futebol paulistanos.</p>
+      <p>Por muito tempo, a hist&oacute;ria da capoeira se limitou ao eixo Salvador&ndash;Rio de Janeiro. Este trabalho busca ampliar essa vis&atilde;o, mostrando que a pr&aacute;tica dessa arte marcial afro-brasileira chegou tamb&eacute;m ao interior e &agrave; capital de S&atilde;o Paulo.</p>
+      <div class="pdf-reader-bloco">
         <div class="pdf-reader-topo">
           <div>
-            <strong>Dissertação completa em PDF</strong><br />
-            <span>Pedro Figueiredo Alves da Cunha · USP · 2011</span>
+            <strong>Disserta&ccedil;&atilde;o completa em PDF</strong><br />
+            <span>Pedro Figueiredo Alves da Cunha &middot; USP &middot; 2011</span>
           </div>
           <div class="pdf-reader-btns">
-            <button class="btn-reader-expand" id="btn-reader-expand" aria-expanded="false" aria-controls="pdf-frame">
-              Ler aqui no portal
-            </button>
-            <a href="https://drive.google.com/file/d/1_5yrNuLScfKgQxTjlm4NDU_R8mSiuInJ/view?usp=sharing"
-               target="_blank" rel="noopener" class="btn-reader-nova-aba">
-              Abrir em nova aba
-            </a>
+            <button class="btn-reader-expand" id="btn-reader-expand" aria-expanded="false" aria-controls="pdf-frame">Ler aqui no portal</button>
+            <a href="https://drive.google.com/file/d/1_5yrNuLScfKgQxTjlm4NDU_R8mSiuInJ/view?usp=sharing" target="_blank" rel="noopener" class="btn-reader-nova-aba">Abrir em nova aba</a>
           </div>
         </div>
-        <iframe
-          id="pdf-frame"
-          class="pdf-reader-frame"
+        <iframe id="pdf-frame" class="pdf-reader-frame"
           src="https://drive.google.com/file/d/1_5yrNuLScfKgQxTjlm4NDU_R8mSiuInJ/preview"
-          title="Dissertação: Capoeiras e valentões na história de São Paulo (1830–1930)"
-          allow="autoplay"
-          loading="lazy"
-        ></iframe>
+          title="Disserta&ccedil;&atilde;o: Capoeiras e valent&otilde;es na hist&oacute;ria de S&atilde;o Paulo (1830&ndash;1930)"
+          allow="autoplay" loading="lazy"></iframe>
       </div>
-
       <div style="margin-top: 16px;">
-        <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html"
-           target="_blank" rel="noopener" class="btn-cta">Registro oficial na USP</a>
+        <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html" target="_blank" rel="noopener" class="btn-cta">Registro oficial na USP</a>
       </div>
     </section>
 
-    <!-- O AUTOR -->
-    <section aria-labelledby="sobre-autor-titulo" style="margin-bottom: 56px;">
+    <section aria-labelledby="sobre-autor-titulo">
       <p class="secao-titulo" id="sobre-autor-titulo">O autor</p>
       <div class="sobre-grid">
-        <img src="img/pedro-cunha-sobre.jpg"
-             alt="Pedro Figueiredo Alves da Cunha tocando atabaque em evento de capoeira"
-             class="sobre-foto" />
+        <img src="img/pedro-cunha-sobre.jpg" alt="Pedro Figueiredo Alves da Cunha tocando atabaque em evento de capoeira" class="sobre-foto" />
         <div class="sobre-texto">
           <h2>Pedro Figueiredo Alves da Cunha</h2>
-          <p>Pedro Cunha nasceu em Niterói/RJ em 1978 e mudou-se para Santos/SP em 1995, quando começou a praticar capoeira com Nilton Ribas Martins Jr., o Mestre Ribas, fundador do Grupo Capoeira Santista. Inspirado pelas aulas sobre História da Capoeira ministradas por Ribas, e por encontros com outros grandes mestres da Baixada Santista como Sombra, Parada, Bandeira, e mestres de outros estados, Pedro decidiu buscar mais informações sobre a capoeira em São Paulo no período da escravidão.</p>
-          <p>Formado em jornalismo (UniSantos, 1999), entrou no programa de Mestrado da USP em 2008 e, com orientação da professora Cris Wissenbach, encontrou um caminho para pesquisar algo que muitas pessoas diziam ser impossível pela falta de documentos históricos.</p>
-          <p>A dissertação publicada em 2011 mostrou que a pesquisa não só era possível, como necessária, para dar voz a grupos silenciados pela História, e cujos feitos não chegaram aos tempos atuais apesar da força da oralidade na cultura afro-brasileira.</p>
-          <p>Este portal tem o objetivo de ampliar essas vozes, para que mais pessoas possam conhecer as histórias descritas na dissertação ou acessar diretamente documentos digitalizados pelo autor durante sua pesquisa.</p>
+          <p>Pedro Cunha nasceu em Niter&oacute;i/RJ em 1978 e mudou-se para Santos/SP em 1995, quando come&ccedil;ou a praticar capoeira com Nilton Ribas Martins Jr., o Mestre Ribas, fundador do Grupo Capoeira Santista. Inspirado pelas aulas sobre Hist&oacute;ria da Capoeira ministradas por Ribas, e por encontros com outros grandes mestres da Baixada Santista como Sombra, Parada, Bandeira, e mestres de outros estados, Pedro decidiu buscar mais informa&ccedil;&otilde;es sobre a capoeira em S&atilde;o Paulo no per&iacute;odo da escravid&atilde;o.</p>
+          <p>Formado em jornalismo (UniSantos, 1999), entrou no programa de Mestrado da USP em 2008 e, com orienta&ccedil;&atilde;o da professora Cris Wissenbach, encontrou um caminho para pesquisar algo que muitas pessoas diziam ser imposs&iacute;vel pela falta de documentos hist&oacute;ricos.</p>
+          <p>A disserta&ccedil;&atilde;o publicada em 2011 mostrou que a pesquisa n&atilde;o s&oacute; era poss&iacute;vel, como necess&aacute;ria, para dar voz a grupos silenciados pela Hist&oacute;ria, e cujos feitos n&atilde;o chegaram aos tempos atuais apesar da for&ccedil;a da oralidade na cultura afro-brasileira.</p>
+          <p>Este portal tem o objetivo de ampliar essas vozes, para que mais pessoas possam conhecer as hist&oacute;rias descritas na disserta&ccedil;&atilde;o ou acessar diretamente documentos digitalizados pelo autor durante sua pesquisa.</p>
         </div>
       </div>
     </section>
-
-    <!-- ACERVOS CONSULTADOS -->
-    <section aria-labelledby="acervos-titulo">
-      <p class="secao-titulo" id="acervos-titulo">Acervos consultados</p>
-      <p style="max-width:700px; color:var(--text-muted); font-size:0.93rem; margin-bottom:24px;">
-        A pesquisa foi realizada em 13 instituições. Os documentos digitalizados estão disponíveis no <a href="documentos.html">Banco de documentos</a>.
-      </p>
-      <ol class="acervos-lista">
-        <li><a href="https://www.arquivoestado.sp.gov.br" target="_blank" rel="noopener">Arquivo do Estado de São Paulo</a></li>
-        <li><a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/cultura/arquivo_historico/" target="_blank" rel="noopener">Arquivo Municipal Washington Luís — São Paulo</a></li>
-        <li><a href="https://www.al.sp.gov.br" target="_blank" rel="noopener">Arquivo da Assembleia Legislativa de São Paulo</a></li>
-        <li><a href="https://www.direito.usp.br" target="_blank" rel="noopener">Arquivo da Faculdade de Direito da USP (Academia de Direito)</a></li>
-        <li>Arquivo da Polícia Civil — Praia Grande / Santos <span style="color:var(--text-muted); font-size:0.85rem;">(acesso presencial)</span></li>
-        <li><a href="https://www.bn.gov.br" target="_blank" rel="noopener">Biblioteca Nacional do Rio de Janeiro</a></li>
-        <li><a href="https://www.tjsp.jus.br" target="_blank" rel="noopener">Fórum João Mendes — Tribunal de Justiça de São Paulo</a></li>
-        <li><a href="https://www.santos.sp.gov.br" target="_blank" rel="noopener">Fundação Arquivo e Memória de Santos</a></li>
-        <li>Hemeroteca Municipal Roldão Mendes Rosa — Santos <span style="color:var(--text-muted); font-size:0.85rem;">(acesso presencial)</span></li>
-        <li><a href="https://www.ieb.usp.br" target="_blank" rel="noopener">Instituto de Estudos Brasileiros (IEB) — USP</a></li>
-        <li><a href="https://www.atribunasp.com.br" target="_blank" rel="noopener">Jornal A Tribuna — Santos</a></li>
-        <li>Museu da Companhia de Ferro <span style="color:var(--text-muted); font-size:0.85rem;">(sem site público identificado)</span></li>
-        <li><a href="https://www.ihgb.org.br" target="_blank" rel="noopener">Instituto Histórico e Geográfico Brasileiro (IHGB)</a></li>
-      </ol>
-    </section>
-
   </main>
 
-  <footer><p>
-    <strong>Capoeira e valentia em São Paulo — Pesquisa e documentos</strong><br />
-    Dissertação de mestrado em História Social · Universidade de São Paulo · 2011<br />
-    <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html" target="_blank" rel="noopener">Registro oficial na USP</a>
-    &nbsp;·&nbsp;
-    <a href="sobre.html">Sobre a pesquisa</a>
-  </p></footer>
+  <footer>
+    <p>
+      <strong>Capoeira e valentia em S&atilde;o Paulo &mdash; Pesquisa e documentos</strong><br />
+      Disserta&ccedil;&atilde;o de mestrado em Hist&oacute;ria Social &middot; Universidade de S&atilde;o Paulo &middot; 2011<br />
+      <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html" target="_blank" rel="noopener">Registro oficial na USP</a>
+      &nbsp;&middot;&nbsp;
+      <a href="sobre.html">Sobre a pesquisa</a>
+    </p>
+    <p class="footer-ia">
+      Este portal foi gerado com suporte do <strong>IBM Bob</strong>, recurso baseado em IA da IBM, para tornar os dados da pesquisa mais acess&iacute;veis. Caso alguma informa&ccedil;&atilde;o pare&ccedil;a incorreta, considere a disserta&ccedil;&atilde;o publicada no <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html" target="_blank" rel="noopener">site da USP</a> como fonte confi&aacute;vel para verifica&ccedil;&atilde;o.
+    </p>
+  </footer>
 
   <script src="script.js"></script>
   <script>
-  // Reader PDF expansível
   (function () {
     var btn = document.getElementById('btn-reader-expand');
     var frame = document.getElementById('pdf-frame');
@@ -234,20 +122,13 @@
       var aberto = frame.classList.toggle('aberto');
       btn.setAttribute('aria-expanded', aberto);
       btn.textContent = aberto ? 'Fechar leitor' : 'Ler aqui no portal';
-      if (aberto) {
-        frame.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      if (aberto) frame.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   })();
   </script>
   <script>
   function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'pt',
-      includedLanguages: 'en,es',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
-    }, 'google_translate_element');
+    new google.translate.TranslateElement({ pageLanguage: 'pt', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
   }
   </script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

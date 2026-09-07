@@ -49,533 +49,67 @@
     "descricao": "Um dos mais importantes acervos documentais do Brasil. Re\u00fane manuscritos, of\u00edcios, processos policiais e judiciais, jornais em microfilme e registros administrativos da Prov\u00edncia e do Estado de S\u00e3o Paulo do s\u00e9culo XIX e in\u00edcio do s\u00e9culo XX.",
     "drive_url": "https://drive.google.com/drive/folders/1i98ibX7OjJlXQBjwyvB5hih8CrCJv53P",
     "series": [
-      {
-        "id": "aesp-2cartorio-livro37",
-        "nome": "2\u00ba Cart\u00f3rio de Notas da Capital \u2014 Livro 37, E12092 (1830\u20131831)",
-        "periodo": "1830\u20131831",
-        "imagens": 4,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/10wRDEvNKNe90xu9ewWjCJL0QoWy2CUdf",
-        "docs_portal": [
-          { "referencia": "Livro 37 \u2013 E12092", "titulo": "Cartas de liberdade de escravizados (1830\u20131831)", "nota": "Inclui cartas de liberdade de Igm\u00e1cio, Jezu\u00edno, Benedita e Fortunata" }
-        ]
-      },
-      {
-        "id": "aesp-autos-crimes-adao",
-        "nome": "Autos de Crimes da Capital \u2014 Ad\u00e3o dos Santos Jorge (1864\u20131865)",
-        "periodo": "1864\u20131865",
-        "imagens": 103,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1aMOFkw5diwY5n3MOGDW98q9jfykiCGjK",
-        "docs_portal": [
-          { "referencia": "Ordem 3930\u20133931 / microfilme 05.03.036 / n\u00ba 514", "titulo": "Processo-crime: Ad\u00e3o dos Santos Jorge (capoeira com navalha, 1864\u20131865)", "nota": "Africano livre, pedreiro, Congo, 23 anos. Absolvido pelo j\u00fari em 6/5/1865." }
-        ]
-      },
-      {
-        "id": "aesp-jornais-compilador",
-        "nome": "Jornais \u2014 O Compilador Paulistano (1852\u20131853)",
-        "periodo": "1852\u20131853",
-        "imagens": 0,
-        "pdfs": 1,
-        "drive_url": "https://drive.google.com/drive/folders/1INbEACGG492fpncAs9UoAirucsEB9BKu",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-jornais-correio-paulistano",
-        "nome": "Jornais \u2014 Correio Paulistano (microfilmes 1890\u20131908)",
-        "periodo": "1890\u20131908",
-        "imagens": 19,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1ppzdwachp3vecOJz0poFZB3Tx_UsEwXl",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-jornais-farol-paulistano",
-        "nome": "Jornais \u2014 O Farol Paulistano",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 0,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1NTcfZKojMOx1TfuhfZsxRaWvClJj9iiB",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-jornais-diversos",
-        "nome": "Jornais \u2014 Diversos (VAR077)",
-        "periodo": "S\u00e9c. XIX\u2013XX",
-        "imagens": 17,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/10IMvb72tds02zB_jJ8VPoHup5iSFIEQa",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-jornais-commercio-campinas",
-        "nome": "Jornais \u2014 Jornal do Com\u00e9rcio de Campinas (jan\u2013jun 1912)",
-        "periodo": "1912",
-        "imagens": 19,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1mwCyHV5_8436dNbheM-nN9WLoBcyYAJG",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-jornais-estado-sp",
-        "nome": "Jornais \u2014 O Estado de S\u00e3o Paulo (microfilmes 1888\u20131918)",
-        "periodo": "1888\u20131918",
-        "imagens": 104,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1590fwiPTO-3O66TB-5V6xbd5kBscDvCq",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-matricula-africanos",
-        "nome": "Matr\u00edcula de Africanos Livres (1864\u20131865)",
-        "periodo": "1864\u20131865",
-        "imagens": 39,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1ulejrcDOaBkDfeNmzTCiigFdSOpUJjtN",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-odc-caixa69",
-        "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 69, Ordem 864 (1822\u20131825)",
-        "periodo": "1822\u20131825",
-        "imagens": 23,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1vlvq1NcPtT9rM9IWxd6oLr8VvriPp3ML",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-odc-caixa70",
-        "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 70, Ordem 865 (1826\u20131827)",
-        "periodo": "1826\u20131827",
-        "imagens": 41,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1Tp0Zlzp3kbyIXROjNHwA61HghmmRSOd1",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-odc-caixa72",
-        "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 72, Ordem 867",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 11,
-        "pdfs": 3,
-        "drive_url": "https://drive.google.com/drive/folders/1KBZjQX_sQZORWvQRj-iQavrL1loRowHN",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-odc-caixa73",
-        "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 73, Ordem 868",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 2,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1-sEh7v_NS93djtrhedu_0xt2D49DV0Fb",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-odc-caixa74",
-        "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 74, Ordem 869",
-        "periodo": "1833",
-        "imagens": 3,
-        "pdfs": 4,
-        "drive_url": "https://drive.google.com/drive/folders/1M4d3q4wfqNEv3ea_EPh-c_WkAwUXWIUV",
-        "docs_portal": [
-          { "referencia": "Oficio_postura_capoeiras.pdf", "titulo": "Of\u00edcio encaminhando a Postura de 1833 proibindo a capoeira em S\u00e3o Paulo", "nota": "Inclui imagem da postura original manuscrita" }
-        ]
-      },
-      {
-        "id": "aesp-odc-caixa75",
-        "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 75, Ordem 870",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 9,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1ixidFg6CdJIXupCyDanLJjD4jQvlYAIK",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-odc-caixa84",
-        "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 84, Ordem 879",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 0,
-        "pdfs": 2,
-        "drive_url": "https://drive.google.com/drive/folders/1h1MtOs9tCSqgxjPpG-V6mEDBmZPoyk6e",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-odc-caixa123",
-        "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 123, Ordem 918",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 1,
-        "pdfs": 1,
-        "drive_url": "https://drive.google.com/drive/folders/1Orz2jlhXr4u0zzeVqF9__NLBmb53tJfY",
-        "docs_portal": [
-          { "referencia": "Caixa 123 \u2013 Ordem 918", "titulo": "Ilustra\u00e7\u00e3o do Chafariz do Miguel Carlos \u2014 confronto de Ad\u00e3o dos Santos Jorge", "nota": "Imagem iconogr\u00e1fica relacionada ao processo criminal de 1864\u20131865" }
-        ]
-      },
-      {
-        "id": "aesp-odc-caixa126",
-        "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 126, Ordem 921",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 0,
-        "pdfs": 1,
-        "drive_url": "https://drive.google.com/drive/folders/1RLZ22guiP93zkqaArJBhC8rQ8_8qsX8e",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-odc-caixa134",
-        "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 134, Ordem 929",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 0,
-        "pdfs": 3,
-        "drive_url": "https://drive.google.com/drive/folders/1Qwe7lzSTQaKj6l0NTPWdJqTIvR4Ya1Hm",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-odc-caixa140",
-        "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 140, Ordem 935",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 0,
-        "pdfs": 1,
-        "drive_url": "https://drive.google.com/drive/folders/1JOjCelw41nx_6Tm7eDiqkmoqWIBXFl-D",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-ods-caixa445",
-        "nome": "Of\u00edcios Diversos de Santos \u2014 Caixa 445, Ordem 1240 (1860)",
-        "periodo": "1860",
-        "imagens": 5,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1hxj2HBXrqUf5XZxGSZER4MR-jiXH6NTp",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-ods-caixa454",
-        "nome": "Of\u00edcios Diversos de Santos \u2014 Caixa 454, Ordem 1249",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 42,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1Ni5kkV9NUmFbbdVBLZKFilh8QGTV3Ut0",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-ods-caixa458",
-        "nome": "Of\u00edcios Diversos de Santos \u2014 Caixa 458, Ordem 1253 (1881\u20131892)",
-        "periodo": "1881\u20131892",
-        "imagens": 10,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1Ae2LLj6fbkQAk1k65VoKg3oYGAG0e-IS",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-ods-caixa459",
-        "nome": "Of\u00edcios Diversos de Santos \u2014 Caixa 459, Ordem 1254 (1853)",
-        "periodo": "1853",
-        "imagens": 6,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1ZuWU5IeWtEqsHkz22-ATQ0xRKcSQHpjd",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-odsorocaba-caixa504",
-        "nome": "Of\u00edcios Diversos de Sorocaba \u2014 Caixa 504, Ordem 1299",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 33,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/15aIfC8iOhOfqdQ2fMHj9H7JcHc_CkQth",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-caixa1",
-        "nome": "Pol\u00edcia \u2014 Caixa 1, Ordem 2436 (1837\u20131841)",
-        "periodo": "1837\u20131841",
-        "imagens": 61,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1T664xw8xTGUFzoWGDWuwe9pWlWDgMQCX",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-caixa9",
-        "nome": "Pol\u00edcia \u2014 Caixa 9, Ordem 2444 (1846)",
-        "periodo": "1846",
-        "imagens": 64,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1SbZOMQpapNHB_2G9rlFG1yJfIohBCIhJ",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-caixa233",
-        "nome": "Pol\u00edcia \u2014 Caixa 233, Ordem 2668 (1886)",
-        "periodo": "1886",
-        "imagens": 128,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1OrUIN0cpUQ-K6c1h9-yBNWhkcsJtZiQz",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-caixa247",
-        "nome": "Pol\u00edcia \u2014 Caixa 247, Ordem 2682 (1887)",
-        "periodo": "1887",
-        "imagens": 29,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1LqNlMXAhKaVZI7Ty3tD4YoURBL1eOrqN",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-caixa257",
-        "nome": "Pol\u00edcia \u2014 Caixa 257, Ordem 2692 (1888)",
-        "periodo": "1888",
-        "imagens": 25,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1njYODPuN6BpgStSR-ukiNB6wrA1FDBCS",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-caixa259",
-        "nome": "Pol\u00edcia \u2014 Caixa 259, Ordem 2694 (1888)",
-        "periodo": "1888",
-        "imagens": 5,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/10WUTOd5aHUQoevutf0hzwdSy47WMEfMZ",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-caixa265",
-        "nome": "Pol\u00edcia \u2014 Caixa 265, Ordem 2700 (1889)",
-        "periodo": "1889",
-        "imagens": 5,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1Snq3hSFIPX4shT7VfQxi-EeS8Qwvtq9O",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-caixa286",
-        "nome": "Pol\u00edcia \u2014 Caixa 286, Ordem 2721 (1890)",
-        "periodo": "1890",
-        "imagens": 30,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1H3dWGRLKlmnbExKfp6GoIjqmfMsYmiFW",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-caixa290",
-        "nome": "Pol\u00edcia \u2014 Caixa 290, Ordem 2725 (1890)",
-        "periodo": "1890",
-        "imagens": 7,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1txPNsnLxov-fwzcWb2KwswNDj5ArV6MB",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-caixa306",
-        "nome": "Pol\u00edcia \u2014 Caixa 306, Ordem 2741 (1892)",
-        "periodo": "1892",
-        "imagens": 2,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1uhRaHqjA53wSrfS_489kRtiHATug4oOk",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-correspondencias",
-        "nome": "Pol\u00edcia \u2014 Correspond\u00eancias (E01476)",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 6,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1ZkvlSMWdYTPPUso-tgCulVIFHBfZBLet",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-reservados",
-        "nome": "Pol\u00edcia \u2014 Livro de Reservados, E01529 (1878\u20131884)",
-        "periodo": "1878\u20131884",
-        "imagens": 22,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1YsRvULGCtumlaHYr74jLfaG15iA7jCGQ",
-        "docs_portal": [
-          { "referencia": "E01529", "titulo": "Livro de Reservados \u2014 of\u00edcios confidenciais (1878\u20131884)", "nota": "Registros sobre festas de S\u00e3o Benedito, batuques, aliciamento de escravos, quilombos" }
-        ]
-      },
-      {
-        "id": "aesp-policia-entrada-saida-1555",
-        "nome": "Pol\u00edcia \u2014 Livro de Entrada e Sa\u00edda de Presos, Encadernado 01555",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 29,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1OH5wzftwCQbzPVa9Fd7ZH_fg1KgpvTnx",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-entrada-saida-1556",
-        "nome": "Pol\u00edcia \u2014 Livro de Entrada e Sa\u00edda de Presos, Encadernado 01556",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 18,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1jdPtQPHh6Y7NRLaS4ybvP2BfFeioUOzT",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-partes-diarias-1493",
-        "nome": "Pol\u00edcia \u2014 Partes Di\u00e1rias, Encadernado 01493",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 26,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1ZZbZnjFVf1yF89ycr9KQRZrgy6sS2RIy",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-partes-diarias-1494",
-        "nome": "Pol\u00edcia \u2014 Partes Di\u00e1rias, Encadernado 01494",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 41,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1DDoyz5whUfmU2fV12rVI7CcyOiTuP-ws",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-processos-caixa1",
-        "nome": "Pol\u00edcia \u2014 Processos Policiais, Caixa 1, Ordem 3202 (1851\u20131852)",
-        "periodo": "1851\u20131852",
-        "imagens": 7,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1m4foF2ekTmw_JKa9VQGNbOjAbiDfxttm",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-processos-caixa10",
-        "nome": "Pol\u00edcia \u2014 Processos Policiais, Caixa 10, Ordem 3211 (1862)",
-        "periodo": "1862",
-        "imagens": 4,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1SGx49Kb5NTPP-TlycjJU-nVqYO6RPzgg",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-processos-caixa15",
-        "nome": "Pol\u00edcia \u2014 Processos Policiais, Caixa 15, Ordem 3216 (1870\u20131875)",
-        "periodo": "1870\u20131875",
-        "imagens": 21,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1X93YXymTByQvkkkojyok18Fc_Ec60T1R",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-policia-relatorios-chefe",
-        "nome": "Pol\u00edcia \u2014 Relat\u00f3rios do Chefe de Pol\u00edcia, E01630 (1895)",
-        "periodo": "1895",
-        "imagens": 32,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/14DqpcKDIjJEilchohxvEEdWU_s7bo5GK",
-        "docs_portal": []
-      },
-      {
-        "id": "aesp-telegramas-caixa6037",
-        "nome": "Telegramas \u2014 Caixa 6037 (1874\u20131888, Revoltas)",
-        "periodo": "1874\u20131888",
-        "imagens": 9,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1bzbUkaFb-_RbXo7vZxOOp-ZnZ4X5W8u_",
-        "docs_portal": []
-      }
-    ]
-  },
-  {
-    "id": "amwl",
-    "nome": "Arquivo Municipal Washington Luiz \u2014 S\u00e3o Paulo",
-    "sigla": "AMWL",
-    "descricao": "Acervo da C\u00e2mara Municipal de S\u00e3o Paulo. Cont\u00e9m fundos documentais sobre correspond\u00eancias, intend\u00eancia e assuntos diversos da administra\u00e7\u00e3o municipal paulistana no s\u00e9culo XIX. Os documentos pesquisados foram transcritos e o acervo n\u00e3o possui imagens digitalizadas dispon\u00edveis neste portal.",
-    "drive_url": null,
-    "series": [
-      {
-        "id": "amwl-cmsp",
-        "nome": "Fundo CMSP \u2014 Correspond\u00eancias, Atas da C\u00e2mara e Assuntos Diversos",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 0,
-        "pdfs": 0,
-        "sem_drive": true,
-        "docs_portal": []
-      }
+      { "id": "aesp-2cartorio-livro37", "nome": "2\u00ba Cart\u00f3rio de Notas da Capital \u2014 Livro 37, E12092 (1830\u20131831)", "periodo": "1830\u20131831", "imagens": 4, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/10wRDEvNKNe90xu9ewWjCJL0QoWy2CUdf", "docs_portal": [{ "referencia": "Livro 37 \u2013 E12092", "titulo": "Cartas de liberdade de escravizados (1830\u20131831)", "nota": "Inclui cartas de liberdade de Ign\u00e1cio, Jezu\u00edno, Benedita e Fortunata" }] },
+      { "id": "aesp-autos-crimes-adao", "nome": "Autos de Crimes da Capital \u2014 Ad\u00e3o dos Santos Jorge (1864\u20131865)", "periodo": "1864\u20131865", "imagens": 103, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1aMOFkw5diwY5n3MOGDW98q9jfykiCGjK", "docs_portal": [{ "referencia": "Ordem 3930\u20133931", "titulo": "Processo-crime: Ad\u00e3o dos Santos Jorge (capoeira com navalha, 1864\u20131865)", "nota": "Africano livre, pedreiro, Congo, 23 anos. Absolvido pelo j\u00fari em 6/5/1865." }] },
+      { "id": "aesp-jornais-compilador", "nome": "Jornais \u2014 O Compilador Paulistano (1852\u20131853)", "periodo": "1852\u20131853", "imagens": 0, "pdfs": 1, "drive_url": "https://drive.google.com/drive/folders/1INbEACGG492fpncAs9UoAirucsEB9BKu", "docs_portal": [] },
+      { "id": "aesp-jornais-correio-paulistano", "nome": "Jornais \u2014 Correio Paulistano (microfilmes 1890\u20131908)", "periodo": "1890\u20131908", "imagens": 19, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1ppzdwachp3vecOJz0poFZB3Tx_UsEwXl", "docs_portal": [] },
+      { "id": "aesp-jornais-farol-paulistano", "nome": "Jornais \u2014 O Farol Paulistano", "periodo": "S\u00e9c. XIX", "imagens": 0, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1NTcfZKojMOx1TfuhfZsxRaWvClJj9iiB", "docs_portal": [] },
+      { "id": "aesp-jornais-diversos", "nome": "Jornais \u2014 Diversos (VAR077)", "periodo": "S\u00e9c. XIX\u2013XX", "imagens": 17, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/10IMvb72tds02zB_jJ8VPoHup5iSFIEQa", "docs_portal": [] },
+      { "id": "aesp-jornais-commercio-campinas", "nome": "Jornais \u2014 Jornal do Com\u00e9rcio de Campinas (jan\u2013jun 1912)", "periodo": "1912", "imagens": 19, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1mwCyHV5_8436dNbheM-nN9WLoBcyYAJG", "docs_portal": [] },
+      { "id": "aesp-jornais-estado-sp", "nome": "Jornais \u2014 O Estado de S\u00e3o Paulo (microfilmes 1888\u20131918)", "periodo": "1888\u20131918", "imagens": 104, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1590fwiPTO-3O66TB-5V6xbd5kBscDvCq", "docs_portal": [] },
+      { "id": "aesp-matricula-africanos", "nome": "Matr\u00edcula de Africanos Livres (1864\u20131865)", "periodo": "1864\u20131865", "imagens": 39, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1ulejrcDOaBkDfeNmzTCiigFdSOpUJjtN", "docs_portal": [] },
+      { "id": "aesp-odc-caixa69", "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 69, Ordem 864 (1822\u20131825)", "periodo": "1822\u20131825", "imagens": 23, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1vlvq1NcPtT9rM9IWxd6oLr8VvriPp3ML", "docs_portal": [] },
+      { "id": "aesp-odc-caixa70", "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 70, Ordem 865 (1826\u20131827)", "periodo": "1826\u20131827", "imagens": 41, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1Tp0Zlzp3kbyIXROjNHwA61HghmmRSOd1", "docs_portal": [] },
+      { "id": "aesp-odc-caixa72", "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 72, Ordem 867", "periodo": "S\u00e9c. XIX", "imagens": 11, "pdfs": 3, "drive_url": "https://drive.google.com/drive/folders/1KBZjQX_sQZORWvQRj-iQavrL1loRowHN", "docs_portal": [] },
+      { "id": "aesp-odc-caixa73", "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 73, Ordem 868", "periodo": "S\u00e9c. XIX", "imagens": 2, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1-sEh7v_NS93djtrhedu_0xt2D49DV0Fb", "docs_portal": [] },
+      { "id": "aesp-odc-caixa74", "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 74, Ordem 869", "periodo": "1833", "imagens": 3, "pdfs": 4, "drive_url": "https://drive.google.com/drive/folders/1M4d3q4wfqNEv3ea_EPh-c_WkAwUXWIUV", "docs_portal": [{ "referencia": "Oficio_postura_capoeiras.pdf", "titulo": "Of\u00edcio encaminhando a Postura de 1833 proibindo a capoeira em S\u00e3o Paulo", "nota": "Inclui imagem da postura original manuscrita" }] },
+      { "id": "aesp-odc-caixa75", "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 75, Ordem 870", "periodo": "S\u00e9c. XIX", "imagens": 9, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1ixidFg6CdJIXupCyDanLJjD4jQvlYAIK", "docs_portal": [] },
+      { "id": "aesp-odc-caixa84", "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 84, Ordem 879", "periodo": "S\u00e9c. XIX", "imagens": 0, "pdfs": 2, "drive_url": "https://drive.google.com/drive/folders/1h1MtOs9tCSqgxjPpG-V6mEDBmZPoyk6e", "docs_portal": [] },
+      { "id": "aesp-odc-caixa123", "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 123, Ordem 918", "periodo": "S\u00e9c. XIX", "imagens": 1, "pdfs": 1, "drive_url": "https://drive.google.com/drive/folders/1Orz2jlhXr4u0zzeVqF9__NLBmb53tJfY", "docs_portal": [{ "referencia": "Caixa 123 \u2013 Ordem 918", "titulo": "Ilustra\u00e7\u00e3o do Chafariz do Miguel Carlos", "nota": "Imagem relacionada ao processo criminal de 1864\u20131865" }] },
+      { "id": "aesp-odc-caixa126", "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 126, Ordem 921", "periodo": "S\u00e9c. XIX", "imagens": 0, "pdfs": 1, "drive_url": "https://drive.google.com/drive/folders/1RLZ22guiP93zkqaArJBhC8rQ8_8qsX8e", "docs_portal": [] },
+      { "id": "aesp-odc-caixa134", "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 134, Ordem 929", "periodo": "S\u00e9c. XIX", "imagens": 0, "pdfs": 3, "drive_url": "https://drive.google.com/drive/folders/1Qwe7lzSTQaKj6l0NTPWdJqTIvR4Ya1Hm", "docs_portal": [] },
+      { "id": "aesp-odc-caixa140", "nome": "Of\u00edcios Diversos da Capital \u2014 Caixa 140, Ordem 935", "periodo": "S\u00e9c. XIX", "imagens": 0, "pdfs": 1, "drive_url": "https://drive.google.com/drive/folders/1JOjCelw41nx_6Tm7eDiqkmoqWIBXFl-D", "docs_portal": [] },
+      { "id": "aesp-ods-caixa445", "nome": "Of\u00edcios Diversos de Santos \u2014 Caixa 445, Ordem 1240 (1860)", "periodo": "1860", "imagens": 5, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1hxj2HBXrqUf5XZxGSZER4MR-jiXH6NTp", "docs_portal": [] },
+      { "id": "aesp-ods-caixa454", "nome": "Of\u00edcios Diversos de Santos \u2014 Caixa 454, Ordem 1249", "periodo": "S\u00e9c. XIX", "imagens": 42, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1Ni5kkV9NUmFbbdVBLZKFilh8QGTV3Ut0", "docs_portal": [] },
+      { "id": "aesp-ods-caixa458", "nome": "Of\u00edcios Diversos de Santos \u2014 Caixa 458, Ordem 1253 (1881\u20131892)", "periodo": "1881\u20131892", "imagens": 10, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1Ae2LLj6fbkQAk1k65VoKg3oYGAG0e-IS", "docs_portal": [] },
+      { "id": "aesp-ods-caixa459", "nome": "Of\u00edcios Diversos de Santos \u2014 Caixa 459, Ordem 1254 (1853)", "periodo": "1853", "imagens": 6, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1ZuWU5IeWtEqsHkz22-ATQ0xRKcSQHpjd", "docs_portal": [] },
+      { "id": "aesp-odsorocaba-caixa504", "nome": "Of\u00edcios Diversos de Sorocaba \u2014 Caixa 504, Ordem 1299", "periodo": "S\u00e9c. XIX", "imagens": 33, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/15aIfC8iOhOfqdQ2fMHj9H7JcHc_CkQth", "docs_portal": [] },
+      { "id": "aesp-policia-caixa1", "nome": "Pol\u00edcia \u2014 Caixa 1, Ordem 2436 (1837\u20131841)", "periodo": "1837\u20131841", "imagens": 61, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1T664xw8xTGUFzoWGDWuwe9pWlWDgMQCX", "docs_portal": [] },
+      { "id": "aesp-policia-caixa9", "nome": "Pol\u00edcia \u2014 Caixa 9, Ordem 2444 (1846)", "periodo": "1846", "imagens": 64, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1SbZOMQpapNHB_2G9rlFG1yJfIohBCIhJ", "docs_portal": [] },
+      { "id": "aesp-policia-caixa233", "nome": "Pol\u00edcia \u2014 Caixa 233, Ordem 2668 (1886)", "periodo": "1886", "imagens": 128, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1OrUIN0cpUQ-K6c1h9-yBNWhkcsJtZiQz", "docs_portal": [] },
+      { "id": "aesp-policia-caixa247", "nome": "Pol\u00edcia \u2014 Caixa 247, Ordem 2682 (1887)", "periodo": "1887", "imagens": 29, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1LqNlMXAhKaVZI7Ty3tD4YoURBL1eOrqN", "docs_portal": [] },
+      { "id": "aesp-policia-caixa257", "nome": "Pol\u00edcia \u2014 Caixa 257, Ordem 2692 (1888)", "periodo": "1888", "imagens": 25, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1njYODPuN6BpgStSR-ukiNB6wrA1FDBCS", "docs_portal": [] },
+      { "id": "aesp-policia-caixa259", "nome": "Pol\u00edcia \u2014 Caixa 259, Ordem 2694 (1888)", "periodo": "1888", "imagens": 5, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/10WUTOd5aHUQoevutf0hzwdSy47WMEfMZ", "docs_portal": [] },
+      { "id": "aesp-policia-caixa265", "nome": "Pol\u00edcia \u2014 Caixa 265, Ordem 2700 (1889)", "periodo": "1889", "imagens": 5, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1Snq3hSFIPX4shT7VfQxi-EeS8Qwvtq9O", "docs_portal": [] },
+      { "id": "aesp-policia-caixa286", "nome": "Pol\u00edcia \u2014 Caixa 286, Ordem 2721 (1890)", "periodo": "1890", "imagens": 30, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1H3dWGRLKlmnbExKfp6GoIjqmfMsYmiFW", "docs_portal": [] },
+      { "id": "aesp-policia-caixa290", "nome": "Pol\u00edcia \u2014 Caixa 290, Ordem 2725 (1890)", "periodo": "1890", "imagens": 7, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1txPNsnLxov-fwzcWb2KwswNDj5ArV6MB", "docs_portal": [] },
+      { "id": "aesp-policia-caixa306", "nome": "Pol\u00edcia \u2014 Caixa 306, Ordem 2741 (1892)", "periodo": "1892", "imagens": 2, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1uhRaHqjA53wSrfS_489kRtiHATug4oOk", "docs_portal": [] },
+      { "id": "aesp-policia-correspondencias", "nome": "Pol\u00edcia \u2014 Correspond\u00eancias (E01476)", "periodo": "S\u00e9c. XIX", "imagens": 6, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1ZkvlSMWdYTPPUso-tgCulVIFHBfZBLet", "docs_portal": [] },
+      { "id": "aesp-policia-reservados", "nome": "Pol\u00edcia \u2014 Livro de Reservados, E01529 (1878\u20131884)", "periodo": "1878\u20131884", "imagens": 22, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1YsRvULGCtumlaHYr74jLfaG15iA7jCGQ", "docs_portal": [{ "referencia": "E01529", "titulo": "Livro de Reservados \u2014 of\u00edcios confidenciais (1878\u20131884)", "nota": "Registros sobre festas de S\u00e3o Benedito, batuques, aliciamento de escravos, quilombos" }] },
+      { "id": "aesp-policia-entrada-saida-1555", "nome": "Pol\u00edcia \u2014 Livro de Entrada e Sa\u00edda de Presos, Encadernado 01555", "periodo": "S\u00e9c. XIX", "imagens": 29, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1OH5wzftwCQbzPVa9Fd7ZH_fg1KgpvTnx", "docs_portal": [] },
+      { "id": "aesp-policia-entrada-saida-1556", "nome": "Pol\u00edcia \u2014 Livro de Entrada e Sa\u00edda de Presos, Encadernado 01556", "periodo": "S\u00e9c. XIX", "imagens": 18, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1jdPtQPHh6Y7NRLaS4ybvP2BfFeioUOzT", "docs_portal": [] },
+      { "id": "aesp-policia-partes-diarias-1493", "nome": "Pol\u00edcia \u2014 Partes Di\u00e1rias, Encadernado 01493", "periodo": "S\u00e9c. XIX", "imagens": 26, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1ZZbZnjFVf1yF89ycr9KQRZrgy6sS2RIy", "docs_portal": [] },
+      { "id": "aesp-policia-partes-diarias-1494", "nome": "Pol\u00edcia \u2014 Partes Di\u00e1rias, Encadernado 01494", "periodo": "S\u00e9c. XIX", "imagens": 41, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1DDoyz5whUfmU2fV12rVI7CcyOiTuP-ws", "docs_portal": [] },
+      { "id": "aesp-policia-processos-caixa1", "nome": "Pol\u00edcia \u2014 Processos Policiais, Caixa 1, Ordem 3202 (1851\u20131852)", "periodo": "1851\u20131852", "imagens": 7, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1m4foF2ekTmw_JKa9VQGNbOjAbiDfxttm", "docs_portal": [] },
+      { "id": "aesp-policia-processos-caixa10", "nome": "Pol\u00edcia \u2014 Processos Policiais, Caixa 10, Ordem 3211 (1862)", "periodo": "1862", "imagens": 4, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1SGx49Kb5NTPP-TlycjJU-nVqYO6RPzgg", "docs_portal": [] },
+      { "id": "aesp-policia-processos-caixa15", "nome": "Pol\u00edcia \u2014 Processos Policiais, Caixa 15, Ordem 3216 (1870\u20131875)", "periodo": "1870\u20131875", "imagens": 21, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1X93YXymTByQvkkkojyok18Fc_Ec60T1R", "docs_portal": [] },
+      { "id": "aesp-policia-relatorios-chefe", "nome": "Pol\u00edcia \u2014 Relat\u00f3rios do Chefe de Pol\u00edcia, E01630 (1895)", "periodo": "1895", "imagens": 32, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/14DqpcKDIjJEilchohxvEEdWU_s7bo5GK", "docs_portal": [] },
+      { "id": "aesp-telegramas-caixa6037", "nome": "Telegramas \u2014 Caixa 6037 (1874\u20131888, Revoltas)", "periodo": "1874\u20131888", "imagens": 9, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1bzbUkaFb-_RbXo7vZxOOp-ZnZ4X5W8u_", "docs_portal": [] }
     ]
   },
   {
     "id": "policia-praia-grande",
     "nome": "Arquivo da Pol\u00edcia Civil de Praia Grande (Santos)",
     "sigla": "ACPG",
-    "descricao": "Livros de registros de presos da delegacia de Santos, cobrindo 1870 a 1905. Cont\u00e9m registros nominais com indica\u00e7\u00e3o da infra\u00e7\u00e3o \u2014 incluindo dezenas de casos de pris\u00e3o por capoeira. Acervo de excepcional valor para a pesquisa.",
+    "descricao": "Livros de registros de presos da delegacia de Santos, cobrindo 1870 a 1905. Cont\u00e9m registros nominais com indica\u00e7\u00e3o da infra\u00e7\u00e3o \u2014 incluindo dezenas de casos de pris\u00e3o por capoeira.",
     "drive_url": "https://drive.google.com/drive/folders/1S1Y8G7qXxB3dBtUQUhuxs7-PzEdIuy9F",
     "series": [
-      {
-        "id": "acpg-livro-1870-1872",
-        "nome": "Livro de Registro de Presos \u2014 1870\u20131872",
-        "periodo": "1870\u20131872",
-        "imagens": 201,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1ojftsBZHAMUwqoQWGqZZgEbGCPDwNHJ8",
-        "docs_portal": [
-          { "referencia": "Registro 213", "titulo": "Japhet preso por capoeira \u2014 13 de julho de 1871", "nota": "" }
-        ]
-      },
-      {
-        "id": "acpg-livro-1872-1874",
-        "nome": "Livro de Registro de Presos \u2014 1872\u20131874",
-        "periodo": "1872\u20131874",
-        "imagens": 39,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1Rn685TXDVKexb5pCzQiRUiqzKLEy8nuA",
-        "docs_portal": [
-          { "referencia": "Registros 275, 357, 359\u2013361", "titulo": "Francisco, Marcelino, Zacarias, Lu\u00eds e Jo\u00e3o \u2014 presos por capoeira (set\u2013dez 1873)", "nota": "" }
-        ]
-      },
-      {
-        "id": "acpg-livro-1874-1877",
-        "nome": "Livro de Registro de Presos \u2014 1874\u20131877",
-        "periodo": "1874\u20131877",
-        "imagens": 13,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1xGPLWjVrn8Qi33Vg5wG3Siigmq2UZad2",
-        "docs_portal": []
-      },
-      {
-        "id": "acpg-livro-1878-1879",
-        "nome": "Livro de Registro de Presos \u2014 1878\u20131879",
-        "periodo": "1878\u20131879",
-        "imagens": 23,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1FKo0SPxoQxQ9I-NproxaFiua4QklY07m",
-        "docs_portal": []
-      },
-      {
-        "id": "acpg-livro-1903-1905",
-        "nome": "Livro de Registro de Presos \u2014 1903\u20131905",
-        "periodo": "1903\u20131905",
-        "imagens": 15,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1Di1GkALDM_yLEUUDz4KIP02KbvJnOf2i",
-        "docs_portal": []
-      },
-      {
-        "id": "acpg-localizado-capoeira",
-        "nome": "Destaques \u2014 Registros de capoeiras presos (sele\u00e7\u00e3o dos livros)",
-        "periodo": "1870\u20131874",
-        "imagens": 27,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1-Ox50gzCqolZz1Svd2yNeAshoMQ2xpsu",
-        "docs_portal": []
-      }
-    ]
-  },
-  {
-    "id": "bnrj",
-    "nome": "Biblioteca Nacional do Rio de Janeiro",
-    "sigla": "BNRJ",
-    "descricao": "Acervo da Biblioteca Nacional. Os documentos pesquisados incluem o Di\u00e1rio Popular de S\u00e3o Paulo, consultado em microfilme. As imagens n\u00e3o foram digitalizadas pelo pesquisador; as refer\u00eancias foram transcritas.",
-    "drive_url": null,
-    "series": [
-      {
-        "id": "bnrj-diario-popular",
-        "nome": "Di\u00e1rio Popular de S\u00e3o Paulo",
-        "periodo": "S\u00e9c. XIX\u2013XX",
-        "imagens": 0,
-        "pdfs": 0,
-        "sem_drive": true,
-        "docs_portal": []
-      }
+      { "id": "acpg-livro-1870-1872", "nome": "Livro de Registro de Presos \u2014 1870\u20131872", "periodo": "1870\u20131872", "imagens": 201, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1ojftsBZHAMUwqoQWGqZZgEbGCPDwNHJ8", "docs_portal": [{ "referencia": "Registro 213", "titulo": "Japhet preso por capoeira \u2014 13 de julho de 1871", "nota": "" }] },
+      { "id": "acpg-livro-1872-1874", "nome": "Livro de Registro de Presos \u2014 1872\u20131874", "periodo": "1872\u20131874", "imagens": 39, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1Rn685TXDVKexb5pCzQiRUiqzKLEy8nuA", "docs_portal": [{ "referencia": "Registros 275, 357, 359\u2013361", "titulo": "Francisco, Marcelino, Zacarias, Lu\u00eds e Jo\u00e3o \u2014 presos por capoeira (set\u2013dez 1873)", "nota": "" }] },
+      { "id": "acpg-livro-1874-1877", "nome": "Livro de Registro de Presos \u2014 1874\u20131877", "periodo": "1874\u20131877", "imagens": 13, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1xGPLWjVrn8Qi33Vg5wG3Siigmq2UZad2", "docs_portal": [] },
+      { "id": "acpg-livro-1878-1879", "nome": "Livro de Registro de Presos \u2014 1878\u20131879", "periodo": "1878\u20131879", "imagens": 23, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1FKo0SPxoQxQ9I-NproxaFiua4QklY07m", "docs_portal": [] },
+      { "id": "acpg-livro-1903-1905", "nome": "Livro de Registro de Presos \u2014 1903\u20131905", "periodo": "1903\u20131905", "imagens": 15, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1Di1GkALDM_yLEUUDz4KIP02KbvJnOf2i", "docs_portal": [] },
+      { "id": "acpg-localizado-capoeira", "nome": "Destaques \u2014 Registros de capoeiras presos (sele\u00e7\u00e3o dos livros)", "periodo": "1870\u20131874", "imagens": 27, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1-Ox50gzCqolZz1Svd2yNeAshoMQ2xpsu", "docs_portal": [] }
     ]
   },
   {
@@ -585,159 +119,41 @@
     "descricao": "Acervo documental da cidade de Santos. Inclui atas da C\u00e2mara Municipal e a Cole\u00e7\u00e3o Costa e Silva Sobrinho, com recortes do Di\u00e1rio de Santos sobre os festejos da aboli\u00e7\u00e3o em 1888.",
     "drive_url": "https://drive.google.com/drive/folders/1HL-FhsJfSA8VRTbufPnEueu_Zou1j63S",
     "series": [
-      {
-        "id": "fams-atas-camara",
-        "nome": "Atas da C\u00e2mara Municipal de Santos \u2014 1888\u20131889",
-        "periodo": "1888\u20131889",
-        "imagens": 9,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1FYFwKiUx_X0cDrR0V2LRv-adpGgMSq1C",
-        "docs_portal": []
-      },
-      {
-        "id": "fams-costa-silva",
-        "nome": "Cole\u00e7\u00e3o Costa e Silva Sobrinho \u2014 Recortes do Di\u00e1rio de Santos",
-        "periodo": "1888",
-        "imagens": 8,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/192RJpoZnOcY2_7E0iQIAcKU6ar2YSJib",
-        "docs_portal": []
-      }
-    ]
-  },
-  {
-    "id": "forum-joao-mendes",
-    "nome": "F\u00f3rum Jo\u00e3o Mendes \u2014 Tribunal de Justi\u00e7a de SP",
-    "sigla": "FJM",
-    "descricao": "Acervo judicial do F\u00f3rum Jo\u00e3o Mendes em S\u00e3o Paulo. Consultado para processos crimes do s\u00e9culo XIX. O acesso exigiu credenciamento presencial. As fontes foram transcritas; imagens n\u00e3o dispon\u00edveis neste portal.",
-    "drive_url": null,
-    "series": [
-      {
-        "id": "fjm-processos-crimes",
-        "nome": "Processos criminais \u2014 s\u00e9culo XIX",
-        "periodo": "S\u00e9c. XIX",
-        "imagens": 0,
-        "pdfs": 0,
-        "sem_drive": true,
-        "docs_portal": []
-      }
+      { "id": "fams-atas-camara", "nome": "Atas da C\u00e2mara Municipal de Santos \u2014 1888\u20131889", "periodo": "1888\u20131889", "imagens": 9, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1FYFwKiUx_X0cDrR0V2LRv-adpGgMSq1C", "docs_portal": [] },
+      { "id": "fams-costa-silva", "nome": "Cole\u00e7\u00e3o Costa e Silva Sobrinho \u2014 Recortes do Di\u00e1rio de Santos", "periodo": "1888", "imagens": 8, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/192RJpoZnOcY2_7E0iQIAcKU6ar2YSJib", "docs_portal": [] }
     ]
   },
   {
     "id": "hemeroteca-santos",
     "nome": "Hemeroteca Municipal Rold\u00e3o Mendes Rosa (Santos)",
     "sigla": "HMRMS",
-    "descricao": "Cole\u00e7\u00e3o de peri\u00f3dicos santistas do s\u00e9culo XIX. Cont\u00e9m edi\u00e7\u00f5es do Di\u00e1rio de Santos de 1880 e 1886, com registros de ocorr\u00eancias, editais policiais e not\u00edcias sobre a vida urbana da cidade.",
+    "descricao": "Cole\u00e7\u00e3o de peri\u00f3dicos santistas do s\u00e9culo XIX. Cont\u00e9m edi\u00e7\u00f5es do Di\u00e1rio de Santos de 1880 e 1886.",
     "drive_url": "https://drive.google.com/drive/folders/1cb9YSPZJ9CGNWuwIz3qu1y6ShelSkTAT",
     "series": [
-      {
-        "id": "hmrms-diario-1880",
-        "nome": "Di\u00e1rio de Santos \u2014 Livro 1880",
-        "periodo": "1880",
-        "imagens": 28,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1oW-Lqy3aA3dgaPkaEaEpObxb-Umnlswk",
-        "docs_portal": []
-      },
-      {
-        "id": "hmrms-diario-1886",
-        "nome": "Di\u00e1rio de Santos \u2014 Livro 35 (jan\u2013jun 1886)",
-        "periodo": "jan\u2013jun 1886",
-        "imagens": 36,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1VlcqeI28V_U7YPGx6d0F6jisxSx5U_GZ",
-        "docs_portal": []
-      }
+      { "id": "hmrms-diario-1880", "nome": "Di\u00e1rio de Santos \u2014 Livro 1880", "periodo": "1880", "imagens": 28, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1oW-Lqy3aA3dgaPkaEaEpObxb-Umnlswk", "docs_portal": [] },
+      { "id": "hmrms-diario-1886", "nome": "Di\u00e1rio de Santos \u2014 Livro 35 (jan\u2013jun 1886)", "periodo": "jan\u2013jun 1886", "imagens": 36, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1VlcqeI28V_U7YPGx6d0F6jisxSx5U_GZ", "docs_portal": [] }
     ]
   },
   {
     "id": "ieb",
     "nome": "Instituto de Estudos Brasileiros (IEB \u2014 USP)",
     "sigla": "IEB",
-    "descricao": "Acervo de publica\u00e7\u00f5es peri\u00f3dicas brasileiras. Inclui a Revista do IHGSP (Instituto Hist\u00f3rico e Geogr\u00e1fico de S\u00e3o Paulo) e a Revista Kosmos, com artigos e iconografia sobre a sociedade paulista e santista do in\u00edcio do s\u00e9culo XX. Guarda tamb\u00e9m o Arquivo M\u00e1rio de Andrade, com correspond\u00eancias sobre capoeira e berimbau dos anos 1930.",
+    "descricao": "Acervo de publica\u00e7\u00f5es peri\u00f3dicas brasileiras. Inclui a Revista do IHGSP e a Revista Kosmos, com artigos e iconografia sobre a sociedade paulista e santista do in\u00edcio do s\u00e9culo XX. Guarda tamb\u00e9m o Arquivo M\u00e1rio de Andrade.",
     "drive_url": "https://drive.google.com/drive/folders/1514zUVJ6MUjk8sxZiJbNpx8AvHIGnX0T",
     "series": [
-      {
-        "id": "ieb-ihgsp-vol21",
-        "nome": "Revista do IHGSP \u2014 vol. XXI (1916\u20131921)",
-        "periodo": "1916\u20131921",
-        "imagens": 13,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1lCsi6-4CoynV6FVSIJKdjHQNkXsZXdyQ",
-        "docs_portal": []
-      },
-      {
-        "id": "ieb-kosmos",
-        "nome": "Revista Kosmos",
-        "periodo": "S\u00e9c. XIX\u2013XX",
-        "imagens": 20,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1RrJUlwc1wNHg465_CiOcuPuCZthE35aB",
-        "docs_portal": []
-      }
+      { "id": "ieb-ihgsp-vol21", "nome": "Revista do IHGSP \u2014 vol. XXI (1916\u20131921)", "periodo": "1916\u20131921", "imagens": 13, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1lCsi6-4CoynV6FVSIJKdjHQNkXsZXdyQ", "docs_portal": [] },
+      { "id": "ieb-kosmos", "nome": "Revista Kosmos", "periodo": "S\u00e9c. XIX\u2013XX", "imagens": 20, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1RrJUlwc1wNHg465_CiOcuPuCZthE35aB", "docs_portal": [] }
     ]
   },
   {
     "id": "jornal-tribuna",
     "nome": "Jornal A Tribuna (Santos)",
     "sigla": "TRIBUNA",
-    "descricao": "Edi\u00e7\u00f5es comemorativas do jornal A Tribuna de Santos: centen\u00e1rio da cidade de Santos (1939) e 50 anos do jornal (1944). Publica\u00e7\u00f5es de grande formato com ampla cobertura da hist\u00f3ria santista.",
+    "descricao": "Edi\u00e7\u00f5es comemorativas do jornal A Tribuna de Santos: centen\u00e1rio da cidade de Santos (1939) e 50 anos do jornal (1944).",
     "drive_url": "https://drive.google.com/drive/folders/1_Dllj3Ljiiod6Byw95RkzHlVtwxA38qI",
     "series": [
-      {
-        "id": "tribuna-1939",
-        "nome": "Edi\u00e7\u00e3o Comemorativa \u2014 100 anos de Santos (26/01/1939)",
-        "periodo": "1939",
-        "imagens": 23,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1_Dllj3Ljiiod6Byw95RkzHlVtwxA38qI",
-        "docs_portal": []
-      },
-      {
-        "id": "tribuna-1944",
-        "nome": "Edi\u00e7\u00e3o Comemorativa \u2014 50 anos do jornal (26/03/1944)",
-        "periodo": "1944",
-        "imagens": 6,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1_Dllj3Ljiiod6Byw95RkzHlVtwxA38qI",
-        "docs_portal": []
-      }
-    ]
-  },
-  {
-    "id": "museu-cia-ferro",
-    "nome": "Museu da Companhia de Ferro (Santos)",
-    "sigla": "MCF",
-    "descricao": "Acervo do museu da Estrada de Ferro Santos\u2013Jundiai. Cont\u00e9m um mapa hist\u00f3rico de 1945 consultado para localiza\u00e7\u00e3o de locais citados na pesquisa. Imagem dispon\u00edvel no Drive.",
-    "drive_url": "https://drive.google.com/drive/folders/1pXmFoETXM_DXU7NmWPlaxYS7YeJEIN4t",
-    "series": [
-      {
-        "id": "mcf-mapa-1945",
-        "nome": "Mapa da regi\u00e3o de Santos \u2014 1945",
-        "periodo": "1945",
-        "imagens": 1,
-        "pdfs": 0,
-        "drive_url": "https://drive.google.com/drive/folders/1pXmFoETXM_DXU7NmWPlaxYS7YeJEIN4t",
-        "docs_portal": []
-      }
-    ]
-  },
-  {
-    "id": "rhgb",
-    "nome": "Revista do Instituto Hist\u00f3rico e Geogr\u00e1fico Brasileiro (RIHGB)",
-    "sigla": "RIHGB",
-    "descricao": "Publica\u00e7\u00e3o peri\u00f3dica do IHGB, consultada em www.rhgb.org.br. Cont\u00e9m o tomo XXII (1859) com refer\u00eancias hist\u00f3ricas usadas na pesquisa. Dispon\u00edvel em PDF.",
-    "drive_url": "https://drive.google.com/drive/folders/1pXmFoETXM_DXU7NmWPlaxYS7YeJEIN4t",
-    "series": [
-      {
-        "id": "rihgb-tomo22",
-        "nome": "RIHGB \u2014 Tomo XXII (1859)",
-        "periodo": "1859",
-        "imagens": 0,
-        "pdfs": 1,
-        "drive_url": "https://drive.google.com/drive/folders/1pXmFoETXM_DXU7NmWPlaxYS7YeJEIN4t",
-        "docs_portal": []
-      }
+      { "id": "tribuna-1939", "nome": "Edi\u00e7\u00e3o Comemorativa \u2014 100 anos de Santos (26/01/1939)", "periodo": "1939", "imagens": 23, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1_Dllj3Ljiiod6Byw95RkzHlVtwxA38qI", "docs_portal": [] },
+      { "id": "tribuna-1944", "nome": "Edi\u00e7\u00e3o Comemorativa \u2014 50 anos do jornal (26/03/1944)", "periodo": "1944", "imagens": 6, "pdfs": 0, "drive_url": "https://drive.google.com/drive/folders/1_Dllj3Ljiiod6Byw95RkzHlVtwxA38qI", "docs_portal": [] }
     ]
   }
 ]
