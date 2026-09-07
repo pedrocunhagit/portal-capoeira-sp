@@ -132,6 +132,16 @@
     "pagina_pdf": 120
   },
   {
+    "ano": 1872,
+    "titulo": "Malta 'Flor da Gente': ex-aluno da Academia de Direito lidera grupo no Rio",
+    "descricao": "Luíz Joaquim Duque-Estrada Teixeira, formado em Direito em São Paulo em 1858, retorna ao Rio de Janeiro e funda a malta 'Flor da Gente' na Freguesia da Glória, tornando-se líder do Partido Conservador e figura central nas disputas eleitorais violentas da Corte. A trajetória de Duque-Estrada ilustra como a capoeira aprendida em São Paulo podia servir de trampolim para o poder político.",
+    "periodo": "1870-1888",
+    "tipo": "POLITICO",
+    "personagens": ["Luíz Joaquim Duque-Estrada Teixeira"],
+    "pagina": "p. 14",
+    "pagina_pdf": 14
+  },
+  {
     "ano": 1871,
     "mes": 7,
     "dia": 13,
@@ -210,6 +220,27 @@
     "pagina_pdf": 186
   },
   {
+    "ano": 1886,
+    "titulo": "Bando de meninos pratica capoeiragem na Tabatingueira",
+    "descricao": "O jornal Diário Popular noticia um 'bando de meninos insuportáveis' que causa transtorno na Ladeira da Tabatingueira, em São Paulo, promovendo 'ações vergonhosas e exercícios de capoeiragem' e agredindo crianças e vendedoras. O caso é citado pelo historiador Boris Fausto como um dos raros registros da preocupação com a capoeira em São Paulo antes da Abolição. Fonte: Diário Popular, julho de 1886.",
+    "periodo": "1870-1888",
+    "tipo": "CONFLITO",
+    "personagens": [],
+    "pagina": "p. 12",
+    "pagina_pdf": 12
+  },
+  {
+    "ano": 1888,
+    "mes": 4,
+    "titulo": "Emiliano Rocha: último preso por capoeira antes da Abolição em SP",
+    "descricao": "A poucos dias da Abolição, em 27 de abril de 1888, Emiliano Rocha é preso especificamente por capoeira na cidade de São Paulo. O caso é divulgado em pequena nota de jornal e o praticante é solto no dia seguinte, revelando a pouca preocupação que o jogo-luta despertava nas autoridades paulistas. Fonte: O Estado de S. Paulo, abril de 1888.",
+    "periodo": "1870-1888",
+    "tipo": "PRISAO",
+    "personagens": ["Emiliano Rocha"],
+    "pagina": "p. 12",
+    "pagina_pdf": 12
+  },
+  {
     "ano": 1888,
     "mes": 5,
     "dia": 13,
@@ -235,6 +266,17 @@
   },
   {
     "ano": 1889,
+    "mes": 7,
+    "titulo": "Policiais flagrados em exercícios de capoeira em Cruzeiro",
+    "descricao": "Em 16 de julho de 1889, na cidade de Cruzeiro (SP), as praças Felicio de Souza Ferreira e José Luiz de Toledo são flagradas 'em estado de embriaguez e fasendo exercicios de capoeiras em frente as portas de uma venda'. Advertidos por um professor público, atacaram-no com pedradas — arma típica dos capoeiras da época. O incidente termina com a prisão dos dois policiais. Fonte: Ofício policial, Arquivo do Estado de São Paulo.",
+    "periodo": "1888-1930",
+    "tipo": "CONFLITO",
+    "personagens": ["Felicio de Souza Ferreira", "José Luiz de Toledo"],
+    "pagina": "p. 178",
+    "pagina_pdf": 178
+  },
+  {
+    "ano": 1889,
     "mes": 11,
     "dia": 15,
     "titulo": "Proclamação da República",
@@ -246,6 +288,51 @@
   },
   {
     "ano": 1890,
+    "mes": 1,
+    "titulo": "Capoeira foragido em Itu: SP não persegue capoeiras",
+    "descricao": "Em 1º de fevereiro de 1890, o delegado de Itu reporta ao chefe de Polícia de São Paulo a presença de um valentão de origem italiana, foragido de uma malta carioca perseguida por Sampaio Ferraz. Testado, 'deu a conhecer que não desconhece o offício' da capoeira. Surpreendentemente, o chefe de Polícia de SP mandou soltar o homem, demonstrando que a capital paulista não perseguia capoeiras. O caso ocorreu exatamente na cidade onde Sampaio Ferraz — o grande perseguidor da capoeira no Rio — fez seus estudos preparatórios. Fonte: Ofício do delegado de Itu, Arquivo do Estado de SP, 1890.",
+    "periodo": "1888-1930",
+    "tipo": "PRISAO",
+    "personagens": [],
+    "pagina": "p. 77",
+    "pagina_pdf": 77
+  },
+  {
+    "ano": 1890,
+    "mes": 2,
+    "titulo": "José da Silva preso por capoeira no carnaval de Santos",
+    "descricao": "Em 20 de fevereiro de 1890, José da Silva é preso em Santos por 'estar fasendo o jogo de capoeira, quando passava um grupo carnavalesco'. O preso resistiu com um canivete à patrulha. O delegado esclarece ao chefe de Polícia que o homem é ensacador de café e não faz 'profissão de Capoeira', propondo apenas 'uns dias de cadeia'. O episódio revela a capoeira como prática lúdica integrada às festas populares santistas. Fonte: Ofício do delegado Francisco Cruz, Arquivo da Polícia de Praia Grande.",
+    "periodo": "1888-1930",
+    "tipo": "PRISAO",
+    "acervo_drive": "acpg-1870-1872",
+    "personagens": ["José da Silva"],
+    "pagina": "p. 146",
+    "pagina_pdf": 146
+  },
+  {
+    "ano": 1890,
+    "mes": 2,
+    "titulo": "Benedicto Alves de Siqueira, capoeira em Ribeirão Preto",
+    "descricao": "Em 2 de fevereiro de 1890, o delegado de Ribeirão Preto escreve ao chefe de Polícia sobre Benedicto Alves de Siqueira, que 'tem incommodado a Policia com exercicios de capoeiragem' e andava armado de navalha. O chefe de Polícia responde que o único recurso legal é fazer o homem assinar 'Termo de bem viver', revelando a limitação das autoridades paulistas para coibir a prática. Fonte: Ofício do delegado de Ribeirão Preto, Arquivo do Estado de SP, 1890.",
+    "periodo": "1888-1930",
+    "tipo": "PRISAO",
+    "personagens": ["Benedicto Alves de Siqueira"],
+    "pagina": "p. 151",
+    "pagina_pdf": 151
+  },
+  {
+    "ano": 1890,
+    "mes": 5,
+    "titulo": "Ricardo Florencio, capoeira carioca foragido em Sorocaba",
+    "descricao": "Em 10 de maio de 1890, o delegado de Sorocaba envia preso ao chefe de Polícia Ricardo Florencio, espanhol, 30 anos, considerado 'verdadeiro gatuno, e dos capoeiras foragidos da Capital Federal'. O chefe de Polícia manda soltá-lo, explicando que não há processo legal contra ele em SP. O episódio reforça que São Paulo se tornava refúgio para capoeiras perseguidos no Rio de Janeiro por Sampaio Ferraz, e que as cidades com tradição de capoeira — como Sorocaba — eram destinos preferidos. Fonte: Ofício do delegado de Sorocaba, Arquivo do Estado de SP, 1890.",
+    "periodo": "1888-1930",
+    "tipo": "PRISAO",
+    "personagens": ["Ricardo Florencio"],
+    "pagina": "p. 78",
+    "pagina_pdf": 78
+  },
+  {
+    "ano": 1890,
     "titulo": "Código Penal criminaliza a capoeira",
     "descricao": "O Código Penal republicano, no artigo 402, criminaliza a capoeira em todo o Brasil. A pena vai de dois a seis meses de prisão. No Rio de Janeiro, 297 pessoas são presas só naquele ano.",
     "periodo": "1888-1930",
@@ -253,6 +340,17 @@
     "acervo_drive": "aesp-policia-caixa233",
     "pagina": "p. 224",
     "pagina_pdf": 224
+  },
+  {
+    "ano": 1890,
+    "mes": 8,
+    "titulo": "João Antonio dos Santos 'Bambú', capoeira preso em Rio Claro",
+    "descricao": "O chefe de Polícia Bernardino de Campos consulta o governador Prudente de Moraes sobre o destino de João Antonio dos Santos, o 'Bambú', 'ex-praça do 7º batalhão de infantaria', preso em São João do Rio Claro 'por capoeira, jogador, turbulento e vagabundo'. O governador não sabia o que fazer e remeteu o caso ao ministro da Justiça. O desfecho revela o despreparo das autoridades paulistas para lidar com capoeiras. Fonte: Ofício do chefe de Polícia ao governador, Arquivo do Estado de SP, agosto de 1890.",
+    "periodo": "1888-1930",
+    "tipo": "PRISAO",
+    "personagens": ["João Antonio dos Santos (Bambú)"],
+    "pagina": "p. 162",
+    "pagina_pdf": 162
   },
   {
     "ano": 1891,
@@ -266,6 +364,16 @@
     "pagina_pdf": 227
   },
   {
+    "ano": 1895,
+    "titulo": "Quintino de Lacerda eleito vereador em Santos",
+    "descricao": "Quintino de Lacerda, líder negro e ex-chefe do Quilombo do Jabaquara, é eleito vereador em Santos — feito extraordinário para a época, sendo negro e analfabeto. A Câmara tentou impedi-lo de tomar posse; um a um, três presidentes renunciaram em protesto. Por ordem do Tribunal de Relações de São Paulo, Quintino tomou posse e chegou a presidir a Câmara Municipal. O episódio é símbolo da força política dos ex-libertos de Santos. Fonte: Francisco Martins dos Santos, História de Santos.",
+    "periodo": "1888-1930",
+    "tipo": "POLITICO",
+    "personagens": ["Quintino de Lacerda"],
+    "pagina": "p. 114",
+    "pagina_pdf": 114
+  },
+  {
     "ano": 1897,
     "titulo": "General defende capoeira como treinamento militar",
     "descricao": "O general Couto de Magalhães, ex-aluno da Academia de Direito de São Paulo, apresenta trabalho defendendo o uso da capoeira nas escolas militares brasileiras.",
@@ -275,6 +383,17 @@
     "personagens": ["Couto de Magalhães"],
     "pagina": "p. 120",
     "pagina_pdf": 120
+  },
+  {
+    "ano": 1900,
+    "titulo": "Partidos de capoeiras na Várzea do Carmo",
+    "descricao": "Uma notícia de janeiro de 1900 denuncia que, nos domingos, seis 'partidos' de valentões disputam combates na Várzea do Carmo, em São Paulo, usando pedradas (com fundas), navalhas e golpes de capoeira. Cada partido tinha bandeira própria e um chefe que se impunha 'pela força e pela brutalidade'. Ao serem surpreendidos pela polícia, 'rápidos como que já habituados a taes surprezas', espalhavam-se pelos cortiços e atalhos. Nove foram presos. Fonte: Jornal, São Paulo, 15 de janeiro de 1900.",
+    "periodo": "1888-1930",
+    "tipo": "CONFLITO",
+    "acervo_drive": "aesp-estado-sp",
+    "personagens": [],
+    "pagina": "p. 219",
+    "pagina_pdf": 219
   },
   {
     "ano": 1900,
@@ -298,6 +417,17 @@
     "pagina_pdf": 112
   },
   {
+    "ano": 1908,
+    "titulo": "Bugrinho, navalhista capoeira nas ruas de São Paulo",
+    "descricao": "O navalhista Bugrinho e seu companheiro — ambos dados ao 'perigoso sport da capoeiragem' — ferem um comerciante italiano na Rua Tiradentes, São Paulo, durante um acerto de contas de uma rixa de carnaval. O Correio Paulistano descreve: 'Bugrinho sacou resolutamente da navalha e, num movimento rápido, crescendo para Molinaro...'. O caso revela a naturalidade com que a imprensa tratava ações de capoeiras na capital paulista. Fonte: Correio Paulistano, 1908.",
+    "periodo": "1888-1930",
+    "tipo": "CONFLITO",
+    "acervo_drive": "aesp-correio-paulistano",
+    "personagens": ["Bugrinho"],
+    "pagina": "p. 203",
+    "pagina_pdf": 203
+  },
+  {
     "ano": 1910,
     "titulo": "Futebol e capoeira: os primeiros times negros de São Paulo",
     "descricao": "O futebol começa a se popularizar nos bairros operários e nas comunidades negras de São Paulo. Nos times dos bairros do Bexiga, Barra Funda e Lavapés, encontram-se ex-capoeiras e seus filhos.",
@@ -306,6 +436,16 @@
     "acervo_drive": "aesp-estado-sp",
     "pagina": "p. 269",
     "pagina_pdf": 269
+  },
+  {
+    "ano": 1910,
+    "titulo": "Os 'negros da Glette' e a tiririca na Barra Funda",
+    "descricao": "Trabalhadores carregadores e ensacadores reunidos no Largo da Banana (Barra Funda) ficam conhecidos como os 'negros da Glette' ou 'bambas da Barra Funda'. Respeitados pela força e valentia, mantinham rodas de samba onde 'uma hora passava a perna ou dava uma umbigada. Era a capoeira.' O sambista Dionísio Barbosa relata que, na hora do refrão 'é hora do zumzunzum, quem não com dois leva um', surgiam as pernadas. Essa forma de capoeira dissimulada no samba ficaria conhecida como 'tiririca'. Fonte: Iêda Britto, Ah! Vem Capoeira..., 1986.",
+    "periodo": "1888-1930",
+    "tipo": "CULTURAL",
+    "personagens": ["Dionísio Barbosa", "Félix Costa", "João Caboclo", "Amargoso"],
+    "pagina": "p. 427",
+    "pagina_pdf": 427
   },
   {
     "ano": 1912,
@@ -317,6 +457,36 @@
     "personagens": ["Benedicto Amaro Gonçalves"],
     "pagina": "p. 260",
     "pagina_pdf": 260
+  },
+  {
+    "ano": 1916,
+    "titulo": "Tiririca 'invade' ruas de Campinas",
+    "descricao": "A revista literária A Semana, de Campinas, publica coluna reclamando da 'invasão da tiririca em certas ruas da cidade'. É o primeiro registro localizado do termo 'tiririca' em São Paulo para designar a capoeira dissimulada nas rodas de pernada — a versão paulista do jogo-luta, realizada ao som de palmas e instrumentos improvisados. Fonte: A Semana, Campinas, julho de 1916.",
+    "periodo": "1888-1930",
+    "tipo": "CULTURAL",
+    "personagens": [],
+    "pagina": "p. 637",
+    "pagina_pdf": 637
+  },
+  {
+    "ano": 1919,
+    "titulo": "Morte em Cabreúva: capoeira mata um capoeirista",
+    "descricao": "Em Cabreúva (SP), um soldado da Força Pública é designado para conduzir à prisão um homem que praticava 'exercícios de capoeiragem por mera brincadeira'. O homem, embriagado, recusou-se a ir. O soldado começou a desferi-lhe golpes com a ponta do rifle até matá-lo. Foi condenado a dez anos e seis meses de prisão celular. O episódio ilustra como a prática inocente da capoeira poderia terminar em tragédia em mãos de autoridades despreparadas. Fonte: Fernando Salla, As prisões em São Paulo, citado na dissertação.",
+    "periodo": "1888-1930",
+    "tipo": "CONFLITO",
+    "personagens": [],
+    "pagina": "p. 214",
+    "pagina_pdf": 214
+  },
+  {
+    "ano": 1927,
+    "titulo": "Menê: capoeira carioca deportado inicia grupo em Botucatu",
+    "descricao": "Segundo o folclorista Alceu Maynard Araújo, quando Botucatu ainda era ponta de trilhos da Estrada de Ferro Sorocabana, 'algumas levas de capueiras foram ali desembarcadas, provenientes do Rio de Janeiro'. Por volta de 1927, um famoso capoeira carioca chamado Menê — um dos 'deportados', parte de uma das levas soltas nas pontas de trilhos — iniciou um grupo de estudantes na arte da capoeira, 'desenferrujando-se' para ensinar rasteiras, rabo-de-arraia e outros golpes. Entre seus alunos estava o próprio folclorista. Fonte: Alceu Maynard Araújo, citado na dissertação.",
+    "periodo": "1888-1930",
+    "tipo": "CULTURAL",
+    "personagens": ["Menê", "Alceu Maynard Araújo"],
+    "pagina": "p. 89",
+    "pagina_pdf": 89
   },
   {
     "ano": 1928,
