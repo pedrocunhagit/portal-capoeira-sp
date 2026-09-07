@@ -38,11 +38,36 @@
       max-width: 780px;
       margin-bottom: 1.1rem;
     }
+
+    /* Imagem principal — Rugendas */
+    .rugendas-destaque {
+      margin: 2rem 0 2.2rem;
+      max-width: 680px;
+    }
+    .rugendas-destaque img {
+      width: 100%;
+      border: 1px solid #c8b89a;
+      border-radius: 4px;
+      display: block;
+    }
+    .rugendas-legenda {
+      margin-top: .55rem;
+      font-size: .8rem;
+      color: #7a5c3a;
+      line-height: 1.55;
+      font-style: italic;
+    }
+    .rugendas-legenda strong {
+      font-style: normal;
+      color: #4a2810;
+    }
+
+    /* Grade das imagens secundárias */
     .pintores-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       gap: 1rem;
-      margin: 2rem 0 1.5rem;
+      margin: 1.8rem 0 1.5rem;
     }
     .pintor-card {
       background: #fff;
@@ -68,6 +93,14 @@
       font-size: .76rem;
       margin-bottom: .15rem;
     }
+
+    .sobre-cap-cta {
+      margin-top: 1.8rem;
+      display: flex;
+      gap: .9rem;
+      flex-wrap: wrap;
+    }
+
     @media (max-width: 600px) {
       .pintores-grid { grid-template-columns: repeat(2, 1fr); }
       .pintor-card img { height: 120px; }
@@ -155,28 +188,44 @@
   <section class="sobre-cap" aria-labelledby="sobre-cap-titulo">
     <div class="sobre-cap-inner">
       <h2 class="sobre-cap-titulo" id="sobre-cap-titulo">Sobre a capoeira</h2>
-      <p class="sobre-cap-subtitulo">A arte marcial afro-brasileira no per&iacute;odo da escravid&atilde;o</p>
+      <p class="sobre-cap-subtitulo">Uma pr&aacute;tica afro-brasileira no tempo da escravid&atilde;o</p>
 
       <p>
-        A capoeira &eacute; hoje praticada em todo o mundo por milh&otilde;es de pessoas. Mas durante muito tempo &mdash; especialmente nos s&eacute;culos XVIII e XIX &mdash; ela foi perseguida, proibida e associada &agrave; resist&ecirc;ncia de escravizados e libertos nas cidades brasileiras. Compreender essa hist&oacute;ria &eacute; essencial para entender a pr&oacute;pria hist&oacute;ria do Brasil.
+        A capoeira nasceu nas cidades brasileiras durante o per&iacute;odo da escravid&atilde;o. Era praticada por africanos escravizados, forros e libertos que disputavam espa&ccedil;os nas ruas, largos e chafarizes &mdash; lugares onde a vida p&uacute;blica se misturava com o trabalho compuls&oacute;rio. N&atilde;o era apenas luta nem apenas dan&ccedil;a: era um modo de afirmar presen&ccedil;a, demonstrar coragem e criar laos de solidariedade entre pessoas que viviam sob um regime que negava sua humanidade.
       </p>
 
       <p>
-        Em sua forma mais antiga, a capoeira era um conjunto de pr&aacute;ticas corporais que misturava luta, dan&ccedil;a e jogo. Era praticada por africanos e seus descendentes nas ruas, largos e chafarizes das cidades. N&atilde;o era apenas entretenimento: era tamb&eacute;m uma forma de afirmar identidade, demonstrar coragem e criar v&iacute;nculos de solidariedade entre pessoas que viviam sob o regime da escravid&atilde;o. O corpo era, muitas vezes, o &uacute;nico recurso dispon&iacute;vel.
+        As autoridades coloniais e imperiais trataram a capoeira como amea&ccedil;a desde cedo. Em S&atilde;o Paulo, a primeira proibi&ccedil;&atilde;o data de 1833 &mdash; apenas quatro anos depois de um incidente em que cerca de sessenta africanos escravizados se reuniram nos arredores da cidade, divididos em dois grupos, &ldquo;paulistas&rdquo; e &ldquo;cariocas&rdquo;, para mostrar uns aos outros quem era mais valente. A lei impunha tr&ecirc;s dias de pris&atilde;o para pessoas livres e cinquenta a&ccedil;oites para escravizados. A exig&ecirc;ncia da pena revela o que estava em jogo: o corpo como instrumento de resist&ecirc;ncia num mundo em que o corpo era a &uacute;nica propriedade que n&atilde;o podia ser confiscada.
+      </p>
+
+      <!-- Imagem principal: Rugendas, "Jogar Capoeira" (Danse de la Guerre), c. 1835 -->
+      <figure class="rugendas-destaque" aria-label="Ilustra&ccedil;&atilde;o: Johann Moritz Rugendas, Jogar Capoeira">
+        <img src="img/hero/Rugendas_capoeira_RJ.jpg"
+             alt="Johann Moritz Rugendas, 'Jogar Capoeira' (&laquo;Danse de la Guerre&raquo;), c. 1835. Litografia colorida publicada em Viagem Pitoresca Atrav&eacute;s do Brasil." />
+        <figcaption class="rugendas-legenda">
+          <strong>Johann Moritz Rugendas &mdash; &laquo;Jogar Capoeira&raquo; (Danse de la Guerre), c. 1835</strong>
+          Litografia colorida publicada na obra <em>Viagem Pitoresca Atrav&eacute;s do Brasil</em> (Paris, 1835). Rugendas descreveu a cena como &ldquo;uma esp&eacute;cie de dan&ccedil;a de guerra&rdquo; (<em>danse de la guerre</em>), retratando dois combatentes rodeados por espectadores que marcam o ritmo. &Eacute; uma das primeiras representa&ccedil;&otilde;es visuais da capoeira conhecidas. Acervo: Biblioteca Nacional (Rio de Janeiro).
+        </figcaption>
+      </figure>
+
+      <p>
+        Rugendas foi um dos primeiros a deixar registro visual da pr&aacute;tica. O artista alem&atilde;o Johann Moritz Rugendas esteve no Brasil entre 1821 e 1825 e publicou suas observa&ccedil;&otilde;es em <em>Viagem Pitoresca Atrav&eacute;s do Brasil</em> (1835), obra que se tornou refer&ecirc;ncia fundamental para o estudo da vida afro-brasileira no s&eacute;culo XIX. Ao descrever a cena que registrou, ele usou a express&atilde;o <em>danse de la guerre</em> &mdash; &ldquo;dan&ccedil;a de guerra&rdquo; &mdash;, captando com precis&atilde;o o car&aacute;ter amb&iacute;guo da capoeira: ao mesmo tempo jogo e combate, arte e estrat&eacute;gia.
       </p>
 
       <p>
-        Os viajantes europeus que visitaram o Brasil no s&eacute;culo XIX ficaram impressionados com o que viram. Artistas como Johann Moritz Rugendas, Augustus Earle e Henry Chamberlain registraram cenas de capoeira em suas pinturas e gravuras &mdash; algumas das primeiras imagens visuais que temos dessa pr&aacute;tica. Rugendas, em sua c&eacute;lebre obra <em>Viagem Pitoresca Atrav&eacute;s do Brasil</em> (1835), descreveu o jogo como &ldquo;uma esp&eacute;cie de dança de guerra&rdquo; e retratou dois combatentes rodeados por espectadores que marcavam o ritmo. Earle, por volta de 1820, pintou uma cena intensa de dois homens lutando no Rio de Janeiro. Chamberlain, na mesma &eacute;poca, registrou um vendedor ambulante carregando o berimbau &mdash; instrumento musical indissoci&aacute;vel da capoeira.
+        Essa ambig&uuml;idade n&atilde;o era acidental. A capoeira se desenvolveu num contexto em que africanos e seus descendentes precisavam criar formas de auto-defesa e de resist&ecirc;ncia que n&atilde;o fossem imediatamente identificadas como tais. Combinar golpes com movimentos de dan&ccedil;a, embrulhar a luta no ritmo do berimbau, tornar a pr&aacute;tica coletiva e ritual &mdash; tudo isso fazia parte de uma estrat&eacute;gia de sobreviv&ecirc;ncia. A capoeira se desenvolveu assim nas brechas do sistema escravista: nos tempos livres, nas festas religiosas autorizadas, nos cantos das ruas onde a vigil&acirc;ncia era menor.
       </p>
 
+      <p>
+        A presen&ccedil;a da capoeira n&atilde;o se limitou &agrave; cidade de S&atilde;o Paulo. Os documentos revelam que a pr&aacute;tica estava disseminada por toda a prov&iacute;ncia: Sorocaba proibiu a capoeira em 1850, Itu em 1858, Cabre&uacute;va em 1863. Em Santos, as disputas entre grupos rivais de capoeiristas &mdash; os &ldquo;valongueiros&rdquo; e os &ldquo;quarteleiros&rdquo; &mdash; marcaram a vida p&uacute;blica da cidade por d&eacute;cadas. Onde havia escravizados e libertos vivendo nas cidades, havia capoeira.
+      </p>
+
+      <p>
+        Na d&eacute;cada de 1880, a capoeira ganhou nova dimens&atilde;o pol&iacute;tica. Grupos de capoeiristas se incorporaram &agrave; rede abolicionista dos caifases, liderada por Ant&ocirc;nio Bento, protegendo libertadores, escoltando fugitivos e enfrentando capatazes. Era o corpo colocado a servi&ccedil;o de uma causa coletiva. Com a Aboli&ccedil;&atilde;o em 1888 e a Rep&uacute;blica em 1889, a capoeira foi criminalizada em todo o pa&iacute;s &mdash; mas n&atilde;o desapareceu. Transformou-se, incorporou-se ao samba, ao carnaval e ao futebol, e sobreviveu nas mem&oacute;rias e nos corpos das comunidades negras paulistanas.
+      </p>
+
+      <!-- Imagens históricas complementares -->
       <div class="pintores-grid">
-        <div class="pintor-card">
-          <img src="img/hero/Rugendas_capoeira_RJ.jpg" alt="Rugendas: jogar capoeira, c. 1835" loading="lazy" />
-          <div class="pintor-legenda">
-            <strong>Johann Moritz Rugendas</strong>
-            &ldquo;Jogar Capoeira&rdquo;, c. 1835. Uma das primeiras imagens da capoeira conhecidas.
-          </div>
-        </div>
         <div class="pintor-card">
           <img src="img/hero/Negros_lutando.jpg" alt="Augustus Earle: negros lutando, c. 1820" loading="lazy" />
           <div class="pintor-legenda">
@@ -201,16 +250,13 @@
       </div>
 
       <p>
-        Em S&atilde;o Paulo, a primeira men&ccedil;&atilde;o documentada &agrave; capoeira data de 1829: uma carta publicada no jornal <em>O Farol Paulistano</em> critica um professor de franc&ecirc;s que jogava capoeira no Largo do Chafariz, &ldquo;servindo de espet&aacute;culo aos negros, que quando o v&ecirc;em dar bem uma cabe&ccedil;ada, o applaudem com bastantes assobios, palmas, gargalhadas&rdquo;. Apenas quatro anos depois, em 1833, a C&acirc;mara Municipal de S&atilde;o Paulo aprovaria a primeira lei proibindo o &ldquo;jogo denominado de Capoeiras&rdquo;, com pena de pris&atilde;o para pessoas livres e a&ccedil;oites para escravizados.
+        Esta pesquisa rastreou essa hist&oacute;ria por quase cem anos &mdash; de 1830, quando a capoeira come&ccedil;a a aparecer sistematicamente nos documentos oficiais de S&atilde;o Paulo, at&eacute; 1930, quando come&ccedil;a a ser reabilitada como arte marcial nacional. Para conhecer os personagens, os documentos e os eventos que comp&otilde;em essa trajet&oacute;ria, explore as se&ccedil;&otilde;es deste portal.
       </p>
 
-      <p>
-        A proibi&ccedil;&atilde;o n&atilde;o extinguiu a pr&aacute;tica. Pelo contr&aacute;rio: ao longo do s&eacute;culo XIX, os registros mostram que a capoeira continuou presente nas ruas de S&atilde;o Paulo, Santos e outras cidades paulistas, praticada por africanos livres, escravizados e libertos. Nas d&eacute;cadas de 1870 e 1880, capoeiras e &ldquo;valentes&rdquo; participaram ativamente do movimento abolicionista &mdash; protegendo libertadores, escoltando fugitivos e confrontando capatazes. Era a arte do corpo a servi&ccedil;o de uma causa.
-      </p>
-
-      <p>
-        Esta pesquisa rastreou essa hist&oacute;ria por quase 100 anos &mdash; de 1830, quando a capoeira come&ccedil;a a aparecer nos documentos oficiais, at&eacute; 1930, quando come&ccedil;a a ser reabilitada como arte marcial nacional. Para saber mais, acesse os documentos originais, a linha do tempo e os cap&iacute;tulos da disserta&ccedil;&atilde;o neste portal.
-      </p>
+      <div class="sobre-cap-cta">
+        <a href="dissertacao.html" class="btn-cta">Ler a pesquisa</a>
+        <a href="timeline.html" class="btn-cta" style="background:transparent; color:var(--accent); border:1px solid var(--accent);">Ver linha do tempo</a>
+      </div>
     </div>
   </section>
 
