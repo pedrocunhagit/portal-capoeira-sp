@@ -1,6 +1,6 @@
 /* ============================================================
-   PORTAL: Capoeira e valentia em São Paulo
-   Folha de estilos global — design contemporâneo
+   PORTAL: Capoeira e valentia em Sao Paulo
+   Folha de estilos global
    ============================================================ */
 
 :root {
@@ -57,7 +57,7 @@ a:hover  { color: var(--accent-hover); text-decoration: underline; }
 a:focus  { outline: 3px solid var(--focus); outline-offset: 2px; }
 
 /* ============================================================
-   BARRA DE ACESSIBILIDADE + IDIOMA
+   BARRA DE ACESSIBILIDADE
    ============================================================ */
 .acess-bar {
   background: #2e1a0a;
@@ -92,7 +92,6 @@ a:focus  { outline: 3px solid var(--focus); outline-offset: 2px; }
 .acess-bar button.ativo  { background: var(--accent); color: #fff; border-color: var(--accent); }
 .acess-bar button:focus  { outline: 3px solid var(--focus); }
 
-/* ---- Google Translate: integrado discretamente na barra ---- */
 #google_translate_element {
   display: inline-flex;
   align-items: center;
@@ -121,7 +120,6 @@ a:focus  { outline: 3px solid var(--focus); outline-offset: 2px; }
   text-decoration: none !important;
   vertical-align: middle !important;
 }
-/* Oculta o logo e texto 'Traduzido por Google' */
 #google_translate_element .goog-te-gadget img { display: none !important; }
 #google_translate_element .goog-te-gadget > span > a { display: none !important; }
 .goog-te-banner-frame { display: none !important; }
@@ -129,7 +127,7 @@ a:focus  { outline: 3px solid var(--focus); outline-offset: 2px; }
 body { top: 0 !important; }
 
 /* ============================================================
-   CABEÇALHO
+   CABECALHO
    ============================================================ */
 header {
   background: var(--accent);
@@ -152,7 +150,7 @@ header .subtitulo {
 }
 
 /* ============================================================
-   NAVEGAÇÃO
+   NAVEGACAO
    ============================================================ */
 nav {
   background: #3d1f08;
@@ -258,7 +256,7 @@ nav ul li a:focus  { outline: 3px solid var(--focus); outline-offset: -3px; }
 }
 
 /* ============================================================
-   CONTEÚDO PRINCIPAL
+   CONTEUDO PRINCIPAL
    ============================================================ */
 main {
   max-width: 1100px;
@@ -339,7 +337,6 @@ main {
 .sobre-texto p    { color: var(--text-muted); font-size: 0.93rem; margin-bottom: 14px; line-height: 1.75; }
 .sobre-texto a    { color: var(--accent); text-decoration: underline; }
 
-/* lista de acervos */
 .acervos-lista {
   list-style: decimal;
   padding-left: 22px;
@@ -357,7 +354,7 @@ main {
 .acervos-lista a:hover { color: var(--accent-hover); }
 
 /* ============================================================
-   PÁGINAS INTERNAS
+   PAGINAS INTERNAS
    ============================================================ */
 .page-header {
   background: var(--bg-alt);
@@ -412,13 +409,13 @@ main {
 .btn-cta:hover { background: var(--accent-hover); color: #fff; text-decoration: none; }
 
 /* ============================================================
-   RODAPÉ
+   RODAPE
    ============================================================ */
 footer {
   background: #2e1a0a;
   color: #a08060;
   text-align: center;
-  padding: 24px 32px;
+  padding: 24px 32px 20px;
   font-size: 0.82rem;
   line-height: 1.9;
   margin-top: auto;
@@ -426,6 +423,21 @@ footer {
 }
 footer a { color: #d4a870; text-decoration: underline; }
 footer strong { color: #e8c898; }
+
+/* Nota sobre IA no rodape */
+.footer-ia {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #4a2a10;
+  font-size: 0.76rem;
+  color: #7a5a3a;
+  line-height: 1.65;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-ia strong { color: #9a7a5a; }
+.footer-ia a { color: #9a7a5a; }
 
 /* ============================================================
    RESPONSIVO
