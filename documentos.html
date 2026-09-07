@@ -3,168 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Banco de documentos históricos digitalizados em 13 acervos brasileiros. Transcrições e acesso ao acervo original no Google Drive." />
-  <title>Banco de documentos — Capoeira e valentia em São Paulo</title>
+  <meta name="description" content="Banco de documentos hist&oacute;ricos digitalizados em 13 acervos brasileiros. Visualize os originais diretamente nesta p&aacute;gina ou acesse o acervo completo no Google Drive." />
+  <title>Banco de documentos &mdash; Capoeira e valentia em S&atilde;o Paulo</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* ── Navegação interna ── */
     .doc-nav-interna {
-      display: flex;
-      gap: .7rem;
-      flex-wrap: wrap;
-      margin-top: .9rem;
+      display: flex; gap: .7rem; flex-wrap: wrap; margin-top: .9rem;
     }
     .doc-nav-interna a {
-      font-size: .83rem;
-      font-weight: 700;
-      color: var(--accent);
-      border: 1.5px solid var(--accent);
-      border-radius: 4px;
-      padding: .3rem .85rem;
-      text-decoration: none;
+      font-size: .83rem; font-weight: 700; color: var(--accent);
+      border: 1.5px solid var(--accent); border-radius: 4px;
+      padding: .3rem .85rem; text-decoration: none;
       transition: background .15s, color .15s;
     }
     .doc-nav-interna a:hover { background: var(--accent); color: #fff; }
 
-    /* ── Controles de busca e filtros ── */
     .doc-controles {
-      background: #fdf6ec;
-      border-bottom: 1px solid #e0d3c0;
+      background: #fdf6ec; border-bottom: 1px solid #e0d3c0;
       padding: 1.4rem 1.2rem 1rem;
     }
-    .doc-controles-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .doc-busca-row {
-      display: flex;
-      gap: .6rem;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-    }
+    .doc-controles-inner { max-width: 1000px; margin: 0 auto; }
+    .doc-busca-row { display: flex; gap: .6rem; margin-bottom: 1rem; flex-wrap: wrap; }
     #busca-input {
-      flex: 1 1 280px;
-      font-family: Arial, sans-serif;
-      font-size: 1rem;
-      padding: .55rem .85rem;
-      border: 1.5px solid #c8b89a;
-      border-radius: 4px;
-      background: #fff;
-      color: #2c1a0e;
-      outline: none;
-      transition: border-color .2s;
+      flex: 1 1 280px; font-family: Arial, sans-serif; font-size: 1rem;
+      padding: .55rem .85rem; border: 1.5px solid #c8b89a; border-radius: 4px;
+      background: #fff; color: #2c1a0e; outline: none; transition: border-color .2s;
     }
     #busca-input:focus { border-color: #6b3a1f; }
     #busca-input::placeholder { color: #a08060; }
-    .doc-filtros {
-      display: flex;
-      gap: .6rem;
-      flex-wrap: wrap;
-    }
+    .doc-filtros { display: flex; gap: .6rem; flex-wrap: wrap; }
     .doc-filtros select {
-      font-family: Arial, sans-serif;
-      font-size: .88rem;
-      padding: .42rem .7rem;
-      border: 1.5px solid #c8b89a;
-      border-radius: 4px;
-      background: #fff;
-      color: #2c1a0e;
-      cursor: pointer;
-      outline: none;
-      transition: border-color .2s;
+      font-family: Arial, sans-serif; font-size: .88rem; padding: .42rem .7rem;
+      border: 1.5px solid #c8b89a; border-radius: 4px; background: #fff;
+      color: #2c1a0e; cursor: pointer; outline: none; transition: border-color .2s;
     }
     .doc-filtros select:focus { border-color: #6b3a1f; }
     #btn-limpar {
-      font-family: Arial, sans-serif;
-      font-size: .88rem;
-      padding: .42rem .9rem;
-      background: transparent;
-      border: 1.5px solid #6b3a1f;
-      border-radius: 4px;
-      color: #6b3a1f;
-      cursor: pointer;
-      transition: background .15s, color .15s;
+      font-family: Arial, sans-serif; font-size: .88rem; padding: .42rem .9rem;
+      background: transparent; border: 1.5px solid #6b3a1f; border-radius: 4px;
+      color: #6b3a1f; cursor: pointer; transition: background .15s, color .15s;
     }
     #btn-limpar:hover { background: #6b3a1f; color: #fff; }
 
-    /* ── Contador ── */
     .doc-contador {
-      max-width: 1000px;
-      margin: .7rem auto .4rem;
-      padding: 0 1.2rem;
-      font-size: .88rem;
-      color: #7a5c3a;
+      max-width: 1000px; margin: .7rem auto .4rem; padding: 0 1.2rem;
+      font-size: .88rem; color: #7a5c3a;
     }
 
-    /* ── Grid de cards de transcrição ── */
     #doc-lista {
-      max-width: 1000px;
-      margin: 0 auto 3rem;
-      padding: .6rem 1.2rem 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 1.2rem;
+      max-width: 1000px; margin: 0 auto 3rem; padding: .6rem 1.2rem 0;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1.2rem;
     }
     .doc-card {
-      background: #fff;
-      border: 1px solid #e0d3c0;
-      border-radius: 6px;
-      overflow: hidden;
-      transition: box-shadow .2s;
-      display: flex;
-      flex-direction: column;
+      background: #fff; border: 1px solid #e0d3c0; border-radius: 6px;
+      overflow: hidden; transition: box-shadow .2s; display: flex; flex-direction: column;
     }
     .doc-card:hover { box-shadow: 0 4px 18px rgba(107,58,31,.13); }
     .doc-card-topo {
-      border-top: 3px solid transparent;
-      transition: border-color .2s;
-      padding: 1rem 1rem .7rem;
-      flex: 1;
+      border-top: 3px solid transparent; transition: border-color .2s;
+      padding: 1rem 1rem .7rem; flex: 1;
     }
     .doc-card:hover .doc-card-topo { border-color: #6b3a1f; }
     .doc-sigla {
-      display: inline-block;
-      font-size: .72rem;
-      font-weight: bold;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-      background: #f5ead8;
-      color: #6b3a1f;
-      border-radius: 3px;
-      padding: .15rem .45rem;
-      margin-bottom: .45rem;
+      display: inline-block; font-size: .72rem; font-weight: bold;
+      letter-spacing: .05em; text-transform: uppercase;
+      background: #f5ead8; color: #6b3a1f; border-radius: 3px;
+      padding: .15rem .45rem; margin-bottom: .45rem;
     }
     .doc-titulo { font-size: .97rem; font-weight: bold; color: #2c1a0e; margin: 0 0 .35rem; line-height: 1.35; }
     .doc-meta { font-size: .8rem; color: #7a5c3a; margin-bottom: .55rem; }
-    .doc-meta span + span::before { content: " · "; }
+    .doc-meta span + span::before { content: " \00b7 "; }
     .doc-tipo-badge {
-      display: inline-block;
-      font-size: .72rem;
-      background: #f0e8d8;
-      color: #5c3d1a;
-      border-radius: 3px;
-      padding: .1rem .4rem;
-      margin-bottom: .55rem;
+      display: inline-block; font-size: .72rem; background: #f0e8d8;
+      color: #5c3d1a; border-radius: 3px; padding: .1rem .4rem; margin-bottom: .55rem;
     }
     .doc-trecho { font-size: .84rem; color: #4a3520; line-height: 1.5; margin-bottom: .6rem; font-style: italic; }
     .doc-trecho mark { background: #ffe066; color: #2c1a0e; border-radius: 2px; padding: 0 .1em; font-style: normal; }
     .doc-card-rodape { padding: .5rem 1rem .75rem; border-top: 1px solid #f0e8d8; }
     .btn-expandir {
-      font-family: Arial, sans-serif;
-      font-size: .82rem;
-      background: transparent;
-      border: 1px solid #6b3a1f;
-      border-radius: 4px;
-      color: #6b3a1f;
-      cursor: pointer;
-      padding: .3rem .75rem;
-      transition: background .15s, color .15s;
+      font-family: Arial, sans-serif; font-size: .82rem; background: transparent;
+      border: 1px solid #6b3a1f; border-radius: 4px; color: #6b3a1f;
+      cursor: pointer; padding: .3rem .75rem; transition: background .15s, color .15s;
     }
     .btn-expandir:hover { background: #6b3a1f; color: #fff; }
     .doc-expandido {
-      display: none;
-      background: #fdf6ec;
-      border-top: 1px solid #e0d3c0;
+      display: none; background: #fdf6ec; border-top: 1px solid #e0d3c0;
       padding: .9rem 1rem 1rem;
     }
     .doc-expandido.aberto { display: block; }
@@ -181,218 +104,123 @@
     .doc-ref { font-size: .78rem; color: #8a6a4a; font-style: italic; }
     .doc-sem-resultado { grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: #8a6a4a; font-size: .95rem; }
 
-    /* ── Divisor entre seções ── */
-    .secao-divisor {
-      border: none;
-      border-top: 2px solid #e0d3c0;
-      max-width: 1000px;
-      margin: 2.5rem auto 0;
-    }
+    .secao-divisor { border: none; border-top: 2px solid #e0d3c0; max-width: 1000px; margin: 2.5rem auto 0; }
 
-    /* ── Seção: Acervo digitalizado ── */
-    #acervo-drive {
-      background: #faf4ea;
-      padding: 2.5rem 1.2rem 3rem;
-    }
-    .acervo-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .acervo-titulo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #6b3a1f;
-      margin-bottom: .4rem;
-      letter-spacing: -.2px;
-    }
-    .acervo-subtitulo {
-      font-size: .9rem;
-      color: #7a5c3a;
-      margin-bottom: 1.6rem;
-      line-height: 1.6;
-      max-width: 720px;
-    }
+    /* === ACERVO DIGITALIZADO === */
+    #acervo-drive { background: #faf4ea; padding: 2.5rem 1.2rem 3rem; }
+    .acervo-inner { max-width: 1000px; margin: 0 auto; }
+    .acervo-titulo { font-size: 1.25rem; font-weight: 700; color: #6b3a1f; margin-bottom: .4rem; letter-spacing: -.2px; }
+    .acervo-subtitulo { font-size: .9rem; color: #7a5c3a; margin-bottom: 1.6rem; line-height: 1.6; max-width: 720px; }
     .acervo-aviso-ieb {
-      font-size: .8rem;
-      color: #8a5c2a;
-      background: #fff8ec;
-      border: 1px solid #e0ceB4;
-      border-radius: 4px;
-      padding: .45rem .8rem;
-      margin-bottom: 1.4rem;
-      max-width: 700px;
+      font-size: .8rem; color: #8a5c2a; background: #fff8ec;
+      border: 1px solid #e0ceb4; border-radius: 4px;
+      padding: .45rem .8rem; margin-bottom: 1.4rem; max-width: 700px;
     }
 
-    /* ── Card de acervo (instituição) ── */
-    .acervo-card {
-      background: #fff;
-      border: 1px solid #e0d3c0;
-      border-radius: 6px;
-      margin-bottom: 1rem;
-      overflow: hidden;
-    }
+    .acervo-card { background: #fff; border: 1px solid #e0d3c0; border-radius: 6px; margin-bottom: 1rem; overflow: hidden; }
     .acervo-card-header {
-      display: flex;
-      align-items: center;
-      gap: .8rem;
-      padding: .9rem 1.1rem;
-      cursor: pointer;
-      user-select: none;
-      transition: background .15s;
+      display: flex; align-items: center; gap: .8rem; padding: .9rem 1.1rem;
+      cursor: pointer; user-select: none; transition: background .15s;
     }
     .acervo-card-header:hover { background: #fdf6ec; }
     .acervo-sigla-badge {
-      font-size: .7rem;
-      font-weight: 700;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      background: #f5ead8;
-      color: #6b3a1f;
-      border-radius: 3px;
-      padding: .18rem .5rem;
-      white-space: nowrap;
-      flex-shrink: 0;
+      font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+      background: #f5ead8; color: #6b3a1f; border-radius: 3px;
+      padding: .18rem .5rem; white-space: nowrap; flex-shrink: 0;
     }
-    .acervo-nome {
-      font-size: .95rem;
-      font-weight: 700;
-      color: #2c1a0e;
-      flex: 1;
-    }
-    .acervo-total-badge {
-      font-size: .75rem;
-      color: #7a5c3a;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .acervo-chevron {
-      font-size: .8rem;
-      color: #6b3a1f;
-      flex-shrink: 0;
-      transition: transform .2s;
-    }
+    .acervo-nome { font-size: .95rem; font-weight: 700; color: #2c1a0e; flex: 1; }
+    .acervo-total-badge { font-size: .75rem; color: #7a5c3a; white-space: nowrap; flex-shrink: 0; }
+    .acervo-chevron { font-size: .8rem; color: #6b3a1f; flex-shrink: 0; transition: transform .2s; }
     .acervo-card.aberto .acervo-chevron { transform: rotate(180deg); }
 
-    /* ── Descrição do acervo ── */
     .acervo-descricao {
-      display: none;
-      padding: .1rem 1.1rem .7rem 1.1rem;
-      font-size: .83rem;
-      color: #5a4030;
-      line-height: 1.6;
-      border-top: 1px solid #f0e8d8;
-      background: #fffcf8;
+      display: none; padding: .1rem 1.1rem .7rem; font-size: .83rem; color: #5a4030;
+      line-height: 1.6; border-top: 1px solid #f0e8d8; background: #fffcf8;
     }
     .acervo-card.aberto .acervo-descricao { display: block; }
 
-    /* ── Lista de séries ── */
-    .acervo-series {
-      display: none;
-      border-top: 1px solid #e8dcc8;
-    }
+    .acervo-series { display: none; border-top: 1px solid #e8dcc8; }
     .acervo-card.aberto .acervo-series { display: block; }
 
-    .serie-item {
-      display: flex;
-      align-items: center;
-      gap: .7rem;
-      padding: .65rem 1.1rem;
-      border-bottom: 1px solid #f0e8d8;
-      flex-wrap: wrap;
-    }
+    .serie-item { border-bottom: 1px solid #f0e8d8; }
     .serie-item:last-child { border-bottom: none; }
-    .serie-nome {
-      font-size: .86rem;
-      color: #2c1a0e;
-      flex: 1;
-      line-height: 1.4;
-      min-width: 180px;
+    .serie-item-row {
+      display: flex; align-items: center; gap: .7rem;
+      padding: .65rem 1.1rem; flex-wrap: wrap;
     }
-    .serie-periodo {
-      font-size: .75rem;
-      color: #8a6a4a;
-      white-space: nowrap;
-    }
-    .serie-contagem {
-      font-size: .75rem;
-      color: #8a6a4a;
-      white-space: nowrap;
-    }
-    .serie-docs-portal {
-      display: flex;
-      gap: .4rem;
-      flex-wrap: wrap;
-    }
+    .serie-nome { font-size: .86rem; color: #2c1a0e; flex: 1; line-height: 1.4; min-width: 180px; }
+    .serie-periodo { font-size: .75rem; color: #8a6a4a; white-space: nowrap; }
+    .serie-contagem { font-size: .75rem; color: #8a6a4a; white-space: nowrap; }
+    .serie-docs-portal { display: flex; gap: .4rem; flex-wrap: wrap; }
     .badge-portal {
-      font-size: .68rem;
-      background: #e8f0fa;
-      color: #2a5090;
-      border-radius: 3px;
-      padding: .1rem .4rem;
-      border: 1px solid #b8ccee;
-      white-space: nowrap;
+      font-size: .68rem; background: #e8f0fa; color: #2a5090;
+      border-radius: 3px; padding: .1rem .4rem; border: 1px solid #b8ccee; white-space: nowrap;
     }
+
+    .serie-acoes { display: flex; gap: .4rem; flex-shrink: 0; flex-wrap: wrap; align-items: center; }
+
     .btn-drive {
-      display: inline-flex;
-      align-items: center;
-      gap: .35rem;
-      font-family: Arial, sans-serif;
-      font-size: .78rem;
-      font-weight: 700;
-      background: #6b3a1f;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      padding: .32rem .75rem;
-      cursor: pointer;
-      text-decoration: none;
-      white-space: nowrap;
-      transition: background .15s;
-      flex-shrink: 0;
+      display: inline-flex; align-items: center; gap: .35rem;
+      font-family: Arial, sans-serif; font-size: .78rem; font-weight: 700;
+      background: #6b3a1f; color: #fff; border: none; border-radius: 4px;
+      padding: .32rem .75rem; cursor: pointer; text-decoration: none;
+      white-space: nowrap; transition: background .15s; flex-shrink: 0;
     }
     .btn-drive:hover { background: #8f4f28; color: #fff; text-decoration: none; }
     .btn-drive svg { flex-shrink: 0; }
-    .btn-drive-pendente {
-      font-size: .78rem;
-      color: #a08060;
-      font-style: italic;
-    }
+    .btn-drive-pendente { font-size: .78rem; color: #a08060; font-style: italic; }
 
-    /* ── Links do portal destacados na série ── */
+    .btn-visualizar {
+      display: inline-flex; align-items: center; gap: .3rem;
+      font-family: Arial, sans-serif; font-size: .78rem; font-weight: 700;
+      background: #fff; color: #6b3a1f; border: 1.5px solid #6b3a1f;
+      border-radius: 4px; padding: .28rem .7rem; cursor: pointer;
+      white-space: nowrap; transition: background .15s, color .15s;
+    }
+    .btn-visualizar:hover { background: #6b3a1f; color: #fff; }
+    .btn-visualizar.ativo { background: #6b3a1f; color: #fff; }
+
+    /* Inline Drive viewer panel */
+    .serie-viewer {
+      display: none; background: #f2ebe0;
+      border-top: 1px dashed #c8b89a;
+      padding: .8rem 1.1rem 1rem;
+    }
+    .serie-viewer.aberto { display: block; }
+    .viewer-cabecalho {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      margin-bottom: .6rem; flex-wrap: wrap; gap: .4rem;
+    }
+    .viewer-titulo { font-size: .82rem; font-weight: 700; color: #4a2810; }
+    .viewer-instrucao { font-size: .75rem; color: #7a5c3a; font-style: italic; max-width: 420px; text-align: right; }
+    .viewer-iframe-wrap {
+      width: 100%; border: 1px solid #c8b89a; border-radius: 4px;
+      overflow: hidden; background: #fff;
+    }
+    .viewer-iframe-wrap iframe { display: block; width: 100%; height: 440px; border: none; }
+    .viewer-link-direto {
+      display: inline-flex; align-items: center; gap: .3rem;
+      font-size: .78rem; color: #6b3a1f; text-decoration: underline; margin-top: .5rem;
+    }
+    .viewer-link-direto:hover { color: #3a1a08; }
+
     .serie-docs-detalhe {
-      display: none;
-      background: #fdf6ec;
-      border-top: 1px dashed #e0ceB4;
+      display: none; background: #fdf6ec;
+      border-top: 1px dashed #e0ceb4;
       padding: .5rem 1.1rem .6rem 2.2rem;
     }
-    .serie-item.com-docs .serie-nome { cursor: pointer; }
-    .serie-item.aberto + .serie-docs-detalhe { display: block; }
+    .serie-item.aberto .serie-docs-detalhe { display: block; }
     .docs-detalhe-item {
-      font-size: .8rem;
-      color: #4a3520;
-      padding: .22rem 0;
-      border-bottom: 1px dotted #e0d3c0;
-      line-height: 1.45;
+      font-size: .8rem; color: #4a3520; padding: .22rem 0;
+      border-bottom: 1px dotted #e0d3c0; line-height: 1.45;
     }
     .docs-detalhe-item:last-child { border-bottom: none; }
-    .docs-detalhe-ref {
-      font-size: .72rem;
-      color: #8a6a4a;
-      font-style: italic;
-      margin-left: .4rem;
-    }
+    .docs-detalhe-ref { font-size: .72rem; color: #8a6a4a; font-style: italic; margin-left: .4rem; }
     .toggle-docs-btn {
-      font-size: .75rem;
-      color: #6b3a1f;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      text-decoration: underline;
-      margin-left: .4rem;
+      font-size: .75rem; color: #6b3a1f; background: none; border: none;
+      cursor: pointer; padding: 0; text-decoration: underline; margin-left: .4rem;
     }
 
-    /* ── Acessibilidade modo contraste ── */
     body.alto-contraste .doc-card { background: #000; border-color: #fff; }
     body.alto-contraste .doc-titulo { color: #fff; }
     body.alto-contraste .doc-trecho { color: #eee; }
@@ -404,18 +232,23 @@
     body.alto-contraste .acervo-card { background: #000; border-color: #fff; }
     body.alto-contraste .acervo-nome { color: #fff; }
     body.alto-contraste .btn-drive { background: #ffdd00; color: #000; }
+    body.alto-contraste .btn-visualizar { border-color: #fff; color: #fff; background: #000; }
+    body.alto-contraste .btn-visualizar.ativo { background: #fff; color: #000; }
+    body.alto-contraste .serie-viewer { background: #111; border-color: #888; }
 
-    /* ── Responsivo ── */
     @media (max-width: 600px) {
       #doc-lista { grid-template-columns: 1fr; }
       .doc-filtros select { font-size: .82rem; }
-      .serie-item { flex-direction: column; align-items: flex-start; gap: .4rem; }
-      .btn-drive { width: 100%; justify-content: center; }
+      .serie-item-row { flex-direction: column; align-items: flex-start; gap: .4rem; }
+      .serie-acoes { width: 100%; }
+      .btn-drive, .btn-visualizar { flex: 1; justify-content: center; }
+      .viewer-iframe-wrap iframe { height: 300px; }
+      .viewer-instrucao { text-align: left; }
     }
   </style>
 </head>
 <body>
-  <div class="acess-bar" role="toolbar" aria-label="Opções de acessibilidade">
+  <div class="acess-bar" role="toolbar" aria-label="Op&ccedil;&otilde;es de acessibilidade">
     <span>Acessibilidade</span>
     <button class="btn-fonte" data-nivel="n">A</button>
     <button class="btn-fonte" data-nivel="g">A+</button>
@@ -428,49 +261,43 @@
   </div>
 
   <header><div class="header-inner">
-    <h1>Capoeira e valentia em São Paulo</h1>
-    <p class="subtitulo">Pesquisa e documentos históricos (1830–1930)</p>
+    <h1>Capoeira e valentia em S&atilde;o Paulo</h1>
+    <p class="subtitulo">Pesquisa e documentos hist&oacute;ricos (1830&ndash;1930)</p>
   </div></header>
 
   <nav aria-label="Menu principal">
     <button class="menu-toggle" aria-expanded="false" aria-controls="menu-lista">Menu</button>
     <ul id="menu-lista" role="list">
-      <li><a href="index.html">Início</a></li>
+      <li><a href="index.html">In&iacute;cio</a></li>
       <li><a href="timeline.html">Linha do tempo</a></li>
       <li><a href="dissertacao.html">A pesquisa</a></li>
       <li><a href="documentos.html" class="ativo">Documentos</a></li>
-      <li><a href="referencias.html">Referências</a></li>
+      <li><a href="referencias.html">Refer&ecirc;ncias</a></li>
       <li><a href="sobre.html">Sobre a pesquisa</a></li>
     </ul>
   </nav>
 
   <div class="page-header"><div class="page-header-inner">
     <h2>Banco de documentos</h2>
-    <p>Transcrições comentadas e acesso ao acervo digitalizado em 8 instituições e mais de 60 séries e fundos</p>
-    <nav class="doc-nav-interna" aria-label="Seções da página">
-      <a href="#transcricoes">↓ Transcrições comentadas</a>
-      <a href="#acervo-drive">↓ Acervo digitalizado no Drive</a>
+    <p>Transcri&ccedil;&otilde;es comentadas e visualiza&ccedil;&atilde;o dos originais digitalizados em 13 acervos brasileiros</p>
+    <nav class="doc-nav-interna" aria-label="Se&ccedil;&otilde;es da p&aacute;gina">
+      <a href="#transcricoes">&darr; Transcri&ccedil;&otilde;es comentadas</a>
+      <a href="#acervo-drive">&darr; Acervo digitalizado &mdash; visualizar originais</a>
     </nav>
   </div></div>
 
-  <!-- ═══════════════════════════════════════════════════
-       SEÇÃO 1 — BANCO DE TRANSCRIÇÕES
-  ═══════════════════════════════════════════════════ -->
+  <!-- TRANSCRICOES -->
   <div id="transcricoes">
     <div class="doc-controles">
       <div class="doc-controles-inner">
         <div class="doc-busca-row">
-          <input
-            type="search"
-            id="busca-input"
+          <input type="search" id="busca-input"
             placeholder="Buscar por palavra, nome, local ou data..."
-            aria-label="Buscar documentos"
-            autocomplete="off"
-          />
+            aria-label="Buscar documentos" autocomplete="off" />
         </div>
         <div class="doc-filtros">
           <select id="filtro-acervo" aria-label="Filtrar por acervo"><option value="">Todos os acervos</option></select>
-          <select id="filtro-periodo" aria-label="Filtrar por período"><option value="">Todos os períodos</option></select>
+          <select id="filtro-periodo" aria-label="Filtrar por per&iacute;odo"><option value="">Todos os per&iacute;odos</option></select>
           <select id="filtro-tipo" aria-label="Filtrar por tipo de documento"><option value="">Todos os tipos</option></select>
           <button id="btn-limpar" type="button">Limpar filtros</button>
         </div>
@@ -484,27 +311,27 @@
 
   <hr class="secao-divisor" />
 
-  <!-- ═══════════════════════════════════════════════════
-       SEÇÃO 2 — ACERVO DIGITALIZADO
-  ═══════════════════════════════════════════════════ -->
+  <!-- ACERVO DIGITALIZADO -->
   <section id="acervo-drive" aria-labelledby="acervo-titulo">
     <div class="acervo-inner">
-      <h2 class="acervo-titulo" id="acervo-titulo">Acervo digitalizado — navegue pelos originais</h2>
+      <h2 class="acervo-titulo" id="acervo-titulo">Acervo digitalizado &mdash; visualize os originais</h2>
       <p class="acervo-subtitulo">
-        Mais de 1.300 imagens digitalizadas de manuscritos, processos judiciais, registros policiais, jornais e periódicos históricos, distribuídas em 8 instituições e mais de 60 séries. Clique em <strong>Abrir no Drive</strong> para ver as imagens originais diretamente no Google Drive.
+        Mais de 1.500 imagens digitalizadas de manuscritos, processos judiciais, registros policiais, jornais e peri&oacute;dicos hist&oacute;ricos, distribu&iacute;das em 13 institui&ccedil;&otilde;es.
+        Clique em <strong>&#128065; Visualizar</strong> para abrir o visor de documentos diretamente nesta p&aacute;gina.
+        Use <strong>Abrir no Drive</strong> para navegar em janela separada ou baixar arquivos.
       </p>
       <p class="acervo-aviso-ieb" id="aviso-ieb" style="display:none">
-        ⚠ O link da pasta raiz do <strong>Instituto de Estudos Brasileiros (IEB)</strong> não pôde ser confirmado. Os links das séries individuais (Revista IHGSP e Revista Kosmos) estão corretos.
+        &#9888; O link da pasta raiz do <strong>Instituto de Estudos Brasileiros (IEB)</strong> n&atilde;o p&ocirc;de ser confirmado. Os links das s&eacute;ries individuais est&atilde;o corretos.
       </p>
       <div id="acervo-lista" role="list"></div>
     </div>
   </section>
 
   <footer><p>
-    <strong>Capoeira e valentia em São Paulo — Pesquisa e documentos</strong><br />
-    Dissertação de mestrado em História Social · Universidade de São Paulo · 2011<br />
+    <strong>Capoeira e valentia em S&atilde;o Paulo &mdash; Pesquisa e documentos</strong><br />
+    Disserta&ccedil;&atilde;o de mestrado em Hist&oacute;ria Social &middot; Universidade de S&atilde;o Paulo &middot; 2011<br />
     <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html" target="_blank" rel="noopener">Registro oficial na USP</a>
-    &nbsp;·&nbsp;
+    &nbsp;&middot;&nbsp;
     <a href="sobre.html">Sobre a pesquisa</a>
   </p></footer>
 
@@ -512,116 +339,104 @@
   <script>
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
-      pageLanguage: 'pt',
-      includedLanguages: 'en,es',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
+      pageLanguage: 'pt', includedLanguages: 'en,es',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false
     }, 'google_translate_element');
   }
   </script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-  <!-- ── BANCO DE TRANSCRIÇÕES ── -->
+  <!-- BANCO DE TRANSCRICOES -->
   <script>
   (function () {
     'use strict';
-    let DOCS = [];
-    let termoBusca = '';
-    let filtroAcervo = '';
-    let filtroPeriodo = '';
-    let filtroTipo = '';
+    var DOCS = [], termoBusca = '', filtroAcervo = '', filtroPeriodo = '', filtroTipo = '';
 
     fetch('data/documentos.json')
-      .then(r => r.json())
-      .then(data => { DOCS = data; popularFiltros(); renderizar(); })
-      .catch(() => {
+      .then(function(r){ return r.json(); })
+      .then(function(data){ DOCS = data; popularFiltros(); renderizar(); })
+      .catch(function(){
         document.getElementById('doc-lista').innerHTML =
-          '<p class="doc-sem-resultado">Não foi possível carregar os documentos.</p>';
+          '<p class="doc-sem-resultado">N\u00e3o foi poss\u00edvel carregar os documentos.</p>';
       });
 
     function popularFiltros() {
-      preencheSelect('filtro-acervo',  [...new Set(DOCS.map(d => d.acervo))].sort());
-      preencheSelect('filtro-periodo', [...new Set(DOCS.map(d => d.periodo))].sort());
-      preencheSelect('filtro-tipo',    [...new Set(DOCS.map(d => d.tipo))].sort());
+      preencheSelect('filtro-acervo',  [...new Set(DOCS.map(function(d){ return d.acervo; }))].sort());
+      preencheSelect('filtro-periodo', [...new Set(DOCS.map(function(d){ return d.periodo; }))].sort());
+      preencheSelect('filtro-tipo',    [...new Set(DOCS.map(function(d){ return d.tipo; }))].sort());
     }
     function preencheSelect(id, valores) {
-      const sel = document.getElementById(id);
-      valores.forEach(v => { const o = document.createElement('option'); o.value = o.textContent = v; sel.appendChild(o); });
+      var sel = document.getElementById(id);
+      valores.forEach(function(v){ var o = document.createElement('option'); o.value = o.textContent = v; sel.appendChild(o); });
     }
-
     function filtrar() {
-      const termo = termoBusca.toLowerCase().trim();
-      return DOCS.filter(d => {
+      var termo = termoBusca.toLowerCase().trim();
+      return DOCS.filter(function(d) {
         if (filtroAcervo  && d.acervo  !== filtroAcervo)  return false;
         if (filtroPeriodo && d.periodo !== filtroPeriodo) return false;
         if (filtroTipo    && d.tipo    !== filtroTipo)    return false;
         if (!termo) return true;
-        const hay = [d.titulo, d.acervo, d.tipo, d.data, d.local, d.periodo, d.transcricao, d.contexto,
-          ...(d.personagens||[]), ...(d.palavras_chave||[])].join(' ').toLowerCase();
-        return hay.includes(termo);
+        var hay = [d.titulo, d.acervo, d.tipo, d.data, d.local, d.periodo, d.transcricao, d.contexto]
+          .concat(d.personagens||[]).concat(d.palavras_chave||[]).join(' ').toLowerCase();
+        return hay.indexOf(termo) !== -1;
       });
     }
-
-    function esc(s)  { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+    function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
     function escRe(s){ return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
     function hl(txt, termo) {
       if (!termo) return esc(txt);
       return esc(txt).replace(new RegExp('('+escRe(termo)+')','gi'),'<mark>$1</mark>');
     }
     function trecho(txt, termo) {
-      const MAX = 200;
-      if (!termo) return txt.length > MAX ? txt.slice(0,MAX)+'…' : txt;
-      const idx = txt.toLowerCase().indexOf(termo.toLowerCase());
-      if (idx === -1) return txt.length > MAX ? txt.slice(0,MAX)+'…' : txt;
-      const i = Math.max(0,idx-80), f = Math.min(txt.length,idx+termo.length+120);
-      return (i>0?'…':'')+txt.slice(i,f)+(f<txt.length?'…':'');
+      var MAX = 200;
+      if (!termo) return txt.length > MAX ? txt.slice(0,MAX)+'\u2026' : txt;
+      var idx = txt.toLowerCase().indexOf(termo.toLowerCase());
+      if (idx === -1) return txt.length > MAX ? txt.slice(0,MAX)+'\u2026' : txt;
+      var i = Math.max(0,idx-80), f = Math.min(txt.length,idx+termo.length+120);
+      return (i>0?'\u2026':'')+txt.slice(i,f)+(f<txt.length?'\u2026':'');
     }
-
     function renderizar() {
-      const res = filtrar();
-      const lista    = document.getElementById('doc-lista');
-      const contador = document.getElementById('doc-contador');
-      const termo    = termoBusca.trim();
+      var res = filtrar();
+      var lista = document.getElementById('doc-lista');
+      var contador = document.getElementById('doc-contador');
+      var termo = termoBusca.trim();
       contador.textContent = res.length === 0 ? 'Nenhum documento encontrado.' :
         res.length === 1 ? '1 documento encontrado.' : res.length + ' documentos encontrados.';
-      if (!res.length) { lista.innerHTML = '<p class="doc-sem-resultado">Nenhum documento corresponde à busca.</p>'; return; }
-      lista.innerHTML = res.map(d => {
-        const trechoTxt = trecho(d.transcricao, termo);
-        const persHtml  = d.personagens && d.personagens.length
-          ? `<h4>Personagens mencionados</h4><p class="doc-personagens-lista">${d.personagens.map(p=>hl(p,termo)).join(', ')}</p>` : '';
-        return `<div class="doc-card" role="listitem" id="card-${d.id}">
-          <div class="doc-card-topo">
-            <span class="doc-sigla">${esc(d.acervo_sigla)}</span>
-            <span class="doc-tipo-badge">${esc(d.tipo)}</span>
-            <h3 class="doc-titulo">${hl(d.titulo,termo)}</h3>
-            <p class="doc-meta"><span>${esc(d.data)}</span><span>${esc(d.local)}</span></p>
-            <p class="doc-trecho">"${hl(trechoTxt,termo)}"</p>
-          </div>
-          <div class="doc-card-rodape">
-            <button class="btn-expandir" aria-expanded="false" aria-controls="exp-${d.id}"
-              onclick="toggleCard('${d.id}',this)">Ver transcrição completa</button>
-          </div>
-          <div class="doc-expandido" id="exp-${d.id}" aria-hidden="true">
-            <h4>Transcrição</h4>
-            <p class="doc-transcricao-texto">${hl(d.transcricao,termo)}</p>
-            <h4>Contexto</h4>
-            <p class="doc-contexto-texto">${hl(d.contexto,termo)}</p>
-            ${persHtml}
-            <h4>Referência de arquivo</h4>
-            <p class="doc-ref">${esc(d.acervo)} — ${esc(d.referencia)}</p>
-          </div>
-        </div>`;
+      if (!res.length) { lista.innerHTML = '<p class="doc-sem-resultado">Nenhum documento corresponde \u00e0 busca.</p>'; return; }
+      lista.innerHTML = res.map(function(d) {
+        var trechoTxt = trecho(d.transcricao, termo);
+        var persHtml = d.personagens && d.personagens.length
+          ? '<h4>Personagens mencionados</h4><p class="doc-personagens-lista">'+d.personagens.map(function(p){return hl(p,termo);}).join(', ')+'</p>' : '';
+        return '<div class="doc-card" role="listitem" id="card-'+d.id+'">'+
+          '<div class="doc-card-topo">'+
+          '<span class="doc-sigla">'+esc(d.acervo_sigla)+'</span>'+
+          '<span class="doc-tipo-badge">'+esc(d.tipo)+'</span>'+
+          '<h3 class="doc-titulo">'+hl(d.titulo,termo)+'</h3>'+
+          '<p class="doc-meta"><span>'+esc(d.data)+'</span><span>'+esc(d.local)+'</span></p>'+
+          '<p class="doc-trecho">&ldquo;'+hl(trechoTxt,termo)+'&rdquo;</p>'+
+          '</div>'+
+          '<div class="doc-card-rodape">'+
+          '<button class="btn-expandir" aria-expanded="false" aria-controls="exp-'+d.id+'"'+
+          ' onclick="toggleCard(\''+d.id+'\',this)">Ver transcri\u00e7\u00e3o completa</button>'+
+          '</div>'+
+          '<div class="doc-expandido" id="exp-'+d.id+'" aria-hidden="true">'+
+          '<h4>Transcri\u00e7\u00e3o</h4>'+
+          '<p class="doc-transcricao-texto">'+hl(d.transcricao,termo)+'</p>'+
+          '<h4>Contexto</h4>'+
+          '<p class="doc-contexto-texto">'+hl(d.contexto,termo)+'</p>'+
+          persHtml+
+          '<h4>Refer\u00eancia de arquivo</h4>'+
+          '<p class="doc-ref">'+esc(d.acervo)+' \u2014 '+esc(d.referencia)+'</p>'+
+          '</div></div>';
       }).join('');
     }
-
     window.toggleCard = function(id, btn) {
-      const p = document.getElementById('exp-'+id), aberto = p.classList.contains('aberto');
+      var p = document.getElementById('exp-'+id), aberto = p.classList.contains('aberto');
       p.classList.toggle('aberto',!aberto); p.setAttribute('aria-hidden', aberto?'true':'false');
       btn.setAttribute('aria-expanded', aberto?'false':'true');
-      btn.textContent = aberto ? 'Ver transcrição completa' : 'Recolher';
+      btn.textContent = aberto ? 'Ver transcri\u00e7\u00e3o completa' : 'Recolher';
     };
-
-    let debTimer;
+    var debTimer;
     document.getElementById('busca-input').addEventListener('input', function(){
       termoBusca = this.value; clearTimeout(debTimer); debTimer = setTimeout(renderizar,180);
     });
@@ -630,117 +445,185 @@
     document.getElementById('filtro-tipo').addEventListener('change', function(){ filtroTipo = this.value; renderizar(); });
     document.getElementById('btn-limpar').addEventListener('click', function(){
       termoBusca=''; filtroAcervo=''; filtroPeriodo=''; filtroTipo='';
-      ['busca-input','filtro-acervo','filtro-periodo','filtro-tipo'].forEach(id => document.getElementById(id).value='');
+      ['busca-input','filtro-acervo','filtro-periodo','filtro-tipo'].forEach(function(id){ document.getElementById(id).value=''; });
       renderizar();
     });
   })();
   </script>
 
-  <!-- ── ACERVO DIGITALIZADO ── -->
+  <!-- ACERVO DIGITALIZADO -->
   <script>
   (function(){
     'use strict';
+    var DRIVE_SVG = '<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L2 19.5h8l2-4 2 4h8L12 2zm0 4.2l5.6 9.8H14l-2-4-2 4H6.4L12 6.2z"/></svg>';
+    var EYE_SVG  = '<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5C21.27 7.61 17 4.5 12 4.5zm0 12.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>';
 
-    const DRIVE_ICON = `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L2 19.5h8l2-4 2 4h8L12 2zm0 4.2l5.6 9.8H14l-2-4-2 4H6.4L12 6.2z"/></svg>`;
+    function driveId(url) {
+      if (!url) return null;
+      var m = url.match(/\/folders\/([a-zA-Z0-9_-]+)/);
+      return m ? m[1] : null;
+    }
+    function embedUrl(id) {
+      return 'https://drive.google.com/embeddedfolderview?id=' + id + '#grid';
+    }
+    function esc(s) {
+      if (!s) return '';
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
 
     fetch('data/acervos.json')
-      .then(r => r.json())
-      .then(data => renderAcervos(data))
-      .catch(() => {
+      .then(function(r){ return r.json(); })
+      .then(function(data){ renderAcervos(data); })
+      .catch(function(){
         document.getElementById('acervo-lista').innerHTML =
-          '<p style="color:#8a6a4a;padding:2rem 0">Não foi possível carregar os acervos.</p>';
+          '<p style="color:#8a6a4a;padding:2rem 0">N\u00e3o foi poss\u00edvel carregar os acervos.</p>';
       });
 
     function contarArquivos(series) {
-      let imgs = 0, pdfs = 0;
-      series.forEach(s => { imgs += (s.imagens||0); pdfs += (s.pdfs||0); });
-      const partes = [];
+      var imgs = 0, pdfs = 0;
+      series.forEach(function(s){ imgs += (s.imagens||0); pdfs += (s.pdfs||0); });
+      var partes = [];
       if (imgs) partes.push(imgs + ' imagem' + (imgs>1?'ns':''));
       if (pdfs) partes.push(pdfs + ' PDF' + (pdfs>1?'s':''));
       return partes.join(' + ');
     }
 
     function renderAcervos(acervos) {
-      const lista = document.getElementById('acervo-lista');
-      let temIebPendente = false;
+      var lista = document.getElementById('acervo-lista');
+      var temIebPendente = false;
 
-      lista.innerHTML = acervos.map((acervo, ai) => {
+      lista.innerHTML = acervos.map(function(acervo) {
         if (acervo.drive_url_pendente) temIebPendente = true;
-        const total = contarArquivos(acervo.series);
+        var total = contarArquivos(acervo.series);
 
-        const seriesHtml = acervo.series.map((s, si) => {
-          const temDocs = s.docs_portal && s.docs_portal.length > 0;
-          const contagem = [];
+        var seriesHtml = acervo.series.map(function(s, si) {
+          var temDocs = s.docs_portal && s.docs_portal.length > 0;
+          var contagem = [];
           if (s.imagens) contagem.push(s.imagens + ' img.');
           if (s.pdfs)    contagem.push(s.pdfs + ' PDF');
-          const contagemStr = contagem.join(' + ') || '';
+          var contagemStr = contagem.join(' + ');
 
-          const docsBadges = temDocs
-            ? `<div class="serie-docs-portal">${s.docs_portal.map(dp =>
-                `<span class="badge-portal" title="${esc(dp.nota||'')}">${esc(dp.referencia)}</span>`
-              ).join('')}</div>` : '';
+          var docsBadges = temDocs
+            ? '<div class="serie-docs-portal">' + s.docs_portal.map(function(dp){
+                return '<span class="badge-portal" title="'+esc(dp.nota||'')+'">'+esc(dp.referencia)+'</span>';
+              }).join('') + '</div>' : '';
 
-          const docsDetalhe = temDocs
-            ? `<div class="serie-docs-detalhe" id="dd-${acervo.id}-${si}">${
-                s.docs_portal.map(dp =>
-                  `<div class="docs-detalhe-item">${esc(dp.titulo)}${dp.nota ? ' <span class="docs-detalhe-ref">'+esc(dp.nota)+'</span>' : ''}</div>`
-                ).join('')
-              }</div>` : '';
+          var docsDetalhe = temDocs
+            ? '<div class="serie-docs-detalhe" id="dd-'+acervo.id+'-'+si+'">' +
+              s.docs_portal.map(function(dp){
+                return '<div class="docs-detalhe-item">'+esc(dp.titulo)+(dp.nota?' <span class="docs-detalhe-ref">'+esc(dp.nota)+'</span>':'')+'</div>';
+              }).join('') + '</div>' : '';
 
-          const toggleBtn = temDocs
-            ? `<button class="toggle-docs-btn" onclick="toggleDocs('${acervo.id}',${si},this)" aria-expanded="false">ver docs citados ▾</button>` : '';
+          var toggleBtn = temDocs
+            ? '<button class="toggle-docs-btn" onclick="toggleDocs(\''+acervo.id+'\','+si+',this)" aria-expanded="false">ver docs citados \u25be</button>' : '';
 
-          const linkDrive = s.drive_url
-            ? `<a class="btn-drive" href="${s.drive_url}" target="_blank" rel="noopener" aria-label="Abrir ${esc(s.nome)} no Google Drive">${DRIVE_ICON} Abrir no Drive</a>`
-            : `<span class="btn-drive-pendente">link pendente</span>`;
+          var folderId = driveId(s.drive_url);
+          var temImagens = (s.imagens||0) + (s.pdfs||0) > 0;
+          var botoesAcao = '';
 
-          return `<div class="serie-item${temDocs?' com-docs':''}" id="si-${acervo.id}-${si}">
-            <span class="serie-nome">${esc(s.nome)}${toggleBtn}</span>
-            <span class="serie-periodo">${esc(s.periodo)}</span>
-            ${contagemStr ? `<span class="serie-contagem">${esc(contagemStr)}</span>` : ''}
-            ${docsBadges}
-            ${linkDrive}
-          </div>${docsDetalhe}`;
+          if (s.drive_url) {
+            botoesAcao = '<div class="serie-acoes">';
+            if (temImagens && folderId) {
+              botoesAcao += '<button class="btn-visualizar" id="bv-'+acervo.id+'-'+si+'"'+
+                ' onclick="toggleViewer(\''+acervo.id+'\','+si+',\''+folderId+'\',this)"'+
+                ' aria-expanded="false" aria-controls="sv-'+acervo.id+'-'+si+'"'+
+                ' title="Visualizar documentos aqui na p\u00e1gina">'+EYE_SVG+' Visualizar</button>';
+            }
+            botoesAcao += '<a class="btn-drive" href="'+s.drive_url+'" target="_blank" rel="noopener"'+
+              ' aria-label="Abrir '+esc(s.nome)+' no Google Drive">'+DRIVE_SVG+' Abrir no Drive</a>';
+            botoesAcao += '</div>';
+          } else if (!s.sem_drive) {
+            botoesAcao = '<div class="serie-acoes"><span class="btn-drive-pendente">link pendente</span></div>';
+          }
+
+          var viewerPanel = '';
+          if (temImagens && folderId) {
+            viewerPanel = '<div class="serie-viewer" id="sv-'+acervo.id+'-'+si+'" aria-hidden="true">' +
+              '<div class="viewer-cabecalho">' +
+              '<span class="viewer-titulo">\ud83d\udcc2 '+esc(s.nome)+'</span>' +
+              '<span class="viewer-instrucao">Clique num arquivo para abrir. Use &ldquo;Abrir no Drive&rdquo; para baixar.</span>' +
+              '</div>' +
+              '<div class="viewer-iframe-wrap">' +
+              '<iframe id="if-'+acervo.id+'-'+si+'"' +
+              ' title="Visualizador: '+esc(s.nome)+'"' +
+              ' allowfullscreen loading="lazy"' +
+              ' data-src="'+embedUrl(folderId)+'">' +
+              '</iframe>' +
+              '</div>' +
+              '<a class="viewer-link-direto" href="'+s.drive_url+'" target="_blank" rel="noopener">'+
+              DRIVE_SVG+' Abrir em nova janela para melhor visualiza\u00e7\u00e3o</a>' +
+              '</div>';
+          }
+
+          return '<div class="serie-item'+(temDocs?' com-docs':'')+'" id="si-'+acervo.id+'-'+si+'">' +
+            '<div class="serie-item-row">' +
+            '<span class="serie-nome">'+esc(s.nome)+toggleBtn+'</span>' +
+            '<span class="serie-periodo">'+esc(s.periodo)+'</span>' +
+            (contagemStr ? '<span class="serie-contagem">'+esc(contagemStr)+'</span>' : '') +
+            docsBadges + botoesAcao +
+            '</div>' + docsDetalhe + viewerPanel + '</div>';
         }).join('');
 
-        return `<div class="acervo-card" id="ac-${acervo.id}" role="listitem">
-          <div class="acervo-card-header" onclick="toggleAcervo('${acervo.id}')" tabindex="0"
-            role="button" aria-expanded="false" aria-controls="acs-${acervo.id}"
-            onkeydown="if(event.key==='Enter'||event.key===' '){toggleAcervo('${acervo.id}');}">
-            <span class="acervo-sigla-badge">${esc(acervo.sigla)}</span>
-            <span class="acervo-nome">${esc(acervo.nome)}</span>
-            <span class="acervo-total-badge">${esc(total)}</span>
-            <span class="acervo-chevron" aria-hidden="true">▼</span>
-          </div>
-          <div class="acervo-descricao">${esc(acervo.descricao)}</div>
-          <div class="acervo-series" id="acs-${acervo.id}">${seriesHtml}</div>
-        </div>`;
+        return '<div class="acervo-card" id="ac-'+acervo.id+'" role="listitem">' +
+          '<div class="acervo-card-header" onclick="toggleAcervo(\''+acervo.id+'\')") tabindex="0"' +
+          ' role="button" aria-expanded="false" aria-controls="acs-'+acervo.id+'"' +
+          ' onkeydown="if(event.key===\'Enter\'||event.key===\' \'){toggleAcervo(\''+acervo.id+'\');}">' +
+          '<span class="acervo-sigla-badge">'+esc(acervo.sigla)+'</span>' +
+          '<span class="acervo-nome">'+esc(acervo.nome)+'</span>' +
+          '<span class="acervo-total-badge">'+esc(total)+'</span>' +
+          '<span class="acervo-chevron" aria-hidden="true">&#9660;</span>' +
+          '</div>' +
+          '<div class="acervo-descricao">'+esc(acervo.descricao)+'</div>' +
+          '<div class="acervo-series" id="acs-'+acervo.id+'">'+seriesHtml+'</div>' +
+          '</div>';
       }).join('');
 
       if (temIebPendente) document.getElementById('aviso-ieb').style.display = '';
     }
 
-    function esc(s) {
-      if (!s) return '';
-      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-    }
-
     window.toggleAcervo = function(id) {
-      const card = document.getElementById('ac-'+id);
-      const hdr  = card.querySelector('.acervo-card-header');
-      const aberto = card.classList.contains('aberto');
+      var card = document.getElementById('ac-'+id);
+      var hdr  = card.querySelector('.acervo-card-header');
+      var aberto = card.classList.contains('aberto');
       card.classList.toggle('aberto', !aberto);
       hdr.setAttribute('aria-expanded', aberto ? 'false' : 'true');
     };
 
     window.toggleDocs = function(acervoId, si, btn) {
-      const item = document.getElementById('si-'+acervoId+'-'+si);
-      const dd   = document.getElementById('dd-'+acervoId+'-'+si);
+      var item = document.getElementById('si-'+acervoId+'-'+si);
+      var dd   = document.getElementById('dd-'+acervoId+'-'+si);
       if (!dd) return;
-      const aberto = item.classList.contains('aberto');
+      var aberto = item.classList.contains('aberto');
       item.classList.toggle('aberto', !aberto);
       btn.setAttribute('aria-expanded', aberto ? 'false' : 'true');
-      btn.textContent = aberto ? 'ver docs citados ▾' : 'ocultar ▴';
+      btn.textContent = aberto ? 'ver docs citados \u25be' : 'ocultar \u25b4';
+    };
+
+    window.toggleViewer = function(acervoId, si, folderId, btn) {
+      var viewer = document.getElementById('sv-'+acervoId+'-'+si);
+      if (!viewer) return;
+      var aberto = viewer.classList.contains('aberto');
+      // Close all other open viewers
+      document.querySelectorAll('.serie-viewer.aberto').forEach(function(v){
+        if (v !== viewer) {
+          v.classList.remove('aberto');
+          v.setAttribute('aria-hidden','true');
+          var otherBtn = v.closest('.serie-item').querySelector('.btn-visualizar');
+          if (otherBtn) { otherBtn.classList.remove('ativo'); otherBtn.setAttribute('aria-expanded','false'); }
+        }
+      });
+      viewer.classList.toggle('aberto', !aberto);
+      viewer.setAttribute('aria-hidden', aberto ? 'true' : 'false');
+      btn.classList.toggle('ativo', !aberto);
+      btn.setAttribute('aria-expanded', aberto ? 'false' : 'true');
+      if (!aberto) {
+        // Lazy-load the iframe on first open
+        var iframe = viewer.querySelector('iframe[data-src]');
+        if (iframe && !iframe.src) {
+          iframe.src = iframe.getAttribute('data-src');
+        }
+        setTimeout(function(){ viewer.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 120);
+      }
     };
   })();
   </script>
