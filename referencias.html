@@ -82,13 +82,36 @@
       margin-top: 2rem;
     }
 
+    /* Acervos consultados */
+    .ref-acervos {
+      margin-top: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    .ref-acervos-lista {
+      list-style: none;
+      padding: 0;
+      margin: .8rem 0 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: .35rem .8rem;
+    }
+    .ref-acervos-lista li {
+      font-size: .88rem;
+      color: #4a3520;
+      padding: .3rem 0 .3rem .7rem;
+      border-left: 2px solid #c8b89a;
+      line-height: 1.45;
+    }
+
     @media (max-width: 600px) {
       .ref-item { font-size: .85rem; }
+      .ref-acervos-lista { grid-template-columns: 1fr; }
     }
 
     body.alto-contraste .ref-item { color: #fff; border-bottom-color: #444; }
     body.alto-contraste .ref-item:hover { background: #111; }
     body.alto-contraste #ref-busca { background: #111; color: #fff; border-color: #fff; }
+    body.alto-contraste .ref-acervos-lista li { color: #eee; border-left-color: #888; }
   </style>
 </head>
 <body>
@@ -331,6 +354,30 @@
       </ul>
     </section>
 
+    <!-- ACERVOS CONSULTADOS -->
+    <section class="ref-acervos" aria-labelledby="acervos-titulo">
+      <h3 class="ref-secao-titulo" id="acervos-titulo">Acervos consultados</h3>
+      <p style="font-size:.88rem;color:#5a4030;line-height:1.6;margin-bottom:.5rem;">
+        A pesquisa consultou fontes primárias em 13 instituições. Os documentos digitalizados estão disponíveis na página
+        <a href="documentos.html" style="color:#6b3a1f;">Banco de documentos</a>.
+      </p>
+      <ul class="ref-acervos-lista">
+        <li>Arquivo do Estado de São Paulo</li>
+        <li>Arquivo Municipal Washington Luís — São Paulo</li>
+        <li>Arquivo da Assembleia Legislativa de São Paulo</li>
+        <li>Arquivo da Faculdade de Direito da USP (Academia de Direito)</li>
+        <li>Arquivo da Polícia Civil — Praia Grande / Santos</li>
+        <li>Biblioteca Nacional do Rio de Janeiro</li>
+        <li>Fórum João Mendes — Tribunal de Justiça de São Paulo</li>
+        <li>Fundação Arquivo e Memória de Santos</li>
+        <li>Hemeroteca Municipal Roldão Mendes Rosa — Santos</li>
+        <li>Instituto de Estudos Brasileiros (IEB) — USP</li>
+        <li>Jornal A Tribuna — Santos</li>
+        <li>Museu da Companhia de Ferro</li>
+        <li>Instituto Histórico e Geográfico Brasileiro (IHGB)</li>
+      </ul>
+    </section>
+
     <p class="ref-nota">
       Esta lista corresponde à bibliografia consultada na dissertação <em>Capoeira e valentia em São Paulo (1830-1930)</em>, Pedro Cunha, USP, 2011.
       A versão completa das referências, com notas de rodapé e fontes primárias de arquivo, está disponível na
@@ -345,6 +392,9 @@
     <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html" target="_blank" rel="noopener">Registro oficial na USP</a>
     &nbsp;·&nbsp;
     <a href="sobre.html">Sobre a pesquisa</a>
+  </p>
+  <p class="footer-ia">
+    Este portal foi gerado com suporte do <strong>IBM Bob</strong>, recurso baseado em IA da IBM, para tornar os dados da pesquisa mais acessíveis. Caso alguma informação pareça incorreta, considere a dissertação publicada no <a href="https://teses.usp.br/teses/disponiveis/8/8138/tde-11092012-105013/pt-br.html" target="_blank" rel="noopener">site da USP</a> como fonte confiável para verificação.
   </p></footer>
 
   <script src="script.js"></script>
