@@ -53,7 +53,7 @@ portal-capoeira-sp/
 ├── README.md           ✅ Criado — caráter educativo, conteúdo do portal, licenças, como citar
 ├── LICENSE             ✅ Criado — MIT (código) + CC BY 4.0 (conteúdo), bilíngue PT/EN
 ├── data/
-│   ├── timeline.json   ✅ 28 eventos com acervo_drive links
+│   ├── timeline.json   ✅ 41 eventos com acervo_drive links (atualizado sessão 8)
 │   ├── documentos.json ✅ 19 transcrições (8 acervos)
 │   └── acervos.json    ✅ 8 instituições com Drive folder IDs por série
 └── img/hero/
@@ -85,11 +85,31 @@ portal-capoeira-sp/
 
 **5 instituições removidas** (sem material visualizável): AMWL, BNRJ, FJM, MCF, RHGB
 
-### `data/timeline.json` — 28 eventos
+### `data/timeline.json` — 41 eventos (atualizado sessão 8)
 
 - Organizados em 3 períodos: `1830-1870`, `1870-1888`, `1888-1930`
 - Cada evento pode ter `acervo_drive` referenciando um DRIVE_LINKS no `timeline.html`
 - ~20 eventos têm link para Drive
+
+#### Eventos adicionados na sessão 8 (13 novos):
+| Ano | Evento |
+|---|---|
+| 1872 | Malta "Flor da Gente" — ex-aluno da Academia de Direito lidera grupo no Rio |
+| 1886 | Bando de meninos pratica capoeiragem na Ladeira da Tabatingueira (SP) |
+| 1888 abr. | Emiliano Rocha: último preso por capoeira antes da Abolição em SP |
+| 1889 jul. | Policiais flagrados em exercícios de capoeira em Cruzeiro (SP) |
+| 1890 jan. | Capoeira foragido em Itu: SP não persegue capoeiras (italiano, malteiro carioca) |
+| 1890 fev. | José da Silva preso por capoeira no carnaval de Santos |
+| 1890 fev. | Benedicto Alves de Siqueira, capoeira em Ribeirão Preto |
+| 1890 mai. | Ricardo Florencio, capoeira carioca foragido em Sorocaba |
+| 1890 ago. | João Antonio dos Santos "Bambú", capoeira em Rio Claro |
+| 1895 | Quintino de Lacerda eleito vereador em Santos |
+| 1900 | Partidos de capoeiras na Várzea do Carmo, São Paulo (6 grupos) |
+| 1908 | Bugrinho, navalhista capoeira na Rua Tiradentes, São Paulo |
+| 1910 | Os "negros da Glette" e a tiririca na Barra Funda |
+| 1916 | Tiririca "invade" ruas de Campinas |
+| 1919 | Morte em Cabreúva: soldado mata capoeirista |
+| 1927 | Menê, capoeira carioca deportado inicia grupo em Botucatu |
 
 ### `data/documentos.json` — 19 transcrições comentadas
 
@@ -121,8 +141,8 @@ Dissertação em PDF: https://drive.google.com/file/d/1_5yrNuLScfKgQxTjlm4NDU_R8
 ```
 A:\Documents\USP\Pesquisa\
 ├── Arquivos\                    ← 13 pastas com imagens digitalizadas originais
-│   ├── Arquivo da Academia de Direito de SP\
-│   ├── Arquivo da Assembleia Legislativa de SP\
+│   ├── Arquivo da Academia de Direito de SP
+│   ├── Arquivo da Assembleia Legislativa de SP
 │   ├── Arquivo do Estado de SP\   (subpastas por série)
 │   ├── Arquivo Municipal Washington Luiz - SP\  (só .doc, sem imgs)
 │   ├── Arquivo_Polícia_Praia Grande\
@@ -176,7 +196,7 @@ A:\Documents\USP\Pesquisa\
 - Imagem de Rugendas (*danse de la guerre*) em destaque com legenda completa ✅
 - Footer IBM Bob verificado em todas as 6 páginas ✅
 
-### Sessão 7 (esta sessão — licença, README e caráter educativo)
+### Sessão 7 (licença, README e caráter educativo)
 - **`index.html`**: bloco "Uso livre — cite a fonte" adicionado à seção "Sobre este portal" ✅
   - Menciona GitHub como plataforma educativa e aberta
   - Indica licença CC BY 4.0 e MIT com links
@@ -198,6 +218,14 @@ A:\Documents\USP\Pesquisa\
   - CC BY 4.0 para conteúdo (PT + EN)
   - Modelo de citação
 
+### Sessão 8 (expansão da linha do tempo — Capítulo 4)
+- Leitura completa do dump de `Capítulo 4.docx` (arquivo local) ✅
+- **Madame Satã**: citado na dissertação apenas como exemplo de malandro carioca (p.593), sem ligação direta com SP — não foi adicionado à timeline
+- **`data/timeline.json`**: expandido de 28 para **41 eventos** ✅
+  - 13 novos eventos do pós-abolição e do início do século XX
+  - Cobertura aprofundada de: capoeiras cariocas foragidos em SP (Itu, Sorocaba, Botucatu), capoeiras no interior (Ribeirão Preto, Rio Claro, Cabreúva), Várzea do Carmo partidos, negros da Glette e tiririca (Barra Funda), Quintino de Lacerda vereador, Menê em Botucatu, registro da tiririca em Campinas
+  - SHA novo: `cd22615790c308395661bf761d3d456d2729b8f6`
+
 ---
 
 ## Estado atual — tudo concluído
@@ -209,10 +237,16 @@ A:\Documents\USP\Pesquisa\
 | Item | Prioridade | Descrição |
 |---|---|---|
 | Mais transcrições | Alta | Adicionar mais documentos ao `documentos.json` — atualmente 19, há centenas disponíveis |
+| Mais eventos na timeline | Média | Expandir além dos 41; adicionar imagens nos popups; eventos do Jabaquara (Maria Theresa de Jesus, Manoel Leocádio) |
 | Verificar links Drive | Média | Confirmar que todos os folder IDs em `acervos.json` abrem corretamente |
-| Mais eventos na timeline | Baixa | Expandir de 28 para mais eventos; adicionar imagens nos popups |
 | Domínio personalizado | Baixa | Configurar domínio próprio (ex: capoeira-sp.com.br) via GitHub Pages |
 | SEO | Baixa | Adicionar meta tags Open Graph para compartilhamento em redes sociais |
+
+### Passagens identificadas para futura inclusão na timeline
+- **Maria Theresa de Jesus** (Quilombo do Jabaquara, 1939 — entrevistada com 110 anos): casou-se no Jabaquara com **Manoel Leocádio**, "crioulo desempenado, capoeira destemido". Relata batucadas de sábado à noite e a festa da abolição. Leocádio lutou na Revolta da Armada (1893) e morreu em Canudos (1897). Fonte: *A Tribuna de Santos*, "110 annos de vida", 26/01/1939.
+- **Fortes, capoeirista sergipano em Santos**: "Fortes, nascido em Sergipe, excelente capoeirista, como dezenas de outros que existiam entre os abolicionistas da linha de frente" — aplicava "tremendas rasteiras, rápidas e certas" para derrubar soldados e capitães-do-mato.
+- **Capoeira na Festa da Penha do Rio do Peixe**: extinta "devido à ação da polícia reprimindo a capoeira, interferindo nas apresentações dos 'bambas' nas pernadas e derrubadas".
+- **Morro do Piolho / Cambuci** (c.1904): foto registra ponto de encontro de "capoeiras, malandros e valentões" no Cambuci.
 
 ---
 
