@@ -42,14 +42,16 @@
 
 ```
 portal-capoeira-sp/
-├── index.html          ✅ Completo — seção "Sobre a capoeira" reescrita (v2) com texto da introdução da dissertação e imagem de Rugendas
+├── index.html          ✅ Completo — inclui bloco "Uso livre / licença" na seção "Sobre este portal"
 ├── timeline.html       ✅ Completo — linha do tempo com Drive links
 ├── dissertacao.html    ✅ Completo — capítulos com acordeão
 ├── documentos.html     ✅ Completo — transcrições + visor inline Drive + botão acervo raiz
 ├── referencias.html    ✅ Completo — 107 referências + busca + "Acervos consultados"
-├── sobre.html          ✅ Completo — sobre a pesquisa e o autor
+├── sobre.html          ✅ Completo — inclui seção "Licença e uso livre" com cards CC BY / MIT e modelo de citação
 ├── style.css           ✅ Completo — inclui .footer-ia
 ├── script.js           ✅ Completo — acessibilidade (fonte, contraste, daltonismo)
+├── README.md           ✅ Criado — caráter educativo, conteúdo do portal, licenças, como citar
+├── LICENSE             ✅ Criado — MIT (código) + CC BY 4.0 (conteúdo), bilíngue PT/EN
 ├── data/
 │   ├── timeline.json   ✅ 28 eventos com acervo_drive links
 │   ├── documentos.json ✅ 19 transcrições (8 acervos)
@@ -161,27 +163,40 @@ A:\Documents\USP\Pesquisa\
 - Visor inline de documentos (iframe `embeddedfolderview`) implementado em `documentos.html`
 - `data/acervos.json` criado com 8 instituições e todas as séries documentais
 - 5 instituições sem material visualizável removidas de `acervos.json` e `documentos.json`
-- Seção "Acervos consultados" removida de `sobre.html`
 - `.footer-ia` adicionado ao `style.css`
 - Footer IBM Bob adicionado a: `index.html`, `timeline.html`, `sobre.html`
 
 ### Sessão 5 (conclusão dos pendentes + Drive raiz)
-- Footer IBM Bob adicionado a `dissertacao.html` ✅
-- Footer IBM Bob adicionado a `referencias.html` ✅
-- Footer IBM Bob adicionado a `documentos.html` ✅
+- Footer IBM Bob adicionado a `dissertacao.html`, `referencias.html`, `documentos.html` ✅
 - Seção "Acervos consultados" (13 instituições) adicionada a `referencias.html` ✅
-- Análise do conteúdo local: confirmado que as 5 instituições removidas não têm imagens visualizáveis ✅
-- **Novo:** Botão "Acervo completo no Google Drive" adicionado à seção de acervo em `documentos.html` ✅
-- Texto da seção de acervo melhorado com instrução clara de uso ✅
+- Botão "Acervo completo no Google Drive" adicionado a `documentos.html` ✅
 
-### Sessão 6 (esta sessão — seção "Sobre a capoeira" reescrita)
-- Seção "Sobre a capoeira" em `index.html` **completamente reescrita** ✅
-  - Novo texto baseado na introdução da dissertação, focado no período da escravidão
-  - Linguagem acessível para público geral, usando expressões da dissertação
-  - Imagem principal: Rugendas "Jogar Capoeira" (*danse de la guerre*, c. 1835) em destaque com legenda completa
-  - Imagens secundárias: Earle, Chamberlain, Rugendas (Batuque)
-  - Botões CTA: "Ler a pesquisa" e "Ver linha do tempo"
-- Footer IBM Bob verificado em **todas as 6 páginas** — já estava correto em todas ✅
+### Sessão 6 (seção "Sobre a capoeira" reescrita)
+- Seção "Sobre a capoeira" em `index.html` reescrita com texto da introdução da dissertação ✅
+- Imagem de Rugendas (*danse de la guerre*) em destaque com legenda completa ✅
+- Footer IBM Bob verificado em todas as 6 páginas ✅
+
+### Sessão 7 (esta sessão — licença, README e caráter educativo)
+- **`index.html`**: bloco "Uso livre — cite a fonte" adicionado à seção "Sobre este portal" ✅
+  - Menciona GitHub como plataforma educativa e aberta
+  - Indica licença CC BY 4.0 e MIT com links
+  - Modelo de citação em formato acadêmico
+- **`sobre.html`**: seção "Licença e uso livre" adicionada ao final do `<main>` ✅
+  - Cards para CC BY 4.0 (conteúdo) e MIT (código)
+  - Nota sobre imagens históricas (domínio público)
+  - Modelo de citação formatado
+  - Link para o repositório GitHub
+- **`README.md`**: criado ✅
+  - Declaração de caráter educativo e sem fins comerciais
+  - Descrição do conteúdo do portal
+  - Seção "Por que o GitHub" explicando a escolha da plataforma
+  - Licenças CC BY 4.0 e MIT
+  - Modelo de citação
+  - Link para issues/pull requests
+- **`LICENSE`**: criado ✅
+  - MIT para código (PT + EN)
+  - CC BY 4.0 para conteúdo (PT + EN)
+  - Modelo de citação
 
 ---
 
@@ -195,9 +210,8 @@ A:\Documents\USP\Pesquisa\
 |---|---|---|
 | Mais transcrições | Alta | Adicionar mais documentos ao `documentos.json` — atualmente 19, há centenas disponíveis |
 | Verificar links Drive | Média | Confirmar que todos os folder IDs em `acervos.json` abrem corretamente |
-| Página "Sobre a pesquisa" | Baixa | Expandir com mais informações sobre o autor e contato |
-| Domínio personalizado | Baixa | Configurar domínio próprio (ex: capoeira-sp.com.br) via GitHub Pages |
 | Mais eventos na timeline | Baixa | Expandir de 28 para mais eventos; adicionar imagens nos popups |
+| Domínio personalizado | Baixa | Configurar domínio próprio (ex: capoeira-sp.com.br) via GitHub Pages |
 | SEO | Baixa | Adicionar meta tags Open Graph para compartilhamento em redes sociais |
 
 ---
