@@ -110,7 +110,32 @@
     #acervo-drive { background: #faf4ea; padding: 2.5rem 1.2rem 3rem; }
     .acervo-inner { max-width: 1000px; margin: 0 auto; }
     .acervo-titulo { font-size: 1.25rem; font-weight: 700; color: #6b3a1f; margin-bottom: .4rem; letter-spacing: -.2px; }
-    .acervo-subtitulo { font-size: .9rem; color: #7a5c3a; margin-bottom: 1.6rem; line-height: 1.6; max-width: 720px; }
+    .acervo-subtitulo { font-size: .9rem; color: #7a5c3a; margin-bottom: 1rem; line-height: 1.6; max-width: 720px; }
+
+    /* Drive root CTA box */
+    .acervo-drive-raiz {
+      display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+      background: #fff; border: 1.5px solid #c8b89a; border-radius: 6px;
+      padding: .9rem 1.2rem; margin-bottom: 1.6rem; max-width: 720px;
+    }
+    .acervo-drive-raiz-texto {
+      flex: 1; min-width: 200px;
+    }
+    .acervo-drive-raiz-texto strong {
+      display: block; font-size: .92rem; color: #2c1a0e; margin-bottom: .2rem;
+    }
+    .acervo-drive-raiz-texto span {
+      font-size: .8rem; color: #7a5c3a;
+    }
+    .btn-drive-raiz {
+      display: inline-flex; align-items: center; gap: .4rem;
+      font-family: Arial, sans-serif; font-size: .85rem; font-weight: 700;
+      background: #6b3a1f; color: #fff; border: none; border-radius: 4px;
+      padding: .5rem 1.1rem; cursor: pointer; text-decoration: none;
+      white-space: nowrap; transition: background .15s; flex-shrink: 0;
+    }
+    .btn-drive-raiz:hover { background: #8f4f28; color: #fff; text-decoration: none; }
+
     .acervo-aviso-ieb {
       font-size: .8rem; color: #8a5c2a; background: #fff8ec;
       border: 1px solid #e0ceb4; border-radius: 4px;
@@ -232,9 +257,13 @@
     body.alto-contraste .acervo-card { background: #000; border-color: #fff; }
     body.alto-contraste .acervo-nome { color: #fff; }
     body.alto-contraste .btn-drive { background: #ffdd00; color: #000; }
+    body.alto-contraste .btn-drive-raiz { background: #ffdd00; color: #000; }
     body.alto-contraste .btn-visualizar { border-color: #fff; color: #fff; background: #000; }
     body.alto-contraste .btn-visualizar.ativo { background: #fff; color: #000; }
     body.alto-contraste .serie-viewer { background: #111; border-color: #888; }
+    body.alto-contraste .acervo-drive-raiz { background: #111; border-color: #888; }
+    body.alto-contraste .acervo-drive-raiz-texto strong { color: #fff; }
+    body.alto-contraste .acervo-drive-raiz-texto span { color: #ccc; }
 
     @media (max-width: 600px) {
       #doc-lista { grid-template-columns: 1fr; }
@@ -244,6 +273,8 @@
       .btn-drive, .btn-visualizar { flex: 1; justify-content: center; }
       .viewer-iframe-wrap iframe { height: 300px; }
       .viewer-instrucao { text-align: left; }
+      .acervo-drive-raiz { flex-direction: column; align-items: flex-start; }
+      .btn-drive-raiz { width: 100%; justify-content: center; }
     }
   </style>
 </head>
@@ -282,7 +313,7 @@
     <p>Transcrições comentadas e visualização dos originais digitalizados em 13 acervos brasileiros</p>
     <nav class="doc-nav-interna" aria-label="Seções da página">
       <a href="#transcricoes">&darr; Transcrições comentadas</a>
-      <a href="#acervo-drive">&darr; Acervo digitalizado &mdash; visualizar originais</a>
+      <a href="#acervo-drive">&darr; Acervo digitalizado &mdash; ver originais</a>
     </nav>
   </div></div>
 
@@ -316,10 +347,26 @@
     <div class="acervo-inner">
       <h2 class="acervo-titulo" id="acervo-titulo">Acervo digitalizado &mdash; visualize os originais</h2>
       <p class="acervo-subtitulo">
-        Mais de 1.500 imagens digitalizadas de manuscritos, processos judiciais, registros policiais, jornais e periódicos históricos, distribuídas em 13 instituições.
-        Clique em <strong>&#128065; Visualizar</strong> para abrir o visor de documentos diretamente nesta página.
-        Use <strong>Abrir no Drive</strong> para navegar em janela separada ou baixar arquivos.
+        Mais de 1.500 imagens digitalizadas de manuscritos, processos judiciais, registros policiais, jornais e periódicos históricos.
+        Expanda uma instituição, depois clique em <strong>&#128065; Visualizar</strong> ao lado de uma série para abrir o visor embutido diretamente nesta página,
+        ou em <strong>Abrir no Drive</strong> para navegar ou baixar em janela separada.
       </p>
+
+      <!-- Botão de acesso ao acervo raiz completo -->
+      <div class="acervo-drive-raiz" role="complementary" aria-label="Acesso ao acervo completo no Drive">
+        <div class="acervo-drive-raiz-texto">
+          <strong>&#128193; Acervo completo no Google Drive</strong>
+          <span>Todas as pastas organizadas por instituição, com subpastas por série documental. Acesso público, sem necessidade de conta Google.</span>
+        </div>
+        <a class="btn-drive-raiz"
+           href="https://drive.google.com/drive/folders/1pXmFoETXM_DXU7NmWPlaxYS7YeJEIN4t?usp=sharing"
+           target="_blank" rel="noopener"
+           aria-label="Abrir acervo completo de documentos no Google Drive">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L2 19.5h8l2-4 2 4h8L12 2zm0 4.2l5.6 9.8H14l-2-4-2 4H6.4L12 6.2z"/></svg>
+          Abrir acervo no Drive
+        </a>
+      </div>
+
       <p class="acervo-aviso-ieb" id="aviso-ieb" style="display:none">
         &#9888; O link da pasta raiz do <strong>Instituto de Estudos Brasileiros (IEB)</strong> não pôde ser confirmado. Os links das séries individuais estão corretos.
       </p>
