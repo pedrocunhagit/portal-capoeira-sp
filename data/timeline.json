@@ -185,7 +185,7 @@
     "tipo": "POLITICO",
     "acervo_drive": "fams-costa-silva",
     "personagens": ["Vicente de Carvalho", "Eugênio Wansuít"],
-    "pagina": "p. 182",
+    "pagina": "pp. 182-186",
     "pagina_pdf": 182
   },
   {
@@ -261,8 +261,21 @@
     "tipo": "POLITICO",
     "acervo_drive": "aesp-estado-sp",
     "personagens": ["Eugênio Wansuit", "Quintino de Lacerda"],
-    "pagina": "p. 208",
+    "pagina": "pp. 208-215",
     "pagina_pdf": 208
+  },
+  {
+    "ano": 1889,
+    "mes": 1,
+    "dia": 13,
+    "titulo": "Eugênio Wansuit contra a Guarda Negra: carta pública em Santos",
+    "descricao": "O pernambucano Eugênio Wansuít — veterano da Guerra do Paraguai, líder da Bohemia Abolicionista de Santos e acérrimo republicano — publica carta no Diário da Tarde de Santos (republicada na Província de São Paulo em 13 de janeiro de 1889) denunciando a tentativa de organizar uma 'guarda-negra' na cidade. Na carta, afirma que 'a abolição é obra do povo' e que figuras como Quintino de Lacerda, Firmino e Felippe fizeram mais pela causa do que a Regente. Alerta que a Guarda Negra prejudicaria os trabalhadores negros que vivem do ensaque e transporte de café no porto de Santos. Em 15 de janeiro, cerca de 300 'homens de côr' reuniram-se e assinaram um telegrama coletivo rejeitando a Guarda Negra e reconhecendo a abolição como obra dos 'esforços populares'. Fonte: A Província de São Paulo, 13/01/1889, p. 4; 15/01/1889, seção Telegramas.",
+    "periodo": "1888-1930",
+    "tipo": "DOCUMENTO",
+    "acervo_drive": "aesp-estado-sp",
+    "personagens": ["Eugênio Wansuít", "Quintino de Lacerda", "Pae Felippe", "Firmino"],
+    "pagina": "pp. 213-215",
+    "pagina_pdf": 213
   },
   {
     "ano": 1889,
@@ -360,7 +373,7 @@
     "tipo": "POLITICO",
     "acervo_drive": "aesp-estado-sp",
     "personagens": ["Quintino de Lacerda"],
-    "pagina": "p. 227",
+    "pagina": "pp. 227-229",
     "pagina_pdf": 227
   },
   {
